@@ -2,6 +2,7 @@
   "name": "blocklist-extension",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL-3.0-only",
   "description": "Hide and slowly block accounts from lists you choose, on X, Threads and Instagram.",
   "type": "module",
   "scripts": {
