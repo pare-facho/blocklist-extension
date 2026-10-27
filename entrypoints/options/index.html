@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blocklist — settings</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Blocklist</h1>
+      <p class="muted">
+        Everything on this page stays in your browser. Nothing is sent anywhere except the feeds you add
+        and the blocks you ask for on the sites themselves.
+      </p>
+
+      <section>
+        <h2>Subscribed lists</h2>
+        <div id="subscriptions"></div>
+        <form id="subscribe-form">
+          <input id="subscribe-url" type="url" placeholder="https://…/blocklist.json" required />
+          <button type="submit">Add list</button>
+          <span id="subscribe-status" class="status"></span>
+        </form>
+        <p class="muted">Lists are re-downloaded every <span id="refresh-hours"></span> hours. <button type="button" id="refresh-now">Refresh now</button></p>
+      </section>
+
+      <section>
+        <h2>My own list</h2>
+        <p class="muted">One account per line: a handle, @handle or profile link. Added here by hand or with the ⛔ button on posts.</p>
+        <textarea id="manual" rows="6" spellcheck="false"></textarea>
+        <div><button type="button" id="manual-save">Save</button> <span id="manual-status" class="status"></span></div>
+      </section>
+
+      <section>
+        <h2>Never block</h2>
+        <p class="muted">Accounts you want to keep seeing even if a list contains them.</p>
+        <textarea id="allow" rows="3" spellcheck="false"></textarea>
+        <div><button type="button" id="allow-save">Save</button> <span id="allow-status" class="status"></span></div>
+      </section>
+
+      <section>
+        <h2>Blocking</h2>
+        <p>
+          Posts from listed accounts are always hidden. Real blocks are optional and run slowly in the background,
+          only while an x.com tab is open and you are logged in.
+        </p>
+        <p class="warn">
+          Automated actions are against the terms of most networks. Slow pacing lowers the risk for your account;
+          it does not remove it. Use a secondary account if you can.
+        </p>
+        <label><input type="checkbox" id="blocking-enabled" /> Block listed accounts for real</label><br />
+        <label><input type="checkbox" id="paused" /> Pause</label>
+        <div class="grid">
+          <label>Max per hour <input type="number" id="per-hour" min="1" max="100" /></label>
+          <label>Max per day <input type="number" id="per-day" min="1" max="1000" /></label>
+          <label>Gap between blocks, min (minutes) <input type="number" id="gap-min" min="0" max="720" /></label>
+          <label>Gap between blocks, max (minutes) <input type="number" id="gap-max" min="0" max="720" /></label>
+        </div>
+        <div><button type="button" id="settings-save">Save</button> <span id="settings-status" class="status"></span></div>
+      </section>
+
+      <section>
+        <h2>Queue</h2>
+        <p id="queue-summary"></p>
+        <p><button type="button" id="retry-failed">Retry failed</button> <button type="button" id="clear-done">Clear done</button></p>
+        <table id="queue-table"><thead><tr><th>Account</th><th>Status</th><th>When</th><th>Note</th></tr></thead><tbody></tbody></table>
+      </section>
+
+      <section>
+        <h2>Activity</h2>
+        <pre id="log"></pre>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
