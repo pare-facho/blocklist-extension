@@ -1,0 +1,51 @@
+name: Release extension
+
+# On a version tag: build, test, attach the zips to the GitHub release, and
+# submit to the Chrome Web Store and Firefox Add-ons when the store secrets exist.
+# The first submission on each store must be done by hand (it creates the listing);
+# the ids and API credentials from that step go into the repository secrets.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Secrets cannot be read in a step condition; this flag can.
+      HAS_STORE_SECRETS: ${{ secrets.CHROME_EXTENSION_ID != '' && secrets.FIREFOX_EXTENSION_ID != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-fund --no-audit
+      - run: npm test
+      - run: npx tsc --noEmit
+      - run: npx wxt zip
+      - run: npx wxt zip -b firefox
+      - name: Attach zips to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "${GITHUB_REF_NAME}" .output/*-chrome.zip .output/*-firefox.zip .output/*-sources.zip --clobber
+      - name: Submit to the stores
+        if: env.HAS_STORE_SECRETS == 'true'
+        env:
+          CHROME_EXTENSION_ID: ${{ secrets.CHROME_EXTENSION_ID }}
+          CHROME_CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+          CHROME_CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
+          CHROME_REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          FIREFOX_EXTENSION_ID: ${{ secrets.FIREFOX_EXTENSION_ID }}
+          FIREFOX_JWT_ISSUER: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          FIREFOX_JWT_SECRET: ${{ secrets.FIREFOX_JWT_SECRET }}
+        run: |
+          npx wxt submit \
+            --chrome-zip .output/*-chrome.zip \
+            --firefox-zip .output/*-firefox.zip \
+            --firefox-sources-zip .output/*-sources.zip

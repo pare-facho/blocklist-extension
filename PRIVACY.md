@@ -2,7 +2,7 @@
 
 ## Français
 
-L'extension Blocklist ne collecte aucune donnée et n'a pas de serveur.
+L'extension Pare-Facho ne collecte aucune donnée et n'a pas de serveur.
 
 - Vos listes, vos réglages, la file de blocage et l'historique sont enregistrés uniquement
   dans le stockage local de votre navigateur. Rien n'est synchronisé ni envoyé ailleurs.
@@ -15,7 +15,7 @@ L'extension Blocklist ne collecte aucune donnée et n'a pas de serveur.
 
 ## English
 
-The Blocklist extension collects no data and has no server.
+The Pare-Facho extension collects no data and has no server.
 
 - Your lists, settings, block queue and history are stored only in your browser's local
   extension storage. Nothing is synced or sent anywhere.

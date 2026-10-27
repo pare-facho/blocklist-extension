@@ -1,104 +1,404 @@
 {
-  "extName": { "message": "Blocklist" },
-  "extDescription": { "message": "Masque et bloque lentement les comptes des listes auxquelles vous êtes abonné·e." },
-
-  "optionsTitle": { "message": "Blocklist — réglages" },
-  "intro": { "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez et les blocages que vous demandez sur les réseaux eux-mêmes." },
-
-  "statusTitle": { "message": "Statut" },
-  "statListed": { "message": "comptes listés" },
-  "statBlocked": { "message": "bloqués" },
-  "statRemaining": { "message": "restants" },
-  "statToday": { "message": "bloqués ces 24 h" },
-  "statNext": { "message": "prochain blocage" },
-  "stateOff": { "message": "Le blocage réel est désactivé : les publications sont seulement masquées." },
-  "statePaused": { "message": "Blocage en pause." },
-  "stateOn": { "message": "Blocage actif : un compte à la fois, tant qu'un onglet x.com connecté est ouvert." },
-  "nextNow": { "message": "dès que possible" },
-  "nextNone": { "message": "—" },
-
-  "listsTitle": { "message": "Listes abonnées" },
-  "listsNone": { "message": "Aucune liste pour l'instant." },
-  "listsEnabled": { "message": "Activée" },
-  "listsSource": { "message": "source" },
-  "listsRemove": { "message": "Retirer" },
-  "listsMeta": { "message": "$COUNTS$ · liste mise à jour le $UPDATED$ · vérifiée le $CHECKED$", "placeholders": { "counts": { "content": "$1" }, "updated": { "content": "$2" }, "checked": { "content": "$3" } } },
-  "never": { "message": "jamais" },
-  "subscribePlaceholder": { "message": "https://…/blocklist.json" },
-  "subscribeButton": { "message": "Ajouter la liste" },
-  "subscribeHttps": { "message": "L'adresse doit commencer par https://" },
-  "subscribePermission": { "message": "L'autorisation de lire cette adresse a été refusée" },
-  "subscribeDownloading": { "message": "Téléchargement…" },
-  "subscribeAdded": { "message": "« $NAME$ » ajoutée avec $COUNT$ comptes", "placeholders": { "name": { "content": "$1" }, "count": { "content": "$2" } } },
-  "subscribeFailed": { "message": "Impossible d'ajouter la liste : $ERROR$", "placeholders": { "error": { "content": "$1" } } },
-  "refreshEvery": { "message": "Les listes sont retéléchargées toutes les $HOURS$ heures.", "placeholders": { "hours": { "content": "$1" } } },
-  "refreshNow": { "message": "Actualiser maintenant" },
-
-  "ownTitle": { "message": "Ma liste" },
-  "ownHelp": { "message": "Comptes que vous ajoutez vous-même : ici, ou avec le bouton ⛔ sur les publications. Un compte par ligne : pseudo, @pseudo ou lien du profil." },
-  "ownAddPlaceholder": { "message": "@pseudo ou lien du profil" },
-  "ownAddButton": { "message": "Ajouter" },
-  "ownAdded": { "message": "@$HANDLE$ ajouté·e à ma liste", "placeholders": { "handle": { "content": "$1" } } },
-  "save": { "message": "Enregistrer" },
-  "saved": { "message": "Enregistré" },
-
-  "allowTitle": { "message": "Ne jamais bloquer" },
-  "allowHelp": { "message": "Comptes que vous voulez garder, même s'ils figurent dans une liste. Un compte par ligne." },
-
-  "allTitle": { "message": "Tous les comptes à bloquer" },
-  "allHelp": { "message": "Les listes abonnées et ma liste, moins les exceptions. « Garder » ajoute le compte aux exceptions ; il n'est plus masqué ni bloqué (un blocage déjà fait n'est pas annulé)." },
-  "searchPlaceholder": { "message": "Rechercher un pseudo ou un nom…" },
-  "allShowing": { "message": "$SHOWN$ affichés sur $TOTAL$", "placeholders": { "shown": { "content": "$1" }, "total": { "content": "$2" } } },
-  "colAccount": { "message": "Compte" },
-  "colName": { "message": "Nom" },
-  "colList": { "message": "Liste" },
-  "colStatus": { "message": "Statut" },
-  "colActions": { "message": "" },
-  "colWhen": { "message": "Quand" },
-  "colNote": { "message": "Note" },
-  "stHiddenOnly": { "message": "masqué" },
-  "stWaiting": { "message": "en attente" },
-  "stBlocked": { "message": "bloqué" },
-  "stFailed": { "message": "échec" },
-  "stSkipped": { "message": "ignoré" },
-  "stKept": { "message": "gardé" },
-  "actKeep": { "message": "Garder" },
-  "actUnkeep": { "message": "Ne plus garder" },
-  "actRemove": { "message": "Retirer" },
-  "ownListName": { "message": "Ma liste" },
-
-  "blockingTitle": { "message": "Blocage" },
-  "blockingHelp": { "message": "Les publications des comptes listés sont toujours masquées. Le blocage réel est optionnel : il se fait lentement en arrière-plan, uniquement quand un onglet x.com est ouvert et que vous êtes connecté·e." },
-  "blockingWarn": { "message": "Les actions automatiques sont contraires aux conditions d'utilisation de la plupart des réseaux. Un rythme lent réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte secondaire si vous le pouvez." },
-  "blockingEnabled": { "message": "Bloquer réellement les comptes listés" },
-  "paused": { "message": "Pause" },
-  "perHour": { "message": "Maximum par heure" },
-  "perDay": { "message": "Maximum par jour" },
-  "gapMin": { "message": "Délai entre deux blocages, minimum (minutes)" },
-  "gapMax": { "message": "Délai entre deux blocages, maximum (minutes)" },
-
-  "historyTitle": { "message": "Historique" },
-  "historyHelp": { "message": "Derniers blocages effectués, échecs et comptes ignorés." },
-  "historySummary": { "message": "$WAITING$ en attente · $DONE$ bloqués · $FAILED$ échecs · $SKIPPED$ ignorés", "placeholders": { "waiting": { "content": "$1" }, "done": { "content": "$2" }, "failed": { "content": "$3" }, "skipped": { "content": "$4" } } },
-  "retryFailed": { "message": "Réessayer les échecs" },
-  "clearHistory": { "message": "Effacer l'historique" },
-  "historyEmpty": { "message": "Aucun blocage pour l'instant." },
-
-  "activityTitle": { "message": "Journal" },
-
-  "quickTitle": { "message": "Bloquer @$HANDLE$ (un clic, annulable pendant 5 s)", "placeholders": { "handle": { "content": "$1" } } },
-  "quickAdded": { "message": "@$HANDLE$ ajouté·e à ma liste de blocage.", "placeholders": { "handle": { "content": "$1" } } },
-  "undo": { "message": "Annuler" },
-
-  "logSubscribed": { "message": "abonnement à « $NAME$ » ($COUNT$ comptes)", "placeholders": { "name": { "content": "$1" }, "count": { "content": "$2" } } },
-  "logFeedRefreshed": { "message": "liste « $NAME$ » actualisée : $COUNT$ comptes", "placeholders": { "name": { "content": "$1" }, "count": { "content": "$2" } } },
-  "logFeedFailed": { "message": "liste « $NAME$ » : échec du téléchargement ($ERROR$)", "placeholders": { "name": { "content": "$1" }, "error": { "content": "$2" } } },
-  "logQuickBlock": { "message": "bouton ⛔ : @$HANDLE$ ajouté·e", "placeholders": { "handle": { "content": "$1" } } },
-  "logQuickUndo": { "message": "bouton ⛔ annulé : @$HANDLE$", "placeholders": { "handle": { "content": "$1" } } },
-  "logBlocked": { "message": "bloqué @$HANDLE$ sur X", "placeholders": { "handle": { "content": "$1" } } },
-  "logRateLimit": { "message": "X demande de ralentir, reprise à $TIME$", "placeholders": { "time": { "content": "$1" } } },
-  "logNotLoggedIn": { "message": "X : pas connecté·e, nouvel essai dans 15 min" },
-  "logSkipped": { "message": "@$HANDLE$ ignoré·e : compte introuvable", "placeholders": { "handle": { "content": "$1" } } },
-  "logFailed": { "message": "blocage de @$HANDLE$ échoué ($ATTEMPT$/$MAX$) : $ERROR$", "placeholders": { "handle": { "content": "$1" }, "attempt": { "content": "$2" }, "max": { "content": "$3" }, "error": { "content": "$4" } } },
-  "errNotFound": { "message": "compte introuvable" }
+  "extName": {
+    "message": "Pare-Facho"
+  },
+  "extDescription": {
+    "message": "On bloque l’extrême droite : masque et bloque lentement les comptes des listes auxquelles vous êtes abonné·e."
+  },
+  "optionsTitle": {
+    "message": "Pare-Facho — réglages"
+  },
+  "intro": {
+    "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez et les blocages que vous demandez sur les réseaux eux-mêmes."
+  },
+  "statusTitle": {
+    "message": "Statut"
+  },
+  "statListed": {
+    "message": "comptes listés"
+  },
+  "statBlocked": {
+    "message": "bloqués"
+  },
+  "statRemaining": {
+    "message": "restants"
+  },
+  "statToday": {
+    "message": "bloqués ces 24 h"
+  },
+  "statNext": {
+    "message": "prochain blocage"
+  },
+  "stateOff": {
+    "message": "Le blocage réel est désactivé : les publications sont seulement masquées."
+  },
+  "statePaused": {
+    "message": "Blocage en pause."
+  },
+  "stateOn": {
+    "message": "Blocage actif : un compte à la fois, tant qu'un onglet x.com connecté est ouvert."
+  },
+  "nextNow": {
+    "message": "dès que possible"
+  },
+  "nextNone": {
+    "message": "—"
+  },
+  "listsTitle": {
+    "message": "Listes abonnées"
+  },
+  "listsNone": {
+    "message": "Aucune liste pour l'instant."
+  },
+  "listsEnabled": {
+    "message": "Activée"
+  },
+  "listsSource": {
+    "message": "source"
+  },
+  "listsRemove": {
+    "message": "Retirer"
+  },
+  "listsMeta": {
+    "message": "$COUNTS$ · liste mise à jour le $UPDATED$ · vérifiée le $CHECKED$",
+    "placeholders": {
+      "counts": {
+        "content": "$1"
+      },
+      "updated": {
+        "content": "$2"
+      },
+      "checked": {
+        "content": "$3"
+      }
+    }
+  },
+  "never": {
+    "message": "jamais"
+  },
+  "subscribePlaceholder": {
+    "message": "https://…/blocklist.json"
+  },
+  "subscribeButton": {
+    "message": "Ajouter la liste"
+  },
+  "subscribeHttps": {
+    "message": "L'adresse doit commencer par https://"
+  },
+  "subscribePermission": {
+    "message": "L'autorisation de lire cette adresse a été refusée"
+  },
+  "subscribeDownloading": {
+    "message": "Téléchargement…"
+  },
+  "subscribeAdded": {
+    "message": "« $NAME$ » ajoutée avec $COUNT$ comptes",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "count": {
+        "content": "$2"
+      }
+    }
+  },
+  "subscribeFailed": {
+    "message": "Impossible d'ajouter la liste : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "refreshEvery": {
+    "message": "Les listes sont retéléchargées toutes les $HOURS$ heures.",
+    "placeholders": {
+      "hours": {
+        "content": "$1"
+      }
+    }
+  },
+  "refreshNow": {
+    "message": "Actualiser maintenant"
+  },
+  "ownTitle": {
+    "message": "Ma liste"
+  },
+  "ownHelp": {
+    "message": "Comptes que vous ajoutez vous-même : ici, ou avec le bouton ⛔ sur les publications. Un compte par ligne : pseudo, @pseudo ou lien du profil."
+  },
+  "ownAddPlaceholder": {
+    "message": "@pseudo ou lien du profil"
+  },
+  "ownAddButton": {
+    "message": "Ajouter"
+  },
+  "ownAdded": {
+    "message": "@$HANDLE$ ajouté·e à ma liste",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "save": {
+    "message": "Enregistrer"
+  },
+  "saved": {
+    "message": "Enregistré"
+  },
+  "allowTitle": {
+    "message": "Ne jamais bloquer"
+  },
+  "allowHelp": {
+    "message": "Comptes que vous voulez garder, même s'ils figurent dans une liste. Un compte par ligne."
+  },
+  "allTitle": {
+    "message": "Tous les comptes à bloquer"
+  },
+  "allHelp": {
+    "message": "Les listes abonnées et ma liste, moins les exceptions. « Garder » ajoute le compte aux exceptions ; il n'est plus masqué ni bloqué (un blocage déjà fait n'est pas annulé)."
+  },
+  "searchPlaceholder": {
+    "message": "Rechercher un pseudo ou un nom…"
+  },
+  "allShowing": {
+    "message": "$SHOWN$ affichés sur $TOTAL$",
+    "placeholders": {
+      "shown": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "colAccount": {
+    "message": "Compte"
+  },
+  "colName": {
+    "message": "Nom"
+  },
+  "colList": {
+    "message": "Liste"
+  },
+  "colStatus": {
+    "message": "Statut"
+  },
+  "colActions": {
+    "message": ""
+  },
+  "colWhen": {
+    "message": "Quand"
+  },
+  "colNote": {
+    "message": "Note"
+  },
+  "stHiddenOnly": {
+    "message": "masqué"
+  },
+  "stWaiting": {
+    "message": "en attente"
+  },
+  "stBlocked": {
+    "message": "bloqué"
+  },
+  "stFailed": {
+    "message": "échec"
+  },
+  "stSkipped": {
+    "message": "ignoré"
+  },
+  "stKept": {
+    "message": "gardé"
+  },
+  "actKeep": {
+    "message": "Garder"
+  },
+  "actUnkeep": {
+    "message": "Ne plus garder"
+  },
+  "actRemove": {
+    "message": "Retirer"
+  },
+  "ownListName": {
+    "message": "Ma liste"
+  },
+  "blockingTitle": {
+    "message": "Blocage"
+  },
+  "blockingHelp": {
+    "message": "Les publications des comptes listés sont toujours masquées. Le blocage réel est optionnel : il se fait lentement en arrière-plan, uniquement quand un onglet x.com est ouvert et que vous êtes connecté·e."
+  },
+  "blockingWarn": {
+    "message": "Les actions automatiques sont contraires aux conditions d'utilisation de la plupart des réseaux. Un rythme lent réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte secondaire si vous le pouvez."
+  },
+  "blockingEnabled": {
+    "message": "Bloquer réellement les comptes listés"
+  },
+  "paused": {
+    "message": "Pause"
+  },
+  "perHour": {
+    "message": "Maximum par heure"
+  },
+  "perDay": {
+    "message": "Maximum par jour"
+  },
+  "gapMin": {
+    "message": "Délai entre deux blocages, minimum (minutes)"
+  },
+  "gapMax": {
+    "message": "Délai entre deux blocages, maximum (minutes)"
+  },
+  "historyTitle": {
+    "message": "Historique"
+  },
+  "historyHelp": {
+    "message": "Derniers blocages effectués, échecs et comptes ignorés."
+  },
+  "historySummary": {
+    "message": "$WAITING$ en attente · $DONE$ bloqués · $FAILED$ échecs · $SKIPPED$ ignorés",
+    "placeholders": {
+      "waiting": {
+        "content": "$1"
+      },
+      "done": {
+        "content": "$2"
+      },
+      "failed": {
+        "content": "$3"
+      },
+      "skipped": {
+        "content": "$4"
+      }
+    }
+  },
+  "retryFailed": {
+    "message": "Réessayer les échecs"
+  },
+  "clearHistory": {
+    "message": "Effacer l'historique"
+  },
+  "historyEmpty": {
+    "message": "Aucun blocage pour l'instant."
+  },
+  "activityTitle": {
+    "message": "Journal"
+  },
+  "quickTitle": {
+    "message": "Bloquer @$HANDLE$ (un clic, annulable pendant 5 s)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "quickAdded": {
+    "message": "@$HANDLE$ ajouté·e à ma liste de blocage.",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "undo": {
+    "message": "Annuler"
+  },
+  "logSubscribed": {
+    "message": "abonnement à « $NAME$ » ($COUNT$ comptes)",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "count": {
+        "content": "$2"
+      }
+    }
+  },
+  "logFeedRefreshed": {
+    "message": "liste « $NAME$ » actualisée : $COUNT$ comptes",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "count": {
+        "content": "$2"
+      }
+    }
+  },
+  "logFeedFailed": {
+    "message": "liste « $NAME$ » : échec du téléchargement ($ERROR$)",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      },
+      "error": {
+        "content": "$2"
+      }
+    }
+  },
+  "logQuickBlock": {
+    "message": "bouton ⛔ : @$HANDLE$ ajouté·e",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logQuickUndo": {
+    "message": "bouton ⛔ annulé : @$HANDLE$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logBlocked": {
+    "message": "bloqué @$HANDLE$ sur X",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logRateLimit": {
+    "message": "X demande de ralentir, reprise à $TIME$",
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    }
+  },
+  "logNotLoggedIn": {
+    "message": "X : pas connecté·e, nouvel essai dans 15 min"
+  },
+  "logSkipped": {
+    "message": "@$HANDLE$ ignoré·e : compte introuvable",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logFailed": {
+    "message": "blocage de @$HANDLE$ échoué ($ATTEMPT$/$MAX$) : $ERROR$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "attempt": {
+        "content": "$2"
+      },
+      "max": {
+        "content": "$3"
+      },
+      "error": {
+        "content": "$4"
+      }
+    }
+  },
+  "errNotFound": {
+    "message": "compte introuvable"
+  }
 }
