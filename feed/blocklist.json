@@ -1,0 +1,3613 @@
+{
+  "format": "blocklist/1",
+  "name": "Blockfacho — on bloque l’extrême droite",
+  "description": "Comptes d’extrême droite recensés par onbloquelextremedroite.fun",
+  "homepage": "https://onbloquelextremedroite.fun/",
+  "updated": "2026-10-27T23:22:24.278Z",
+  "entries": [
+    {
+      "site": "facebook",
+      "handle": "100014070544362",
+      "name": "Timothée Houssin",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793632"
+    },
+    {
+      "site": "facebook",
+      "handle": "15smn5germ9",
+      "name": "Anne Sicard",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "61562278240513",
+      "name": "Jonathan Gery",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841737"
+    },
+    {
+      "site": "facebook",
+      "handle": "alexandreloubet.off",
+      "name": "Alexandre Loubet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "asfrigout",
+      "name": "Anne-Sophie Frigout",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "auguste.evrard62",
+      "name": "Auguste Evrard",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "ballardphilippe",
+      "name": "Philippe Ballard",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794562"
+    },
+    {
+      "site": "facebook",
+      "handle": "bernardchaumeilrn",
+      "name": "Bernard Chaumeil",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "boccaletti83",
+      "name": "Frédéric Boccaletti",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA796042"
+    },
+    {
+      "site": "facebook",
+      "handle": "carpentrasbm",
+      "name": "Hervé de Lépinau",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA642988"
+    },
+    {
+      "site": "facebook",
+      "handle": "catherinegriset.rn",
+      "name": "Catherine Griset",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "chenu.sebastien",
+      "name": "Sébastien Chenu",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA720468"
+    },
+    {
+      "site": "facebook",
+      "handle": "christophebentzdepute",
+      "name": "Christophe Bentz",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794434"
+    },
+    {
+      "site": "facebook",
+      "handle": "cyril-tribuiani-61550666226285",
+      "name": "Cyril Tribuiani",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793334"
+    },
+    {
+      "site": "facebook",
+      "handle": "defleurianmarc",
+      "name": "Marc de Fleurian",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841613"
+    },
+    {
+      "site": "facebook",
+      "handle": "emeric.salmonoff",
+      "name": "Emeric Salmon",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794954"
+    },
+    {
+      "site": "facebook",
+      "handle": "g.dussausaye",
+      "name": "Gaëtan Dussausaye",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA842073"
+    },
+    {
+      "site": "facebook",
+      "handle": "gisele.lelouis",
+      "name": "Gisèle Lelouis",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793290"
+    },
+    {
+      "site": "facebook",
+      "handle": "guiniotofficiel",
+      "name": "Michel Guiniot",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794734"
+    },
+    {
+      "site": "facebook",
+      "handle": "id:61560966638578",
+      "name": "Eddy Casterman",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840075"
+    },
+    {
+      "site": "facebook",
+      "handle": "jlechanteux",
+      "name": "Julie Lechanteux",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA796026"
+    },
+    {
+      "site": "facebook",
+      "handle": "joellemelinrn",
+      "name": "Joëlle Mélin",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793354"
+    },
+    {
+      "site": "facebook",
+      "handle": "jordanguittonrn",
+      "name": "Jordan Guitton",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793218"
+    },
+    {
+      "site": "facebook",
+      "handle": "jorys.bovet",
+      "name": "Jorys Bovet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793182"
+    },
+    {
+      "site": "facebook",
+      "handle": "jrancoulern",
+      "name": "Julien Rancoule",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793254"
+    },
+    {
+      "site": "facebook",
+      "handle": "julie-rechagneux-61559577425120",
+      "name": "Julie Rechagneux",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "julien-sanchez-100044874316374",
+      "name": "Julien Sanchez",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "julienleonardellirn",
+      "name": "Julien Leonardelli",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "kevin.pfeffer57",
+      "name": "Kévin Pfeffer",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794582"
+    },
+    {
+      "site": "facebook",
+      "handle": "kevinmauvieuxpagepolitique",
+      "name": "Kévin Mauvieux",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793616"
+    },
+    {
+      "site": "facebook",
+      "handle": "lioneltivoli",
+      "name": "Lionel Tivoli",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793298"
+    },
+    {
+      "site": "facebook",
+      "handle": "mariefrancelorho",
+      "name": "Marie-France Lorho",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA721932"
+    },
+    {
+      "site": "facebook",
+      "handle": "marine.hameletaurand",
+      "name": "Marine Hamelet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795900"
+    },
+    {
+      "site": "facebook",
+      "handle": "marinelepen",
+      "name": "Marine Le Pen",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "massou24",
+      "name": "Maxime Amblard",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841495"
+    },
+    {
+      "site": "facebook",
+      "handle": "meurinpierre",
+      "name": "Pierre Meurin",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793852"
+    },
+    {
+      "site": "facebook",
+      "handle": "michaeltaverne12",
+      "name": "Michaël Taverne",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794502"
+    },
+    {
+      "site": "facebook",
+      "handle": "nathaliedaconceicaocarvalho",
+      "name": "Nathalie Da Conceicao Carvalho",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795644"
+    },
+    {
+      "site": "facebook",
+      "handle": "nmeizonnet",
+      "name": "Nicolas Meizonnet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA719436"
+    },
+    {
+      "site": "facebook",
+      "handle": "odouljulien",
+      "name": "Julien Odoul",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795552"
+    },
+    {
+      "site": "facebook",
+      "handle": "rancangelique",
+      "name": "Angélique Ranc",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "rassemblementnational",
+      "name": "Rassemblement National",
+      "category": "RN",
+      "reason": "Parti politique",
+      "source": "https://lepodium2027.fr/partis/rassemblement-national"
+    },
+    {
+      "site": "facebook",
+      "handle": "rogerchudeau4102",
+      "name": "Roger Chudeau",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794198"
+    },
+    {
+      "site": "facebook",
+      "handle": "sabatoualexandre",
+      "name": "Alexandre Sabatou",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "sardoche",
+      "name": "@sardoche",
+      "category": "Autres",
+      "source": "https://www.facebook.com/sardoche"
+    },
+    {
+      "site": "facebook",
+      "handle": "sebastienhumbertrn",
+      "name": "Sébastien Humbert",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA842085"
+    },
+    {
+      "site": "facebook",
+      "handle": "srambaudrn",
+      "name": "Stéphane Rambaud",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795966"
+    },
+    {
+      "site": "facebook",
+      "handle": "terracid",
+      "name": "@terracid",
+      "category": "Autres",
+      "source": "https://www.facebook.com/terracid"
+    },
+    {
+      "site": "facebook",
+      "handle": "thibautmonnieroff",
+      "name": "Thibaut Monnier",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840915"
+    },
+    {
+      "site": "facebook",
+      "handle": "thierry.frappe",
+      "name": "Thierry Frappé",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794678"
+    },
+    {
+      "site": "facebook",
+      "handle": "thierrymariani",
+      "name": "Thierry Mariani",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "thomasmenagecvdl",
+      "name": "Thomas Ménagé",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794322"
+    },
+    {
+      "site": "facebook",
+      "handle": "valeriedelogern",
+      "name": "Valérie Deloge",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "villedieu.a",
+      "name": "Antoine Villedieu",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "virginiejoronfn",
+      "name": "Virginie Joron",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "yoanngillet30",
+      "name": "Yoann Gillet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793832"
+    },
+    {
+      "site": "instagram",
+      "handle": "alexandre_loubet",
+      "name": "Alexandre Loubet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794590"
+    },
+    {
+      "site": "instagram",
+      "handle": "alexis_jolly",
+      "name": "Alexis Jolly",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794030"
+    },
+    {
+      "site": "instagram",
+      "handle": "andrerougern",
+      "name": "André Rougé",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "annesicardoff",
+      "name": "Anne Sicard",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA842255"
+    },
+    {
+      "site": "instagram",
+      "handle": "annesophie_frigout",
+      "name": "Anne-Sophie Frigout",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "augusteevrard",
+      "name": "Auguste Evrard",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841621"
+    },
+    {
+      "site": "instagram",
+      "handle": "aurelien_dutremble",
+      "name": "Aurélien Dutremble",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841761"
+    },
+    {
+      "site": "instagram",
+      "handle": "bernardchaumeil_rn",
+      "name": "Bernard Chaumeil",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840107"
+    },
+    {
+      "site": "instagram",
+      "handle": "bruno_clavet",
+      "name": "Bruno Clavet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840159"
+    },
+    {
+      "site": "instagram",
+      "handle": "catherine_rimbert",
+      "name": "Catherine Rimbert",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841981"
+    },
+    {
+      "site": "instagram",
+      "handle": "cocardeetudiante",
+      "name": "La Cocarde étudiante",
+      "category": "Groupes",
+      "reason": "Organisation étudiante du camp national",
+      "source": "https://www.cocardeetudiante.com/"
+    },
+    {
+      "site": "instagram",
+      "handle": "cyril_tribuiani",
+      "name": "Cyril Tribuiani",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793334"
+    },
+    {
+      "site": "instagram",
+      "handle": "e_fouquart",
+      "name": "Emmanuel Fouquart",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840801"
+    },
+    {
+      "site": "instagram",
+      "handle": "eddycasterman",
+      "name": "Eddy Casterman",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840075"
+    },
+    {
+      "site": "instagram",
+      "handle": "emeric.salmon",
+      "name": "Emeric Salmon",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794954"
+    },
+    {
+      "site": "instagram",
+      "handle": "ericzemmour_",
+      "name": "Éric Zemmour",
+      "category": "Reconquête",
+      "reason": "Reconquête",
+      "source": "https://www.parti-reconquete.fr/"
+    },
+    {
+      "site": "instagram",
+      "handle": "fabriceleggeri",
+      "name": "Fabrice Leggeri",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "flo_joubert24",
+      "name": "Florence Joubert",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840869"
+    },
+    {
+      "site": "instagram",
+      "handle": "fp_vos",
+      "name": "Frédéric-Pierre Vos",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841575"
+    },
+    {
+      "site": "instagram",
+      "handle": "frontieresmedia",
+      "name": "Frontières",
+      "category": "Groupes",
+      "reason": "Le compte Instagram n’est pas dispo actuellement sur votre site",
+      "source": "https://www.instagram.com/frontieresmedia?obrf=MXZ3YjRrMWdoM25teQ=="
+    },
+    {
+      "site": "instagram",
+      "handle": "gaetan_dussausaye",
+      "name": "Gaëtan Dussausaye",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA842073"
+    },
+    {
+      "site": "instagram",
+      "handle": "grangier_geraldine",
+      "name": "Géraldine Grangier",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793592"
+    },
+    {
+      "site": "instagram",
+      "handle": "guillaume_bigot",
+      "name": "Guillaume Bigot",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA842001"
+    },
+    {
+      "site": "instagram",
+      "handle": "helenelaportern",
+      "name": "Hélène Laporte",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794354"
+    },
+    {
+      "site": "instagram",
+      "handle": "herve_delepinau",
+      "name": "Hervé de Lépinau",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA642988"
+    },
+    {
+      "site": "instagram",
+      "handle": "jleonardelli_",
+      "name": "Julien Leonardelli",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "jonathangery_off",
+      "name": "Jonathan Gery",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841737"
+    },
+    {
+      "site": "instagram",
+      "handle": "jordan_guitton",
+      "name": "Jordan Guitton",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793218"
+    },
+    {
+      "site": "instagram",
+      "handle": "jordanbardella",
+      "name": "Jordan Bardella",
+      "category": "RN",
+      "reason": "Rassemblement National",
+      "source": "https://www.t-online.de/nachrichten/europawahl/id_100405796/marine-le-pen-fuer-ihn-ist-das-urteil-die-grosse-chance.html"
+    },
+    {
+      "site": "instagram",
+      "handle": "josebeaurain_an",
+      "name": "José Beaurain",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793158"
+    },
+    {
+      "site": "instagram",
+      "handle": "jsanchez_rn",
+      "name": "Julien Sanchez",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "julie_lechanteux",
+      "name": "Julie Lechanteux",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA796026"
+    },
+    {
+      "site": "instagram",
+      "handle": "julien_odoul",
+      "name": "Julien Odoul",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795552"
+    },
+    {
+      "site": "instagram",
+      "handle": "julien.limongi",
+      "name": "Julien Limongi",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841873"
+    },
+    {
+      "site": "instagram",
+      "handle": "julien.rancoule",
+      "name": "Julien Rancoule",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793254"
+    },
+    {
+      "site": "instagram",
+      "handle": "julierchx",
+      "name": "Julie Rechagneux",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "kevin_mauvieux",
+      "name": "Kévin Mauvieux",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793616"
+    },
+    {
+      "site": "instagram",
+      "handle": "lelouisgisele",
+      "name": "Gisèle Lelouis",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793290"
+    },
+    {
+      "site": "instagram",
+      "handle": "marcdefleurian",
+      "name": "Marc de Fleurian",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841613"
+    },
+    {
+      "site": "instagram",
+      "handle": "mariani.thierry",
+      "name": "Thierry Mariani",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "marine_hamelet",
+      "name": "Marine Hamelet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795900"
+    },
+    {
+      "site": "instagram",
+      "handle": "marine_lepen",
+      "name": "Marine Le Pen",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://lepodium2027.fr/marine-le-pen"
+    },
+    {
+      "site": "instagram",
+      "handle": "mathildeandrouet",
+      "name": "Mathilde Androuët",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "matthiasrnt",
+      "name": "Matthias Renault",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841955"
+    },
+    {
+      "site": "instagram",
+      "handle": "nathcarvalho91",
+      "name": "Nathalie Da Conceicao Carvalho",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795644"
+    },
+    {
+      "site": "instagram",
+      "handle": "nmeizonnet",
+      "name": "Nicolas Meizonnet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA719436"
+    },
+    {
+      "site": "instagram",
+      "handle": "philippe_ballard",
+      "name": "Philippe Ballard",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794562"
+    },
+    {
+      "site": "instagram",
+      "handle": "philippe_schreck",
+      "name": "Philippe Schreck",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA796050"
+    },
+    {
+      "site": "instagram",
+      "handle": "pierre_romain_thionnet",
+      "name": "Pierre-Romain Thionnet",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "rassemblementnational_fr",
+      "name": "Rassemblement National",
+      "category": "RN",
+      "reason": "Parti politique",
+      "source": "https://lepodium2027.fr/partis/rassemblement-national"
+    },
+    {
+      "site": "instagram",
+      "handle": "robert_le_bourgeois",
+      "name": "Robert Le Bourgeois",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841837"
+    },
+    {
+      "site": "instagram",
+      "handle": "sabatoualexandre",
+      "name": "Alexandre Sabatou",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794570"
+    },
+    {
+      "site": "instagram",
+      "handle": "serge_muller_off",
+      "name": "Serge Muller",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793696"
+    },
+    {
+      "site": "instagram",
+      "handle": "sophieblanc_deputee",
+      "name": "Sophie Blanc",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794886"
+    },
+    {
+      "site": "instagram",
+      "handle": "srambaudrn",
+      "name": "Stéphane Rambaud",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795966"
+    },
+    {
+      "site": "instagram",
+      "handle": "thibaut.monnier",
+      "name": "Thibaut Monnier",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA840915"
+    },
+    {
+      "site": "instagram",
+      "handle": "thomasmenage_45",
+      "name": "Thomas Ménagé",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794322"
+    },
+    {
+      "site": "instagram",
+      "handle": "tiffany_joncour",
+      "name": "Tiffany Joncour",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841749"
+    },
+    {
+      "site": "instagram",
+      "handle": "valerie.deloge",
+      "name": "Valérie Deloge",
+      "category": "RN",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "instagram",
+      "handle": "yael_menachee",
+      "name": "Yaël Ménaché",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795786"
+    },
+    {
+      "site": "instagram",
+      "handle": "yoanngillet30",
+      "name": "Yoann Gillet",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793832"
+    },
+    {
+      "site": "tiktok",
+      "handle": "bardella",
+      "name": "Bardella",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@Bardella"
+    },
+    {
+      "site": "tiktok",
+      "handle": "christophe.bentz",
+      "name": "Christophe Bentz",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://gensdinternet.fr/2023/03/02/30-politiques-francais-sur-tiktok/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "cocardeetud",
+      "name": "La Cocarde étudiante",
+      "category": "Groupes",
+      "reason": "Organisation étudiante du camp national",
+      "source": "https://www.cocardeetudiante.com/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "jordanbardella",
+      "name": "Jordan Bardella",
+      "category": "RN",
+      "reason": "Rassemblement National",
+      "source": "https://www.t-online.de/nachrichten/europawahl/id_100405796/marine-le-pen-fuer-ihn-ist-das-urteil-die-grosse-chance.html"
+    },
+    {
+      "site": "tiktok",
+      "handle": "jphtanguy",
+      "name": "Jean-Philippe Tanguy",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://gensdinternet.fr/2023/03/02/30-politiques-francais-sur-tiktok/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "kevinmauvieux",
+      "name": "Kévin Mauvieux",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://gensdinternet.fr/2023/03/02/30-politiques-francais-sur-tiktok/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "marion_marechal",
+      "name": "Marion Maréchal",
+      "category": "Autres",
+      "reason": "Remigration",
+      "source": "https://t.me/s/MarionMarechal/3398"
+    },
+    {
+      "site": "tiktok",
+      "handle": "mlp.officiel",
+      "name": "Marine Le Pen",
+      "category": "RN",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://lepodium2027.fr/marine-le-pen"
+    },
+    {
+      "site": "tiktok",
+      "handle": "rnational_off",
+      "name": "Rassemblement National",
+      "category": "RN",
+      "reason": "Parti politique",
+      "source": "https://lepodium2027.fr/partis/rassemblement-national"
+    },
+    {
+      "site": "x",
+      "handle": "21newsbe",
+      "name": "21NewsBE",
+      "category": "Autres",
+      "id": "1803504026698346496",
+      "source": "https://x.com/21NewsBE"
+    },
+    {
+      "site": "x",
+      "handle": "a_dutremble",
+      "name": "Aurélien Dutremble",
+      "category": "RN",
+      "id": "708306997637226496",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "actionfrancaise",
+      "name": "Action française",
+      "category": "Groupes",
+      "id": "76723418",
+      "reason": "Mouvement royaliste et nationaliste",
+      "source": "https://www.lyonpremiere.fr/faits-divers/lyon-le-drapeau-de-france-peint-sur-des-escaliers-a-la-croix-rousse/"
+    },
+    {
+      "site": "x",
+      "handle": "alcidedefrance",
+      "name": "Alcide de France",
+      "category": "Autres",
+      "id": "1641306819363471361",
+      "reason": "Influenceur d'extreme droite",
+      "source": "https://x.com/alcidedefrance"
+    },
+    {
+      "site": "x",
+      "handle": "alexandrejardin",
+      "name": "Alexandre Jardin",
+      "category": "Autres",
+      "id": "108928379",
+      "reason": "Ecrivain de \"Les Gueux\", influenceur pro-RN régulièrement raciste",
+      "source": "https://x.com/AlexandreJardin"
+    },
+    {
+      "site": "x",
+      "handle": "alexandreloubet",
+      "name": "Alexandre Loubet",
+      "category": "RN",
+      "id": "782118072",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "alexandrevaraut",
+      "name": "AlexandreVaraut",
+      "category": "Autres",
+      "id": "1765330447066611712",
+      "source": "https://x.com/AlexandreVaraut"
+    },
+    {
+      "site": "x",
+      "handle": "alexisjollyrn",
+      "name": "Alexis Jolly",
+      "category": "RN",
+      "id": "120521019",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "alienordep",
+      "name": "Aliénor de Pompignan",
+      "category": "Autres",
+      "id": "1812280277248434176",
+      "reason": "Journaliste Boulevard Voltaire",
+      "source": "https://c63706c8-c7b0-4ef4-8c3d-1b3ed59bea37.twstalker.com/alienordep"
+    },
+    {
+      "site": "x",
+      "handle": "amaurybucco",
+      "name": "AmauryBucco",
+      "category": "Autres",
+      "id": "799159685421076480",
+      "source": "https://x.com/AmauryBucco"
+    },
+    {
+      "site": "x",
+      "handle": "anais_marechal_",
+      "name": "Anaïs Maréchal",
+      "category": "Autres",
+      "id": "1731767747216875520",
+      "reason": "Reporter Frontières",
+      "source": "https://sotwe.twstalker.com/anais_marechal_"
+    },
+    {
+      "site": "x",
+      "handle": "andrerougeoff",
+      "name": "André Rougé",
+      "category": "RN",
+      "id": "1156135942660460544",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/197690"
+    },
+    {
+      "site": "x",
+      "handle": "angelique_ranc",
+      "name": "Angélique Ranc",
+      "category": "RN",
+      "id": "1496184473439899657",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "anne_deprovence",
+      "name": "Anne_deProvence",
+      "category": "Autres",
+      "id": "1668313816776441859",
+      "source": "https://x.com/Anne_deProvence"
+    },
+    {
+      "site": "x",
+      "handle": "annesicard1",
+      "name": "Anne Sicard",
+      "category": "RN",
+      "id": "1521865560828649473",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "antboulogne54",
+      "name": "Anthony Boulogne",
+      "category": "RN",
+      "id": "53667012",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "anthonyfavalli",
+      "name": "Anthony Favalli",
+      "category": "Autres",
+      "id": "77767449",
+      "reason": "Journaliste CNEWS",
+      "source": "https://platform.twstalker.com/anthonyfavalli"
+    },
+    {
+      "site": "x",
+      "handle": "armarvailher",
+      "name": "Ar Marvailher",
+      "category": "Autres",
+      "id": "1472269167218806797",
+      "reason": "Influenceur breton d'extrême droite",
+      "source": "https://x.com/ArMarvailher"
+    },
+    {
+      "site": "x",
+      "handle": "asabatou",
+      "name": "Alexandre Sabatou",
+      "category": "RN",
+      "id": "1222799668150665216",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "asfrigout",
+      "name": "Anne-Sophie Frigout",
+      "category": "RN",
+      "id": "51018189",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/256876"
+    },
+    {
+      "site": "x",
+      "handle": "au_evrard",
+      "name": "Auguste Evrard",
+      "category": "RN",
+      "id": "1437390141354610693",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "ballardphilippe",
+      "name": "Philippe Ballard",
+      "category": "RN",
+      "id": "1030167852",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "bart_dewever",
+      "name": "@Bart_DeWever",
+      "category": "Autres",
+      "id": "143910307",
+      "source": "https://x.com/Bart_DeWever"
+    },
+    {
+      "site": "x",
+      "handle": "bastionmediafr",
+      "name": "Bastion",
+      "category": "Groupes",
+      "id": "1718034808347992064",
+      "reason": "Media d'extreme droite",
+      "source": "https://x.com/BastionMediaFR"
+    },
+    {
+      "site": "x",
+      "handle": "bay_christophe",
+      "name": "Bay_Christophe",
+      "category": "Autres",
+      "id": "1802355173727105024",
+      "source": "https://x.com/Bay_Christophe"
+    },
+    {
+      "site": "x",
+      "handle": "bchaumeil_rn",
+      "name": "Bernard Chaumeil",
+      "category": "RN",
+      "id": "2041458254312607744",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "beaurainjose",
+      "name": "José Beaurain",
+      "category": "RN",
+      "id": "1159815717811867649",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "bentzchristophe",
+      "name": "Christophe Bentz",
+      "category": "RN",
+      "id": "93939435",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "bernardquintin_",
+      "name": "@BernardQuintin_",
+      "category": "Autres",
+      "id": "1167751907928137728",
+      "source": "https://x.com/BernardQuintin_"
+    },
+    {
+      "site": "x",
+      "handle": "bfmtv",
+      "name": "Bfmtv",
+      "category": "Autres",
+      "id": "133663801",
+      "source": "https://x.com/Bfmtv"
+    },
+    {
+      "site": "x",
+      "handle": "bildmartial",
+      "name": "Martial Bild",
+      "category": "Autres",
+      "id": "1349648845",
+      "reason": "Direction de TV Libertés",
+      "source": "https://tvl.fr/actus/a-ne-pas-manquer-martial-bild-sera-l-invite-d-eric-morillot-ce-dimanche-a-18h-lien-vers-la-video"
+    },
+    {
+      "site": "x",
+      "handle": "blairyemmanuel",
+      "name": "Emmanuel Blairy",
+      "category": "RN",
+      "id": "1487084725521063936",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "boccaletti83",
+      "name": "Frédéric Boccaletti",
+      "category": "RN",
+      "id": "345332120",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "boskodebamako",
+      "name": "BoskoDeBamako",
+      "category": "Autres",
+      "id": "1971324557861462016",
+      "source": "https://x.com/BoskoDeBamako"
+    },
+    {
+      "site": "x",
+      "handle": "boulee_boulee",
+      "name": "Boulee_Boulee",
+      "category": "Autres",
+      "id": "1947955256463077377",
+      "source": "https://x.com/Boulee_Boulee"
+    },
+    {
+      "site": "x",
+      "handle": "bouliboulibouli",
+      "name": "Bouli",
+      "category": "Autres",
+      "id": "1534763390",
+      "reason": "Ce compte tient des propos extrêmement graves.",
+      "source": "https://x.com/bouliboulibouli"
+    },
+    {
+      "site": "x",
+      "handle": "boulicitoyen",
+      "name": "Boulicitoyen",
+      "category": "Autres",
+      "id": "1898101152002326529",
+      "source": "https://x.com/Boulicitoyen"
+    },
+    {
+      "site": "x",
+      "handle": "boulizellig",
+      "name": "BouliZellig",
+      "category": "Autres",
+      "id": "2084660158722961409",
+      "source": "https://x.com/BouliZellig"
+    },
+    {
+      "site": "x",
+      "handle": "breizh_info",
+      "name": "Breizh-Info (Yann Vallerie)",
+      "category": "Autres",
+      "id": "1433016846",
+      "reason": "Site d'info régional classé à l'extrême droite identitaire ; compte de son rédacteur en chef.",
+      "source": "https://x.com/Breizh_Info"
+    },
+    {
+      "site": "x",
+      "handle": "brivael",
+      "name": "brivael",
+      "category": "Autres",
+      "id": "1874492187070615552",
+      "source": "https://x.com/brivael"
+    },
+    {
+      "site": "x",
+      "handle": "bruno_attal_",
+      "name": "Bruno Attal",
+      "category": "Autres",
+      "id": "1433048743687905280",
+      "reason": "Proche du RN",
+      "source": "https://x.com/Bruno_Attal_"
+    },
+    {
+      "site": "x",
+      "handle": "brunobilde",
+      "name": "Bruno Bilde",
+      "category": "RN",
+      "id": "1635233568",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "brunoclavet",
+      "name": "Bruno Clavet",
+      "category": "RN",
+      "id": "1089589855875727360",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "brunoretailleau",
+      "name": "Bruno Retailleau",
+      "category": "Autres",
+      "id": "408398312",
+      "reason": "Appel à mettre à bas l'état de droit en récidive",
+      "source": "https://x.com/BrunoRetailleau"
+    },
+    {
+      "site": "x",
+      "handle": "bvoltaire",
+      "name": "Boulevard Voltaire",
+      "category": "Autres",
+      "id": "586595369",
+      "reason": "Média Boulevard Voltaire",
+      "source": "https://platform.twstalker.com/gabriellecluzel"
+    },
+    {
+      "site": "x",
+      "handle": "carolinefourest",
+      "name": "Caroline Fourest",
+      "category": "Autres",
+      "id": "49292117",
+      "reason": "\"Journaliste\" d'extreme droite",
+      "source": "https://x.com/CarolineFourest"
+    },
+    {
+      "site": "x",
+      "handle": "casuslady",
+      "name": "Casus Lady",
+      "category": "Autres",
+      "id": "1533500020804165635",
+      "reason": "Influenceuse d'extreme droite",
+      "source": "https://x.com/CasusLady"
+    },
+    {
+      "site": "x",
+      "handle": "cathrimbert84",
+      "name": "Catherine Rimbert",
+      "category": "RN",
+      "id": "733415876637163520",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "causeur",
+      "name": "Causeur",
+      "category": "Autres",
+      "id": "19856081",
+      "reason": "Magazine d'Élisabeth Lévy, ligne de droite conservatrice ; classement à l'extrême droite discuté.",
+      "source": "https://x.com/Causeur"
+    },
+    {
+      "site": "x",
+      "handle": "ccolombier_rn",
+      "name": "Caroline Colombier",
+      "category": "RN",
+      "id": "1397542849122553859",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "centrejeangol",
+      "name": "@CentreJeanGol",
+      "category": "Autres",
+      "id": "1243902206",
+      "source": "https://x.com/CentreJeanGol"
+    },
+    {
+      "site": "x",
+      "handle": "cerfiafr",
+      "name": "CerfiaFR",
+      "category": "Autres",
+      "id": "971820228",
+      "source": "https://x.com/CerfiaFR"
+    },
+    {
+      "site": "x",
+      "handle": "chdornellas",
+      "name": "Charlotte d'Ornellas",
+      "category": "Autres",
+      "id": "1350083185774891010",
+      "reason": "Journaliste du JDD et chroniqueuse CNews, ex-Valeurs actuelles.",
+      "source": "https://x.com/ChdOrnellas"
+    },
+    {
+      "site": "x",
+      "handle": "cheznousoff",
+      "name": "@ChezNousOff",
+      "category": "Autres",
+      "id": "1534786162174337025",
+      "source": "https://x.com/ChezNousOff"
+    },
+    {
+      "site": "x",
+      "handle": "christine_kelly",
+      "name": "Christine Kelly",
+      "category": "Autres",
+      "id": "1072300501",
+      "reason": "Présentatrice CNEWS",
+      "source": "https://x.com/christine_kelly/with_replies"
+    },
+    {
+      "site": "x",
+      "handle": "chudeaur",
+      "name": "Roger Chudeau",
+      "category": "RN",
+      "id": "1522966362267734017",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "cnews",
+      "name": "CNEWS",
+      "category": "Autres",
+      "id": "18396319",
+      "reason": "Chaîne d’information",
+      "source": "https://x.com/CNEWS"
+    },
+    {
+      "site": "x",
+      "handle": "cnewslesoff",
+      "name": "CNEWS Les OFF",
+      "category": "Autres",
+      "id": "875283222",
+      "reason": "Communication CNEWS",
+      "source": "https://www30.twstalker.com/ThierryCabannes"
+    },
+    {
+      "site": "x",
+      "handle": "cocardeetud",
+      "name": "La Cocarde étudiante",
+      "category": "Groupes",
+      "id": "3239132428",
+      "reason": "Organisation étudiante du camp national",
+      "source": "https://www.cocardeetudiante.com/"
+    },
+    {
+      "site": "x",
+      "handle": "coll_nemesis",
+      "name": "Collectif Némésis",
+      "category": "Groupes",
+      "id": "1189178129501298688",
+      "reason": "Collectif Némésis",
+      "source": "https://www.twstalker.com/Coll_Nemesis"
+    },
+    {
+      "site": "x",
+      "handle": "commandertorenn",
+      "name": "Commander Torenn",
+      "category": "Autres",
+      "id": "1124166730568359936",
+      "reason": "Influenceur libertarien à 15k abonnés",
+      "source": "https://x.com/CommanderTorenn"
+    },
+    {
+      "site": "x",
+      "handle": "cordieralice2",
+      "name": "Alice Cordier",
+      "category": "Groupes",
+      "id": "1402910091909681160",
+      "reason": "Collectif Némésis",
+      "source": "https://politiwiki.fr/wiki/Alice_Cordier"
+    },
+    {
+      "site": "x",
+      "handle": "coupeau_maxime",
+      "name": "Maxime Coupeau",
+      "category": "Autres",
+      "id": "785579922777526272",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://platform.twstalker.com/coupeau_maxime"
+    },
+    {
+      "site": "x",
+      "handle": "cs_sed",
+      "name": "aSiCsSed",
+      "category": "RN",
+      "id": "1318280486758789125",
+      "reason": "discour anti LFI",
+      "source": "https://x.com/cs_sed"
+    },
+    {
+      "site": "x",
+      "handle": "csapin",
+      "name": "Charles Sapin",
+      "category": "Autres",
+      "id": "409408825",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://www.ojim.fr/portraits/charles-sapin/"
+    },
+    {
+      "site": "x",
+      "handle": "damienrieu",
+      "name": "Damien Rieu",
+      "category": "Autres",
+      "id": "978184280",
+      "reason": "Ex-Génération identitaire",
+      "source": "https://www.huffingtonpost.fr/politique/article/damien-rieu-ex-porte-parole-de-generation-identitaire-candidat-rn_178387.html"
+    },
+    {
+      "site": "x",
+      "handle": "davidalaime",
+      "name": "David Alaime",
+      "category": "Autres",
+      "id": "1046167840536055809",
+      "reason": "Direction éditoriale Frontières",
+      "source": "https://www.instalker.org/DavidAlaime"
+    },
+    {
+      "site": "x",
+      "handle": "davidlisnard",
+      "name": "David Lisnard",
+      "category": "Autres",
+      "id": "103918784",
+      "reason": "Candidat LR libertarien radicalisé",
+      "source": "https://x.com/davidlisnard"
+    },
+    {
+      "site": "x",
+      "handle": "destexhe",
+      "name": "@Destexhe",
+      "category": "Autres",
+      "id": "36775728",
+      "source": "https://x.com/Destexhe"
+    },
+    {
+      "site": "x",
+      "handle": "destinationcine",
+      "name": "Destination Ciné",
+      "category": "Autres",
+      "id": "568684695",
+      "reason": "Inluenceur d'extrême droite sur les positions politiques des acteurs et du cinéma - 50k abonnés",
+      "source": "https://x.com/destinationcine"
+    },
+    {
+      "site": "x",
+      "handle": "deval_eliot",
+      "name": "Eliot Deval",
+      "category": "Autres",
+      "id": "3245478640",
+      "reason": "Journaliste CNEWS",
+      "source": "https://www30.twstalker.com/ThierryCabannes"
+    },
+    {
+      "site": "x",
+      "handle": "diazinho_fox75",
+      "name": "Diazinho_fox75",
+      "category": "Autres",
+      "id": "1508765662000386054",
+      "reason": "Compte anti LFI et pro extrême droite",
+      "source": "https://x.com/Diazinho_fox75"
+    },
+    {
+      "site": "x",
+      "handle": "doramoutot",
+      "name": "Doramoutot",
+      "category": "Autres",
+      "id": "1120082742849495040",
+      "source": "https://x.com/Doramoutot"
+    },
+    {
+      "site": "x",
+      "handle": "dupontaignan",
+      "name": "Nicolas Dupont-Aignan",
+      "category": "Autres",
+      "id": "38170599",
+      "reason": "Président de Debout la France, rallié à Marine Le Pen en 2017 ; souverainiste, classement discuté.",
+      "source": "https://x.com/dupontaignan"
+    },
+    {
+      "site": "x",
+      "handle": "dvanlangenhove",
+      "name": "@DVanLangenhove",
+      "category": "Autres",
+      "id": "848784339483721728",
+      "source": "https://x.com/DVanLangenhove"
+    },
+    {
+      "site": "x",
+      "handle": "e_fouquart",
+      "name": "Emmanuel Fouquart",
+      "category": "RN",
+      "id": "4507234275",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "e2villiers",
+      "name": "E2Villiers",
+      "category": "Autres",
+      "id": "1956470191",
+      "source": "https://x.com/E2Villiers"
+    },
+    {
+      "site": "x",
+      "handle": "eciotti",
+      "name": "Éric Ciotti",
+      "category": "Autres",
+      "id": "87886754",
+      "reason": "Président de l'UDR, allié du RN à l'Assemblée depuis 2024.",
+      "source": "https://x.com/eciotti"
+    },
+    {
+      "site": "x",
+      "handle": "eddycasterman",
+      "name": "Eddy Casterman",
+      "category": "RN",
+      "id": "917502220576460801",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "elodiehuchard",
+      "name": "Élodie Huchard",
+      "category": "Autres",
+      "id": "98605435",
+      "reason": "Journaliste politique CNEWS",
+      "source": "https://mobile.twstalker.com/SniperDeDroite"
+    },
+    {
+      "site": "x",
+      "handle": "elonmusk",
+      "name": "elonmusk",
+      "category": "Autres",
+      "id": "44196397",
+      "source": "https://x.com/elonmusk"
+    },
+    {
+      "site": "x",
+      "handle": "emericsalmon",
+      "name": "Emeric Salmon",
+      "category": "RN",
+      "id": "493628470",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "europe1",
+      "name": "Europe 1",
+      "category": "Autres",
+      "id": "34570323",
+      "reason": "Radio du groupe Bolloré, ligne éditoriale alignée sur CNews depuis 2021, souvent classée à droite de la droite.",
+      "source": "https://x.com/Europe1"
+    },
+    {
+      "site": "x",
+      "handle": "evaduparc",
+      "name": "Eva Duparc",
+      "category": "Autres",
+      "id": "1624427772130066433",
+      "reason": "Journaliste Frontières",
+      "source": "https://lightbrd.com/evaduparc/media"
+    },
+    {
+      "site": "x",
+      "handle": "eynaud_marc",
+      "name": "Marc Eynaud",
+      "category": "Autres",
+      "id": "3309185985",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://workingww.twstalker.com/Eynaud_Marc"
+    },
+    {
+      "site": "x",
+      "handle": "f_desouche",
+      "name": "Fdesouche",
+      "category": "Groupes",
+      "id": "92849144",
+      "reason": "Média",
+      "source": "https://www.sotwe.com/frdesouche"
+    },
+    {
+      "site": "x",
+      "handle": "f_philippot",
+      "name": "Florian Philippot",
+      "category": "Autres",
+      "id": "472412809",
+      "reason": "Président des Patriotes, ancien vice-président du FN.",
+      "source": "https://x.com/f_philippot"
+    },
+    {
+      "site": "x",
+      "handle": "fabriceleggeri",
+      "name": "Fabrice Leggeri",
+      "category": "RN",
+      "id": "1758061038279225344",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/256872"
+    },
+    {
+      "site": "x",
+      "handle": "faycaljelil",
+      "name": "Faycal Jelil",
+      "category": "Autres",
+      "id": "836890014495698944",
+      "reason": "Influenceur raciste à 20k abonnés",
+      "source": "https://x.com/FaycalJelil"
+    },
+    {
+      "site": "x",
+      "handle": "fbblackler",
+      "name": "Florence Bergeaud-Backler",
+      "category": "Autres",
+      "id": "128159103",
+      "reason": "Chercheuse au CNRS qui utilise sa position pour appuyer la thèse complotiste des frères musulmans",
+      "source": "https://x.com/FBBlackler"
+    },
+    {
+      "site": "x",
+      "handle": "fdw_vb",
+      "name": "@FDW_VB",
+      "category": "Autres",
+      "id": "142646856",
+      "source": "https://x.com/FDW_VB"
+    },
+    {
+      "site": "x",
+      "handle": "flo_joubert",
+      "name": "Florence Joubert",
+      "category": "RN",
+      "id": "1263385251176484864",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "francelorho",
+      "name": "Marie-France Lorho",
+      "category": "RN",
+      "id": "902788871460724740",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "franckallisio",
+      "name": "Franck Allisio",
+      "category": "RN",
+      "id": "138810824",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "franckentheo",
+      "name": "@FranckenTheo",
+      "category": "Autres",
+      "id": "951258554",
+      "source": "https://x.com/FranckenTheo"
+    },
+    {
+      "site": "x",
+      "handle": "frdesouche",
+      "name": "Pierre Sautarel",
+      "category": "Autres",
+      "id": "402223330",
+      "reason": "Fdesouche",
+      "source": "https://www.lemonde.fr/pixels/article/2024/07/08/legislatives-2024-chez-les-influenceurs-la-gauche-respire-l-extreme-droite-fulmine_6247903_4408996.html"
+    },
+    {
+      "site": "x",
+      "handle": "fredericvos",
+      "name": "Frédéric-Pierre Vos",
+      "category": "RN",
+      "id": "1801005818378104834",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "frontieresmedia",
+      "name": "Frontières",
+      "category": "Autres",
+      "id": "1357358878674059265",
+      "reason": "Média Frontières",
+      "source": "https://www.sotwe.com/frontieresmedia"
+    },
+    {
+      "site": "x",
+      "handle": "g_dussausaye",
+      "name": "Gaëtan Dussausaye",
+      "category": "RN",
+      "id": "1098578904",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "g_peltier",
+      "name": "G_Peltier",
+      "category": "Autres",
+      "id": "239867102",
+      "source": "https://x.com/G_Peltier"
+    },
+    {
+      "site": "x",
+      "handle": "gabriellecluzel",
+      "name": "Gabrielle Cluzel",
+      "category": "Autres",
+      "id": "1166120125",
+      "reason": "Boulevard Voltaire · CNEWS",
+      "source": "https://platform.twstalker.com/gabriellecluzel"
+    },
+    {
+      "site": "x",
+      "handle": "garenshn",
+      "name": "Garen Shnorhokian",
+      "category": "Autres",
+      "id": "1640655372",
+      "reason": "Journaliste Frontières",
+      "source": "https://cdjm.org/files/avis/25-198.pdf"
+    },
+    {
+      "site": "x",
+      "handle": "gauthierbret",
+      "name": "Gauthier Le Bret",
+      "category": "Autres",
+      "id": "1165570989490659329",
+      "reason": "Présentateur CNEWS",
+      "source": "https://mobile.x.com/GauthierBret/with_replies"
+    },
+    {
+      "site": "x",
+      "handle": "geoffroylejeune",
+      "name": "Geoffroy Lejeune",
+      "category": "Autres",
+      "id": "128698096",
+      "reason": "Directeur du JDD, ancien directeur de Valeurs actuelles.",
+      "source": "https://x.com/GeoffroyLejeune"
+    },
+    {
+      "site": "x",
+      "handle": "giacomofirenze",
+      "name": "Giacomo Firenze",
+      "category": "RN",
+      "id": "1972600003341295616",
+      "reason": "Compte fasciste italien/français - 5k abonnés",
+      "source": "https://x.com/GiacomoFirenze"
+    },
+    {
+      "site": "x",
+      "handle": "gilbertcollard",
+      "name": "Gilbert Collard",
+      "category": "Autres",
+      "id": "471163803",
+      "reason": "Ancien député et eurodéputé RN, rallié à Reconquête en 2022.",
+      "source": "https://x.com/GilbertCollard"
+    },
+    {
+      "site": "x",
+      "handle": "giorgiameloni",
+      "name": "GiorgiaMeloni",
+      "category": "Autres",
+      "id": "130537001",
+      "source": "https://x.com/GiorgiaMeloni"
+    },
+    {
+      "site": "x",
+      "handle": "gisele_lelouis",
+      "name": "Gisèle Lelouis",
+      "category": "RN",
+      "id": "1464671963121692672",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "glbouchez",
+      "name": "@GLBouchez",
+      "category": "Autres",
+      "id": "194514787",
+      "source": "https://x.com/GLBouchez"
+    },
+    {
+      "site": "x",
+      "handle": "grangierge",
+      "name": "Géraldine Grangier",
+      "category": "RN",
+      "id": "1238476209291476993",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "grisetcatherine",
+      "name": "Catherine Griset",
+      "category": "RN",
+      "id": "1090919392840503296",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/94649"
+    },
+    {
+      "site": "x",
+      "handle": "groupern_off",
+      "name": "Groupe Rassemblement National à l’Assemblée",
+      "category": "Groupes",
+      "id": "1579863270399287296",
+      "reason": "Groupe RN à l’Assemblée nationale",
+      "source": "https://nosparlementaires.fr/groupes/PO845401"
+    },
+    {
+      "site": "x",
+      "handle": "gtsytb",
+      "name": "GTSytb",
+      "category": "Autres",
+      "id": "1572294335760142339",
+      "source": "https://x.com/GTSytb"
+    },
+    {
+      "site": "x",
+      "handle": "guillaume_bigot",
+      "name": "Guillaume Bigot",
+      "category": "RN",
+      "id": "2194423693",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "guillaume_fcqt",
+      "name": "Guillaume Foucqueteau",
+      "category": "Autres",
+      "id": "1839558329195958272",
+      "reason": "Reporter Frontières",
+      "source": "https://mobile.twstalker.com/Guillaume_fcqt"
+    },
+    {
+      "site": "x",
+      "handle": "guydhaeseleervb",
+      "name": "@GuydhaeseleerVB",
+      "category": "Autres",
+      "id": "1872209575",
+      "source": "https://x.com/GuydhaeseleerVB"
+    },
+    {
+      "site": "x",
+      "handle": "gwgoldnadel",
+      "name": "Gilles-William Goldnadel",
+      "category": "Autres",
+      "id": "3373762791",
+      "reason": "Avocat et chroniqueur CNews / Europe 1 ; classement discuté.",
+      "source": "https://x.com/GWGoldnadel"
+    },
+    {
+      "site": "x",
+      "handle": "h2lepinau",
+      "name": "Hervé de Lépinau",
+      "category": "RN",
+      "id": "1637687536502951939",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "helenelaportern",
+      "name": "Hélène Laporte",
+      "category": "RN",
+      "id": "789179329854869507",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "ilangabet",
+      "name": "IlanGabet",
+      "category": "Autres",
+      "id": "1481064763211886592",
+      "source": "https://x.com/IlanGabet"
+    },
+    {
+      "site": "x",
+      "handle": "imambouli",
+      "name": "imambouli",
+      "category": "Autres",
+      "id": "1946222929282281472",
+      "source": "https://x.com/imambouli"
+    },
+    {
+      "site": "x",
+      "handle": "incorrectibles",
+      "name": "Les Incorrectibles",
+      "category": "Autres",
+      "id": "1061483105079435264",
+      "reason": "Émission Les Incorrectibles",
+      "source": "https://tvl.fr/actus/a-ne-pas-manquer-martial-bild-sera-l-invite-d-eric-morillot-ce-dimanche-a-18h-lien-vers-la-video"
+    },
+    {
+      "site": "x",
+      "handle": "institutiliade",
+      "name": "Institut Iliade",
+      "category": "Groupes",
+      "id": "2580283244",
+      "reason": "Institut identitaire ; publications sur la remigration",
+      "source": "https://www.dominiquevenner.fr/wp-content/uploads/2014/12/CP-du-21.12.2014_Lancement-du-site-internet-et-des-activites.pdf"
+    },
+    {
+      "site": "x",
+      "handle": "irisbridier",
+      "name": "Iris Bridier",
+      "category": "Autres",
+      "id": "1354419839029407746",
+      "reason": "Journaliste Boulevard Voltaire",
+      "source": "https://www.bvoltaire.fr/reportage-raphael-renove-ces-statues-que-lon-ne-regardait-plus/"
+    },
+    {
+      "site": "x",
+      "handle": "ivanrioufol",
+      "name": "Ivan Rioufol",
+      "category": "Autres",
+      "id": "73383656",
+      "reason": "Chroniqueur CNEWS",
+      "source": "https://www30.twstalker.com/ThierryCabannes"
+    },
+    {
+      "site": "x",
+      "handle": "j_bardella",
+      "name": "Jordan Bardella",
+      "category": "RN",
+      "id": "1499400284",
+      "reason": "Rassemblement National",
+      "source": "https://x.com/J_Bardella/with_replies"
+    },
+    {
+      "site": "x",
+      "handle": "j_rancoule",
+      "name": "Julien Rancoule",
+      "category": "RN",
+      "id": "4067518516",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jdvance",
+      "name": "JDVance",
+      "category": "Autres",
+      "id": "1542228578",
+      "source": "https://x.com/JDVance"
+    },
+    {
+      "site": "x",
+      "handle": "jdvancejdvance",
+      "name": "JDVanceJDVance",
+      "category": "Autres",
+      "source": "https://x.com/JDVanceJDVance"
+    },
+    {
+      "site": "x",
+      "handle": "jean_bexon",
+      "name": "Jean Bexon",
+      "category": "Autres",
+      "id": "984148251401248770",
+      "reason": "Journaliste Boulevard Voltaire",
+      "source": "https://citoyen-vigilant.eu/blog/bexon-fichier-8-juillet-blocages-0352"
+    },
+    {
+      "site": "x",
+      "handle": "jean_de_lacoste",
+      "name": "Jean de Lacoste Lareymondie",
+      "category": "Autres",
+      "id": "1264246825588047872",
+      "reason": "Journaliste CNEWS",
+      "source": "https://source.twstalker.com/jean_de_lacoste"
+    },
+    {
+      "site": "x",
+      "handle": "jeanmessiha",
+      "name": "Jean Messiha",
+      "category": "Autres",
+      "id": "456777022",
+      "reason": "Ancien cadre du RN puis soutien d'Éric Zemmour, président de l'Institut Apollon.",
+      "source": "https://x.com/JeanMessiha"
+    },
+    {
+      "site": "x",
+      "handle": "jerome_buisson",
+      "name": "Jérôme Buisson",
+      "category": "RN",
+      "id": "125094848",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jlechanteux",
+      "name": "Julie Lechanteux",
+      "category": "RN",
+      "id": "2909481429",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jleonardelli_",
+      "name": "Julien Leonardelli",
+      "category": "RN",
+      "id": "2734007490",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/256895"
+    },
+    {
+      "site": "x",
+      "handle": "jllacapelle",
+      "name": "Jean-Lin Lacapelle",
+      "category": "RN",
+      "id": "95599164",
+      "reason": "Cadre du Rassemblement national",
+      "source": "https://jeanlinlacapelle.fr/cnews/une-nouvelle-etape-pour-preparer-une-majorite-parlementaire/"
+    },
+    {
+      "site": "x",
+      "handle": "jmlepain_off",
+      "name": "JMLePain_Off",
+      "category": "Autres",
+      "id": "2070604133325746176",
+      "source": "https://x.com/JMLePain_Off"
+    },
+    {
+      "site": "x",
+      "handle": "jocelyndessigny",
+      "name": "Jocelyn Dessigny",
+      "category": "RN",
+      "id": "759014652332249088",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "joellemelinrn",
+      "name": "Joëlle Mélin",
+      "category": "RN",
+      "id": "2362654915",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jonathangery_an",
+      "name": "Jonathan Gery",
+      "category": "RN",
+      "id": "1813579349959839745",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jordan_guitton",
+      "name": "Jordan Guitton",
+      "category": "RN",
+      "id": "1318978447",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jordanflrtn",
+      "name": "Jordan Florentin",
+      "category": "Autres",
+      "id": "2715673193",
+      "reason": "Frontières · CNEWS",
+      "source": "https://jilbab.twstalker.com/JordanFlrtn"
+    },
+    {
+      "site": "x",
+      "handle": "jorysb3",
+      "name": "Jorys Bovet",
+      "category": "RN",
+      "id": "1453357110255931399",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jphtanguy",
+      "name": "Jean-Philippe Tanguy",
+      "category": "RN",
+      "id": "288854464",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jrechagneux",
+      "name": "Julie Rechagneux",
+      "category": "RN",
+      "id": "497172391",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/256882"
+    },
+    {
+      "site": "x",
+      "handle": "jrochedy",
+      "name": "Julien Rochedy",
+      "category": "Autres",
+      "id": "163951423",
+      "reason": "Ex-FNJ",
+      "source": "https://www.lemonde.fr/pixels/article/2024/07/08/legislatives-2024-chez-les-influenceurs-la-gauche-respire-l-extreme-droite-fulmine_6247903_4408996.html"
+    },
+    {
+      "site": "x",
+      "handle": "jsanchez_rn",
+      "name": "Julien Sanchez",
+      "category": "RN",
+      "id": "79458791",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/88552"
+    },
+    {
+      "site": "x",
+      "handle": "jules_laurans",
+      "name": "Jules Laurans",
+      "category": "Autres",
+      "id": "1666535186517950466",
+      "reason": "Rédaction Frontières",
+      "source": "https://ssstwitterx.app/jules_laurans/"
+    },
+    {
+      "site": "x",
+      "handle": "julestorres17",
+      "name": "Jules Torres",
+      "category": "Autres",
+      "id": "2971475529",
+      "reason": "CNEWS · Frontières",
+      "source": "https://d46rckpsl2ks7laj5lfg.twstalker.com/JulesTorres17"
+    },
+    {
+      "site": "x",
+      "handle": "julien_limongi",
+      "name": "Julien Limongi",
+      "category": "RN",
+      "id": "1599411938416533506",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "julienbahloul",
+      "name": "julienbahloul",
+      "category": "Autres",
+      "id": "103223236",
+      "source": "https://x.com/julienbahloul"
+    },
+    {
+      "site": "x",
+      "handle": "julienchieze",
+      "name": "JulienChieze",
+      "category": "Autres",
+      "id": "253296586",
+      "source": "https://x.com/JulienChieze"
+    },
+    {
+      "site": "x",
+      "handle": "juliengabarron",
+      "name": "Julien Gabarron",
+      "category": "RN",
+      "id": "1627372197655322624",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "julienodoul",
+      "name": "Julien Odoul",
+      "category": "RN",
+      "id": "440914834",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "juliettebriens",
+      "name": "Juliette Briens",
+      "category": "Autres",
+      "id": "1572230584008671232",
+      "reason": "L’Incorrect · chroniqueuse",
+      "source": "https://lcp.fr/sites/lcp.fr/files/2026-05/l17b2698-t1_rapport-enquete.pdf"
+    },
+    {
+      "site": "x",
+      "handle": "jussetain",
+      "name": "jussetain",
+      "category": "Autres",
+      "id": "142747796",
+      "source": "https://x.com/jussetain"
+    },
+    {
+      "site": "x",
+      "handle": "jylgallou",
+      "name": "Jean-Yves Le Gallou",
+      "category": "Autres",
+      "id": "2148731538",
+      "reason": "Animateur TV Libertés · Polémia",
+      "source": "https://www.polemia.com/wp-content/uploads/2025/04/Jugement-Nikolic-c-Le-Gallou.pdf"
+    },
+    {
+      "site": "x",
+      "handle": "jyyyceoff_",
+      "name": "JYYYCE",
+      "category": "RN",
+      "id": "1535366512080560131",
+      "reason": "Compte anti LFI",
+      "source": "https://x.com/jyyyceoff_"
+    },
+    {
+      "site": "x",
+      "handle": "k_pfeffer",
+      "name": "Kévin Pfeffer",
+      "category": "RN",
+      "id": "22993455",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "kbgstream",
+      "name": "Kroc Blanc",
+      "category": "Autres",
+      "id": "1409073772133601283",
+      "reason": "Rappeur raciste",
+      "source": "https://x.com/KbgStream"
+    },
+    {
+      "site": "x",
+      "handle": "kevindm75",
+      "name": "KevinDM75",
+      "category": "Autres",
+      "id": "1539373821764968450",
+      "source": "https://x.com/KevinDM75"
+    },
+    {
+      "site": "x",
+      "handle": "knafo_sarah",
+      "name": "Sarah Knafo",
+      "category": "Reconquête",
+      "id": "1111901164487000064",
+      "reason": "Reconquête",
+      "source": "https://mobile.twstalker.com/Reconquete_off"
+    },
+    {
+      "site": "x",
+      "handle": "laurenceferrari",
+      "name": "Laurence Ferrari",
+      "category": "Autres",
+      "id": "72343264",
+      "reason": "Présentatrice CNEWS",
+      "source": "https://nitter.jaydenha.uk/LaurenceFerrari"
+    },
+    {
+      "site": "x",
+      "handle": "laurentobertone",
+      "name": "Laurent Obertone",
+      "category": "Autres",
+      "id": "2229879344",
+      "reason": "Auteur",
+      "source": "https://x.com/LaurentObertone"
+    },
+    {
+      "site": "x",
+      "handle": "lauriane_bd",
+      "name": "Lauriane Bernard",
+      "category": "Autres",
+      "id": "1477951452744232964",
+      "reason": "Journaliste Frontières",
+      "source": "https://testing-when.twstalker.com/Lauriane_Bd"
+    },
+    {
+      "site": "x",
+      "handle": "lbleublancrouge",
+      "name": "Bleu Blanc Rouge",
+      "category": "Autres",
+      "id": "1782390679768829952",
+      "reason": "Influenceur d'extreme droite",
+      "source": "https://x.com/LBleuBlancRouge"
+    },
+    {
+      "site": "x",
+      "handle": "le_crapaud47",
+      "name": "Le_Crapaud47",
+      "category": "Autres",
+      "id": "969933528",
+      "source": "https://x.com/Le_Crapaud47"
+    },
+    {
+      "site": "x",
+      "handle": "le_jarl",
+      "name": "@le_jarl",
+      "category": "Autres",
+      "id": "1122538444734050306",
+      "source": "https://x.com/le_jarl"
+    },
+    {
+      "site": "x",
+      "handle": "lebourgeois7610",
+      "name": "Robert Le Bourgeois",
+      "category": "RN",
+      "id": "1802995739536003072",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "legaymaxime1",
+      "name": "Maxime Legay",
+      "category": "Autres",
+      "id": "1240284223308775424",
+      "reason": "Journaliste politique CNEWS",
+      "source": "https://platform.twstalker.com/vivelafrance128"
+    },
+    {
+      "site": "x",
+      "handle": "lejdd",
+      "name": "Le JDD",
+      "category": "Autres",
+      "id": "49678509",
+      "reason": "Hebdomadaire du groupe Bolloré, dirigé depuis 2023 par Geoffroy Lejeune (ex-Valeurs actuelles).",
+      "source": "https://x.com/leJDD"
+    },
+    {
+      "site": "x",
+      "handle": "linfiltremedia",
+      "name": "L’Infiltré",
+      "category": "Autres",
+      "id": "2096604207293820936",
+      "reason": "Média Frontières",
+      "source": "https://nitter.jaydenha.uk/linfiltremedia/with_replies"
+    },
+    {
+      "site": "x",
+      "handle": "lionel_tivoli",
+      "name": "Lionel Tivoli",
+      "category": "RN",
+      "id": "2164568108",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "ljacobelli",
+      "name": "Laurent Jacobelli",
+      "category": "RN",
+      "id": "2784005936",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "lnatifs",
+      "name": "Les Natifs",
+      "category": "Groupes",
+      "id": "1458394769579778048",
+      "reason": "Collectif identitaire",
+      "source": "https://universitepopulairetoulouse.fr/IMG/pdf/mediapart_le_racisme_sans_fard_des_identitaires_qui_ont_vise_aya_nakamura.pdf"
+    },
+    {
+      "site": "x",
+      "handle": "loreine_lad",
+      "name": "Loreine_LAD",
+      "category": "RN",
+      "id": "1744403931646558208",
+      "reason": "Tweet racistes, discours mensongers sur la gauche. J'ai mis un exemple de source, mais y'en a un paquet sur son compte",
+      "source": "https://x.com/Loreine_LAD"
+    },
+    {
+      "site": "x",
+      "handle": "louis_aliot",
+      "name": "Louis Aliot",
+      "category": "RN",
+      "id": "316956459",
+      "reason": "Maire de Perpignan, cadre RN",
+      "source": "https://www.lemonde.fr/politique/article/2017/03/15/un-documentaire-fait-ressurgir-les-vieux-demons-du-front-national_5992909_823448.html"
+    },
+    {
+      "site": "x",
+      "handle": "louise_morice_",
+      "name": "Louise Morice",
+      "category": "Autres",
+      "id": "1670085105375649793",
+      "reason": "Journaliste d'extreme droite",
+      "source": "https://x.com/louise_morice_"
+    },
+    {
+      "site": "x",
+      "handle": "louiselzeu",
+      "name": "Louise Montangon",
+      "category": "RN",
+      "id": "1221332420978532353",
+      "reason": "Étudiante militante rn/uni qui passe sur les plateaux télé pour dire de la merde en étant condescendante (très gros frond)",
+      "source": "https://x.com/louiselzeu"
+    },
+    {
+      "site": "x",
+      "handle": "maaroufi9",
+      "name": "@Maaroufi9",
+      "category": "Autres",
+      "id": "563148050",
+      "source": "https://x.com/Maaroufi9"
+    },
+    {
+      "site": "x",
+      "handle": "magelya777",
+      "name": "Magelya",
+      "category": "Autres",
+      "id": "1634020046082039808",
+      "reason": "Influenceuse fasciste",
+      "source": "https://x.com/magelya777"
+    },
+    {
+      "site": "x",
+      "handle": "maglincorrect",
+      "name": "L’Incorrect",
+      "category": "Autres",
+      "id": "883736338540965890",
+      "reason": "Magazine L’Incorrect",
+      "source": "https://entrevue.fr/en/elections/patrick-cohen-et-thomas-legrand-pris-en-flagrant-delit-de-collusion-avec-le-ps-et-de-complot-contre-dati/"
+    },
+    {
+      "site": "x",
+      "handle": "mandrouet",
+      "name": "Mathilde Androuët",
+      "category": "RN",
+      "id": "1176830490894118913",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/197691"
+    },
+    {
+      "site": "x",
+      "handle": "marcdefleurian",
+      "name": "Marc de Fleurian",
+      "category": "RN",
+      "id": "1181874470564384774",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "marchiomatthieu",
+      "name": "Matthieu Marchio",
+      "category": "RN",
+      "id": "1173524445169934336",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "margueritestern",
+      "name": "@margueritestern",
+      "category": "Autres",
+      "id": "320896444",
+      "source": "https://x.com/margueritestern"
+    },
+    {
+      "site": "x",
+      "handle": "marine_hamelet",
+      "name": "Marine Hamelet",
+      "category": "RN",
+      "id": "1160270849871613953",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "marionmarechal",
+      "name": "Marion Maréchal",
+      "category": "Autres",
+      "id": "520449734",
+      "reason": "Remigration",
+      "source": "https://www.lemonde.fr/politique/article/2024/08/07/l-identitaire-philippe-vardon-de-retour-dans-l-orbite-du-rassemblement-national_6272268_823448.html"
+    },
+    {
+      "site": "x",
+      "handle": "mathildeklotgen",
+      "name": "Mathilde Klötgen",
+      "category": "Autres",
+      "id": "856207970560077825",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://workingww.twstalker.com/mathildeklotgen"
+    },
+    {
+      "site": "x",
+      "handle": "matthiasrn",
+      "name": "Matthias Renault",
+      "category": "RN",
+      "id": "1590736934640517122",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "maudpk",
+      "name": "Maud Koffler",
+      "category": "Autres",
+      "id": "572861750",
+      "reason": "Journaliste, ancienne collaboratrice de Frontières",
+      "source": "https://x.com/MaudPK"
+    },
+    {
+      "site": "x",
+      "handle": "mauvieuxkevin",
+      "name": "Kévin Mauvieux",
+      "category": "RN",
+      "id": "898253869",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "maximeamblard5",
+      "name": "Maxime Amblard",
+      "category": "RN",
+      "id": "1431646297744887816",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "mbockcote",
+      "name": "Mathieu Bock-Côté",
+      "category": "Autres",
+      "id": "203311649",
+      "reason": "Chroniqueur CNEWS",
+      "source": "https://www30.twstalker.com/ThierryCabannes"
+    },
+    {
+      "site": "x",
+      "handle": "meurin_p",
+      "name": "Pierre Meurin",
+      "category": "RN",
+      "id": "1459094447753469964",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "meyerhabib",
+      "name": "Meyerhabib",
+      "category": "Autres",
+      "id": "1020378311262957569",
+      "source": "https://x.com/Meyerhabib"
+    },
+    {
+      "site": "x",
+      "handle": "michelguiniot",
+      "name": "Michel Guiniot",
+      "category": "RN",
+      "id": "106782026",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "michelonfray4",
+      "name": "@MichelOnfray4",
+      "category": "Autres",
+      "id": "1055538130013564928",
+      "source": "https://x.com/MichelOnfray4"
+    },
+    {
+      "site": "x",
+      "handle": "michlemartinez3",
+      "name": "Michèle Martinez",
+      "category": "RN",
+      "id": "1315334499077681153",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "migeotm",
+      "name": "MigeotM",
+      "category": "Autres",
+      "id": "1137880044",
+      "source": "https://x.com/MigeotM"
+    },
+    {
+      "site": "x",
+      "handle": "milafique",
+      "name": "Mila Orriols",
+      "category": "Autres",
+      "id": "1272166368088113157",
+      "reason": "Influenceuse",
+      "source": "https://x.com/milafique"
+    },
+    {
+      "site": "x",
+      "handle": "mlp_officiel",
+      "name": "Marine Le Pen",
+      "category": "RN",
+      "id": "217749896",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "monnierthibaut",
+      "name": "Thibaut Monnier",
+      "category": "RN",
+      "id": "1364165334",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "morandiniblog",
+      "name": "Jean-Marc Morandini",
+      "category": "Autres",
+      "id": "35287180",
+      "reason": "Présentateur CNEWS",
+      "source": "https://workingww.twstalker.com/PascalPraud"
+    },
+    {
+      "site": "x",
+      "handle": "mvalet_officiel",
+      "name": "Matthieu Valet",
+      "category": "RN",
+      "id": "1432839907559542785",
+      "reason": "Porte-parole du RN",
+      "source": "https://x.com/mvalet_officiel"
+    },
+    {
+      "site": "x",
+      "handle": "nadiageerts",
+      "name": "@NadiaGeerts",
+      "category": "Autres",
+      "id": "218856598",
+      "source": "https://x.com/NadiaGeerts"
+    },
+    {
+      "site": "x",
+      "handle": "nadinelechonrn",
+      "name": "Nadine Lechon",
+      "category": "RN",
+      "id": "1817912895394701312",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "naimamfaddel",
+      "name": "naimamfaddel",
+      "category": "Autres",
+      "id": "1254359274",
+      "source": "https://x.com/naimamfaddel"
+    },
+    {
+      "site": "x",
+      "handle": "nathcarvalho91",
+      "name": "Nathalie Da Conceicao Carvalho",
+      "category": "RN",
+      "id": "830514488415760386",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "nation_x_",
+      "name": "@Nation_x_",
+      "category": "Autres",
+      "id": "2036145956501200896",
+      "source": "https://x.com/Nation_x_"
+    },
+    {
+      "site": "x",
+      "handle": "nicolasboutin11",
+      "name": "Nicolas Boutin",
+      "category": "Autres",
+      "id": "1326646479197515784",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://kyawgyii.twstalker.com/NicolasBoutin11"
+    },
+    {
+      "site": "x",
+      "handle": "nmeizonnet",
+      "name": "Nicolas Meizonnet",
+      "category": "RN",
+      "id": "773854656",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "norbert_fr",
+      "name": "Constantin - Nobert",
+      "category": "Autres",
+      "id": "1674689088450973696",
+      "reason": "Influenceur fasciste",
+      "source": "https://x.com/norbert_fr"
+    },
+    {
+      "site": "x",
+      "handle": "objectifremi",
+      "name": "Objectif Remigration",
+      "category": "Groupes",
+      "id": "2059337030698496000",
+      "reason": "Remigration",
+      "source": "https://citoyen-vigilant.eu/blog/jeunesse-reve-remigration-objectifremi-0163"
+    },
+    {
+      "site": "x",
+      "handle": "officielsoral",
+      "name": "Alain Soral",
+      "category": "Autres",
+      "id": "1861453307442593792",
+      "reason": "Fondateur d’Égalité et Réconciliation",
+      "source": "https://x.com/officielsoral"
+    },
+    {
+      "site": "x",
+      "handle": "omertamedia",
+      "name": "Omerta",
+      "category": "Autres",
+      "id": "1222950520773599233",
+      "reason": "Média participatif régulièrement classé à l'extrême droite.",
+      "source": "https://x.com/omertamedia"
+    },
+    {
+      "site": "x",
+      "handle": "p_condomines",
+      "name": "Pauline Condomines",
+      "category": "Autres",
+      "id": "1777970574943211520",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://mobile.twstalker.com/p_condomines"
+    },
+    {
+      "site": "x",
+      "handle": "parmentier_rn",
+      "name": "Caroline Parmentier",
+      "category": "RN",
+      "id": "1073862562792521729",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "pascalpraud",
+      "name": "Pascal Praud",
+      "category": "Autres",
+      "id": "416221365",
+      "reason": "Présentateur CNEWS",
+      "source": "https://x.com/PascalPraud/with_replies"
+    },
+    {
+      "site": "x",
+      "handle": "ph_schreck",
+      "name": "Philippe Schreck",
+      "category": "RN",
+      "id": "1100772609321512961",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "phdevilliers",
+      "name": "Philippe de Villiers",
+      "category": "Autres",
+      "id": "1949069192",
+      "reason": "Fondateur du MPF, figure de la droite souverainiste et identitaire.",
+      "source": "https://x.com/PhdeVilliers"
+    },
+    {
+      "site": "x",
+      "handle": "phlottiaux",
+      "name": "Philippe Lottiaux",
+      "category": "RN",
+      "id": "970259667434770437",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "pierre_gtil",
+      "name": "Pierre Gentillet",
+      "category": "Autres",
+      "id": "1691421426",
+      "reason": "Chroniqueur CNEWS · candidat RN en 2024",
+      "source": "https://www.lemonde.fr/politique/article/2024/07/04/legislatives-2024-pierre-gentillet-un-russophile-dans-le-berry_6246778_823448.html"
+    },
+    {
+      "site": "x",
+      "handle": "pnbsbb",
+      "name": "Parti National Breton",
+      "category": "Groupes",
+      "id": "1671375070072287232",
+      "reason": "Parti politique neo-nazi",
+      "source": "https://x.com/pnbsbb"
+    },
+    {
+      "site": "x",
+      "handle": "pr_thionnet",
+      "name": "Pierre-Romain Thionnet",
+      "category": "RN",
+      "id": "1122957390",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/200345"
+    },
+    {
+      "site": "x",
+      "handle": "psyguy007",
+      "name": "Wolf",
+      "category": "Autres",
+      "id": "1595156393153142785",
+      "reason": "Influenceur d'extreme droite",
+      "source": "https://x.com/PsyGuy007"
+    },
+    {
+      "site": "x",
+      "handle": "psyhodelikus",
+      "name": "@Psyhodelikus",
+      "category": "Autres",
+      "id": "400618198",
+      "source": "https://x.com/Psyhodelikus"
+    },
+    {
+      "site": "x",
+      "handle": "quentingerard_",
+      "name": "Quentin Gérard",
+      "category": "Autres",
+      "id": "1186915070267314176",
+      "reason": "JDD · CNEWS",
+      "source": "https://msbrewwc.twstalker.com/quentingerard_"
+    },
+    {
+      "site": "x",
+      "handle": "quoicoubologue",
+      "name": "quoicoubologue",
+      "category": "Autres",
+      "id": "1695095733681033216",
+      "source": "https://x.com/quoicoubologue"
+    },
+    {
+      "site": "x",
+      "handle": "radouan_kourak",
+      "name": "Radouan Kourak",
+      "category": "Autres",
+      "id": "943227398975303680",
+      "reason": "Chroniqueur CNEWS",
+      "source": "https://www30.twstalker.com/radouan_kourak"
+    },
+    {
+      "site": "x",
+      "handle": "raphpaillot",
+      "name": "raphpaillot",
+      "category": "Autres",
+      "id": "1654172428472401920",
+      "source": "https://x.com/raphpaillot"
+    },
+    {
+      "site": "x",
+      "handle": "raptorvswild",
+      "name": "Le raptor",
+      "category": "RN",
+      "id": "3042982083",
+      "reason": "influenceur connu pour être d'extreme droite, en plus de ne pas croire au rechauffement climatique.",
+      "source": "https://x.com/RaptorVsWild"
+    },
+    {
+      "site": "x",
+      "handle": "realdonaldtrump",
+      "name": "realDonaldTrump",
+      "category": "Autres",
+      "id": "25073877",
+      "source": "https://x.com/realDonaldTrump"
+    },
+    {
+      "site": "x",
+      "handle": "reconquete_off",
+      "name": "Reconquête",
+      "category": "Reconquête",
+      "id": "1466151854425923585",
+      "reason": "Parti politique",
+      "source": "https://mobile.twstalker.com/Reconquete_off"
+    },
+    {
+      "site": "x",
+      "handle": "renaudcamus",
+      "name": "Renaud Camus",
+      "category": "Autres",
+      "id": "1044928850",
+      "reason": "Remigration",
+      "source": "https://www.renaud-camus.net/journal/2021/02/16"
+    },
+    {
+      "site": "x",
+      "handle": "rigault_charles",
+      "name": "Charles Rigault",
+      "category": "Autres",
+      "id": "1964646745792495616",
+      "reason": "Journaliste Frontières",
+      "source": "https://www30.twstalker.com/rigault_charles"
+    },
+    {
+      "site": "x",
+      "handle": "ripostelaique",
+      "name": "Riposte Laïque",
+      "category": "Autres",
+      "id": "965712554",
+      "reason": "Site classé à l'extrême droite. Compte X à vérifier (peu d'abonnés, peut-être non officiel).",
+      "source": "https://x.com/RiposteLaique"
+    },
+    {
+      "site": "x",
+      "handle": "rn_paca",
+      "name": "RN Provence-Alpes-Côte d’Azur",
+      "category": "RN",
+      "id": "3359390985",
+      "reason": "Groupe régional RN",
+      "source": "https://sotwe.twstalker.com/rn_paca"
+    },
+    {
+      "site": "x",
+      "handle": "rnational_idf",
+      "name": "RN Île-de-France",
+      "category": "RN",
+      "id": "4821062745",
+      "reason": "Fédération RN",
+      "source": "https://platform.twstalker.com/RNational_IDF"
+    },
+    {
+      "site": "x",
+      "handle": "rnational_off",
+      "name": "Rassemblement National",
+      "category": "RN",
+      "id": "78085410",
+      "reason": "Parti politique",
+      "source": "https://www.lemonde.fr/les-decodeurs/article/2024/07/09/legislatives-2024-pourquoi-le-rn-qui-revendique-la-majorite-des-suffrages-est-seulement-la-troisieme-force-politique-a-l-assemblee_6248243_4355770.html"
+    },
+    {
+      "site": "x",
+      "handle": "rngrandest",
+      "name": "RN Grand Est",
+      "category": "RN",
+      "id": "493091464",
+      "reason": "Fédération RN",
+      "source": "https://testing-when.twstalker.com/RNGrandEst"
+    },
+    {
+      "site": "x",
+      "handle": "roullaudbeatric",
+      "name": "Béatrice Roullaud",
+      "category": "RN",
+      "id": "290794764",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "rsateddyboy",
+      "name": "RsaTeddyboy",
+      "category": "Autres",
+      "id": "747053203846475776",
+      "source": "https://x.com/RsaTeddyboy"
+    },
+    {
+      "site": "x",
+      "handle": "rstainville",
+      "name": "Raphaël Stainville",
+      "category": "Autres",
+      "id": "389731790",
+      "reason": "JDD · CNEWS",
+      "source": "https://c63706c8-c7b0-4ef4-8c3d-1b3ed59bea37.twstalker.com/rstainville"
+    },
+    {
+      "site": "x",
+      "handle": "s_lignier",
+      "name": "Sébastien Lignier",
+      "category": "Autres",
+      "id": "877580052547981315",
+      "reason": "CNEWS · L’Infiltré",
+      "source": "https://d46rckpsl2ks7laj5lfg.twstalker.com/S_Lignier"
+    },
+    {
+      "site": "x",
+      "handle": "samuel_lafont",
+      "name": "Samuel_Lafont",
+      "category": "Autres",
+      "id": "88462044",
+      "source": "https://x.com/Samuel_Lafont"
+    },
+    {
+      "site": "x",
+      "handle": "sardoche",
+      "name": "Sardoche",
+      "category": "Autres",
+      "id": "898994539",
+      "reason": "Influenceur et streamer d'extreme droite",
+      "source": "https://x.com/Sardoche"
+    },
+    {
+      "site": "x",
+      "handle": "sblanc66000",
+      "name": "Sophie Blanc",
+      "category": "RN",
+      "id": "2233497227",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "seb_humbert",
+      "name": "Sébastien Humbert",
+      "category": "RN",
+      "id": "949675222436892672",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "sebchenu",
+      "name": "Sébastien Chenu",
+      "category": "RN",
+      "id": "493833484",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "serge_muller24",
+      "name": "Serge Muller",
+      "category": "RN",
+      "id": "1448914405861871649",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "sevilliayves",
+      "name": "Yves-Marie Sévillia",
+      "category": "Autres",
+      "id": "1908468990315499520",
+      "reason": "Journaliste Boulevard Voltaire",
+      "source": "https://03-presentation.twstalker.com/SevilliaYves"
+    },
+    {
+      "site": "x",
+      "handle": "sgurbuz__",
+      "name": "@SGurbuz__",
+      "category": "Autres",
+      "id": "1065963435098349568",
+      "source": "https://x.com/SGurbuz__"
+    },
+    {
+      "site": "x",
+      "handle": "simao_rda",
+      "name": "@Simao_rda",
+      "category": "Autres",
+      "id": "1167085894584668160",
+      "source": "https://x.com/Simao_rda"
+    },
+    {
+      "site": "x",
+      "handle": "sirenesfr",
+      "name": "Sirènes",
+      "category": "Groupes",
+      "id": "704222685862174720",
+      "reason": "Media d'extreme droite",
+      "source": "https://x.com/SirenesFR"
+    },
+    {
+      "site": "x",
+      "handle": "sociologuelvl99",
+      "name": "@sociologuelvl99",
+      "category": "Autres",
+      "id": "1882507120576483329",
+      "source": "https://x.com/sociologuelvl99"
+    },
+    {
+      "site": "x",
+      "handle": "srambaudrn",
+      "name": "Stéphane Rambaud",
+      "category": "RN",
+      "id": "1456335129731911684",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "stanislasrig",
+      "name": "Stanislas Rigault",
+      "category": "Autres",
+      "id": "1038091753411293185",
+      "reason": "Ancien président de Génération Z, mouvement jeunes de Reconquête.",
+      "source": "https://x.com/stanislasrig"
+    },
+    {
+      "site": "x",
+      "handle": "steph16656",
+      "name": "Steph Sainte Marie",
+      "category": "Autres",
+      "id": "1814385936815333376",
+      "reason": "Influenceur d'extrême droite 5k abonnés",
+      "source": "https://x.com/steph16656"
+    },
+    {
+      "site": "x",
+      "handle": "swordofsalomon",
+      "name": "SwordOfSalomon",
+      "category": "Autres",
+      "id": "602105580",
+      "source": "https://x.com/SwordOfSalomon"
+    },
+    {
+      "site": "x",
+      "handle": "t_houssin",
+      "name": "Timothée Houssin",
+      "category": "RN",
+      "id": "365241641",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "tavernemichael",
+      "name": "Michaël Taverne",
+      "category": "RN",
+      "id": "1319560178958815232",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "tbt9_w9",
+      "name": "TBT9_W9",
+      "category": "Autres",
+      "id": "832766641",
+      "source": "https://x.com/TBT9_W9"
+    },
+    {
+      "site": "x",
+      "handle": "tegnererik",
+      "name": "Erik Tegnér",
+      "category": "Autres",
+      "id": "784347608",
+      "reason": "Frontières · CNEWS",
+      "source": "https://lightbrd.com/tegnererik"
+    },
+    {
+      "site": "x",
+      "handle": "th_bnrdt",
+      "name": "Théo Bernhardt",
+      "category": "RN",
+      "id": "1473415154058551296",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "thaisescufon",
+      "name": "Thaïs d’Escufon",
+      "category": "Autres",
+      "id": "1603048556281085953",
+      "reason": "Ex-Génération identitaire",
+      "source": "https://www.leparisien.fr/culture-loisirs/thais-descufon-ecartee-deurope-1-apres-un-passage-eclair-dans-lemission-de-cyril-hanouna-30-08-2024-TXL4BKGDOJCBPLVV5TAOMWH56I.php"
+    },
+    {
+      "site": "x",
+      "handle": "thierry_frappe",
+      "name": "Thierry Frappé",
+      "category": "RN",
+      "id": "1525806145310445568",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "thierrymariani",
+      "name": "Thierry Mariani",
+      "category": "RN",
+      "id": "87212906",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/197623"
+    },
+    {
+      "site": "x",
+      "handle": "thierryperez43",
+      "name": "Thierry Perez",
+      "category": "RN",
+      "id": "1386975772339015681",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "thomas_mng",
+      "name": "Thomas Ménagé",
+      "category": "RN",
+      "id": "560346582",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "thomasbonnet",
+      "name": "Thomas Bonnet",
+      "category": "Autres",
+      "id": "29241269",
+      "reason": "Journaliste politique CNEWS",
+      "source": "https://testing-when.twstalker.com/ThomasBonnet"
+    },
+    {
+      "site": "x",
+      "handle": "tiffany_joncour",
+      "name": "Tiffany Joncour",
+      "category": "RN",
+      "id": "703306285580754945",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "tomvangrieken",
+      "name": "@tomvangrieken",
+      "category": "Autres",
+      "id": "145611608",
+      "source": "https://x.com/tomvangrieken"
+    },
+    {
+      "site": "x",
+      "handle": "tribuianicyril",
+      "name": "Cyril Tribuiani",
+      "category": "RN",
+      "id": "2286100264",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "trumpdailyposts",
+      "name": "TrumpDailyPosts",
+      "category": "Autres",
+      "id": "1686901686185721857",
+      "source": "https://x.com/TrumpDailyPosts"
+    },
+    {
+      "site": "x",
+      "handle": "tvlofficiel",
+      "name": "TV Libertés",
+      "category": "Autres",
+      "id": "2329034473",
+      "reason": "Chaîne TV Libertés",
+      "source": "https://tvl.fr/actus/ou-suivre-tvlibertes-liens"
+    },
+    {
+      "site": "x",
+      "handle": "twitchgauchiste",
+      "name": "@TwitchGauchiste",
+      "category": "Autres",
+      "id": "1862559135964811264",
+      "source": "https://x.com/TwitchGauchiste"
+    },
+    {
+      "site": "x",
+      "handle": "uiathee",
+      "name": "Irréductible Athée",
+      "category": "Autres",
+      "id": "1268909773115863040",
+      "reason": "Spammeur à 11k abonnés islamophobe",
+      "source": "https://x.com/UIAthee"
+    },
+    {
+      "site": "x",
+      "handle": "v_joron",
+      "name": "Virginie Joron",
+      "category": "RN",
+      "id": "2991912647",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/197627"
+    },
+    {
+      "site": "x",
+      "handle": "valek_maranaj",
+      "name": "Valek_Maranaj",
+      "category": "Autres",
+      "id": "1561194877",
+      "source": "https://x.com/Valek_Maranaj"
+    },
+    {
+      "site": "x",
+      "handle": "valeriedeloge",
+      "name": "Valérie Deloge",
+      "category": "RN",
+      "id": "1369220576905166854",
+      "reason": "Député·e européen·ne · Rassemblement national",
+      "source": "https://www.europarl.europa.eu/meps/fr/256886"
+    },
+    {
+      "site": "x",
+      "handle": "valeurs",
+      "name": "Valeurs actuelles",
+      "category": "Autres",
+      "id": "112754792",
+      "reason": "Magazine Valeurs actuelles",
+      "source": "https://platform.twstalker.com/valeurs"
+    },
+    {
+      "site": "x",
+      "handle": "vaplus_",
+      "name": "VA+",
+      "category": "Groupes",
+      "id": "1380187506956713989",
+      "reason": "Media d'extreme droite",
+      "source": "https://x.com/VAplus_"
+    },
+    {
+      "site": "x",
+      "handle": "vb_officiel",
+      "name": "VB_Officiel",
+      "category": "Autres",
+      "id": "1975498264964182016",
+      "source": "https://x.com/VB_Officiel"
+    },
+    {
+      "site": "x",
+      "handle": "vero_jacquier",
+      "name": "Véronique Jacquier",
+      "category": "Autres",
+      "id": "523346316",
+      "reason": "Journaliste CNEWS",
+      "source": "https://www30.twstalker.com/ThierryCabannes"
+    },
+    {
+      "site": "x",
+      "handle": "victorlefebvre",
+      "name": "Victor Lefebvre",
+      "category": "Autres",
+      "id": "832949442508619776",
+      "reason": "Journaliste JDD",
+      "source": "https://platform.twstalker.com/fan_de_cnews"
+    },
+    {
+      "site": "x",
+      "handle": "villedieu_a",
+      "name": "Antoine Villedieu",
+      "category": "RN",
+      "id": "1070414962437296133",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "vinclapierre",
+      "name": "Vincent Lapierre",
+      "category": "Autres",
+      "id": "844179867163856896",
+      "reason": "Journaliste et fondateur du Média pour Tous",
+      "source": "https://x.com/VincLapierre"
+    },
+    {
+      "site": "x",
+      "handle": "vltngr",
+      "name": "Valentin Gaure",
+      "category": "Autres",
+      "id": "2203069263",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://msbrewwc.twstalker.com/VltnGR"
+    },
+    {
+      "site": "x",
+      "handle": "wdeguerpel",
+      "name": "Wandrille de Guerpel",
+      "category": "Autres",
+      "id": "898556894553542661",
+      "reason": "Journaliste Valeurs actuelles",
+      "source": "https://jilbab.twstalker.com/wdeguerpel"
+    },
+    {
+      "site": "x",
+      "handle": "yaelmenache",
+      "name": "Yaël Ménaché",
+      "category": "RN",
+      "id": "1461639594521378818",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "yannmontero",
+      "name": "Yann Montero",
+      "category": "Autres",
+      "id": "120032616",
+      "reason": "Journaliste Boulevard Voltaire",
+      "source": "https://mobile.twstalker.com/YannMontero"
+    },
+    {
+      "site": "x",
+      "handle": "yoanngillet30",
+      "name": "Yoann Gillet",
+      "category": "RN",
+      "id": "98735932",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "yoannusai",
+      "name": "Yoann Usai",
+      "category": "Autres",
+      "id": "219269942",
+      "reason": "Journaliste politique CNEWS",
+      "source": "https://d46rckpsl2ks7laj5lfg.twstalker.com/YOANNUSAI"
+    },
+    {
+      "site": "x",
+      "handle": "zemmoureric",
+      "name": "Éric Zemmour",
+      "category": "Reconquête",
+      "id": "1183418538285027329",
+      "reason": "Reconquête",
+      "source": "https://x.com/ZemmourEric/with_replies"
+    },
+    {
+      "site": "x",
+      "handle": "zu_demir",
+      "name": "@Zu_Demir",
+      "category": "Autres",
+      "id": "2438136788",
+      "source": "https://x.com/Zu_Demir"
+    }
+  ]
+}

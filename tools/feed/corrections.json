@@ -1,0 +1,8 @@
+{
+  "_comment": "Handles that are wrong or outdated on the source site, mapped to the current handle. Keyed by site, then by the handle as published on the site (lower-case). Prefer fixing the source site; remove an entry here once it is fixed there.",
+  "x": {
+    "fredericvo79738": "FredericVos",
+    "nadinelechon": "NadineLechonRN",
+    "stephan1rambaud": "sRambaudRN"
+  }
+}
