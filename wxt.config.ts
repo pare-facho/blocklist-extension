@@ -4,8 +4,9 @@ export default defineConfig({
   srcDir: ".",
   outDir: ".output",
   manifest: ({ browser, manifestVersion }) => ({
-    name: "Blocklist",
-    description: "Hides and slowly blocks accounts from lists you subscribe to.",
+    name: "__MSG_extName__",
+    description: "__MSG_extDescription__",
+    default_locale: "fr",
     permissions: ["storage", "alarms"],
     host_permissions: ["https://x.com/*"],
     // Feed hosts are granted one by one when the user subscribes (see options page).

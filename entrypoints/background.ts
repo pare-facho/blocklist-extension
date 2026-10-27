@@ -1,5 +1,6 @@
 import { browser, defineBackground } from "#imports";
 import { fetchFeed } from "../lib/feed.ts";
+import { t } from "../lib/i18n.ts";
 import { buildBlockSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, BlockResult, ContentMessage, OptionsMessage } from "../lib/messages.ts";
 import { backOff, canBlockNow, prunePace, recordBlock } from "../lib/pacing.ts";
@@ -74,7 +75,7 @@ async function subscribe(url: string): Promise<{ ok: true; name: string; count: 
       lastFetched: new Date().toISOString(),
     };
     await subscriptionsItem.setValue([...subs.filter((s) => s.url !== url), sub]);
-    await appendLog(`subscribed to "${sub.name}" (${sub.entries.length} entries)`);
+    await appendLog(t("logSubscribed", sub.name, sub.entries.length));
     await syncQueue();
     await notifyContentScripts();
     return { ok: true, name: sub.name, count: sub.entries.length };
@@ -98,11 +99,11 @@ async function refreshAllFeeds() {
         sub.etag = result.etag;
         sub.updated = result.feed.updated;
         changed = true;
-        await appendLog(`feed "${sub.name}" refreshed: ${sub.entries.length} entries`);
+        await appendLog(t("logFeedRefreshed", sub.name, sub.entries.length));
       }
     } catch (err) {
       sub.lastError = (err as Error).message;
-      await appendLog(`feed "${sub.name}" failed: ${sub.lastError}`);
+      await appendLog(t("logFeedFailed", sub.name, sub.lastError));
     }
   }
   await subscriptionsItem.setValue(subs);
@@ -147,7 +148,7 @@ async function quickBlock(msg: { site: Site; handle: string; id?: string; name?:
     queue.push({ key, site: msg.site, handle, id: msg.id, origin: "quick", status: "pending", attempts: 0, createdAt: new Date().toISOString() });
     await queueItem.setValue(queue);
   }
-  await appendLog(`quick block: @${handle} on ${msg.site}`);
+  await appendLog(t("logQuickBlock", handle));
   await notifyContentScripts();
   return { ok: true };
 }
@@ -157,7 +158,7 @@ async function undoQuickBlock(site: Site, handle: string) {
   const key = taskKey(site, handle);
   await manualItem.setValue((await manualItem.getValue()).filter((e) => !(e.site === site && e.handle === handle)));
   await queueItem.setValue((await queueItem.getValue()).filter((t) => !(t.key === key && t.status === "pending")));
-  await appendLog(`quick block undone: @${handle} on ${site}`);
+  await appendLog(t("logQuickUndo", handle));
   await notifyContentScripts();
   return { ok: true };
 }
@@ -196,24 +197,24 @@ async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: s
     task.id = result.id ?? task.id;
     task.lastError = undefined;
     pace = recordBlock(settings, pace, now);
-    await appendLog(`blocked @${task.handle} on x (${result.id ?? "id unknown"})`);
+    await appendLog(t("logBlocked", task.handle));
   } else if (result.kind === "rateLimited") {
     task.attempts--; // not the task's fault
     pace = backOff(pace, result.retryAt ?? now + RETRY_LATER_MS);
-    await appendLog(`x rate limit hit, waiting until ${pace.nextAllowedAt}`);
+    await appendLog(t("logRateLimit", new Date(pace.nextAllowedAt ?? now).toLocaleTimeString()));
   } else if (result.kind === "notLoggedIn") {
     task.attempts--;
     pace = backOff(pace, now + RETRY_LATER_MS);
-    await appendLog("x: not logged in, retrying in 15 min");
+    await appendLog(t("logNotLoggedIn"));
   } else if (result.kind === "notFound") {
     task.status = "skipped";
-    task.lastError = "account not found";
-    await appendLog(`skipped @${task.handle}: account not found`);
+    task.lastError = t("errNotFound");
+    await appendLog(t("logSkipped", task.handle));
   } else {
     task.lastError = result.error;
     if (task.attempts >= MAX_ATTEMPTS) task.status = "failed";
     pace = backOff(pace, now + RETRY_LATER_MS);
-    await appendLog(`block @${task.handle} failed (${task.attempts}/${MAX_ATTEMPTS}): ${result.error}`);
+    await appendLog(t("logFailed", task.handle, task.attempts, MAX_ATTEMPTS, result.error));
   }
   await paceItem.setValue(pace);
   await queueItem.setValue(queue);

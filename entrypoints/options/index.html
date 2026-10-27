@@ -1,73 +1,99 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Blocklist — settings</title>
+    <title data-i18n="optionsTitle">Blocklist</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <main>
       <h1>Blocklist</h1>
-      <p class="muted">
-        Everything on this page stays in your browser. Nothing is sent anywhere except the feeds you add
-        and the blocks you ask for on the sites themselves.
-      </p>
+      <p class="muted" data-i18n="intro"></p>
+
+      <section id="status">
+        <h2 data-i18n="statusTitle"></h2>
+        <div class="stats">
+          <div class="stat"><strong id="stat-listed">–</strong><span data-i18n="statListed"></span></div>
+          <div class="stat"><strong id="stat-blocked">–</strong><span data-i18n="statBlocked"></span></div>
+          <div class="stat"><strong id="stat-remaining">–</strong><span data-i18n="statRemaining"></span></div>
+          <div class="stat"><strong id="stat-today">–</strong><span data-i18n="statToday"></span></div>
+          <div class="stat"><strong id="stat-next">–</strong><span data-i18n="statNext"></span></div>
+        </div>
+        <p id="state-line" class="muted"></p>
+      </section>
 
       <section>
-        <h2>Subscribed lists</h2>
+        <h2 data-i18n="listsTitle"></h2>
         <div id="subscriptions"></div>
         <form id="subscribe-form">
-          <input id="subscribe-url" type="url" placeholder="https://…/blocklist.json" required />
-          <button type="submit">Add list</button>
+          <input id="subscribe-url" type="url" data-i18n-placeholder="subscribePlaceholder" required />
+          <button type="submit" data-i18n="subscribeButton"></button>
           <span id="subscribe-status" class="status"></span>
         </form>
-        <p class="muted">Lists are re-downloaded every <span id="refresh-hours"></span> hours. <button type="button" id="refresh-now">Refresh now</button></p>
+        <p class="muted"><span id="refresh-every"></span> <button type="button" id="refresh-now" data-i18n="refreshNow"></button></p>
       </section>
 
       <section>
-        <h2>My own list</h2>
-        <p class="muted">One account per line: a handle, @handle or profile link. Added here by hand or with the ⛔ button on posts.</p>
+        <h2 data-i18n="ownTitle"></h2>
+        <p class="muted" data-i18n="ownHelp"></p>
+        <form id="own-add-form">
+          <input id="own-add" type="text" data-i18n-placeholder="ownAddPlaceholder" required />
+          <button type="submit" data-i18n="ownAddButton"></button>
+          <span id="own-add-status" class="status"></span>
+        </form>
         <textarea id="manual" rows="6" spellcheck="false"></textarea>
-        <div><button type="button" id="manual-save">Save</button> <span id="manual-status" class="status"></span></div>
+        <div><button type="button" id="manual-save" data-i18n="save"></button> <span id="manual-status" class="status"></span></div>
       </section>
 
       <section>
-        <h2>Never block</h2>
-        <p class="muted">Accounts you want to keep seeing even if a list contains them.</p>
+        <h2 data-i18n="allowTitle"></h2>
+        <p class="muted" data-i18n="allowHelp"></p>
         <textarea id="allow" rows="3" spellcheck="false"></textarea>
-        <div><button type="button" id="allow-save">Save</button> <span id="allow-status" class="status"></span></div>
+        <div><button type="button" id="allow-save" data-i18n="save"></button> <span id="allow-status" class="status"></span></div>
       </section>
 
       <section>
-        <h2>Blocking</h2>
-        <p>
-          Posts from listed accounts are always hidden. Real blocks are optional and run slowly in the background,
-          only while an x.com tab is open and you are logged in.
-        </p>
-        <p class="warn">
-          Automated actions are against the terms of most networks. Slow pacing lowers the risk for your account;
-          it does not remove it. Use a secondary account if you can.
-        </p>
-        <label><input type="checkbox" id="blocking-enabled" /> Block listed accounts for real</label><br />
-        <label><input type="checkbox" id="paused" /> Pause</label>
-        <div class="grid">
-          <label>Max per hour <input type="number" id="per-hour" min="1" max="100" /></label>
-          <label>Max per day <input type="number" id="per-day" min="1" max="1000" /></label>
-          <label>Gap between blocks, min (minutes) <input type="number" id="gap-min" min="0" max="720" /></label>
-          <label>Gap between blocks, max (minutes) <input type="number" id="gap-max" min="0" max="720" /></label>
+        <h2 data-i18n="allTitle"></h2>
+        <p class="muted" data-i18n="allHelp"></p>
+        <div class="toolbar">
+          <input id="search" type="search" data-i18n-placeholder="searchPlaceholder" />
+          <span id="all-count" class="muted"></span>
         </div>
-        <div><button type="button" id="settings-save">Save</button> <span id="settings-status" class="status"></span></div>
+        <table id="all-table">
+          <thead><tr><th data-i18n="colAccount"></th><th data-i18n="colName"></th><th data-i18n="colList"></th><th data-i18n="colStatus"></th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
       </section>
 
       <section>
-        <h2>Queue</h2>
-        <p id="queue-summary"></p>
-        <p><button type="button" id="retry-failed">Retry failed</button> <button type="button" id="clear-done">Clear done</button></p>
-        <table id="queue-table"><thead><tr><th>Account</th><th>Status</th><th>When</th><th>Note</th></tr></thead><tbody></tbody></table>
+        <h2 data-i18n="blockingTitle"></h2>
+        <p data-i18n="blockingHelp"></p>
+        <p class="warn" data-i18n="blockingWarn"></p>
+        <label><input type="checkbox" id="blocking-enabled" /> <span data-i18n="blockingEnabled"></span></label><br />
+        <label><input type="checkbox" id="paused" /> <span data-i18n="paused"></span></label>
+        <div class="grid">
+          <label><span data-i18n="perHour"></span> <input type="number" id="per-hour" min="1" max="100" /></label>
+          <label><span data-i18n="perDay"></span> <input type="number" id="per-day" min="1" max="1000" /></label>
+          <label><span data-i18n="gapMin"></span> <input type="number" id="gap-min" min="0" max="720" /></label>
+          <label><span data-i18n="gapMax"></span> <input type="number" id="gap-max" min="0" max="720" /></label>
+        </div>
+        <div><button type="button" id="settings-save" data-i18n="save"></button> <span id="settings-status" class="status"></span></div>
       </section>
 
       <section>
-        <h2>Activity</h2>
+        <h2 data-i18n="historyTitle"></h2>
+        <p class="muted" data-i18n="historyHelp"></p>
+        <p id="history-summary"></p>
+        <p><button type="button" id="retry-failed" data-i18n="retryFailed"></button> <button type="button" id="clear-history" data-i18n="clearHistory"></button></p>
+        <table id="history-table">
+          <thead><tr><th data-i18n="colAccount"></th><th data-i18n="colStatus"></th><th data-i18n="colWhen"></th><th data-i18n="colNote"></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p id="history-empty" class="muted" data-i18n="historyEmpty" hidden></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="activityTitle"></h2>
         <pre id="log"></pre>
       </section>
     </main>

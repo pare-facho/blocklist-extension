@@ -1,4 +1,5 @@
 import { browser, defineContentScript } from "#imports";
+import { t } from "../lib/i18n.ts";
 import { isListed, type BlockSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, BlockResult, ContentMessage } from "../lib/messages.ts";
 import { blockOnX } from "../lib/x-api.ts";
@@ -60,7 +61,7 @@ export default defineContentScript({
       const btn = document.createElement("button");
       btn.className = BUTTON_CLASS;
       btn.type = "button";
-      btn.title = `Block @${handle} (one click, undo for 5 s)`;
+      btn.title = t("quickTitle", handle);
       btn.textContent = "⛔";
       btn.addEventListener("click", (ev) => {
         ev.preventDefault();
@@ -78,10 +79,10 @@ export default defineContentScript({
 
       const bar = document.createElement("div");
       bar.className = "blocklist-undo";
-      bar.append(`@${handle} added to your block list. `);
+      bar.append(`${t("quickAdded", handle)} `);
       const undo = document.createElement("button");
       undo.type = "button";
-      undo.textContent = "Undo";
+      undo.textContent = t("undo");
       bar.appendChild(undo);
       cell.insertAdjacentElement("beforebegin", bar);
       const timer = window.setTimeout(() => bar.remove(), UNDO_MS);
