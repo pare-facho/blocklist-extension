@@ -1,0 +1,58 @@
+name: Build and publish feed
+
+on:
+  schedule:
+    - cron: "17 * * * *" # hourly, off the full hour to avoid the busiest minute
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/feed/**"
+      - "tests/feed.test.ts"
+      - ".github/workflows/feed.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: feed
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Unit tests
+        run: node --test tests/feed.test.ts
+      - name: Fetch lists and resolve ids
+        run: node tools/feed/run.ts
+      - name: Commit updated feed and id cache
+        run: |
+          git add feed/blocklist.json tools/feed/cache/x-ids.json
+          if git diff --cached --quiet; then
+            echo "no change"
+          else
+            git -c user.name="github-actions[bot]" \
+                -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit -m "feed: update $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: feed
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
