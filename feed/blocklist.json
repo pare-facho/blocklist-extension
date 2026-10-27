@@ -3,7 +3,7 @@
   "name": "Blockfacho — on bloque l’extrême droite",
   "description": "Comptes d’extrême droite recensés par onbloquelextremedroite.fun",
   "homepage": "https://onbloquelextremedroite.fun/",
-  "updated": "2026-10-27T23:10:45.222Z",
+  "updated": "2026-10-27T23:22:24.278Z",
   "entries": [
     {
       "site": "facebook",
@@ -1223,6 +1223,14 @@
     },
     {
       "site": "x",
+      "handle": "bay_christophe",
+      "name": "Bay_Christophe",
+      "category": "Autres",
+      "id": "1802355173727105024",
+      "source": "https://x.com/Bay_Christophe"
+    },
+    {
+      "site": "x",
       "handle": "bchaumeil_rn",
       "name": "Bernard Chaumeil",
       "category": "RN",
@@ -1463,6 +1471,14 @@
       "id": "1350083185774891010",
       "reason": "Journaliste du JDD et chroniqueuse CNews, ex-Valeurs actuelles.",
       "source": "https://x.com/ChdOrnellas"
+    },
+    {
+      "site": "x",
+      "handle": "cheznousoff",
+      "name": "@ChezNousOff",
+      "category": "Autres",
+      "id": "1534786162174337025",
+      "source": "https://x.com/ChezNousOff"
     },
     {
       "site": "x",
@@ -1837,9 +1853,10 @@
     },
     {
       "site": "x",
-      "handle": "fredericvo79738",
+      "handle": "fredericvos",
       "name": "Frédéric-Pierre Vos",
       "category": "RN",
+      "id": "1801005818378104834",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
     },
@@ -2742,6 +2759,14 @@
     },
     {
       "site": "x",
+      "handle": "migeotm",
+      "name": "MigeotM",
+      "category": "Autres",
+      "id": "1137880044",
+      "source": "https://x.com/MigeotM"
+    },
+    {
+      "site": "x",
       "handle": "milafique",
       "name": "Mila Orriols",
       "category": "Autres",
@@ -2795,9 +2820,10 @@
     },
     {
       "site": "x",
-      "handle": "nadinelechon",
+      "handle": "nadinelechonrn",
       "name": "Nadine Lechon",
       "category": "RN",
+      "id": "1817912895394701312",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
     },
@@ -3233,6 +3259,15 @@
     },
     {
       "site": "x",
+      "handle": "srambaudrn",
+      "name": "Stéphane Rambaud",
+      "category": "RN",
+      "id": "1456335129731911684",
+      "reason": "Groupe RN à l’Assemblée · août 2026",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
       "handle": "stanislasrig",
       "name": "Stanislas Rigault",
       "category": "Autres",
@@ -3248,14 +3283,6 @@
       "id": "1814385936815333376",
       "reason": "Influenceur d'extrême droite 5k abonnés",
       "source": "https://x.com/steph16656"
-    },
-    {
-      "site": "x",
-      "handle": "stephan1rambaud",
-      "name": "Stéphane Rambaud",
-      "category": "RN",
-      "reason": "Groupe RN à l’Assemblée · août 2026",
-      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
     },
     {
       "site": "x",

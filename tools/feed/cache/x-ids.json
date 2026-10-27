@@ -119,6 +119,11 @@
     "screenName": "BastionMediaFR",
     "checkedAt": "2026-10-27T23:10:03.979Z"
   },
+  "bay_christophe": {
+    "id": "1802355173727105024",
+    "screenName": "Bay_Christophe",
+    "checkedAt": "2026-10-27T23:22:23.261Z"
+  },
   "bchaumeil_rn": {
     "id": "2041458254312607744",
     "screenName": "BChaumeil_RN",
@@ -258,6 +263,11 @@
     "id": "1350083185774891010",
     "screenName": "ChdOrnellas",
     "checkedAt": "2026-10-27T23:09:56.556Z"
+  },
+  "cheznousoff": {
+    "id": "1534786162174337025",
+    "screenName": "ChezNousOff",
+    "checkedAt": "2026-10-27T23:22:23.865Z"
   },
   "christine_kelly": {
     "id": "1072300501",
@@ -472,6 +482,11 @@
   "fredericvo79738": {
     "missing": true,
     "checkedAt": "2026-10-27T23:08:06.970Z"
+  },
+  "fredericvos": {
+    "id": "1801005818378104834",
+    "screenName": "FredericVos",
+    "checkedAt": "2026-10-27T23:22:20.840Z"
   },
   "frontieresmedia": {
     "id": "1357358878674059265",
@@ -982,6 +997,11 @@
     "screenName": "MichleMartinez3",
     "checkedAt": "2026-10-27T23:08:27.829Z"
   },
+  "migeotm": {
+    "id": "1137880044",
+    "screenName": "MigeotM",
+    "checkedAt": "2026-10-27T23:22:22.650Z"
+  },
   "milafique": {
     "id": "1272166368088113157",
     "screenName": "milafique",
@@ -1015,6 +1035,11 @@
   "nadinelechon": {
     "missing": true,
     "checkedAt": "2026-10-27T23:08:28.433Z"
+  },
+  "nadinelechonrn": {
+    "id": "1817912895394701312",
+    "screenName": "NadineLechonRN",
+    "checkedAt": "2026-10-27T23:22:21.438Z"
   },
   "naimamfaddel": {
     "id": "1254359274",
@@ -1260,6 +1285,11 @@
     "id": "1882507120576483329",
     "screenName": "sociologuelvl99",
     "checkedAt": "2026-10-27T23:10:10.866Z"
+  },
+  "srambaudrn": {
+    "id": "1456335129731911684",
+    "screenName": "sRambaudRN",
+    "checkedAt": "2026-10-27T23:22:22.035Z"
   },
   "stanislasrig": {
     "id": "1038091753411293185",
