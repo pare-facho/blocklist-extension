@@ -7,7 +7,8 @@
 // change to the list is visible in git history.
 
 import { parseArgs } from "node:util";
-import { loadSourceEntries } from "./source.ts";
+import { readFile } from "node:fs/promises";
+import { loadSourceEntries, applyCorrections, type Corrections } from "./source.ts";
 import { readCache, writeCache, resolveMissingIds } from "./xids.ts";
 import { toFeedEntries, readPreviousFeed, buildFeed, writeFeed } from "./build.ts";
 
@@ -15,13 +16,24 @@ const { values } = parseArgs({
   options: {
     out: { type: "string", default: "feed/blocklist.json" },
     cache: { type: "string", default: "tools/feed/cache/x-ids.json" },
+    corrections: { type: "string", default: "tools/feed/corrections.json" },
     quiet: { type: "boolean", default: false },
   },
 });
 
 const log = values.quiet ? () => {} : (msg: string) => console.log(msg);
 
-const entries = await loadSourceEntries();
+async function readCorrections(path: string): Promise<Corrections> {
+  try {
+    const { _comment, ...bySite } = JSON.parse(await readFile(path, "utf8"));
+    return bySite;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return {};
+    throw err;
+  }
+}
+
+const entries = applyCorrections(await loadSourceEntries(), await readCorrections(values.corrections));
 log(`source: ${entries.length} entries (${entries.filter((e) => e.site === "x").length} on X)`);
 
 const cache = await readCache(values.cache);

@@ -8,6 +8,7 @@ import {
   entriesFromSocialsJs,
   entriesFromApi,
   dedupe,
+  applyCorrections,
 } from "../tools/feed/source.ts";
 import { userIdFromLocation } from "../tools/feed/xids.ts";
 import { toFeedEntries, buildFeed } from "../tools/feed/build.ts";
@@ -68,6 +69,18 @@ test("builds entries from the three sources and dedupes", () => {
   const all = dedupe([...x, ...social, ...api.added]).filter((e) => !api.removed.has(e.handle));
   assert.deepEqual(all.map((e) => `${e.site}:${e.handle}`), ["x:exampleone", "instagram:example.one", "facebook:id:42", "x:third"]);
   assert.equal(all[0].name, "Example One", "first occurrence wins");
+});
+
+test("corrections replace a published handle, per site, case-insensitively", () => {
+  const fixed = applyCorrections(
+    [
+      { site: "x", handle: "oldname", name: "A", category: "RN" },
+      { site: "instagram", handle: "oldname", name: "A", category: "RN" },
+      { site: "x", handle: "untouched", name: "B", category: "RN" },
+    ],
+    { x: { oldname: "NewName" } },
+  );
+  assert.deepEqual(fixed.map((e) => `${e.site}:${e.handle}`), ["x:newname", "instagram:oldname", "x:untouched"]);
 });
 
 test("reads the user id from the intent redirect", () => {

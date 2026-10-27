@@ -143,6 +143,17 @@ export function dedupe(entries: SourceEntry[]): SourceEntry[] {
   return [...seen.values()];
 }
 
+export type Corrections = Record<string, Record<string, string>>;
+
+// Replaces handles that are wrong on the source site (see corrections.json).
+// Applied after removals so a removal keyed by the published handle still works.
+export function applyCorrections(entries: SourceEntry[], corrections: Corrections): SourceEntry[] {
+  return entries.map((e) => {
+    const fixed = corrections[e.site]?.[e.handle];
+    return fixed ? { ...e, handle: fixed.toLowerCase() } : e;
+  });
+}
+
 export async function loadSourceEntries(origin = SITE_ORIGIN): Promise<SourceEntry[]> {
   const [accountsJs, socialsJs, apiJson] = await Promise.all([
     fetchText(`${origin}/accounts.js`),
