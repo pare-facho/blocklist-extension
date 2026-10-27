@@ -1,4 +1,4 @@
-# Blocklist
+# Pare-Facho
 
 *[Version française](README.md)*
 
