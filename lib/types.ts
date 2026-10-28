@@ -50,7 +50,7 @@ export type Settings = {
 export const DEFAULT_SETTINGS: Settings = {
   blockingEnabled: true,
   paused: false,
-  perHour: 300,
+  perHour: 30,
   perDay: 1000,
   minGapSeconds: 5,
   maxGapSeconds: 15,
