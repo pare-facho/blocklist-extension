@@ -15,7 +15,7 @@
     "message": "Statut"
   },
   "statListed": {
-    "message": "comptes masqués"
+    "message": "comptes listés"
   },
   "statOwn": {
     "message": "dans ma liste"
@@ -39,7 +39,7 @@
     "message": "Retirer"
   },
   "listsMeta": {
-    "message": "$COUNTS$ · liste mise à jour le $UPDATED$ · vérifiée le $CHECKED$",
+    "message": "$COUNTS$ comptes X · liste du $UPDATED$ · vérifiée le $CHECKED$",
     "placeholders": {
       "counts": {
         "content": "$1"
@@ -133,7 +133,7 @@
     "message": "Comptes que vous voulez garder, même s'ils figurent dans une liste. Un compte par ligne."
   },
   "allTitle": {
-    "message": "Tous les comptes masqués"
+    "message": "Tous les comptes listés"
   },
   "allHelp": {
     "message": "Les listes abonnées et ma liste, moins les exceptions. « Garder » ajoute le compte aux exceptions : il n'est plus masqué."

@@ -50,13 +50,12 @@ format keeps its name (`blocklist/1`).
    - A small ⛔ icon on every post. One click = hide now + add the author to the manual
      list. Short undo (5 s).
 4. **Settings page**
-   - Counts: accounts hidden, "not interested" sent, accounts muted, accounts in the
+   - Counts: accounts listed, "not interested" sent, accounts muted, accounts in the
      user's own list. Actions are listed with their time. The page explains, in the
      user's language, what each mode does to the account's reach and why.
    - Subscribed lists with their size and dates; own list and keep list as text;
      full searchable list with Keep / Remove per account; activity log.
-5. **Platforms**: X (x.com). Threads and Instagram are possible later slices (each site is
-   a separate content script: detect posts, read the author handle, hide).
+5. **Platform**: X (x.com) only.
 6. **Browsers**: Chrome and Firefox from one codebase (WebExtensions; Manifest V3 on
    Chrome, V2 on Firefox).
 
@@ -72,9 +71,8 @@ room for metadata. JSON is easy to host anywhere (GitHub, a static site, Nextclo
   "description": "What this list is for",
   "updated": "2026-10-27T10:00:00Z",
   "entries": [
-    { "site": "x",         "id": "12345678",   "handle": "example",  "reason": "optional short text" },
-    { "site": "threads",   "handle": "example" },
-    { "site": "instagram", "id": "987654321",  "handle": "example" }
+    { "site": "x", "id": "12345678", "handle": "example", "reason": "optional short text" },
+    { "site": "x", "handle": "another_example" }
   ]
 }
 ```
@@ -98,7 +96,8 @@ room for metadata. JSON is easy to host anywhere (GitHub, a static site, Nextclo
 - Blocking or reporting accounts, and any action that is not made from a post on screen
   (profile pages, background queues, whole-list actions).
 - Shared or crowd-sourced list editing inside the extension.
-- Facebook, YouTube, Bluesky, Mastodon (Bluesky and Mastodon have native list import).
+- Other networks: the extension deals with X only. Feed entries for other sites are
+  accepted and ignored.
 - Safari.
 
 ## Success condition

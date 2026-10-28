@@ -1,11 +1,12 @@
-export const SITES = ["x", "threads", "instagram"] as const;
+export const SITES = ["x"] as const;
 export type Site = (typeof SITES)[number];
 
 export function isSite(value: string): value is Site {
   return (SITES as readonly string[]).includes(value);
 }
 
-// One account on one network, as published in a feed (format "blocklist/1").
+// One account, as published in a feed (format "blocklist/1"). Entries whose site is not
+// "x" are kept as data and ignored.
 export type FeedEntry = {
   site: string;
   handle: string;

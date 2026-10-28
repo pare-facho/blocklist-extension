@@ -55,7 +55,8 @@ Collapse on X the posts of the accounts found in lists chosen by the user, and m
 ## Data collection (Chrome form)
 No data collected or transmitted. No sale, no use outside the purpose, no creditworthiness use.
 
-## Screenshots (to provide, 1280×800 or 640×400)
-1. X timeline with the ⛔ button visible on a post.
-2. Settings page: status + subscribed lists.
-3. Settings page: full list with search and Keep / Remove buttons.
+## Screenshots (1280×800, folder store/screenshots)
+1. `1-strips.png`: on X, the posts of a listed account collapsed to one line (⛔ @account · post hidden) with the Show button.
+2. `2-status.png`: settings page, status and mode choice with the explanation.
+3. `3-lists.png`: settings page, subscribed lists and my list.
+4. `4-full-list.png`: settings page, full list with search and Keep / Remove buttons.

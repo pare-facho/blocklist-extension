@@ -1,5 +1,5 @@
-// Reads the three public files of the Blockfacho site and turns them into
-// one flat list of accounts, one entry per account and per network.
+// Reads the two public files of the Blockfacho site (accounts.js and /api/accounts)
+// and turns them into one flat list of X accounts.
 
 export const SITE_ORIGIN = "https://onbloquelextremedroite.fun";
 
@@ -25,28 +25,19 @@ export function parseAccountsJs(text: string): Array<Record<string, string>> {
   return parseJsAssignment(text, "accounts");
 }
 
-// socials.js is "const socials = { handle: { facebook: url, ... } };"
-export function parseSocialsJs(text: string): Record<string, Record<string, unknown>> {
-  return parseJsAssignment(text, "socials");
-}
-
 function parseJsAssignment(text: string, name: string) {
   const m = text.match(new RegExp(`const\\s+${name}\\s*=\\s*([\\[{][\\s\\S]*?[\\]}])\\s*;`));
   if (!m) throw new Error(`could not find "const ${name} = ..." in file`);
   return JSON.parse(m[1]);
 }
 
-// Last path segment of a profile URL, lower-cased. Facebook "profile.php?id=N" gives "id:N".
+// Last path segment of a profile URL, lower-cased.
 export function handleFromProfileUrl(url: string): string | undefined {
   let u: URL;
   try {
     u = new URL(url);
   } catch {
     return undefined;
-  }
-  if (u.pathname === "/profile.php") {
-    const id = u.searchParams.get("id");
-    return id ? `id:${id}` : undefined;
   }
   const segment = u.pathname.split("/").filter(Boolean).pop();
   if (!segment) return undefined;
@@ -66,36 +57,6 @@ export function entriesFromAccountsJs(accounts: Array<Record<string, string>>): 
     }));
 }
 
-const SOCIAL_SITES = ["instagram", "facebook", "tiktok", "threads"];
-
-// socials.js is keyed by the X handle; each value holds profile URLs on other networks.
-export function entriesFromSocialsJs(
-  socials: Record<string, Record<string, unknown>>,
-  xEntries: SourceEntry[],
-): SourceEntry[] {
-  const byHandle = new Map(xEntries.map((e) => [e.handle, e]));
-  const out: SourceEntry[] = [];
-  for (const [xHandle, links] of Object.entries(socials)) {
-    const base = byHandle.get(xHandle.toLowerCase());
-    for (const site of SOCIAL_SITES) {
-      const url = links[site];
-      if (typeof url !== "string") continue;
-      const handle = handleFromProfileUrl(url);
-      if (!handle) continue;
-      const sources = links.sources as Record<string, string> | undefined;
-      out.push({
-        site,
-        handle,
-        name: base?.name ?? xHandle,
-        category: base?.category ?? "Autres",
-        reason: base?.reason,
-        source: sources?.[site] ?? base?.source,
-      });
-    }
-  }
-  return out;
-}
-
 type ApiEntry = {
   type: string;
   platform?: string;
@@ -105,8 +66,8 @@ type ApiEntry = {
   reason?: string;
 };
 
-// /api/accounts holds visitor proposals approved by the site owner.
-// "removal" entries point at an account to drop; we honour them.
+// /api/accounts holds visitor proposals approved by the site owner. Only X accounts are
+// taken; "removal" entries point at an account to drop; we honour them.
 export function entriesFromApi(data: { entries?: ApiEntry[] }): {
   added: SourceEntry[];
   removed: Set<string>;
@@ -126,7 +87,7 @@ export function entriesFromApi(data: { entries?: ApiEntry[] }): {
       if (target) removed.add((handleById.get(String(target)) ?? String(target)).toLowerCase());
       continue;
     }
-    if (e.type !== "new" || !e.platform || !e.profile_url) continue;
+    if (e.type !== "new" || e.platform !== "x" || !e.profile_url) continue;
     const handle = handleFromProfileUrl(e.profile_url);
     if (!handle) continue;
     added.push({
@@ -162,14 +123,9 @@ export function applyCorrections(entries: SourceEntry[], corrections: Correction
 }
 
 export async function loadSourceEntries(origin = SITE_ORIGIN): Promise<SourceEntry[]> {
-  const [accountsJs, socialsJs, apiJson] = await Promise.all([
-    fetchText(`${origin}/accounts.js`),
-    fetchText(`${origin}/socials.js`),
-    fetchText(`${origin}/api/accounts`),
-  ]);
+  const [accountsJs, apiJson] = await Promise.all([fetchText(`${origin}/accounts.js`), fetchText(`${origin}/api/accounts`)]);
   const xEntries = entriesFromAccountsJs(parseAccountsJs(accountsJs));
-  const socialEntries = entriesFromSocialsJs(parseSocialsJs(socialsJs), xEntries);
   const api = entriesFromApi(JSON.parse(apiJson));
-  const all = dedupe([...xEntries, ...socialEntries, ...api.added]);
+  const all = dedupe([...xEntries, ...api.added]);
   return all.filter((e) => !api.removed.has(e.handle));
 }

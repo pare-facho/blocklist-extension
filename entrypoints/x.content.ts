@@ -71,6 +71,10 @@ export default defineContentScript({
       { threshold: 0.5 },
     );
 
+    // "Not interested in this post" only exists in the Home timeline; elsewhere the post is
+    // just hidden, and X's menu is left alone. "Mute" is in the menu everywhere.
+    const canActHere = () => state.action === "mute" || location.pathname === "/home";
+
     // The target of the action: the account in "mute" mode, the post in "not interested" mode.
     const keyFor = (article: HTMLElement, handle: string) => (state.action === "mute" ? handle : postIdOf(article));
     const alreadyDone = (handle: string, key: string) => (state.action === "mute" ? muted.has(handle) : marked.has(key));
@@ -89,7 +93,7 @@ export default defineContentScript({
         // The menu acts on the post's author, so a listed reposter's repost is only hidden.
         const key = listedAuthor ? keyFor(article, author.handle) : undefined;
         const cell = collapse(article, listedAuthor ? author.handle : (reposter as string), key);
-        if (key && !alreadyDone(author.handle, key) && !skipped.has(key)) {
+        if (key && canActHere() && !alreadyDone(author.handle, key) && !skipped.has(key)) {
           cell.setAttribute(KEY_ATTR, key);
           setStatus(cell, "soon");
           onScreen.observe(cell);
@@ -144,6 +148,10 @@ export default defineContentScript({
         await sleep(READ_MIN_MS + Math.random() * (READ_MAX_MS - READ_MIN_MS));
         for (;;) {
           if (!cell.isConnected || skipped.has(key) || alreadyDone(handle, key)) return;
+          if (!canActHere()) {
+            setStatus(cell, "hidden");
+            return;
+          }
           // Another action is running, or the person has a menu open: not now.
           if (busy || overlayOpen()) {
             await sleep(1000);
@@ -178,10 +186,10 @@ export default defineContentScript({
           return;
         }
         skipped.add(key);
-        // No item in the menu is normal outside the Home timeline ("Not interested" only
-        // exists there): the post stays hidden, nothing is logged.
+        // A menu without the item (X changed it, or a timeline without "Not interested"):
+        // the post stays hidden, nothing is logged.
         const quiet = outcome.reason === "gone" || (outcome.reason === "noItem" && action === "notInterested");
-        setStatus(cell, outcome.reason === "gone" ? "hidden" : "failed");
+        setStatus(cell, quiet ? "hidden" : "failed");
         await send({ type: "acted", site: "x", handle, action, postId, slot, result: quiet ? "gone" : "failed", detail: outcome.reason });
       } finally {
         busy = false;

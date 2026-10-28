@@ -129,15 +129,14 @@ A list is a JSON file served over HTTPS at a fixed address, with the header
   "updated": "2026-10-27T10:00:00Z",
   "entries": [
     { "site": "x", "id": "12345678", "handle": "example", "name": "Display name", "reason": "short text" },
-    { "site": "instagram", "handle": "example" }
+    { "site": "x", "handle": "another_example" }
   ]
 }
 ```
 
 - `id` is the account's permanent numeric identifier. Give it when you have it: handles
   change, the id never does.
-- `site`: `x`, `threads` or `instagram`. Other values are accepted and ignored. Only X is
-  supported for now.
+- `site`: `x`. Other values are accepted and ignored: the extension deals with X only.
 - `updated` must change on every modification.
 - Removing an entry removes the hiding at the next refresh.
 - Maximum size: 5 MB.

@@ -15,7 +15,7 @@
     "message": "Status"
   },
   "statListed": {
-    "message": "accounts hidden"
+    "message": "accounts listed"
   },
   "statOwn": {
     "message": "in my list"
@@ -39,7 +39,7 @@
     "message": "Remove"
   },
   "listsMeta": {
-    "message": "$COUNTS$ · list updated $UPDATED$ · checked $CHECKED$",
+    "message": "$COUNTS$ X accounts · list dated $UPDATED$ · checked $CHECKED$",
     "placeholders": {
       "counts": {
         "content": "$1"
@@ -133,7 +133,7 @@
     "message": "Accounts you want to keep, even if a list contains them. One account per line."
   },
   "allTitle": {
-    "message": "All hidden accounts"
+    "message": "All listed accounts"
   },
   "allHelp": {
     "message": "Subscribed lists and my list, minus the exceptions. \"Keep\" adds the account to the exceptions: it is no longer hidden."

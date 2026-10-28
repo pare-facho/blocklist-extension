@@ -2,10 +2,8 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   parseAccountsJs,
-  parseSocialsJs,
   handleFromProfileUrl,
   entriesFromAccountsJs,
-  entriesFromSocialsJs,
   entriesFromApi,
   dedupe,
   applyCorrections,
@@ -19,41 +17,25 @@ const accountsJs = `const accounts = [
 ];
 `;
 
-const socialsJs = `const socials = {
-  "exampleone": {
-    "sources": { "instagram": "https://s/ig" },
-    "instagram": "https://www.instagram.com/example.one",
-    "facebook": "https://www.facebook.com/profile.php?id=42"
-  }
-};
-`;
-
-test("parses accounts.js and socials.js", () => {
+test("parses accounts.js", () => {
   const accounts = parseAccountsJs(accountsJs);
   assert.equal(accounts.length, 2);
-  const socials = parseSocialsJs(socialsJs);
-  assert.equal(socials.exampleone.instagram, "https://www.instagram.com/example.one");
+  assert.equal(accounts[0].handle, "ExampleOne");
 });
 
 test("handles come from the last path segment, lower-cased", () => {
   assert.equal(handleFromProfileUrl("https://x.com/Some_User/with_replies"), "with_replies");
   assert.equal(handleFromProfileUrl("https://x.com/Some_User"), "some_user");
-  assert.equal(handleFromProfileUrl("https://www.tiktok.com/@name"), "name");
-  assert.equal(handleFromProfileUrl("https://www.facebook.com/profile.php?id=42"), "id:42");
+  assert.equal(handleFromProfileUrl("https://x.com/@Name"), "name");
   assert.equal(handleFromProfileUrl("not a url"), undefined);
 });
 
-test("builds entries from the three sources and dedupes", () => {
+test("builds entries from the two sources, keeps X only and dedupes", () => {
   const x = entriesFromAccountsJs(parseAccountsJs(accountsJs));
   assert.deepEqual(x[0], {
     site: "x", handle: "exampleone", name: "Example One", category: "RN", reason: "r1", source: "https://s/1",
   });
   assert.equal(x[1].reason, undefined);
-
-  const social = entriesFromSocialsJs(parseSocialsJs(socialsJs), x);
-  assert.deepEqual(social.map((e) => [e.site, e.handle]), [["instagram", "example.one"], ["facebook", "id:42"]]);
-  assert.equal(social[0].source, "https://s/ig");
-  assert.equal(social[0].name, "Example One");
 
   const api = entriesFromApi({
     entries: [
@@ -61,13 +43,14 @@ test("builds entries from the three sources and dedupes", () => {
       { type: "new", platform: "x", profile_url: "https://x.com/third", name: "Third", category: "Autres", reason: "" },
       { type: "removal", target_id: "example_two" },
       { type: "new", platform: "x" },
+      { type: "new", platform: "other", profile_url: "https://other.example/someone", name: "Elsewhere" },
     ],
   });
   assert.equal(api.added.length, 2);
   assert.deepEqual([...api.removed], ["example_two"]);
 
-  const all = dedupe([...x, ...social, ...api.added]).filter((e) => !api.removed.has(e.handle));
-  assert.deepEqual(all.map((e) => `${e.site}:${e.handle}`), ["x:exampleone", "instagram:example.one", "facebook:id:42", "x:third"]);
+  const all = dedupe([...x, ...api.added]).filter((e) => !api.removed.has(e.handle));
+  assert.deepEqual(all.map((e) => `${e.site}:${e.handle}`), ["x:exampleone", "x:third"]);
   assert.equal(all[0].name, "Example One", "first occurrence wins");
 });
 
@@ -75,12 +58,12 @@ test("corrections replace a published handle, per site, case-insensitively", () 
   const fixed = applyCorrections(
     [
       { site: "x", handle: "oldname", name: "A", category: "RN" },
-      { site: "instagram", handle: "oldname", name: "A", category: "RN" },
+      { site: "other", handle: "oldname", name: "A", category: "RN" },
       { site: "x", handle: "untouched", name: "B", category: "RN" },
     ],
     { x: { oldname: "NewName" } },
   );
-  assert.deepEqual(fixed.map((e) => `${e.site}:${e.handle}`), ["x:newname", "instagram:oldname", "x:untouched"]);
+  assert.deepEqual(fixed.map((e) => `${e.site}:${e.handle}`), ["x:newname", "other:oldname", "x:untouched"]);
 });
 
 test("reads the user id from the intent redirect", () => {
@@ -95,7 +78,6 @@ test("feed entries carry ids from the cache and 'updated' only moves on change",
     [
       { site: "x", handle: "exampleone", name: "Example One", category: "RN" },
       { site: "x", handle: "gone", name: "Gone", category: "RN" },
-      { site: "instagram", handle: "example.one", name: "Example One", category: "RN" },
     ],
     {
       exampleone: { id: "1", screenName: "ExampleOne", checkedAt: "2026-10-28T00:00:00Z" },
@@ -104,7 +86,6 @@ test("feed entries carry ids from the cache and 'updated' only moves on change",
   );
   assert.equal(entries.find((e) => e.handle === "exampleone")?.id, "1");
   assert.equal(entries.find((e) => e.handle === "gone")?.id, undefined);
-  assert.equal(entries.find((e) => e.site === "instagram")?.id, undefined);
 
   const t1 = new Date("2026-10-28T10:00:00Z");
   const t2 = new Date("2026-10-28T11:00:00Z");

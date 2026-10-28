@@ -11,6 +11,7 @@ const send = (msg: OptionsMessage) => browser.runtime.sendMessage(msg);
 const el = <K extends keyof HTMLElementTagNameMap>(tag: K, props: Record<string, string | boolean> = {}): HTMLElementTagNameMap[K] =>
   Object.assign(document.createElement(tag), props);
 const when = (iso?: string) => (iso ? new Date(iso).toLocaleString(undefined, { dateStyle: "short", timeStyle: "short" }) : t("never"));
+const day = (iso?: string) => (iso ? new Date(iso).toLocaleDateString(undefined, { dateStyle: "short" }) : "?");
 
 function flash(sel: string, text: string, error = false) {
   const node = $(sel);
@@ -87,10 +88,8 @@ function renderSubscriptions(subs: Subscription[]) {
       await subscriptionsItem.setValue(subs);
       await send({ type: "refreshFeeds" });
     });
-    const bySite = new Map<string, number>();
-    for (const e of sub.entries) bySite.set(e.site, (bySite.get(e.site) ?? 0) + 1);
-    const counts = [...bySite].map(([s, n]) => `${s}: ${n}`).join(", ");
-    const meta = el("span", { className: "meta", textContent: t("listsMeta", counts, sub.updated?.slice(0, 10) ?? "?", when(sub.lastFetched)) });
+    const count = sub.entries.filter((e) => e.site === "x").length;
+    const meta = el("span", { className: "meta", textContent: t("listsMeta", String(count), day(sub.updated), when(sub.lastFetched)) });
     const link = el("a", { href: sub.url, textContent: t("listsSource"), target: "_blank", rel: "noopener" });
     const remove = el("button", { type: "button", textContent: t("listsRemove"), className: "small" });
     remove.addEventListener("click", async () => {

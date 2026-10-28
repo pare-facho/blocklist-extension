@@ -144,15 +144,14 @@ Une liste est un fichier JSON servi en HTTPS, à une adresse fixe, avec l'en-tê
   "updated": "2026-10-27T10:00:00Z",
   "entries": [
     { "site": "x", "id": "12345678", "handle": "exemple", "name": "Nom affiché", "reason": "texte court" },
-    { "site": "instagram", "handle": "exemple" }
+    { "site": "x", "handle": "autre_exemple" }
   ]
 }
 ```
 
 - `id` est l'identifiant numérique permanent du compte. Donnez-le quand vous l'avez : les
   pseudos changent, l'identifiant jamais.
-- `site` : `x`, `threads` ou `instagram`. D'autres valeurs sont acceptées et ignorées.
-  Seul X est pris en charge pour l'instant.
+- `site` : `x`. D'autres valeurs sont acceptées et ignorées : l'extension ne traite que X.
 - `updated` doit changer à chaque modification.
 - Retirer une entrée retire le masquage à la prochaine mise à jour.
 - Taille maximale : 5 Mo.

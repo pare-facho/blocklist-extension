@@ -52,7 +52,7 @@ version is the only difference.
 1. Open the extension settings page.
 2. The default list (`https://pare-facho.github.io/blocklist-extension/blocklist.json`)
    is subscribed automatically at install; the status board shows the number of
-   accounts hidden. Other lists can be added by address (host permission prompt).
+   accounts listed. Other lists can be added by address (host permission prompt).
 3. Open https://x.com logged in, Home timeline: posts and reposts from listed accounts
    are collapsed to a strip "⛔ @handle · post hidden". The strip reads "acting in a
    moment", then "not interested ✓" once X has closed its menu; X replaces the post by
