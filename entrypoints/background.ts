@@ -22,6 +22,8 @@ export default defineBackground(() => {
     void ensureDefaultFeed();
   });
   browser.runtime.onStartup.addListener(() => void scheduleAlarms());
+  // The toolbar icon opens the settings page (browserAction on Firefox MV2, action on Chrome MV3).
+  (browser.action ?? browser.browserAction).onClicked.addListener(() => void browser.runtime.openOptionsPage());
 
   browser.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === ALARM_REFRESH) void refreshAllFeeds();

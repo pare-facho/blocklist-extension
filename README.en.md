@@ -2,73 +2,68 @@
 
 *[Version française](README.md)*
 
-A browser extension (Chrome and Firefox) that **hides** and **step by step blocks** the accounts
-on lists you choose to subscribe to. First target: X. Threads and Instagram are planned.
+A Chrome and Firefox extension that hides and blocks on X the far-right accounts listed by
+the French website [On bloque l'extrême droite](https://onbloquelextremedroite.fun/).
+The site's list is subscribed at install and refreshed every hour. You can remove it, add
+other lists, and add or remove accounts yourself.
 
-The project started to make use of the list published by
-[On bloque l'extrême droite](https://onbloquelextremedroite.fun/): it is **subscribed by
-default** at install (refreshed hourly from this repository). You can remove it, add other
-lists, and remove or add accounts yourself.
+## Install
 
-> **Beta.** The code is public and tested automatically, but the extension is not yet on
-> the stores. Install it by hand (see below) and prefer a secondary account.
+**Firefox**: install it from the official page
+[addons.mozilla.org/firefox/addon/pare-facho](https://addons.mozilla.org/firefox/addon/pare-facho/)
+by clicking "Add to Firefox".
+
+**Chrome, Edge, Brave**: the extension is being reviewed by Google. Until then you can
+install it by hand in five steps:
+
+1. Download this file:
+   [pare-facho-chrome.zip](https://github.com/pare-facho/blocklist-extension/releases/latest/download/pare-facho-chrome.zip).
+2. Unzip it (double-click the file). You get a folder named `pare-facho-chrome`. Keep it:
+   the browser uses it.
+3. In the browser, type `chrome://extensions` in the address bar and press Enter.
+4. Turn on "Developer mode" (switch at the top right).
+5. Click "Load unpacked" and choose the unzipped folder.
+
+That is all. Open [x.com](https://x.com) and leave the tab open: listed accounts disappear
+from your screen right away, and the blocks run in the background. The extension's icon
+(in the extensions menu, top right) opens the settings page, with status and history.
+
+Prefer a secondary account (see [Before you install](#before-you-install)).
 
 ## What it does
 
 1. **Hide now.** On x.com, posts from listed accounts disappear from your screen as they
    render: timeline, replies, search. Nothing changes on X, only your display.
-2. **Block step by step, in the background (on by default, can be turned off).** While enabled, the
-   extension blocks listed accounts one at a time, at an adjustable pace (defaults: at most 300 per
-   hour, 1000 per day, with a random 5–15 second gap). It sends exactly the request the X
-   website sends when you click "Block" yourself, with your own session. It opens no page,
-   clicks nothing, and only runs while a logged-in x.com tab is open. Real blocks then
-   apply everywhere, including the mobile app.
-   If an account leaves all your lists (added by mistake, or a tampered list), the
-   extension unblocks it the same way, provided it was the one that blocked it: blocks
-   you made yourself are never undone.
-3. **A ⛔ button on every post.** One click: the post is hidden, the account is added to
-   *my list* and queued for blocking. Five seconds to undo.
-4. **Status and history.** The settings page shows how many accounts are listed, blocked,
-   remaining, when the next block is due, the history of recent blocks, and the full list
-   with search. Any account can be **kept** (never hidden nor blocked) or, if it comes from
-   your own list, **removed**.
+2. **Block in the background.** The extension blocks listed accounts one at a time, at an
+   adjustable pace (defaults: at most 300 per hour, 1000 per day, with a random 5 to 15
+   second gap between two). It sends the same request the X website sends when you click
+   "Block" yourself, with your own session. It opens no page and only runs while a
+   logged-in x.com tab is open. Blocks then apply everywhere, including the mobile app.
+   Blocking can be turned off in the settings if you only want hiding.
+3. **Unblock what leaves the lists.** If an account disappears from all your lists (added
+   by mistake, or a tampered list), the extension unblocks it the same way, provided it was
+   the one that blocked it. Blocks you made yourself are never undone.
+4. **A ⛔ button on every post.** One click: the post is hidden, the account is added to
+   your list and queued for blocking. Five seconds to undo.
+5. **Status and history.** The settings page shows listed, blocked and remaining accounts,
+   when the next block is due, the history, and the full list with search. Any account can
+   be **kept** (never hidden nor blocked) or, if it comes from your own list, **removed**.
 
-All data stays in your browser. See [PRIVACY.md](PRIVACY.md).
+All data stays in your browser. Nothing is sent to anyone. See [PRIVACY.md](PRIVACY.md).
 
-## Install (beta)
+## Before you install
 
-Download the zip from the
-[latest release](https://github.com/pare-facho/blocklist-extension/releases).
+- Automated actions are against X's terms of use. The moderate pace lowers the risk for
+  your account; it does not remove it. Use a secondary account if you can.
+- The extension depends on X's pages and internal addresses. When X changes, it may stop
+  working until it is updated.
+- On X, a blocked person can still see your public posts. They can no longer reply, like
+  or message you, and you no longer see them.
 
-- **Chrome / Edge / Brave**: unzip. Open `chrome://extensions`, enable "Developer mode",
-  click "Load unpacked" and pick the unzipped folder.
-- **Firefox**: open `about:debugging#/runtime/this-firefox`, click "Load Temporary Add-on"
-  and pick the zip. (A temporary add-on is removed when Firefox closes; publishing on
-  addons.mozilla.org will fix that.)
-
-Then open the extension's settings and add a list, for example:
-
-```
-https://pare-facho.github.io/blocklist-extension/blocklist.json
-```
-
-This list is generated every hour from the *On bloque l'extrême droite* website (see
-[The feed](#the-feed)).
-
-## Risks, stated plainly
-
-- Automated actions are against the terms of X and the other networks. The pacing lowers
-  the risk for your account; it is not a guarantee. **Use a secondary account if
-  you can.**
-- Hiding depends on the structure of X's pages; blocking depends on its internal
-  addresses. When X changes, the extension may stop working until it is updated.
-- Since late 2024, someone you block on X can still see your public posts. They can no
-  longer reply, like or message you, and you no longer see them.
-
-## For list authors: the format
+## For list authors
 
 A list is a JSON file served over HTTPS at a fixed address, with the header
-`Access-Control-Allow-Origin: *`.
+`Access-Control-Allow-Origin: *`. In the extension, it is added by its address.
 
 ```json
 {
@@ -84,24 +79,26 @@ A list is a JSON file served over HTTPS at a fixed address, with the header
 }
 ```
 
-- `id` is the account's permanent numeric identifier: give it when you have it; handles
+- `id` is the account's permanent numeric identifier. Give it when you have it: handles
   change, the id never does.
-- `site`: `x`, `threads` or `instagram`. Other values are accepted and ignored.
-- `updated` must change on every modification. Removing an entry removes the hiding; a
-  block already done is not undone.
+- `site`: `x`, `threads` or `instagram`. Other values are accepted and ignored. Only X is
+  blocked for now.
+- `updated` must change on every modification.
+- Removing an entry removes the hiding, and the extension unblocks the account if it was
+  the one that blocked it.
 - Maximum size: 5 MB.
 
 Naming people in a public list, especially for their political opinions, is sensitive
-personal data under the GDPR. That is the list author's responsibility, not the
-extension's.
+personal data under the GDPR. That is the list author's responsibility.
 
-## The feed
+## The default list
 
 `tools/feed/` reads the public files of the *On bloque l'extrême droite* website, resolves
 each X account's permanent numeric id (no account, no API key: through the public
-`x.com/intent/user` redirect), and writes `feed/blocklist.json`. A
+`x.com/intent/user` redirect) and writes `feed/blocklist.json`. A
 [GitHub Actions workflow](.github/workflows/feed.yml) runs it hourly and publishes the
-result on GitHub Pages. The git history shows every addition and removal.
+result at `https://pare-facho.github.io/blocklist-extension/blocklist.json`. The git
+history shows every addition and removal.
 
 ```
 node tools/feed/run.ts   # one pass
@@ -116,16 +113,19 @@ Node 22 or newer.
 
 ```
 npm install            # installs WXT and TypeScript
-npm test               # unit tests (feed, format, pacing, translations)
+npm test               # unit tests (feed, format, block queue, pacing, translations)
 npm run check          # type check
 npm run build          # Chrome build in .output/chrome-mv3
 npm run build:firefox  # Firefox build in .output/firefox-mv2
 npm run zip            # store zips
 ```
 
+To try a build in Firefox without the store: `about:debugging#/runtime/this-firefox`,
+"Load Temporary Add-on", pick the zip. The add-on is removed when Firefox closes.
+
 Layout: `entrypoints/` (background, X content script, settings page), `lib/` (shared logic,
 tested under Node), `public/_locales/` (translations: French by default, English),
-`tools/feed/` (feed pipeline), [SPEC.md](SPEC.md) (specification).
+`tools/feed/` (list pipeline), [SPEC.md](SPEC.md) (specification).
 
 Translations live in `public/_locales/<lang>/messages.json`. A test checks that every
 language has the same keys.
