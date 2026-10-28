@@ -4,7 +4,7 @@
 Pare-Facho
 
 ## Summary (Chrome: 132 characters max)
-Block the far right: collapses the posts of listed far-right accounts and tells X you are not interested. X for now.
+Block the far right: collapses the posts of listed far-right accounts on X and tells X you are not interested in them.
 
 ## Long description
 

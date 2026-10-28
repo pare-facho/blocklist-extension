@@ -17,6 +17,10 @@ npm run zip:firefox    # Firefox: .output/pare-facho-<version>-firefox.zip
 The build tool is WXT 0.21 (TypeScript bundling, no minification beyond what
 esbuild does; no obfuscation). No remote code is loaded at runtime.
 
+## What changed in 0.5.1
+
+Only the extension's description string (manifest and store summary) is shorter, within the 132-character limit of the Chrome Web Store. No code change since 0.5.0.
+
 ## What changed in 0.5.0
 
 Posts from listed accounts are collapsed to a one-line strip instead of being
