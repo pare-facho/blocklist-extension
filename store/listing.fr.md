@@ -4,7 +4,7 @@
 Pare-Facho
 
 ## Résumé (Chrome : 132 caractères max)
-On bloque l'extrême droite : masque et bloque lentement les comptes des listes auxquelles vous vous abonnez. X pour l'instant.
+On bloque l'extrême droite : masque et bloque lentement les comptes d'extrême droite listés, que vous les suiviez ou non.
 
 ## Description longue
 
@@ -14,7 +14,7 @@ Ce que fait l'extension :
 
 • Masquer tout de suite. Les publications des comptes listés disparaissent de votre fil, des réponses et de la recherche dès qu'elles s'affichent. Rien ne change sur X, seulement votre écran.
 
-• Bloquer lentement, en arrière-plan (optionnel, désactivé par défaut). Si vous l'activez, l'extension bloque les comptes listés un par un, à un rythme lent que vous réglez (par défaut : au plus 10 par heure, 60 par jour, avec un délai aléatoire entre deux). Elle envoie la même demande que le site X quand vous cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et ne fonctionne que si un onglet x.com connecté est ouvert.
+• Bloquer lentement, en arrière-plan (activé par défaut, désactivable). L'extension bloque les comptes listés un par un, à un rythme lent que vous réglez (par défaut : au plus 15 par heure, 120 par jour, avec un délai aléatoire entre deux). Elle envoie la même demande que le site X quand vous cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et ne fonctionne que si un onglet x.com connecté est ouvert.
 
 • Un bouton ⛔ sur chaque publication : un clic pour masquer, ajouter le compte à votre liste et le mettre en file de blocage. Cinq secondes pour annuler.
 

@@ -6,7 +6,7 @@ import { buildBlockSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, BlockResult, ContentMessage, OptionsMessage } from "../lib/messages.ts";
 import { backOff, canBlockNow, prunePace, recordBlock } from "../lib/pacing.ts";
 import { allowItem, appendLog, getSettings, manualItem, paceItem, queueItem, seededItem, subscriptionsItem } from "../lib/storage.ts";
-import { isSite, taskKey, type QueueTask, type Site, type Subscription } from "../lib/types.ts";
+import { taskKey, type QueueTask, type Site, type Subscription } from "../lib/types.ts";
 
 const ALARM_REFRESH = "refresh-feeds";
 const ALARM_TICK = "block-tick";
@@ -121,10 +121,9 @@ async function refreshAllFeeds() {
     }
   }
   await subscriptionsItem.setValue(subs);
-  if (changed) {
-    await syncQueue();
-    await notifyContentScripts();
-  }
+  // Always resync: blocking may have been switched on since the lists last changed.
+  await syncQueue();
+  if (changed) await notifyContentScripts();
 }
 
 // ---- queue -----------------------------------------------------------------
@@ -140,7 +139,7 @@ async function syncQueue() {
   const allowed = new Set(allow.map((e) => `${e.site}:${e.handle}`));
   const now = new Date().toISOString();
   for (const e of [...subs.filter((s) => s.enabled).flatMap((s) => s.entries), ...manual]) {
-    if (!isSite(e.site)) continue;
+    if (e.site !== "x") continue; // only X has a blocker so far
     const key = taskKey(e.site, e.handle);
     if (known.has(key) || allowed.has(key)) continue;
     known.add(key);
@@ -177,6 +176,18 @@ async function undoQuickBlock(site: Site, handle: string) {
   return { ok: true };
 }
 
+// Logs why no block can happen right now, once per cause, so the activity log
+// explains a queue that does not move (no x.com tab, tab not answering).
+let lastBlocker: string | undefined;
+async function noteBlocker(kind: "noTab" | "tabSilent", detail = ""): Promise<string> {
+  const reason = kind === "noTab" ? t("logNoTab") : t("logTabSilent", detail);
+  if (lastBlocker !== kind) {
+    lastBlocker = kind;
+    await appendLog(reason);
+  }
+  return reason;
+}
+
 // One tick: if pacing allows, block the oldest pending X account through an open x.com tab.
 async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: string }> {
   const settings = await getSettings();
@@ -194,15 +205,16 @@ async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: s
 
   const tabs = await browser.tabs.query({ url: "https://x.com/*" });
   const tab = tabs.find((t) => t.id === preferredTabId) ?? tabs[0];
-  if (!tab?.id) return { ran: false, reason: "no x.com tab open" };
+  if (!tab?.id) return { ran: false, reason: await noteBlocker("noTab") };
 
   const msg: BackgroundMessage = { type: "x:block", handle: task.handle, id: task.id };
   let result: BlockResult;
   try {
     result = (await browser.tabs.sendMessage(tab.id, msg)) as BlockResult;
   } catch (err) {
-    return { ran: false, reason: `x.com tab did not answer: ${(err as Error).message}` };
+    return { ran: false, reason: await noteBlocker("tabSilent", (err as Error).message) };
   }
+  lastBlocker = undefined;
 
   task.attempts++;
   if (result.ok) {

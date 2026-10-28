@@ -20,9 +20,9 @@ retirer, ajouter d'autres listes, et retirer ou ajouter des comptes vous-même.
 1. **Masquer tout de suite.** Sur x.com, les publications des comptes listés disparaissent
    de votre écran dès qu'elles s'affichent : fil, réponses, recherche. Cela ne touche à rien
    sur X, seulement à votre affichage.
-2. **Bloquer lentement, en arrière-plan (optionnel, désactivé par défaut).** Si vous
-   l'activez, l'extension bloque les comptes listés un par un, à un rythme lent
-   (par défaut : au plus 10 par heure, 60 par jour, avec un délai aléatoire de 3 à 15
+2. **Bloquer lentement, en arrière-plan (activé par défaut, désactivable).** Tant qu'il est
+   activé, l'extension bloque les comptes listés un par un, à un rythme lent
+   (par défaut : au plus 15 par heure, 120 par jour, avec un délai aléatoire de 1 à 4
    minutes entre deux). Elle envoie exactement la même requête que le site X quand vous
    cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page,
    ne clique nulle part, et ne fonctionne que si un onglet x.com connecté est ouvert.

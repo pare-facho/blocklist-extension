@@ -25,7 +25,7 @@ esbuild does; no obfuscation). No remote code is loaded at runtime.
    accounts listed. Other lists can be added by address (host permission prompt).
 3. Open https://x.com while logged in: posts from listed accounts are hidden
    and every post gets a ⛔ button that adds its author to "My list".
-4. Real blocking is off by default. When enabled in "Blocking", the extension
+4. Real blocking is on by default (can be turned off in "Blocking"). The extension
    sends the same block request as the X website, one account at a time, at the
    configured pace, only while an x.com tab is open.
 

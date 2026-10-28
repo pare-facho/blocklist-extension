@@ -42,8 +42,9 @@ async function renderStatus(state: State) {
   const settings = await getSettings();
   const pace = await paceItem.getValue();
   const listed = allAccounts(state).filter((a) => !a.kept).length;
-  const done = state.queue.filter((q) => q.status === "done").length;
-  const pending = state.queue.filter((q) => q.status === "pending").length;
+  const xQueue = state.queue.filter((q) => q.site === "x");
+  const done = xQueue.filter((q) => q.status === "done").length;
+  const pending = xQueue.filter((q) => q.status === "pending").length;
   const dayAgo = Date.now() - 24 * 3600 * 1000;
   const today = pace.blockedAt.filter((iso) => Date.parse(iso) > dayAgo).length;
 
@@ -58,6 +59,10 @@ async function renderStatus(state: State) {
   }
   $("#stat-next").textContent = next;
   $("#state-line").textContent = !settings.blockingEnabled ? t("stateOff") : settings.paused ? t("statePaused") : t("stateOn");
+  const active = settings.blockingEnabled && !settings.paused;
+  $("#tab-notice").hidden = !active;
+  const xTabs = active ? await browser.tabs.query({ url: "https://x.com/*" }) : [];
+  $("#no-tab").hidden = !active || xTabs.length > 0;
 }
 
 // ---- subscriptions ---------------------------------------------------------

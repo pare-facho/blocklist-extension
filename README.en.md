@@ -17,9 +17,9 @@ lists, and remove or add accounts yourself.
 
 1. **Hide now.** On x.com, posts from listed accounts disappear from your screen as they
    render: timeline, replies, search. Nothing changes on X, only your display.
-2. **Block slowly, in the background (optional, off by default).** When enabled, the
-   extension blocks listed accounts one at a time, at a slow pace (defaults: at most 10 per
-   hour, 60 per day, with a random 3–15 minute gap). It sends exactly the request the X
+2. **Block slowly, in the background (on by default, can be turned off).** While enabled, the
+   extension blocks listed accounts one at a time, at a slow pace (defaults: at most 15 per
+   hour, 120 per day, with a random 1–4 minute gap). It sends exactly the request the X
    website sends when you click "Block" yourself, with your own session. It opens no page,
    clicks nothing, and only runs while a logged-in x.com tab is open. Real blocks then
    apply everywhere, including the mobile app.

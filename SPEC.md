@@ -17,7 +17,7 @@ on X, Threads and Instagram, without putting the user's account at risk.
    - Posts, replies and comments from listed accounts are hidden immediately in the page.
    - The real block is queued and executed slowly in the background (see pacing).
 3. **Pacing (account protection)**
-   - Defaults: at most 10 blocks per hour and 60 per day, with a random gap of 3–15 minutes
+   - Defaults: blocking on, at most 15 blocks per hour and 120 per day, with a random gap of 1–4 minutes
      between two blocks. Configurable. Blocks run only while the browser is open and the user
      is logged in on that site.
    - On any rate-limit or error response the queue pauses with back-off; nothing is dropped.

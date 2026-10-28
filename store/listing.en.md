@@ -4,7 +4,7 @@
 Pare-Facho
 
 ## Summary (Chrome: 132 characters max)
-Block the far right: hides and slowly blocks the accounts on lists you subscribe to. X for now.
+Block the far right: hides and slowly blocks listed far-right accounts, whether you follow them or not. X for now.
 
 ## Long description
 
@@ -14,7 +14,7 @@ What it does:
 
 • Hide now. Posts from listed accounts disappear from your timeline, replies and search as they render. Nothing changes on X, only your screen.
 
-• Block slowly, in the background (optional, off by default). When enabled, the extension blocks listed accounts one at a time, at a slow pace you set (defaults: at most 10 per hour, 60 per day, with a random gap between two). It sends the same request the X website sends when you click "Block" yourself, with your own session. It opens no page and only runs while a logged-in x.com tab is open.
+• Block slowly, in the background (on by default, can be turned off). The extension blocks listed accounts one at a time, at a slow pace you set (defaults: at most 15 per hour, 120 per day, with a random gap between two). It sends the same request the X website sends when you click "Block" yourself, with your own session. It opens no page and only runs while a logged-in x.com tab is open.
 
 • A ⛔ button on every post: one click to hide, add the account to your list and queue it for blocking. Five seconds to undo.
 
