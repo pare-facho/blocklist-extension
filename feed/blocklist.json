@@ -3,7 +3,7 @@
   "name": "Blockfacho — on bloque l’extrême droite",
   "description": "Comptes d’extrême droite recensés par onbloquelextremedroite.fun",
   "homepage": "https://onbloquelextremedroite.fun/",
-  "updated": "2026-10-27T23:22:24.278Z",
+  "updated": "2026-10-28T00:08:39.695Z",
   "entries": [
     {
       "site": "facebook",
@@ -869,6 +869,13 @@
     },
     {
       "site": "instagram",
+      "handle": "sarahknafo1",
+      "name": "https://www.instagram.com/sarahknafo1",
+      "category": "Autres",
+      "source": "https://www.instagram.com/sarahknafo1"
+    },
+    {
+      "site": "instagram",
       "handle": "serge_muller_off",
       "name": "Serge Muller",
       "category": "RN",
@@ -1404,6 +1411,14 @@
     },
     {
       "site": "x",
+      "handle": "capetlevrai",
+      "name": "Capetlevrai",
+      "category": "Autres",
+      "id": "262764995",
+      "source": "https://x.com/Capetlevrai"
+    },
+    {
+      "site": "x",
       "handle": "carolinefourest",
       "name": "Caroline Fourest",
       "category": "Autres",
@@ -1651,6 +1666,14 @@
     },
     {
       "site": "x",
+      "handle": "droiteuniv",
+      "name": "droiteuniv",
+      "category": "Autres",
+      "id": "22019685",
+      "source": "https://x.com/droiteuniv"
+    },
+    {
+      "site": "x",
       "handle": "dupontaignan",
       "name": "Nicolas Dupont-Aignan",
       "category": "Autres",
@@ -1726,6 +1749,14 @@
       "id": "493628470",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "ericnaulleau",
+      "name": "Eric Naulleau",
+      "category": "Autres",
+      "id": "700737161708986369",
+      "source": "https://x.com/EricNaulleau"
     },
     {
       "site": "x",
@@ -1806,6 +1837,15 @@
       "category": "Autres",
       "id": "142646856",
       "source": "https://x.com/FDW_VB"
+    },
+    {
+      "site": "x",
+      "handle": "flaviobolsonaro",
+      "name": "FlavioBolsonaro",
+      "category": "Autres",
+      "id": "40053694",
+      "reason": "Pour nos frères BRAZIL",
+      "source": "https://x.com/FlavioBolsonaro"
     },
     {
       "site": "x",
@@ -1894,6 +1934,14 @@
       "id": "1166120125",
       "reason": "Boulevard Voltaire · CNEWS",
       "source": "https://platform.twstalker.com/gabriellecluzel"
+    },
+    {
+      "site": "x",
+      "handle": "galzystephanie",
+      "name": "Stéphanie Galzy",
+      "category": "Autres",
+      "id": "1462873748403474436",
+      "source": "https://x.com/GalzyStephanie"
     },
     {
       "site": "x",
@@ -2980,6 +3028,14 @@
     },
     {
       "site": "x",
+      "handle": "policerealites",
+      "name": "https://x.com/PoliceRealites",
+      "category": "Autres",
+      "id": "372871761",
+      "source": "https://x.com/PoliceRealites"
+    },
+    {
+      "site": "x",
       "handle": "pr_thionnet",
       "name": "Pierre-Romain Thionnet",
       "category": "RN",
@@ -3169,6 +3225,14 @@
       "category": "Autres",
       "id": "88462044",
       "source": "https://x.com/Samuel_Lafont"
+    },
+    {
+      "site": "x",
+      "handle": "sarah176israel",
+      "name": "Sarah176Israel",
+      "category": "Autres",
+      "id": "1495417959036116997",
+      "source": "https://x.com/Sarah176Israel"
     },
     {
       "site": "x",
