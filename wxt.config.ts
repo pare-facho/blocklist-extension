@@ -15,7 +15,12 @@ export default defineConfig({
     ...(browser === "firefox"
       ? {
           browser_specific_settings: {
-            gecko: { id: "pare-facho@pare-facho.github.io", strict_min_version: "128.0" },
+            gecko: {
+              id: "pare-facho@pare-facho.github.io",
+              strict_min_version: "128.0",
+              // Required by addons.mozilla.org: the extension collects no data.
+              data_collection_permissions: { required: ["none"] },
+            },
           },
         }
       : {}),
