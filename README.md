@@ -37,7 +37,7 @@ Utilisez de préférence un compte secondaire (voir [À savoir avant d'installer
    de votre écran dès qu'elles s'affichent : fil, réponses, recherche. Rien ne change sur
    X, seulement votre affichage.
 2. **Bloquer en arrière-plan.** L'extension bloque les comptes listés un par un, à un rythme
-   réglable (par défaut : au plus 300 par heure, 1000 par jour, avec un délai aléatoire de
+   réglable (par défaut : au plus 30 par heure, 1000 par jour, avec un délai aléatoire de
    5 à 15 secondes entre deux). Elle envoie la même requête que le site X quand vous
    cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et
    ne fonctionne que si un onglet x.com connecté est ouvert. Les blocages s'appliquent

@@ -18,7 +18,7 @@ on X, Threads and Instagram, without putting the user's account at risk.
    - The real block is queued and executed step by step in the background (see pacing).
    - Accounts that leave every list are unblocked the same way, if the extension blocked them.
 3. **Pacing (account protection)**
-   - Defaults: blocking on, at most 300 blocks per hour and 1000 per day, with a random gap of 5–15 seconds
+   - Defaults: blocking on, at most 30 blocks per hour and 1000 per day, with a random gap of 5–15 seconds
      between two blocks. A 30-second alarm runs several blocks in a row, waiting out the gap between them. Configurable. Blocks run only while the browser is open and the user
      is logged in on that site.
    - On any rate-limit or error response the queue pauses with back-off; nothing is dropped.

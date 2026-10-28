@@ -14,7 +14,7 @@ Ce que fait l'extension :
 
 • Masquer tout de suite. Les publications des comptes listés disparaissent de votre fil, des réponses et de la recherche dès qu'elles s'affichent. Rien ne change sur X, seulement votre écran.
 
-• Bloquer progressivement, en arrière-plan (activé par défaut, désactivable). L'extension bloque les comptes listés un par un, à un rythme que vous réglez (par défaut : au plus 300 par heure, 1000 par jour, avec un délai aléatoire de 5 à 15 secondes entre deux). Elle envoie la même demande que le site X quand vous cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et ne fonctionne que si un onglet x.com connecté est ouvert. Si un compte sort de toutes vos listes (ajouté par erreur, ou liste trafiquée), l'extension le débloque de la même façon, à condition que ce soit elle qui l'ait bloqué.
+• Bloquer progressivement, en arrière-plan (activé par défaut, désactivable). L'extension bloque les comptes listés un par un, à un rythme que vous réglez (par défaut : au plus 30 par heure, 1000 par jour, avec un délai aléatoire de 5 à 15 secondes entre deux). Elle envoie la même demande que le site X quand vous cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et ne fonctionne que si un onglet x.com connecté est ouvert. Si un compte sort de toutes vos listes (ajouté par erreur, ou liste trafiquée), l'extension le débloque de la même façon, à condition que ce soit elle qui l'ait bloqué.
 
 • Un bouton ⛔ sur chaque publication : un clic pour masquer, ajouter le compte à votre liste et le mettre en file de blocage. Cinq secondes pour annuler.
 
