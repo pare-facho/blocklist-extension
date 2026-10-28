@@ -25,6 +25,15 @@ posts inside the page. It sends no request to x.com. The "blocking" settings,
 the queue and the history were removed, and the stored data of older versions
 is cleaned up at update.
 
+## Two Firefox channels, same code
+
+While the listed version waits for review, the same build is also submitted on
+the self-distributed channel so that the signed `.xpi` can be linked from the
+README (`pare-facho-firefox.xpi` on the GitHub release). AMO does not accept the
+same version number on both channels, so the self-distributed build carries a
+fourth component (listed `0.4.0`, self-distributed `0.4.0.1`); the manifest
+version is the only difference.
+
 ## How to test
 
 1. Open the extension settings page.

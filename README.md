@@ -12,20 +12,43 @@ personne. Elle change seulement ce qui s'affiche sur votre écran.
 
 ## Installer
 
-**Firefox** : installez l'extension depuis la page officielle
-[addons.mozilla.org/firefox/addon/pare-facho](https://addons.mozilla.org/firefox/addon/pare-facho/)
-en cliquant sur « Ajouter à Firefox ».
+### Firefox
 
-**Chrome, Edge, Brave** : l'extension est en cours de validation par Google. En attendant,
-vous pouvez l'installer à la main en cinq étapes :
+L'extension est en attente de validation par Mozilla. En attendant la page officielle
+([addons.mozilla.org/firefox/addon/pare-facho](https://addons.mozilla.org/firefox/addon/pare-facho/)),
+vous pouvez installer la version signée par Mozilla en deux étapes :
+
+1. Dans Firefox, cliquez sur ce lien :
+   [pare-facho-firefox.xpi](https://github.com/pare-facho/blocklist-extension/releases/latest/download/pare-facho-firefox.xpi).
+2. Firefox demande d'abord l'autorisation d'installer depuis GitHub : cliquez sur
+   « Continuer l'installation » (ou « Autoriser »), puis sur « Ajouter » dans la fenêtre
+   « Ajouter Pare-Facho ? ».
+
+Autre méthode : téléchargez le fichier `.xpi`, puis faites-le glisser sur une fenêtre de
+Firefox, ou ouvrez `about:addons`, cliquez sur la roue dentée et choisissez « Installer un
+module depuis un fichier… ».
+
+Cette version est signée par Mozilla, elle fonctionne dans Firefox normal et reste
+installée. Un fichier `.zip` ou un `.xpi` non signé est refusé par Firefox (« le module n'a
+pas pu être vérifié ») : n'utilisez pas `pare-facho-firefox.zip` pour installer, il sert
+seulement à la validation du code.
+
+### Chrome, Edge, Brave
+
+L'extension est en cours de validation par Google. En attendant, vous pouvez l'installer à
+la main en cinq étapes :
 
 1. Téléchargez ce fichier :
    [pare-facho-chrome.zip](https://github.com/pare-facho/blocklist-extension/releases/latest/download/pare-facho-chrome.zip).
 2. Décompressez-le (double-clic sur le fichier). Vous obtenez un dossier `pare-facho-chrome`.
    Ne le supprimez pas ensuite : le navigateur s'en sert.
-3. Dans le navigateur, tapez `chrome://extensions` dans la barre d'adresse et validez.
+3. Dans le navigateur, tapez `chrome://extensions` dans la barre d'adresse et validez
+   (`edge://extensions` dans Edge, `brave://extensions` dans Brave).
 4. Activez le « Mode développeur » (interrupteur en haut à droite).
-5. Cliquez sur « Charger l'extension non empaquetée » et choisissez le dossier décompressé.
+5. Faites glisser le dossier décompressé sur cette page, ou cliquez sur « Charger
+   l'extension non empaquetée » et choisissez le dossier.
+
+Le fichier `.zip` lui-même ne peut pas être glissé : il faut d'abord le décompresser.
 
 C'est tout. Ouvrez [x.com](https://x.com) : les comptes listés disparaissent de votre
 écran. L'icône de l'extension (dans le menu des extensions, en haut à droite) ouvre la page

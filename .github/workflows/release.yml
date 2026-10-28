@@ -34,6 +34,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           # Copies with a fixed name, so the README can link to the latest build directly.
+          # The signed Firefox file (pare-facho-firefox.xpi) is not built here: AMO signs the
+          # self-distributed version and the signed file is attached to the release by hand.
           cp .output/pare-facho-*-chrome.zip .output/pare-facho-chrome.zip
           cp .output/pare-facho-*-firefox.zip .output/pare-facho-firefox.zip
           gh release upload "${GITHUB_REF_NAME}" .output/pare-facho-*-chrome.zip .output/pare-facho-*-firefox.zip .output/*-sources.zip \
