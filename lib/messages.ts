@@ -16,7 +16,8 @@ export type OptionsMessage =
 // Background -> content script
 export type BackgroundMessage =
   | { type: "blocksetChanged" }
-  | { type: "x:block"; handle: string; id?: string };
+  | { type: "x:block"; handle: string; id?: string }
+  | { type: "x:unblock"; handle: string; id?: string };
 
 export type BlockResult =
   | { ok: true; id?: string; handle: string }

@@ -27,6 +27,9 @@ retirer, ajouter d'autres listes, et retirer ou ajouter des comptes vous-même.
    cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page,
    ne clique nulle part, et ne fonctionne que si un onglet x.com connecté est ouvert.
    Le blocage réel s'applique ensuite partout, y compris dans l'application mobile.
+   Si un compte sort de toutes vos listes (ajouté par erreur, ou liste trafiquée),
+   l'extension le débloque de la même façon, à condition que ce soit elle qui l'ait bloqué :
+   vos propres blocages ne sont jamais annulés.
 3. **Un bouton ⛔ sur chaque publication.** Un clic : la publication est masquée, le compte
    est ajouté à *ma liste* et mis dans la file de blocage. Cinq secondes pour annuler.
 4. **Statut et historique.** La page de réglages montre le nombre de comptes listés,

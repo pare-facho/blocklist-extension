@@ -1,7 +1,7 @@
 import type { BlockResult } from "./messages.ts";
 
-// Blocks one account through the endpoint the X website itself calls, with the
-// user's own session. Must run inside an x.com page (content script): the cookies
+// Blocks or unblocks one account through the endpoints the X website itself calls,
+// with the user's own session. Must run inside an x.com page (content script): the cookies
 // and the origin come from the page, nothing is stored by the extension.
 //
 // The bearer token below is the public one X ships in its web client for everyone.
@@ -12,13 +12,18 @@ function csrfToken(): string | undefined {
   return document.cookie.match(/(?:^|;\s*)ct0=([^;]+)/)?.[1];
 }
 
-export async function blockOnX(target: { handle: string; id?: string }): Promise<BlockResult> {
+type Target = { handle: string; id?: string };
+
+export const blockOnX = (target: Target) => callBlocks("create", target);
+export const unblockOnX = (target: Target) => callBlocks("destroy", target);
+
+async function callBlocks(action: "create" | "destroy", target: Target): Promise<BlockResult> {
   const ct0 = csrfToken();
   if (!ct0) return { ok: false, kind: "notLoggedIn" };
   const body = new URLSearchParams(target.id ? { user_id: target.id } : { screen_name: target.handle });
   let res: Response;
   try {
-    res = await fetch("https://x.com/i/api/1.1/blocks/create.json", {
+    res = await fetch(`https://x.com/i/api/1.1/blocks/${action}.json`, {
       method: "POST",
       credentials: "include",
       headers: {

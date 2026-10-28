@@ -2,10 +2,10 @@ import { browser, defineContentScript } from "#imports";
 import { t } from "../lib/i18n.ts";
 import { isListed, type BlockSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, BlockResult, ContentMessage } from "../lib/messages.ts";
-import { blockOnX } from "../lib/x-api.ts";
+import { blockOnX, unblockOnX } from "../lib/x-api.ts";
 
 // Hides posts from listed accounts as they appear, adds a one-click block button,
-// and performs the real block when the background asks for it.
+// and performs the real block or unblock when the background asks for it.
 
 const HIDDEN_ATTR = "data-blocklist-hidden";
 const BUTTON_CLASS = "blocklist-quick";
@@ -26,6 +26,7 @@ export default defineContentScript({
     browser.runtime.onMessage.addListener((msg: BackgroundMessage) => {
       if (msg.type === "blocksetChanged") return reload();
       if (msg.type === "x:block") return blockOnX({ handle: msg.handle, id: msg.id }) as Promise<BlockResult>;
+      if (msg.type === "x:unblock") return unblockOnX({ handle: msg.handle, id: msg.id }) as Promise<BlockResult>;
     });
 
     injectStyle();

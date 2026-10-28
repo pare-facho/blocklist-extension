@@ -23,6 +23,9 @@ lists, and remove or add accounts yourself.
    website sends when you click "Block" yourself, with your own session. It opens no page,
    clicks nothing, and only runs while a logged-in x.com tab is open. Real blocks then
    apply everywhere, including the mobile app.
+   If an account leaves all your lists (added by mistake, or a tampered list), the
+   extension unblocks it the same way, provided it was the one that blocked it: blocks
+   you made yourself are never undone.
 3. **A ⛔ button on every post.** One click: the post is hidden, the account is added to
    *my list* and queued for blocking. Five seconds to undo.
 4. **Status and history.** The settings page shows how many accounts are listed, blocked,

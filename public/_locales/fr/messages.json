@@ -212,6 +212,12 @@
   "stKept": {
     "message": "gardé"
   },
+  "stUnblocking": {
+    "message": "déblocage en attente"
+  },
+  "stUnblocked": {
+    "message": "débloqué"
+  },
   "actKeep": {
     "message": "Garder"
   },
@@ -255,10 +261,10 @@
     "message": "Historique"
   },
   "historyHelp": {
-    "message": "Derniers blocages effectués, échecs et comptes ignorés."
+    "message": "Derniers blocages effectués, échecs, comptes ignorés et déblocages. Les comptes qui sortent des listes sont débloqués automatiquement, s'ils avaient été bloqués par l'extension."
   },
   "historySummary": {
-    "message": "$WAITING$ en attente · $DONE$ bloqués · $FAILED$ échecs · $SKIPPED$ ignorés",
+    "message": "$WAITING$ en attente · $DONE$ bloqués · $FAILED$ échecs · $SKIPPED$ ignorés · $UNBLOCKED$ débloqués",
     "placeholders": {
       "waiting": {
         "content": "$1"
@@ -271,6 +277,9 @@
       },
       "skipped": {
         "content": "$4"
+      },
+      "unblocked": {
+        "content": "$5"
       }
     }
   },
@@ -383,6 +392,39 @@
   },
   "logFailed": {
     "message": "blocage de @$HANDLE$ échoué ($ATTEMPT$/$MAX$) : $ERROR$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "attempt": {
+        "content": "$2"
+      },
+      "max": {
+        "content": "$3"
+      },
+      "error": {
+        "content": "$4"
+      }
+    }
+  },
+  "logDelisted": {
+    "message": "$COUNT$ compte(s) sorti(s) des listes : déblocage prévu",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "logUnblocked": {
+    "message": "débloqué @$HANDLE$ sur X (plus dans les listes)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logUnblockFailed": {
+    "message": "déblocage de @$HANDLE$ échoué ($ATTEMPT$/$MAX$) : $ERROR$",
     "placeholders": {
       "handle": {
         "content": "$1"

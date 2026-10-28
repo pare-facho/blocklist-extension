@@ -14,7 +14,7 @@ What it does:
 
 • Hide now. Posts from listed accounts disappear from your timeline, replies and search as they render. Nothing changes on X, only your screen.
 
-• Block step by step, in the background (on by default, can be turned off). The extension blocks listed accounts one at a time, at a pace you set (defaults: at most 300 per hour, 1000 per day, with a random 5–15 second gap between two). It sends the same request the X website sends when you click "Block" yourself, with your own session. It opens no page and only runs while a logged-in x.com tab is open.
+• Block step by step, in the background (on by default, can be turned off). The extension blocks listed accounts one at a time, at a pace you set (defaults: at most 300 per hour, 1000 per day, with a random 5–15 second gap between two). It sends the same request the X website sends when you click "Block" yourself, with your own session. It opens no page and only runs while a logged-in x.com tab is open. If an account leaves all your lists (added by mistake, or a tampered list), the extension unblocks it the same way, provided it was the one that blocked it.
 
 • A ⛔ button on every post: one click to hide, add the account to your list and queue it for blocking. Five seconds to undo.
 
@@ -47,7 +47,7 @@ Hide and block on X the accounts found in lists chosen by the user.
 ## Permission justification (Chrome)
 - storage: save lists, settings, block queue and history, locally.
 - alarms: check lists periodically and run the blocks in the background, at the configured pace.
-- Host access to x.com: hide posts from listed accounts in the page, show the ⛔ button, and send block requests with the user's session.
+- Host access to x.com: hide posts from listed accounts in the page, show the ⛔ button, and send block and unblock requests with the user's session.
 - Host access to pare-facho.github.io: download the default list and its updates.
 - Optional host access to other sites (optional host permission https://*/*): requested only, and case by case, when the user adds a list address, to download it.
 - No remote code: all code is in the package.

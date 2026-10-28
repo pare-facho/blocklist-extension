@@ -212,6 +212,12 @@
   "stKept": {
     "message": "kept"
   },
+  "stUnblocking": {
+    "message": "unblock pending"
+  },
+  "stUnblocked": {
+    "message": "unblocked"
+  },
   "actKeep": {
     "message": "Keep"
   },
@@ -255,10 +261,10 @@
     "message": "History"
   },
   "historyHelp": {
-    "message": "Latest blocks done, failures and skipped accounts."
+    "message": "Latest blocks done, failures, skipped accounts and unblocks. Accounts that leave the lists are unblocked automatically, if the extension had blocked them."
   },
   "historySummary": {
-    "message": "$WAITING$ waiting · $DONE$ blocked · $FAILED$ failed · $SKIPPED$ skipped",
+    "message": "$WAITING$ waiting · $DONE$ blocked · $FAILED$ failed · $SKIPPED$ skipped · $UNBLOCKED$ unblocked",
     "placeholders": {
       "waiting": {
         "content": "$1"
@@ -271,6 +277,9 @@
       },
       "skipped": {
         "content": "$4"
+      },
+      "unblocked": {
+        "content": "$5"
       }
     }
   },
@@ -383,6 +392,39 @@
   },
   "logFailed": {
     "message": "block of @$HANDLE$ failed ($ATTEMPT$/$MAX$): $ERROR$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "attempt": {
+        "content": "$2"
+      },
+      "max": {
+        "content": "$3"
+      },
+      "error": {
+        "content": "$4"
+      }
+    }
+  },
+  "logDelisted": {
+    "message": "$COUNT$ account(s) left the lists: unblock scheduled",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "logUnblocked": {
+    "message": "unblocked @$HANDLE$ on X (no longer listed)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logUnblockFailed": {
+    "message": "unblock of @$HANDLE$ failed ($ATTEMPT$/$MAX$): $ERROR$",
     "placeholders": {
       "handle": {
         "content": "$1"

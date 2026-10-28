@@ -50,14 +50,16 @@ export type Settings = {
 export const DEFAULT_SETTINGS: Settings = {
   blockingEnabled: true,
   paused: false,
-  perHour: 200,
+  perHour: 300,
   perDay: 1000,
   minGapSeconds: 5,
   maxGapSeconds: 15,
   feedRefreshHours: 6,
 };
 
-export type TaskStatus = "pending" | "done" | "failed" | "skipped";
+// pending: block to do · done: blocked by the extension · unblocking: the account left
+// every list, unblock to do · unblocked: unblock done · failed/skipped: block given up.
+export type TaskStatus = "pending" | "done" | "failed" | "skipped" | "unblocking" | "unblocked";
 
 export type QueueTask = {
   key: string; // `${site}:${handle}`
