@@ -27,9 +27,9 @@ export function canBlockNow(settings: Settings, pace: PaceState, now: number): P
 
 // After a successful block: remember it and draw the next random gap.
 export function recordBlock(settings: Settings, pace: PaceState, now: number, random = Math.random): PaceState {
-  const min = Math.max(0, settings.minGapMinutes);
-  const max = Math.max(min, settings.maxGapMinutes);
-  const gapMs = (min + random() * (max - min)) * 60 * 1000;
+  const min = Math.max(0, settings.minGapSeconds);
+  const max = Math.max(min, settings.maxGapSeconds);
+  const gapMs = (min + random() * (max - min)) * 1000;
   return prunePace(
     { blockedAt: [...pace.blockedAt, new Date(now).toISOString()], nextAllowedAt: new Date(now + gapMs).toISOString() },
     now,

@@ -3,7 +3,7 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "On bloque l’extrême droite : masque et bloque lentement les comptes d’extrême droite listés, que vous les suiviez ou non."
+    "message": "On bloque l’extrême droite : masque et bloque progressivement les comptes d’extrême droite listés, que vous les suiviez ou non."
   },
   "optionsTitle": {
     "message": "Pare-Facho — réglages"
@@ -228,10 +228,10 @@
     "message": "Blocage"
   },
   "blockingHelp": {
-    "message": "Les publications des comptes listés sont toujours masquées. Le blocage réel est activé par défaut : il se fait lentement en arrière-plan, uniquement quand un onglet x.com est ouvert et que vous êtes connecté·e. Décochez la case pour seulement masquer."
+    "message": "Les publications des comptes listés sont toujours masquées. Le blocage réel est activé par défaut : il se fait petit à petit en arrière-plan, uniquement quand un onglet x.com est ouvert et que vous êtes connecté·e. Décochez la case pour seulement masquer."
   },
   "blockingWarn": {
-    "message": "Les actions automatiques sont contraires aux conditions d'utilisation de la plupart des réseaux. Un rythme lent réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte secondaire si vous le pouvez."
+    "message": "Les actions automatiques sont contraires aux conditions d'utilisation de la plupart des réseaux. Un rythme modéré réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte secondaire si vous le pouvez."
   },
   "blockingEnabled": {
     "message": "Bloquer réellement les comptes listés"
@@ -246,10 +246,10 @@
     "message": "Maximum par jour"
   },
   "gapMin": {
-    "message": "Délai entre deux blocages, minimum (minutes)"
+    "message": "Délai entre deux blocages, minimum (secondes)"
   },
   "gapMax": {
-    "message": "Délai entre deux blocages, maximum (minutes)"
+    "message": "Délai entre deux blocages, maximum (secondes)"
   },
   "historyTitle": {
     "message": "Historique"

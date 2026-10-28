@@ -15,10 +15,10 @@ on X, Threads and Instagram, without putting the user's account at risk.
    - Per-list on/off switch and "allow list" (accounts the user never wants blocked).
 2. **Hide now, block later**
    - Posts, replies and comments from listed accounts are hidden immediately in the page.
-   - The real block is queued and executed slowly in the background (see pacing).
+   - The real block is queued and executed step by step in the background (see pacing).
 3. **Pacing (account protection)**
-   - Defaults: blocking on, at most 15 blocks per hour and 120 per day, with a random gap of 1–4 minutes
-     between two blocks. Configurable. Blocks run only while the browser is open and the user
+   - Defaults: blocking on, at most 300 blocks per hour and 1000 per day, with a random gap of 5–15 seconds
+     between two blocks. A 30-second alarm runs several blocks in a row, waiting out the gap between them. Configurable. Blocks run only while the browser is open and the user
      is logged in on that site.
    - On any rate-limit or error response the queue pauses with back-off; nothing is dropped.
    - Per-site daily counter visible in the options page.
