@@ -1,20 +1,25 @@
-# Pare-Facho browser extension — specification (revision 3, 2026-10-28)
+# Pare-Facho browser extension — specification (revision 4, 2026-10-28)
 
 ## Goal
 
 A Chrome + Firefox extension that collapses, on X, the posts of accounts from lists the
-user chooses and, by default, blocks those accounts from the user's own feed so that X's
-ranking receives a negative signal about them. The block is made the way a person makes
-it: through X's own post menu, on a post that is on screen, with the user's session, at a
-human pace. A "Hide only" mode changes only what the user sees.
+user chooses and acts on those posts the way a person does, through X's own post menu, on
+a post that is on screen, with the user's session, at a human pace, so that X's ranking
+receives negative signals about those accounts. Two modes, chosen in the settings:
+"Not interested in this post" on every served post (default) or "Mute" once per account.
+Nothing is blocked or reported.
 
 Revision 1 (2026-10-27) blocked the listed accounts through X's web endpoints from a
 background queue, whether or not their posts were seen. Revision 2 (0.4.0) removed that.
-Revision 3 (0.5.0) reintroduces blocking in a different form, because X's open ranking
-code counts a block made on a served post as a negative training label for the author,
-while a hidden post counts for nothing: blocks happen only from posts rendered on screen,
-through X's own interface, one at a time, under fixed caps (30 per hour, 150 per day, 15 to
-45 seconds apart). The feed format keeps its name (`blocklist/1`).
+Revision 3 reintroduced an action from the feed as a block. Revision 4 (0.5.0) replaces
+the block by the two actions above, because X's published ranking code
+(xai-org/x-algorithm) shows that: only actions on posts served in the Home timeline are
+training labels; a block or mute made from a profile page is not one; per action, mute
+(−58.8) and not interested (−52.3) weigh more than block (−31.2); and only "not
+interested" can be repeated, since mute and block remove the account from the user's
+feed. Actions happen only from posts rendered on screen, through X's own interface, one at
+a time, under fixed caps (30 per hour, 150 per day, 15 to 45 seconds apart). The feed
+format keeps its name (`blocklist/1`).
 
 ## Requirements
 
@@ -26,23 +31,28 @@ through X's own interface, one at a time, under fixed caps (30 per hour, 150 per
    - The extension ships with the "On bloque l'extrême droite" list subscribed by default
      (removable, never re-added once removed). It never sends the user's lists anywhere.
    - Per-list on/off switch and "keep" list (accounts the user never wants hidden).
-2. **Collapse and block**
+2. **Collapse and act**
    - Posts and replies from listed accounts are collapsed to a one-line strip as soon as
      they render, everywhere on x.com (timeline, replies, search, profiles). The strip
-     offers "Show" and, before a block, "Don't block".
+     offers "Show".
    - Reposts made by a listed account are collapsed too, whoever wrote the original post
-     (hidden only: the block targets the post's author).
-   - In "block" mode (default), once a collapsed post is on screen the extension opens the
-     post's own menu, chooses "Block" and confirms, after a short reading pause and within
-     the pace caps. X's page sends the request; the extension never calls X itself. Each
-     account is tried once; the result is listed in the settings.
-   - In "Hide only" mode nothing is sent to X. No block, no mute, no report.
+     (hidden only: the menu acts on the post's author).
+   - Once a collapsed post is on screen, after a short reading pause and within the pace
+     caps, the extension opens the post's own menu and picks the item of the chosen mode,
+     found by its label in the ten interface languages X ships it in. X's page sends the
+     request; the extension never calls X itself.
+   - "Not interested" mode (default): one action per served post; the post id is kept so
+     the same post is never marked twice; "Show fewer posts from…" is never chosen. The
+     item only exists in the Home timeline: elsewhere the post stays hidden, silently.
+   - "Mute" mode: one action per account, kept so it is never tried twice.
+   - What was done, and what failed, is listed in the settings. No block, no report.
 3. **One-click button**
    - A small ⛔ icon on every post. One click = hide now + add the author to the manual
      list. Short undo (5 s).
 4. **Settings page**
-   - Counts: accounts hidden, accounts blocked by the extension, accounts in the user's own
-     list, accounts kept. Blocked accounts are listed with their time.
+   - Counts: accounts hidden, "not interested" sent, accounts muted, accounts in the
+     user's own list. Actions are listed with their time. The page explains, in the
+     user's language, what each mode does to the account's reach and why.
    - Subscribed lists with their size and dates; own list and keep list as text;
      full searchable list with Keep / Remove per account; activity log.
 5. **Platforms**: X (x.com). Threads and Instagram are possible later slices (each site is
@@ -85,8 +95,8 @@ room for metadata. JSON is easy to host anywhere (GitHub, a static site, Nextclo
 
 ## Out of scope
 
-- Muting or reporting accounts, and any block that is not made from a post on screen
-  (background queues, whole-list blocking).
+- Blocking or reporting accounts, and any action that is not made from a post on screen
+  (profile pages, background queues, whole-list actions).
 - Shared or crowd-sourced list editing inside the extension.
 - Facebook, YouTube, Bluesky, Mastodon (Bluesky and Mastodon have native list import).
 - Safari.

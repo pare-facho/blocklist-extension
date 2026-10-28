@@ -6,10 +6,10 @@ import { buildHideSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, ContentMessage, MayActReply, OptionsMessage, SiteState } from "../lib/messages.ts";
 import { canActNow, recordAction, releaseSlot } from "../lib/pacing.ts";
 import {
-  actedItem,
   allowItem,
   appendActed,
   appendLog,
+  getActed,
   getSettings,
   manualItem,
   OBSOLETE_KEYS,
@@ -17,7 +17,7 @@ import {
   seededItem,
   subscriptionsItem,
 } from "../lib/storage.ts";
-import type { Site, Subscription } from "../lib/types.ts";
+import type { Action, Site, Subscription } from "../lib/types.ts";
 
 const ALARM_REFRESH = "refresh-feeds";
 
@@ -26,7 +26,7 @@ export default defineBackground(() => {
     void browser.storage.local.remove(OBSOLETE_KEYS);
     void scheduleRefresh();
     void ensureDefaultFeed();
-    // 0.5 blocks from the page by default where 0.4 only hid: show the settings once so the change is seen.
+    // 0.5 acts on X from the page where 0.4 only hid: show the settings once so the change is seen.
     if (details.reason === "update" && details.previousVersion && details.previousVersion < "0.5") void browser.runtime.openOptionsPage();
   });
   browser.runtime.onStartup.addListener(() => void scheduleRefresh());
@@ -70,12 +70,14 @@ async function stateFor(site: Site): Promise<SiteState> {
     manualItem.getValue(),
     allowItem.getValue(),
     getSettings(),
-    actedItem.getValue(),
+    getActed(),
   ]);
+  const done = acted.filter((e) => e.site === site && e.result === "done");
   return {
     set: buildHideSet(site, subs, manual, allow),
     action: settings.action,
-    blocked: acted.filter((e) => e.site === site && e.result === "blocked").map((e) => e.handle),
+    muted: done.filter((e) => e.action === "mute").map((e) => e.handle),
+    notInterested: done.flatMap((e) => (e.action === "notInterested" && e.postId ? [e.postId] : [])).slice(-3000),
   };
 }
 
@@ -108,19 +110,21 @@ function mayAct(): Promise<MayActReply> {
   });
 }
 
-async function acted(msg: { site: Site; handle: string; slot: string; result: "blocked" | "failed" | "gone"; detail?: string }) {
+async function acted(msg: { site: Site; handle: string; action: Action; postId?: string; slot: string; result: "done" | "failed" | "gone"; detail?: string }) {
   const handle = msg.handle.toLowerCase();
-  if (msg.result === "blocked") {
-    await appendActed({ site: msg.site, handle, at: new Date().toISOString(), result: "blocked" });
-    await appendLog(t("logBlocked", handle));
-    await notifyContentScripts();
+  const at = new Date().toISOString();
+  if (msg.result === "done") {
+    await appendActed({ site: msg.site, handle, action: msg.action, postId: msg.postId, at, result: "done" });
+    await appendLog(t(msg.action === "mute" ? "logMuted" : "logNotInterested", handle));
+    // Other tabs must learn a muted account at once; a marked post is seen in one tab only.
+    if (msg.action === "mute") await notifyContentScripts();
     return { ok: true };
   }
   // Nothing was sent: give the slot back so the pace is not spent on a miss.
   await withPace(async () => pacingItem.setValue(releaseSlot(await pacingItem.getValue(), msg.slot)));
   if (msg.result === "failed") {
-    await appendActed({ site: msg.site, handle, at: new Date().toISOString(), result: "failed", detail: msg.detail });
-    await appendLog(t("logBlockFailed", handle, msg.detail ?? ""));
+    await appendActed({ site: msg.site, handle, action: msg.action, postId: msg.postId, at, result: "failed", detail: msg.detail });
+    await appendLog(t("logFailed", handle, msg.detail ?? ""));
   }
   return { ok: true };
 }

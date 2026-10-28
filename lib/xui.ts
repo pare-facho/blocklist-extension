@@ -1,18 +1,20 @@
-// Drives X's own post menu the way a person does: open the "More" menu of a post,
-// choose "Block", confirm. Everything goes through X's page and X's requests, with
-// the user's session; the extension itself never calls X.
+// Drives X's own post menu the way a person does: open the "More" menu of a post and
+// pick an item. Everything goes through X's page and X's requests, with the user's
+// session; the extension itself never calls X.
 //
-// The hooks are X's stable test ids, not the visible labels, so the language of
-// the X interface does not matter:
+// Hooks: X's stable test ids where they exist, the item's visible label otherwise
+// (see xlabels.ts for the labels, in every language X ships them in):
 //   [data-testid="caret"]                      the "More" button of a post
 //   [data-testid="Dropdown"]                   the open menu
-//   [role="menuitem"][data-testid="block"]     "Block @handle"
-//   [data-testid="confirmationSheetDialog"]    the confirmation sheet (role "alertdialog")
-//   [data-testid="confirmationSheetConfirm"]   its "Block" button
+//   [role="menuitem"]                          its items ("Not interested in this post", "Mute", …)
+//   [data-testid="confirmationSheetDialog"]    a confirmation sheet, if X asks for one
+//   [data-testid="confirmationSheetConfirm"]   its confirm button
 
-export type BlockOutcome =
+import { MUTE_LABELS, NOT_INTERESTED_LABELS, matchesLabel } from "./xlabels.ts";
+
+export type MenuOutcome =
   | { ok: true }
-  | { ok: false; reason: "gone" | "noMenu" | "noBlockItem" | "noConfirm" | "notClosed" };
+  | { ok: false; reason: "gone" | "noMenu" | "noItem" | "notClosed" };
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const between = (min: number, max: number) => min + Math.random() * (max - min);
@@ -30,6 +32,10 @@ export async function waitFor<T>(probe: () => T | null | undefined | false, time
 const menu = () => document.querySelector<HTMLElement>('[data-testid="Dropdown"]');
 const confirmButton = () => document.querySelector<HTMLElement>('[data-testid="confirmationSheetConfirm"]');
 const dialog = () => document.querySelector<HTMLElement>('[data-testid="confirmationSheetDialog"], [role="alertdialog"], [role="dialog"]');
+
+// True while a menu or a sheet is open on the page, which means the person is using
+// one: the extension must not open its own menu over it.
+export const overlayOpen = () => Boolean(menu() || dialog());
 
 // X closes a menu or a sheet on a pointer press outside it. A bare click() on the
 // backdrop is ignored, so the full press sequence is sent.
@@ -57,32 +63,48 @@ export async function closeOverlays(): Promise<void> {
   }
 }
 
-// Blocks the author of `article` through the post's own menu. Resolves once X has
-// closed the confirmation, which is when its block request has been sent.
-export async function blockFromPost(article: HTMLElement): Promise<BlockOutcome> {
+// Opens the menu of `article` and clicks the item whose label is in `labels`. If X then
+// asks for a confirmation, confirms. Resolves once X has closed everything, which is
+// when its request has been sent.
+async function pickFromMenu(article: HTMLElement, labels: readonly string[]): Promise<MenuOutcome> {
   if (!article.isConnected) return { ok: false, reason: "gone" };
   const caret = article.querySelector<HTMLElement>('[data-testid="caret"]');
   if (!caret) return { ok: false, reason: "noMenu" };
-  caret.click();
-  const item = await waitFor(() => menu()?.querySelector<HTMLElement>('[role="menuitem"][data-testid="block"]'), 2500);
+  const findItem = () => {
+    const items = menu()?.querySelectorAll<HTMLElement>('[role="menuitem"]');
+    return items && [...items].find((i) => matchesLabel(i.innerText, labels));
+  };
+  let item: HTMLElement | undefined;
+  // While X is still rendering, a click on the caret can do nothing; one more try.
+  for (let attempt = 0; attempt < 2 && !item; attempt++) {
+    if (attempt) await sleep(between(800, 1500));
+    if (!article.isConnected) return { ok: false, reason: "gone" };
+    caret.click();
+    item = await waitFor(findItem, 2500);
+    if (!item && menu()) break;
+  }
   if (!item) {
     const opened = Boolean(menu());
     await closeOverlays();
-    return { ok: false, reason: opened ? "noBlockItem" : "noMenu" };
+    return { ok: false, reason: opened ? "noItem" : "noMenu" };
   }
   await sleep(between(500, 1100));
   item.click();
-  const confirm = await waitFor(confirmButton, 2500);
-  if (!confirm) {
-    await closeOverlays();
-    return { ok: false, reason: "noConfirm" };
+  const next = await waitFor(() => (confirmButton() ? "confirm" : menu() ? null : "closed"), 2500);
+  if (next === "confirm") {
+    await sleep(between(400, 900));
+    confirmButton()?.click();
   }
-  await sleep(between(400, 900));
-  confirm.click();
-  const closed = await waitFor(() => !confirmButton(), 3000);
+  const closed = await waitFor(() => !menu() && !confirmButton(), 3000);
   if (!closed) {
     await closeOverlays();
     return { ok: false, reason: "notClosed" };
   }
   return { ok: true };
 }
+
+// "Not interested in this post": X replaces the post by its own feedback cell, with Undo.
+export const notInterestedFromPost = (article: HTMLElement) => pickFromMenu(article, NOT_INTERESTED_LABELS);
+
+// "Mute": X mutes the post's author at once (no confirmation on the web client today).
+export const muteFromPost = (article: HTMLElement) => pickFromMenu(article, MUTE_LABELS);

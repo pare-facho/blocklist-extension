@@ -7,9 +7,10 @@ by the French website [On bloque l'extrême droite](https://onbloquelextremedroi
 The site's list is subscribed at install and refreshed regularly. You can remove it, add
 other lists, and add or remove accounts yourself.
 
-By default the extension collapses those posts and **blocks the account** through X's own
-menu, with your session, when the post reaches your screen: one account at a time, at a
-human pace. A "Hide only" setting collapses without sending anything to X.
+The extension collapses those posts and, when the post reaches your screen, acts through
+X's own menu, with your session, at a human pace. Two settings: "Not interested" on every
+post (default), or mute the account. Nothing is blocked. The section
+[What weighs on their reach](#what-weighs-on-their-reach) explains why.
 
 ## Install
 
@@ -55,27 +56,57 @@ extension's icon (in the extensions menu, top right) opens the settings page.
 1. **Collapse.** On x.com, posts from listed accounts are replaced by a line
    "⛔ @account · post hidden" as they render: timeline, replies, search, profiles. Reposts
    made by a listed account are collapsed too. A "Show" button reveals the post anyway.
-2. **Block from the feed** (default). When the collapsed line is on screen, the extension
-   opens the post's "⋯" menu, picks "Block" and confirms, exactly as you would by hand:
-   these are X's own clicks and requests, with your session. A block made from a post on
-   screen is a negative signal for that account in what X recommends. Pace: at most 30
-   blocks per hour and 150 per day, a 15 to 45 second pause between two, one at a time,
-   never in the background. The collapsed line says "blocking in a moment" and offers
-   "Don't block". Blocked accounts are listed in the settings.
+2. **Act from the feed.** When the collapsed line is on screen, the extension opens the
+   post's "⋯" menu and picks, depending on the setting:
+   - **"Not interested in this post"** (default), on every served post. Nothing is blocked
+     or muted: X keeps serving you the account, and each new post sends a new signal. X
+     shows its own "Undo" in place of the post.
+   - **"Mute"**, once per account. X then stops showing you the account; the account is
+     not told. Undo in X's settings ("Muted accounts").
+
+   These are X's own clicks and requests, with your session. Pace: at most 30 actions per
+   hour and 150 per day, a 15 to 45 second pause between two, one at a time, never in the
+   background, never from a profile page. What the extension did is listed in the settings.
 3. **A ⛔ button on every post.** One click: the account is added to your list, the post is
-   collapsed and, in block mode, the account is blocked. Five seconds to undo.
+   collapsed and handled like a listed account's. Five seconds to undo.
 4. **Your lists, your control.** The settings page shows the subscribed lists, your own
    list, the full list with search, and the activity log. Any account can be **kept**
    (never hidden) or, if it comes from your own list, **removed**.
 
 All data stays in your browser. Nothing is sent to anyone but X, and only as your own
-blocks. See [PRIVACY.md](PRIVACY.md).
+clicks in its menu. See [PRIVACY.md](PRIVACY.md).
 
-**Be aware.** X forbids bulk automated actions. "Block" mode only acts on posts X has shown
-you, one by one, at a human pace, and never on the whole list in the background (which is
-what the 0.3 versions did, removed in 0.4). It is still your account that blocks: choose
-"Hide only" if you want nothing sent to X. A block can be undone in X's settings ("Blocked
-accounts").
+**Be aware.** X forbids bulk automated actions. The extension only acts on posts X has
+shown you, one by one, at a human pace, and never on the whole list in the background
+(which is what the 0.3 versions did, removed in 0.4). It is still your account that acts:
+the choice is yours. The menu labels are recognised in ten X interface languages (English,
+French, Spanish, German, Italian, Portuguese, Dutch, Polish, Arabic, Turkish); in another
+language, posts are only collapsed.
+
+## What weighs on their reach
+
+X published the ranking code of its "For you" feed (repository
+[xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)). What the extension does
+follows from it.
+
+- **The ranking only learns from actions made on a post it served you in your feed.** The
+  negative signals that train the model are all "from the post": not interested, mute,
+  block, report. A block or a mute made from a profile page does not exist in that
+  training data. That is why the extension never acts from a profile or in the background.
+- **The weight of each action** in a post's final score (published default values; they
+  multiply the predicted probability of the action, not a raw count): report −234, mute
+  −58.8, not interested −52.3, block −31.2; a like is worth +0.66. A report is an abuse
+  claim with a reason: the extension does not automate it.
+- **"Not interested" repeats, mute and block do not.** After a mute or a block, X removes
+  the account from your feed: you send one signal per account, ever. After "not
+  interested", X keeps serving the account, and every served post gets a new signal; each
+  post's "not interested" count is also a feature stored with it. Two marked posts already
+  weigh more than one mute. The extension does not pick "Show fewer posts from…", which
+  would make the account disappear from your feed.
+- **Limits.** The model is personalised: the effect concentrates on people whose feed
+  looks like yours. The weights are those of the published code; production values may
+  differ. X watches sequences of actions to detect automation: the pace above stays a
+  person's.
 
 ## Before you install
 
@@ -138,7 +169,7 @@ Node 22 or newer.
 
 ```
 npm install            # installs WXT and TypeScript
-npm test               # unit tests (feed, format, matching, translations)
+npm test               # unit tests (feed, format, matching, menu labels, translations)
 npm run check          # type check
 npm run build          # Chrome build in .output/chrome-mv3
 npm run build:firefox  # Firefox build in .output/firefox-mv2

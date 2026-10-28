@@ -37,10 +37,14 @@ export type Subscription = {
   lastError?: string;
 };
 
-// What happens to a listed account's post when it shows on screen:
-// "block": the post is collapsed and the account is blocked through X's own menu;
-// "hide": the post is collapsed, nothing is sent to X.
-export type Action = "block" | "hide";
+// What happens to a listed account's post once it is collapsed and on screen. Both go
+// through X's own post menu, with the user's session; the extension never calls X itself.
+// "notInterested": "Not interested in this post", on every post X serves. Nothing is
+//                  blocked or muted, so X keeps serving the account and each new post
+//                  sends a new signal.
+// "mute":          "Mute", once per account. X then stops showing the account.
+export type Action = "notInterested" | "mute";
+export const ACTIONS: readonly Action[] = ["notInterested", "mute"];
 
 export type Settings = {
   feedRefreshHours: number;
@@ -49,7 +53,7 @@ export type Settings = {
 
 export const DEFAULT_SETTINGS: Settings = {
   feedRefreshHours: 6,
-  action: "block",
+  action: "notInterested",
 };
 
 // Timestamps of the actions done on X, for the pacing rules (see pacing.ts).
@@ -58,12 +62,14 @@ export type PaceState = {
   nextAllowedAt?: string;
 };
 
-// One account the extension acted on, kept so it is never tried twice and so the
-// settings page can show it.
+// One action the extension made (or tried) on X, kept so it is never repeated and so
+// the settings page can show it. "notInterested" entries carry the post id.
 export type ActedEntry = {
   site: Site;
   handle: string;
+  action: Action;
+  postId?: string;
   at: string;
-  result: "blocked" | "failed";
+  result: "done" | "failed";
   detail?: string;
 };

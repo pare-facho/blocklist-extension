@@ -3,13 +3,13 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "On bloque l’extrême droite : masque les publications des comptes d’extrême droite listés et les bloque, depuis votre fil, au rythme d’une personne."
+    "message": "On bloque l’extrême droite : masque les publications des comptes d’extrême droite listés et dit à X qu’elles ne vous intéressent pas, depuis votre fil, au rythme d’une personne."
   },
   "optionsTitle": {
     "message": "Pare-Facho — réglages"
   },
   "intro": {
-    "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez. Les blocages passent par votre session X, comme un clic de votre part."
+    "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez. Ce que l'extension envoie à X passe par votre session X, comme un clic de votre part."
   },
   "statusTitle": {
     "message": "Statut"
@@ -20,11 +20,8 @@
   "statOwn": {
     "message": "dans ma liste"
   },
-  "statKept": {
-    "message": "gardés"
-  },
   "stateLine": {
-    "message": "Les publications des comptes listés sont repliées sur x.com dès qu'elles s'affichent. En mode « bloquer », le compte est ensuite bloqué par le menu de X, comme si vous l'aviez fait à la main."
+    "message": "Les publications des comptes listés sont repliées sur x.com dès qu'elles s'affichent. Quand une publication repliée est à l'écran, l'extension choisit l'option réglée dans le menu de X, comme si vous l'aviez fait à la main."
   },
   "listsTitle": {
     "message": "Listes abonnées"
@@ -256,26 +253,11 @@
       }
     }
   },
-  "statBlocked": {
-    "message": "bloqués"
-  },
   "actionTitle": {
     "message": "Que faire des comptes listés"
   },
-  "actionBlock": {
-    "message": "Bloquer depuis mon fil (recommandé)"
-  },
-  "actionBlockHelp": {
-    "message": "Quand une publication d'un compte listé arrive à l'écran, elle est repliée, puis le compte est bloqué par le menu « Bloquer » de X, avec votre session. Un blocage fait depuis une publication affichée pèse sur ce que X recommande : il compte comme un signal négatif pour ce compte."
-  },
-  "actionHide": {
-    "message": "Masquer seulement"
-  },
-  "actionHideHelp": {
-    "message": "Les publications sont repliées, rien n'est envoyé à X."
-  },
   "actionPace": {
-    "message": "Rythme : au plus $HOUR$ blocages par heure et $DAY$ par jour, avec une pause de $MIN$ à $MAX$ secondes entre deux. Les blocages se font un par un, uniquement sur les publications affichées, jamais en arrière-plan.",
+    "message": "Rythme : au plus $HOUR$ actions par heure et $DAY$ par jour, avec une pause de $MIN$ à $MAX$ secondes entre deux. Une à la fois, uniquement sur les publications affichées.",
     "placeholders": {
       "hour": {
         "content": "$1"
@@ -292,30 +274,10 @@
     }
   },
   "actionRisk": {
-    "message": "X interdit les actions automatisées en masse. Ce rythme imite une personne qui bloque en lisant son fil, mais c'est votre compte qui bloque : à vous de décider. Vous pouvez annuler un blocage dans les réglages de X (« Comptes bloqués »)."
+    "message": "X interdit les actions automatisées en masse. Ce rythme imite une personne qui agit en lisant son fil, mais c'est votre compte qui agit : à vous de décider."
   },
   "whatsNew": {
-    "message": "Nouveau dans la version 0.5 : l'extension peut bloquer les comptes listés depuis votre fil. C'est le réglage par défaut ; choisissez « Masquer seulement » si vous ne voulez rien envoyer à X."
-  },
-  "blockedTitle": {
-    "message": "Comptes bloqués par l'extension"
-  },
-  "blockedHelp": {
-    "message": "Depuis une publication affichée, avec votre session. Pour débloquer : réglages de X, « Comptes bloqués »."
-  },
-  "blockedNone": {
-    "message": "Aucun pour l'instant."
-  },
-  "blockedLine": {
-    "message": "@$HANDLE$ · $WHEN$",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      },
-      "when": {
-        "content": "$2"
-      }
-    }
+    "message": "Nouveau dans la version 0.5 : l'extension agit depuis votre fil par le menu de X. Par défaut elle marque chaque publication « pas intéressé » ; vous pouvez choisir de masquer les comptes à la place. L'explication est ci-dessous."
   },
   "failedLine": {
     "message": "@$HANDLE$ · $WHEN$ · échec ($DETAIL$)",
@@ -331,17 +293,6 @@
       }
     }
   },
-  "stBlocked": {
-    "message": "bloqué"
-  },
-  "quickTitleBlock": {
-    "message": "Masquer et bloquer @$HANDLE$ (un clic, annulable pendant 5 s)",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      }
-    }
-  },
   "stripHidden": {
     "message": "⛔ @$HANDLE$",
     "placeholders": {
@@ -353,40 +304,106 @@
   "stripShow": {
     "message": "Afficher"
   },
-  "stripNoBlock": {
-    "message": "Ne pas bloquer"
-  },
   "strip_hidden": {
     "message": "publication masquée"
   },
   "strip_soon": {
-    "message": "masquée · blocage dans un instant"
+    "message": "masquée · action dans un instant"
   },
   "strip_waiting": {
-    "message": "masquée · blocage dès que le rythme le permet"
-  },
-  "strip_blocking": {
-    "message": "blocage en cours…"
-  },
-  "strip_blocked": {
-    "message": "bloqué ✓"
+    "message": "masquée · action dès que le rythme le permet"
   },
   "strip_failed": {
-    "message": "masquée · blocage impossible ici"
+    "message": "masquée · pas possible ici"
   },
   "strip_shown": {
     "message": "affichée"
   },
-  "logBlocked": {
-    "message": "@$HANDLE$ bloqué·e depuis une publication affichée",
+  "statNotInterested": {
+    "message": "« pas intéressé » envoyés"
+  },
+  "statMuted": {
+    "message": "comptes masqués (mute)"
+  },
+  "actionIntro": {
+    "message": "Le classement de X n'apprend que de ce que vous faites sur les publications qu'il vous a servies, dans votre fil. Les deux options agissent depuis la publication, par le menu de X, avec votre session."
+  },
+  "actionNotInterested": {
+    "message": "« Pas intéressé » sur chaque publication (recommandé)"
+  },
+  "actionNotInterestedHelp": {
+    "message": "La publication est repliée, puis marquée « Ce post ne m'intéresse pas ». Rien n'est bloqué ni masqué, donc X continue de vous servir le compte et chaque nouvelle publication envoie un nouveau signal négatif. Dans le code de classement publié par X, ce signal pèse près de deux fois un blocage. X propose « Annuler » sur la publication."
+  },
+  "actionMute": {
+    "message": "Masquer le compte (mute)"
+  },
+  "actionMuteHelp": {
+    "message": "La publication est repliée, puis le compte est masqué depuis le menu de la publication. Le signal unitaire le plus fort après le signalement, mais un seul par compte : X cesse ensuite de vous montrer le compte, donc plus rien n'est envoyé. Le compte n'est pas prévenu. Annulable dans les réglages de X (« Comptes masqués »)."
+  },
+  "actionProfileNote": {
+    "message": "Un blocage ou un masquage fait depuis une page de profil n'apprend rien au classement de X. L'extension n'agit jamais depuis un profil ni en arrière-plan."
+  },
+  "actedTitle": {
+    "message": "Ce que l'extension a fait sur X"
+  },
+  "actedHelp": {
+    "message": "Depuis des publications affichées, avec votre session. Les plus récentes d'abord."
+  },
+  "actedNone": {
+    "message": "Rien pour l'instant."
+  },
+  "actedNotInterested": {
+    "message": "@$HANDLE$ · $WHEN$ · pas intéressé",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      }
+    }
+  },
+  "actedMuted": {
+    "message": "@$HANDLE$ · $WHEN$ · masqué (mute)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      }
+    }
+  },
+  "stMuted": {
+    "message": "masqué (mute)"
+  },
+  "strip_acting": {
+    "message": "envoi…"
+  },
+  "strip_done_notInterested": {
+    "message": "pas intéressé ✓"
+  },
+  "strip_done_mute": {
+    "message": "compte masqué ✓"
+  },
+  "logNotInterested": {
+    "message": "@$HANDLE$ : « pas intéressé » envoyé depuis une publication affichée",
     "placeholders": {
       "handle": {
         "content": "$1"
       }
     }
   },
-  "logBlockFailed": {
-    "message": "@$HANDLE$ : blocage impossible ($DETAIL$)",
+  "logMuted": {
+    "message": "@$HANDLE$ masqué·e (mute) depuis une publication affichée",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logFailed": {
+    "message": "@$HANDLE$ : action impossible ($DETAIL$)",
     "placeholders": {
       "handle": {
         "content": "$1"
