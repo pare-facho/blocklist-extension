@@ -3,7 +3,7 @@
   "name": "Blockfacho — on bloque l’extrême droite",
   "description": "Comptes d’extrême droite recensés par onbloquelextremedroite.fun",
   "homepage": "https://onbloquelextremedroite.fun/",
-  "updated": "2026-10-28T00:08:39.695Z",
+  "updated": "2026-10-28T05:40:48.123Z",
   "entries": [
     {
       "site": "facebook",
@@ -79,6 +79,14 @@
     },
     {
       "site": "facebook",
+      "handle": "bvoltaire.fr",
+      "name": "Boulevard Voltaire",
+      "category": "Autres",
+      "reason": "Média Boulevard Voltaire",
+      "source": "https://www.bvoltaire.fr/"
+    },
+    {
+      "site": "facebook",
       "handle": "carpentrasbm",
       "name": "Hervé de Lépinau",
       "category": "RN",
@@ -127,11 +135,25 @@
     },
     {
       "site": "facebook",
+      "handle": "deputesrn",
+      "name": "deputesRN",
+      "category": "Autres",
+      "source": "https://www.facebook.com/deputesRN"
+    },
+    {
+      "site": "facebook",
       "handle": "emeric.salmonoff",
       "name": "Emeric Salmon",
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA794954"
+    },
+    {
+      "site": "facebook",
+      "handle": "emmanuel.delapagerie",
+      "name": "pa793382",
+      "category": "Autres",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
     },
     {
       "site": "facebook",
@@ -159,6 +181,14 @@
     },
     {
       "site": "facebook",
+      "handle": "id:100087171534178",
+      "name": "Collectif Némésis",
+      "category": "Groupes",
+      "reason": "Collectif Némésis",
+      "source": "https://www.collectif-nemesis.com/"
+    },
+    {
+      "site": "facebook",
       "handle": "id:61560966638578",
       "name": "Eddy Casterman",
       "category": "RN",
@@ -183,6 +213,14 @@
     },
     {
       "site": "facebook",
+      "handle": "jordanbardella",
+      "name": "Jordan Bardella",
+      "category": "RN",
+      "reason": "Rassemblement National",
+      "source": "https://www.saper-vedere.eu/presidentielle/p/candidat/jordan-bardella/"
+    },
+    {
+      "site": "facebook",
       "handle": "jordanguittonrn",
       "name": "Jordan Guitton",
       "category": "RN",
@@ -196,6 +234,13 @@
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793182"
+    },
+    {
+      "site": "facebook",
+      "handle": "joseph.riviere.legislatives.2024",
+      "name": "pa842227",
+      "category": "Autres",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
     },
     {
       "site": "facebook",
@@ -228,6 +273,13 @@
       "category": "RN",
       "reason": "Député·e européen·ne · Rassemblement national",
       "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "katianalevavasseur",
+      "name": "pa793608",
+      "category": "Autres",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
     },
     {
       "site": "facebook",
@@ -311,6 +363,13 @@
     },
     {
       "site": "facebook",
+      "handle": "nicolasdragon",
+      "name": "pa793146",
+      "category": "Autres",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
       "handle": "nmeizonnet",
       "name": "Nicolas Meizonnet",
       "category": "RN",
@@ -324,6 +383,20 @@
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795552"
+    },
+    {
+      "site": "facebook",
+      "handle": "pascaljenft57",
+      "name": "pa841439",
+      "category": "Autres",
+      "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "philippot.f",
+      "name": "f6ea7549-b694-43c2-a847-1cdf8fabbfb8",
+      "category": "Autres",
+      "source": "https://les-patriotes.fr/"
     },
     {
       "site": "facebook",
@@ -343,6 +416,14 @@
     },
     {
       "site": "facebook",
+      "handle": "reconquete2022",
+      "name": "Reconquête",
+      "category": "Reconquête",
+      "reason": "Parti politique",
+      "source": "https://www.parti-reconquete.fr/"
+    },
+    {
+      "site": "facebook",
       "handle": "rogerchudeau4102",
       "name": "Roger Chudeau",
       "category": "RN",
@@ -356,6 +437,14 @@
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "facebook",
+      "handle": "sarah-knafo-61559003907671",
+      "name": "Sarah Knafo",
+      "category": "Reconquête",
+      "reason": "Reconquête",
+      "source": "https://www.parti-reconquete.fr/"
     },
     {
       "site": "facebook",
@@ -421,11 +510,27 @@
     },
     {
       "site": "facebook",
+      "handle": "tvlofficiel",
+      "name": "TV Libertés",
+      "category": "Autres",
+      "reason": "Chaîne TV Libertés",
+      "source": "https://www.tvlibertes.com/"
+    },
+    {
+      "site": "facebook",
       "handle": "valeriedelogern",
       "name": "Valérie Deloge",
       "category": "RN",
       "reason": "Député·e européen·ne · Rassemblement national",
       "source": "https://data.europarl.europa.eu/en/datasets/members-of-the-european-parliament-meps-parliamentary-term10/0030"
+    },
+    {
+      "site": "facebook",
+      "handle": "valeursactuelles.page",
+      "name": "Valeurs actuelles",
+      "category": "Autres",
+      "reason": "Magazine Valeurs actuelles",
+      "source": "https://www.valeursactuelles.com/"
     },
     {
       "site": "facebook",
@@ -450,6 +555,21 @@
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793832"
+    },
+    {
+      "site": "facebook",
+      "handle": "zemmoureric",
+      "name": "Éric Zemmour",
+      "category": "Reconquête",
+      "reason": "Reconquête",
+      "source": "https://www.parti-reconquete.fr/"
+    },
+    {
+      "site": "instagram",
+      "handle": "_clement.hazard",
+      "name": "_clement.hazard",
+      "category": "RN",
+      "source": "https://www.instagram.com/_clement.hazard?rpxt=YzA5YTYyem83a3Fp"
     },
     {
       "site": "instagram",
@@ -525,6 +645,28 @@
     },
     {
       "site": "instagram",
+      "handle": "bruno_retailleau",
+      "name": "Bruno RETAILLEAU",
+      "category": "Autres",
+      "source": "https://www.instagram.com/Bruno_retailleau"
+    },
+    {
+      "site": "instagram",
+      "handle": "bvoltaire.fr",
+      "name": "Boulevard Voltaire",
+      "category": "Autres",
+      "reason": "Média Boulevard Voltaire",
+      "source": "https://www.bvoltaire.fr/"
+    },
+    {
+      "site": "instagram",
+      "handle": "carolineparmentier_off",
+      "name": "Députée de la 9e du Pas-de-Calais",
+      "category": "RN",
+      "source": "https://www.instagram.com/carolineparmentier_off?dlrf=M3o1bXliYTUxM3pi"
+    },
+    {
+      "site": "instagram",
       "handle": "catherine_rimbert",
       "name": "Catherine Rimbert",
       "category": "RN",
@@ -533,11 +675,26 @@
     },
     {
       "site": "instagram",
+      "handle": "christophe_barthes",
+      "name": "Conseiller Régional d’Occitanie | Agriculteur",
+      "category": "RN",
+      "source": "https://www.instagram.com/christophe_barthes"
+    },
+    {
+      "site": "instagram",
       "handle": "cocardeetudiante",
       "name": "La Cocarde étudiante",
       "category": "Groupes",
       "reason": "Organisation étudiante du camp national",
       "source": "https://www.cocardeetudiante.com/"
+    },
+    {
+      "site": "instagram",
+      "handle": "collectif.nemesis",
+      "name": "Collectif Némésis",
+      "category": "Groupes",
+      "reason": "Collectif Némésis",
+      "source": "https://www.collectif-nemesis.com/"
     },
     {
       "site": "instagram",
@@ -565,6 +722,13 @@
     },
     {
       "site": "instagram",
+      "handle": "edwige_diaz",
+      "name": "edwige_diaz",
+      "category": "Autres",
+      "source": "https://www.instagram.com/edwige_diaz"
+    },
+    {
+      "site": "instagram",
       "handle": "emeric.salmon",
       "name": "Emeric Salmon",
       "category": "RN",
@@ -578,6 +742,13 @@
       "category": "Reconquête",
       "reason": "Reconquête",
       "source": "https://www.parti-reconquete.fr/"
+    },
+    {
+      "site": "instagram",
+      "handle": "f_philippot",
+      "name": "f6ea7549-b694-43c2-a847-1cdf8fabbfb8",
+      "category": "Autres",
+      "source": "https://www.saper-vedere.eu/presidentielle/p/candidat/florian-philippot/"
     },
     {
       "site": "instagram",
@@ -605,6 +776,13 @@
     },
     {
       "site": "instagram",
+      "handle": "fredericpierrevos",
+      "name": "fredericpierrevos",
+      "category": "Autres",
+      "source": "https://www.instagram.com/fredericpierrevos/"
+    },
+    {
+      "site": "instagram",
       "handle": "frontieresmedia",
       "name": "Frontières",
       "category": "Groupes",
@@ -621,11 +799,25 @@
     },
     {
       "site": "instagram",
+      "handle": "giselelelouis",
+      "name": "Députée RN des Bouches-Du-Rhône",
+      "category": "RN",
+      "source": "https://www.instagram.com/giselelelouis/"
+    },
+    {
+      "site": "instagram",
       "handle": "grangier_geraldine",
       "name": "Géraldine Grangier",
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793592"
+    },
+    {
+      "site": "instagram",
+      "handle": "gregoirehoudan",
+      "name": "Conseiller municipal de Rouen",
+      "category": "Autres",
+      "source": "https://www.instagram.com/gregoirehoudan"
     },
     {
       "site": "instagram",
@@ -653,6 +845,20 @@
     },
     {
       "site": "instagram",
+      "handle": "jeanbaptiste.gardes",
+      "name": "Jean-Baptiste Gardes",
+      "category": "RN",
+      "source": "https://www.instagram.com/jeanbaptiste.gardes?xtok=czF6ODhsN2Y5cmJz"
+    },
+    {
+      "site": "instagram",
+      "handle": "jeanpaulgarraud",
+      "name": "jeanpaulgarraud",
+      "category": "Autres",
+      "source": "https://www.instagram.com/jeanpaulgarraud"
+    },
+    {
+      "site": "instagram",
       "handle": "jleonardelli_",
       "name": "Julien Leonardelli",
       "category": "RN",
@@ -677,11 +883,25 @@
     },
     {
       "site": "instagram",
+      "handle": "jordan.bardella_fan",
+      "name": "jordan.bardella_fan",
+      "category": "Autres",
+      "source": "https://www.instagram.com/jordan.bardella_fan"
+    },
+    {
+      "site": "instagram",
       "handle": "jordanbardella",
       "name": "Jordan Bardella",
       "category": "RN",
       "reason": "Rassemblement National",
       "source": "https://www.t-online.de/nachrichten/europawahl/id_100405796/marine-le-pen-fuer-ihn-ist-das-urteil-die-grosse-chance.html"
+    },
+    {
+      "site": "instagram",
+      "handle": "jordanflorentin_",
+      "name": "jordanflorentin_",
+      "category": "Autres",
+      "source": "https://www.instagram.com/jordanflorentin_"
     },
     {
       "site": "instagram",
@@ -749,6 +969,20 @@
     },
     {
       "site": "instagram",
+      "handle": "la_france_qu_on_m",
+      "name": "la_france_qu_on_m",
+      "category": "Autres",
+      "source": "https://www.instagram.com/la_france_qu_on_m"
+    },
+    {
+      "site": "instagram",
+      "handle": "laurentjacobelli",
+      "name": "laurentjacobelli",
+      "category": "Autres",
+      "source": "https://www.instagram.com/laurentjacobelli"
+    },
+    {
+      "site": "instagram",
       "handle": "lelouisgisele",
       "name": "Gisèle Lelouis",
       "category": "RN",
@@ -789,6 +1023,13 @@
     },
     {
       "site": "instagram",
+      "handle": "marionmarechal_",
+      "name": "Marionmarechal_",
+      "category": "Autres",
+      "source": "https://www.instagram.com/Marionmarechal_"
+    },
+    {
+      "site": "instagram",
       "handle": "mathildeandrouet",
       "name": "Mathilde Androuët",
       "category": "RN",
@@ -805,6 +1046,20 @@
     },
     {
       "site": "instagram",
+      "handle": "messiha.jean",
+      "name": "Jean Messiha",
+      "category": "Autres",
+      "source": "https://www.instagram.com/Messiha.jean"
+    },
+    {
+      "site": "instagram",
+      "handle": "michaeltaverne12",
+      "name": "michaeltaverne12",
+      "category": "Autres",
+      "source": "https://www.instagram.com/michaeltaverne12"
+    },
+    {
+      "site": "instagram",
       "handle": "nathcarvalho91",
       "name": "Nathalie Da Conceicao Carvalho",
       "category": "RN",
@@ -818,6 +1073,27 @@
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA719436"
+    },
+    {
+      "site": "instagram",
+      "handle": "observatoireduwokisme",
+      "name": "observatoireduwokisme",
+      "category": "Autres",
+      "source": "https://www.instagram.com/observatoireduwokisme"
+    },
+    {
+      "site": "instagram",
+      "handle": "olivier_guenec",
+      "name": "Olivier Guenec",
+      "category": "Autres",
+      "source": "https://www.instagram.com/olivier_guenec?psln=aDh3eXlhbmdjNDZ2"
+    },
+    {
+      "site": "instagram",
+      "handle": "phdevilliers",
+      "name": "Philippe de Villiers",
+      "category": "Autres",
+      "source": "https://www.instagram.com/Phdevilliers"
     },
     {
       "site": "instagram",
@@ -845,6 +1121,13 @@
     },
     {
       "site": "instagram",
+      "handle": "radiofrontieres",
+      "name": "radiofrontieres",
+      "category": "Autres",
+      "source": "https://www.instagram.com/radiofrontieres"
+    },
+    {
+      "site": "instagram",
       "handle": "rassemblementnational_fr",
       "name": "Rassemblement National",
       "category": "RN",
@@ -853,11 +1136,61 @@
     },
     {
       "site": "instagram",
+      "handle": "rassemblementnationalvarois",
+      "name": "rassemblementnationalvarois",
+      "category": "Autres",
+      "source": "https://www.instagram.com/rassemblementnationalvarois"
+    },
+    {
+      "site": "instagram",
+      "handle": "reconquete_officiel",
+      "name": "Reconquête",
+      "category": "Reconquête",
+      "reason": "Parti politique",
+      "source": "https://www.parti-reconquete.fr/"
+    },
+    {
+      "site": "instagram",
+      "handle": "rn_lot",
+      "name": "RN Lot",
+      "category": "RN",
+      "source": "https://www.instagram.com/rn_lot"
+    },
+    {
+      "site": "instagram",
+      "handle": "rn.bfc",
+      "name": "Groupe RN de Bourgogne Franche-Comté",
+      "category": "RN",
+      "source": "https://www.instagram.com/rn.bfc"
+    },
+    {
+      "site": "instagram",
+      "handle": "rn06_officiel",
+      "name": "Compte officiel du RN des Alpes-Maritimes",
+      "category": "Autres",
+      "source": "https://www.instagram.com/rn06_officiel"
+    },
+    {
+      "site": "instagram",
       "handle": "robert_le_bourgeois",
       "name": "Robert Le Bourgeois",
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA841837"
+    },
+    {
+      "site": "instagram",
+      "handle": "robert.menard_off",
+      "name": "Robert Ménard",
+      "category": "Autres",
+      "source": "https://www.instagram.com/robert.menard_off"
+    },
+    {
+      "site": "instagram",
+      "handle": "romain_baubry",
+      "name": "Député de la 15ème circonscription des Bouches-du-Rhône",
+      "category": "Autres",
+      "source": "https://www.instagram.com/romain_baubry?exln=MXJhOGZoZjRwM2hs"
     },
     {
       "site": "instagram",
@@ -870,9 +1203,10 @@
     {
       "site": "instagram",
       "handle": "sarahknafo1",
-      "name": "https://www.instagram.com/sarahknafo1",
-      "category": "Autres",
-      "source": "https://www.instagram.com/sarahknafo1"
+      "name": "Sarah Knafo",
+      "category": "Reconquête",
+      "reason": "Reconquête",
+      "source": "https://www.parti-reconquete.fr/"
     },
     {
       "site": "instagram",
@@ -897,6 +1231,27 @@
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA795966"
+    },
+    {
+      "site": "instagram",
+      "handle": "stanislasrigault",
+      "name": "stanislasrigault",
+      "category": "Autres",
+      "source": "https://www.instagram.com/stanislasrigault"
+    },
+    {
+      "site": "instagram",
+      "handle": "t_francois59",
+      "name": "Conseiller municipal de #Douai",
+      "category": "RN",
+      "source": "https://www.instagram.com/t_francois59"
+    },
+    {
+      "site": "instagram",
+      "handle": "tanguyjeanphilippe",
+      "name": "Tanguyjeanphilippe",
+      "category": "Autres",
+      "source": "https://www.instagram.com/Tanguyjeanphilippe"
     },
     {
       "site": "instagram",
@@ -932,6 +1287,21 @@
     },
     {
       "site": "instagram",
+      "handle": "valeurs_actuelles",
+      "name": "Valeurs actuelles",
+      "category": "Autres",
+      "reason": "Magazine Valeurs actuelles",
+      "source": "https://www.valeursactuelles.com/"
+    },
+    {
+      "site": "instagram",
+      "handle": "vincent.lapierre",
+      "name": "Vincent Lapierre",
+      "category": "Autres",
+      "source": "https://www.instagram.com/vincent.lapierre?mdxt=ejh2bXI0NXFxeXhs"
+    },
+    {
+      "site": "instagram",
       "handle": "yael_menachee",
       "name": "Yaël Ménaché",
       "category": "RN",
@@ -945,6 +1315,13 @@
       "category": "RN",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA793832"
+    },
+    {
+      "site": "tiktok",
+      "handle": "_future_chomeuse",
+      "name": "FutureChomeuse",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@_future_chomeuse?_r=1&_t=ZN-9AuvqSnRcLm"
     },
     {
       "site": "tiktok",
@@ -968,6 +1345,49 @@
       "category": "Groupes",
       "reason": "Organisation étudiante du camp national",
       "source": "https://www.cocardeetudiante.com/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "collectifnemesis",
+      "name": "Collectif Némésis",
+      "category": "Groupes",
+      "reason": "Collectif Némésis",
+      "source": "https://www.collectif-nemesis.com/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "droite_nationale",
+      "name": "Les conservateurs Patriotes",
+      "category": "Reconquête",
+      "source": "https://www.tiktok.com/@droite_nationale"
+    },
+    {
+      "site": "tiktok",
+      "handle": "droiteuniv",
+      "name": "UNI - la droite étudiante",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@droiteuniv"
+    },
+    {
+      "site": "tiktok",
+      "handle": "fandemarine_",
+      "name": "Fan de Marine",
+      "category": "RN",
+      "source": "https://www.tiktok.com/@fandemarine_"
+    },
+    {
+      "site": "tiktok",
+      "handle": "florianphilippot",
+      "name": "f6ea7549-b694-43c2-a847-1cdf8fabbfb8",
+      "category": "Autres",
+      "source": "https://www.saper-vedere.eu/presidentielle/p/candidat/florian-philippot/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "groupern_off",
+      "name": "Groupe RN",
+      "category": "RN",
+      "source": "https://www.tiktok.com/@groupern_off"
     },
     {
       "site": "tiktok",
@@ -995,11 +1415,60 @@
     },
     {
       "site": "tiktok",
+      "handle": "le_bracq",
+      "name": "le_bracq",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@le_bracq"
+    },
+    {
+      "site": "tiktok",
+      "handle": "le.tribunaldeblaackqueen",
+      "name": "Le Tribunal de Blaackqueen⚖️",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@le.tribunaldeblaackqueen"
+    },
+    {
+      "site": "tiktok",
+      "handle": "lesjeunesavecbardella0",
+      "name": "les jeunes avec bardella",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@lesjeunesavecbardella0?_r=1&_t=ZG-9AustdQvbWK"
+    },
+    {
+      "site": "tiktok",
+      "handle": "louise.offi",
+      "name": "Team Louise 🇫🇷⚜️",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@louise.offi"
+    },
+    {
+      "site": "tiktok",
+      "handle": "louisemontangnon",
+      "name": "louisemontangnon",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@louisemontangnon"
+    },
+    {
+      "site": "tiktok",
+      "handle": "lucastalkactu",
+      "name": "LucasTalkActu",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@lucastalkactu"
+    },
+    {
+      "site": "tiktok",
       "handle": "marion_marechal",
       "name": "Marion Maréchal",
       "category": "Autres",
       "reason": "Remigration",
       "source": "https://t.me/s/MarionMarechal/3398"
+    },
+    {
+      "site": "tiktok",
+      "handle": "mathildanemesis",
+      "name": "French activist @Collectif Némésis",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@mathildanemesis?_r=1&_t=ZG-9Av0prH3CSH"
     },
     {
       "site": "tiktok",
@@ -1011,11 +1480,79 @@
     },
     {
       "site": "tiktok",
+      "handle": "pour1000ans_",
+      "name": "pour1000ans_",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@pour1000ans_"
+    },
+    {
+      "site": "tiktok",
+      "handle": "raison.patriote",
+      "name": "Raison Patriote 🇫🇷",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@raison.patriote"
+    },
+    {
+      "site": "tiktok",
       "handle": "rnational_off",
       "name": "Rassemblement National",
       "category": "RN",
       "reason": "Parti politique",
       "source": "https://lepodium2027.fr/partis/rassemblement-national"
+    },
+    {
+      "site": "tiktok",
+      "handle": "sarah_knafo",
+      "name": "Sarah Knafo",
+      "category": "Reconquête",
+      "reason": "Reconquête",
+      "source": "https://www.parti-reconquete.fr/"
+    },
+    {
+      "site": "tiktok",
+      "handle": "tbt9_w9",
+      "name": "TBT9",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@tbt9_w9?_r=1&_t=ZN-9Av4hltMM4c"
+    },
+    {
+      "site": "tiktok",
+      "handle": "veroniquegenest",
+      "name": "Véronique Genest",
+      "category": "Autres",
+      "source": "https://www.tiktok.com/@veroniquegenest?_r=1&_t=ZG-9AuruRlhZFw"
+    },
+    {
+      "site": "tiktok",
+      "handle": "zemmour_eric",
+      "name": "Éric Zemmour",
+      "category": "Reconquête",
+      "reason": "Reconquête",
+      "source": "https://www.parti-reconquete.fr/"
+    },
+    {
+      "site": "x",
+      "handle": "_agnesmarion",
+      "name": "Agnès Marion ن",
+      "category": "Autres",
+      "id": "1875944024",
+      "source": "https://x.com/_AgnesMarion"
+    },
+    {
+      "site": "x",
+      "handle": "_lespatriotes",
+      "name": "Les Patriotes",
+      "category": "Autres",
+      "id": "864138756068134912",
+      "source": "https://x.com/_LesPatriotes"
+    },
+    {
+      "site": "x",
+      "handle": "1ripostelaique",
+      "name": "Riposte Laique",
+      "category": "Autres",
+      "id": "1953472298",
+      "source": "https://x.com/1RiposteLaique"
     },
     {
       "site": "x",
@@ -1036,6 +1573,22 @@
     },
     {
       "site": "x",
+      "handle": "a_masson06",
+      "name": "A_Masson06",
+      "category": "Autres",
+      "id": "3360454371",
+      "source": "https://x.com/A_Masson06"
+    },
+    {
+      "site": "x",
+      "handle": "abrfl31",
+      "name": "ABRFL31",
+      "category": "Autres",
+      "id": "1445346299965022215",
+      "source": "https://x.com/ABRFL31"
+    },
+    {
+      "site": "x",
       "handle": "actionfrancaise",
       "name": "Action française",
       "category": "Groupes",
@@ -1051,6 +1604,14 @@
       "id": "1641306819363471361",
       "reason": "Influenceur d'extreme droite",
       "source": "https://x.com/alcidedefrance"
+    },
+    {
+      "site": "x",
+      "handle": "alexandredfss",
+      "name": "Alexandre Dufosset",
+      "category": "Autres",
+      "id": "732726264",
+      "source": "https://x.com/AlexandreDfss"
     },
     {
       "site": "x",
@@ -1080,12 +1641,28 @@
     },
     {
       "site": "x",
+      "handle": "alexdevecchio",
+      "name": "Alex Devecchio",
+      "category": "Autres",
+      "id": "87156428",
+      "source": "https://x.com/AlexDevecchio"
+    },
+    {
+      "site": "x",
       "handle": "alexisjollyrn",
       "name": "Alexis Jolly",
       "category": "RN",
       "id": "120521019",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "alexsaradjian",
+      "name": "Alexandre Saradjian",
+      "category": "Autres",
+      "id": "702363387",
+      "source": "https://x.com/AlexSaradjian"
     },
     {
       "site": "x",
@@ -1106,6 +1683,22 @@
     },
     {
       "site": "x",
+      "handle": "ambre_louisin",
+      "name": "ambre_louisin",
+      "category": "Autres",
+      "id": "1293175066218442753",
+      "source": "https://x.com/ambre_louisin"
+    },
+    {
+      "site": "x",
+      "handle": "amirkhizymeliss",
+      "name": "Amirkhizy",
+      "category": "Autres",
+      "id": "1458778569912561668",
+      "source": "https://x.com/AmirkhizyMeliss"
+    },
+    {
+      "site": "x",
       "handle": "anais_marechal_",
       "name": "Anaïs Maréchal",
       "category": "Autres",
@@ -1121,6 +1714,14 @@
       "id": "1156135942660460544",
       "reason": "Député·e européen·ne · Rassemblement national",
       "source": "https://www.europarl.europa.eu/meps/fr/197690"
+    },
+    {
+      "site": "x",
+      "handle": "angel_paradize",
+      "name": "👉 ​𝓐𝓷𝓰𝓮𝓵_𝓟𝓪𝓻𝓪𝓭𝓲𝔃𝓮 👈",
+      "category": "Autres",
+      "id": "432280475",
+      "source": "https://x.com/angel_paradize?s=21"
     },
     {
       "site": "x",
@@ -1150,6 +1751,14 @@
     },
     {
       "site": "x",
+      "handle": "annickcousin_rn",
+      "name": "AnnickCousin_RN",
+      "category": "Autres",
+      "id": "1395420945955840010",
+      "source": "https://x.com/AnnickCousin_RN"
+    },
+    {
+      "site": "x",
       "handle": "antboulogne54",
       "name": "Anthony Boulogne",
       "category": "RN",
@@ -1174,6 +1783,14 @@
       "id": "1472269167218806797",
       "reason": "Influenceur breton d'extrême droite",
       "source": "https://x.com/ArMarvailher"
+    },
+    {
+      "site": "x",
+      "handle": "arthurjosso1",
+      "name": "ArthurJosso1",
+      "category": "Autres",
+      "id": "1424832324877828100",
+      "source": "https://x.com/ArthurJosso1"
     },
     {
       "site": "x",
@@ -1221,12 +1838,28 @@
     },
     {
       "site": "x",
+      "handle": "bartolenoir",
+      "name": "Bartolomé Lenoir",
+      "category": "Autres",
+      "id": "522646235",
+      "source": "https://x.com/bartolenoir"
+    },
+    {
+      "site": "x",
       "handle": "bastionmediafr",
       "name": "Bastion",
       "category": "Groupes",
       "id": "1718034808347992064",
       "reason": "Media d'extreme droite",
       "source": "https://x.com/BastionMediaFR"
+    },
+    {
+      "site": "x",
+      "handle": "baubryr",
+      "name": "Romain Baubry",
+      "category": "Autres",
+      "id": "1180615972597764096",
+      "source": "https://x.com/BaubryR"
     },
     {
       "site": "x",
@@ -1253,6 +1886,22 @@
       "id": "1159815717811867649",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "ben_voyons2022",
+      "name": "Robot Z-5610 ⓩ 🇫🇷",
+      "category": "RN",
+      "id": "1469438263966547973",
+      "source": "https://x.com/Ben_voyons2022"
+    },
+    {
+      "site": "x",
+      "handle": "beneauzanot",
+      "name": "Bénédicte Auzanot",
+      "category": "Autres",
+      "id": "967709351359246337",
+      "source": "https://x.com/BeneAuzanot"
     },
     {
       "site": "x",
@@ -1308,6 +1957,14 @@
     },
     {
       "site": "x",
+      "handle": "bonnationaliste",
+      "name": "Hugo Boulitz ☃️",
+      "category": "Groupes",
+      "id": "1642041498156802049",
+      "source": "https://x.com/bonnationaliste"
+    },
+    {
+      "site": "x",
       "handle": "boskodebamako",
       "name": "BoskoDeBamako",
       "category": "Autres",
@@ -1338,6 +1995,14 @@
       "category": "Autres",
       "id": "1898101152002326529",
       "source": "https://x.com/Boulicitoyen"
+    },
+    {
+      "site": "x",
+      "handle": "boulinukem",
+      "name": "BouliNukem",
+      "category": "Autres",
+      "id": "1464559800558231555",
+      "source": "https://x.com/BouliNukem"
     },
     {
       "site": "x",
@@ -1393,6 +2058,14 @@
     },
     {
       "site": "x",
+      "handle": "brunolemaire",
+      "name": "Bruno LeMaire",
+      "category": "Autres",
+      "id": "374184532",
+      "source": "https://x.com/BrunoLeMaire"
+    },
+    {
+      "site": "x",
       "handle": "brunoretailleau",
       "name": "Bruno Retailleau",
       "category": "Autres",
@@ -1411,6 +2084,14 @@
     },
     {
       "site": "x",
+      "handle": "camille_eros",
+      "name": "camille_eros",
+      "category": "Autres",
+      "id": "1919224678205337600",
+      "source": "https://x.com/camille_eros"
+    },
+    {
+      "site": "x",
       "handle": "capetlevrai",
       "name": "Capetlevrai",
       "category": "Autres",
@@ -1425,6 +2106,14 @@
       "id": "49292117",
       "reason": "\"Journaliste\" d'extreme droite",
       "source": "https://x.com/CarolineFourest"
+    },
+    {
+      "site": "x",
+      "handle": "carolineyadan",
+      "name": "Caroline Yadan",
+      "category": "Autres",
+      "id": "96099818",
+      "source": "https://x.com/Carolineyadan"
     },
     {
       "site": "x",
@@ -1480,6 +2169,22 @@
     },
     {
       "site": "x",
+      "handle": "cerifrerisme",
+      "name": "CERIF - Centre de Recherche sur le Frérisme",
+      "category": "Autres",
+      "id": "1893728528275013632",
+      "source": "https://x.com/cerifrerisme"
+    },
+    {
+      "site": "x",
+      "handle": "charlesconsigny",
+      "name": "Charles Consigny",
+      "category": "Autres",
+      "id": "391385801",
+      "source": "https://x.com/CharlesConsigny"
+    },
+    {
+      "site": "x",
       "handle": "chdornellas",
       "name": "Charlotte d'Ornellas",
       "category": "Autres",
@@ -1506,12 +2211,28 @@
     },
     {
       "site": "x",
+      "handle": "christineloirrn",
+      "name": "Christine Loir",
+      "category": "RN",
+      "id": "1541365185847361536",
+      "source": "https://x.com/ChristineLoirRN"
+    },
+    {
+      "site": "x",
       "handle": "chudeaur",
       "name": "Roger Chudeau",
       "category": "RN",
       "id": "1522966362267734017",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "chypre_france_",
+      "name": "Chypre_France🇨🇾🇫🇷",
+      "category": "Autres",
+      "id": "1982530091465986048",
+      "source": "https://x.com/Chypre_France_"
     },
     {
       "site": "x",
@@ -1542,12 +2263,28 @@
     },
     {
       "site": "x",
+      "handle": "coline_houssays",
+      "name": "Coline Houssays",
+      "category": "RN",
+      "id": "1166439541",
+      "source": "https://x.com/coline_houssays"
+    },
+    {
+      "site": "x",
       "handle": "coll_nemesis",
       "name": "Collectif Némésis",
       "category": "Groupes",
       "id": "1189178129501298688",
       "reason": "Collectif Némésis",
       "source": "https://www.twstalker.com/Coll_Nemesis"
+    },
+    {
+      "site": "x",
+      "handle": "collectiferos",
+      "name": "Collectif Eros",
+      "category": "Autres",
+      "id": "1794027280781512706",
+      "source": "https://x.com/collectiferos"
     },
     {
       "site": "x",
@@ -1605,6 +2342,30 @@
     },
     {
       "site": "x",
+      "handle": "danielgrenon89",
+      "name": "Daniel GRENON",
+      "category": "Autres",
+      "id": "1526201039770341378",
+      "source": "https://x.com/DanielGrenon89"
+    },
+    {
+      "site": "x",
+      "handle": "danielriolo",
+      "name": "Daniel Riolo",
+      "category": "Autres",
+      "id": "360668525",
+      "source": "https://x.com/DanielRiolo"
+    },
+    {
+      "site": "x",
+      "handle": "danykab1971",
+      "name": "Daniel KABUTO",
+      "category": "Autres",
+      "id": "2950850686",
+      "source": "https://x.com/DANYKAB1971"
+    },
+    {
+      "site": "x",
       "handle": "davidalaime",
       "name": "David Alaime",
       "category": "Autres",
@@ -1620,6 +2381,14 @@
       "id": "103918784",
       "reason": "Candidat LR libertarien radicalisé",
       "source": "https://x.com/davidlisnard"
+    },
+    {
+      "site": "x",
+      "handle": "de_nva",
+      "name": "N-VA",
+      "category": "Autres",
+      "id": "24688336",
+      "source": "https://x.com/de_NVA"
     },
     {
       "site": "x",
@@ -1671,6 +2440,14 @@
       "category": "Autres",
       "id": "22019685",
       "source": "https://x.com/droiteuniv"
+    },
+    {
+      "site": "x",
+      "handle": "ducarmedenis",
+      "name": "Denis DUCARME",
+      "category": "Autres",
+      "id": "75315061",
+      "source": "https://x.com/ducarmedenis"
     },
     {
       "site": "x",
@@ -1726,6 +2503,14 @@
     },
     {
       "site": "x",
+      "handle": "eleonorebez",
+      "name": "Eléonore BezⓂ️",
+      "category": "Autres",
+      "id": "3059051375",
+      "source": "https://x.com/EleonoreBez"
+    },
+    {
+      "site": "x",
       "handle": "elodiehuchard",
       "name": "Élodie Huchard",
       "category": "Autres",
@@ -1749,6 +2534,30 @@
       "id": "493628470",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "enerveveve",
+      "name": "🇫🇷 Vévé-énervé",
+      "category": "Autres",
+      "id": "1319620137255948290",
+      "source": "https://x.com/EnerveVeve"
+    },
+    {
+      "site": "x",
+      "handle": "enough_was_then",
+      "name": "Enough_was_then",
+      "category": "Autres",
+      "id": "2049862363214462976",
+      "source": "https://x.com/Enough_was_then"
+    },
+    {
+      "site": "x",
+      "handle": "ericmorillot",
+      "name": "Eric Morillot",
+      "category": "Autres",
+      "id": "40803349",
+      "source": "https://x.com/EricMorillot"
     },
     {
       "site": "x",
@@ -1814,6 +2623,14 @@
     },
     {
       "site": "x",
+      "handle": "falconfrederic",
+      "name": "Frederic Falcon",
+      "category": "RN",
+      "id": "1526227912222990336",
+      "source": "https://x.com/FalconFrederic"
+    },
+    {
+      "site": "x",
       "handle": "faycaljelil",
       "name": "Faycal Jelil",
       "category": "Autres",
@@ -1840,6 +2657,22 @@
     },
     {
       "site": "x",
+      "handle": "femmeazadi",
+      "name": "Association Femme Azadi",
+      "category": "Autres",
+      "id": "1591136052277874704",
+      "source": "https://x.com/femmeazadi"
+    },
+    {
+      "site": "x",
+      "handle": "flavien_jouve",
+      "name": "Flavien JOUVE",
+      "category": "Autres",
+      "id": "1605463540466388992",
+      "source": "https://x.com/flavien_jouve"
+    },
+    {
+      "site": "x",
       "handle": "flaviobolsonaro",
       "name": "FlavioBolsonaro",
       "category": "Autres",
@@ -1855,6 +2688,22 @@
       "id": "1263385251176484864",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "florencegoulet4",
+      "name": "Florence Goulet",
+      "category": "Autres",
+      "id": "1471984978183528450",
+      "source": "https://x.com/FlorenceGoulet4"
+    },
+    {
+      "site": "x",
+      "handle": "france_gaulois",
+      "name": "FranceDeGaulois🇫🇷💤",
+      "category": "Autres",
+      "id": "1584173239638556674",
+      "source": "https://x.com/france_gaulois"
     },
     {
       "site": "x",
@@ -1893,6 +2742,14 @@
     },
     {
       "site": "x",
+      "handle": "fredchatillon",
+      "name": "Frédéric Chatillon",
+      "category": "Autres",
+      "id": "410175771",
+      "source": "https://x.com/fredchatillon"
+    },
+    {
+      "site": "x",
       "handle": "fredericvos",
       "name": "Frédéric-Pierre Vos",
       "category": "RN",
@@ -1902,12 +2759,28 @@
     },
     {
       "site": "x",
+      "handle": "frenchcarcan",
+      "name": "French Carcan",
+      "category": "Autres",
+      "id": "1884145301251837952",
+      "source": "https://x.com/FrenchCarcan"
+    },
+    {
+      "site": "x",
       "handle": "frontieresmedia",
       "name": "Frontières",
       "category": "Autres",
       "id": "1357358878674059265",
       "reason": "Média Frontières",
       "source": "https://www.sotwe.com/frontieresmedia"
+    },
+    {
+      "site": "x",
+      "handle": "furet_angeline",
+      "name": "Angéline Furet",
+      "category": "Autres",
+      "id": "1821135380432687104",
+      "source": "https://x.com/furet_angeline"
     },
     {
       "site": "x",
@@ -1963,12 +2836,36 @@
     },
     {
       "site": "x",
+      "handle": "gbensouss",
+      "name": "Guillaume Bensoussan",
+      "category": "Reconquête",
+      "id": "238317867",
+      "source": "https://x.com/gbensouss"
+    },
+    {
+      "site": "x",
+      "handle": "gensnostra",
+      "name": "Donum Dei",
+      "category": "Autres",
+      "id": "1903887112006717440",
+      "source": "https://x.com/GensNostra"
+    },
+    {
+      "site": "x",
       "handle": "geoffroylejeune",
       "name": "Geoffroy Lejeune",
       "category": "Autres",
       "id": "128698096",
       "reason": "Directeur du JDD, ancien directeur de Valeurs actuelles.",
       "source": "https://x.com/GeoffroyLejeune"
+    },
+    {
+      "site": "x",
+      "handle": "gerard_larcher",
+      "name": "Gérard Larcher",
+      "category": "Autres",
+      "id": "1134643441",
+      "source": "https://x.com/gerard_larcher"
     },
     {
       "site": "x",
@@ -2021,6 +2918,14 @@
       "id": "1238476209291476993",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "gregorybruel",
+      "name": "Gregory Vanden Bruel",
+      "category": "Autres",
+      "id": "379611112",
+      "source": "https://x.com/GregoryBruel"
     },
     {
       "site": "x",
@@ -2094,6 +2999,14 @@
     },
     {
       "site": "x",
+      "handle": "haimkorsia",
+      "name": "Haïm Korsia",
+      "category": "Autres",
+      "id": "2473037815",
+      "source": "https://x.com/HaimKorsia"
+    },
+    {
+      "site": "x",
       "handle": "helenelaportern",
       "name": "Hélène Laporte",
       "category": "RN",
@@ -2103,11 +3016,43 @@
     },
     {
       "site": "x",
-      "handle": "ilangabet",
-      "name": "IlanGabet",
+      "handle": "id_libertes",
+      "name": "Identité Libertés",
       "category": "Autres",
-      "id": "1481064763211886592",
-      "source": "https://x.com/IlanGabet"
+      "id": "1842533759695958016",
+      "source": "https://x.com/ID_Libertes"
+    },
+    {
+      "site": "x",
+      "handle": "id_libertes37",
+      "name": "#ID_Libertes37",
+      "category": "Autres",
+      "id": "780129788270931968",
+      "source": "https://x.com/ID_Libertes37"
+    },
+    {
+      "site": "x",
+      "handle": "id_libertes75",
+      "name": "Identité Libertés (Paris)",
+      "category": "Autres",
+      "id": "1482028056046981120",
+      "source": "https://x.com/ID_Libertes75"
+    },
+    {
+      "site": "x",
+      "handle": "id_libertesocc",
+      "name": "Identité Libertés Occitanie",
+      "category": "Autres",
+      "id": "1852710957367070720",
+      "source": "https://x.com/ID_LibertesOcc"
+    },
+    {
+      "site": "x",
+      "handle": "ilsonttuekenny",
+      "name": "IlsOntTueKenny",
+      "category": "Autres",
+      "id": "598294062",
+      "source": "https://x.com/IlsOntTueKenny"
     },
     {
       "site": "x",
@@ -2155,6 +3100,14 @@
     },
     {
       "site": "x",
+      "handle": "ivoir1savage",
+      "name": "ivoir1savage",
+      "category": "Autres",
+      "id": "1639627664976748546",
+      "source": "https://x.com/ivoir1savage?s=11"
+    },
+    {
+      "site": "x",
       "handle": "j_bardella",
       "name": "Jordan Bardella",
       "category": "RN",
@@ -2170,6 +3123,14 @@
       "id": "4067518516",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "jafarianmona",
+      "name": "Mona Jafarian",
+      "category": "Autres",
+      "id": "1585185702538629121",
+      "source": "https://x.com/JafarianMona"
     },
     {
       "site": "x",
@@ -2248,6 +3209,14 @@
       "id": "95599164",
       "reason": "Cadre du Rassemblement national",
       "source": "https://jeanlinlacapelle.fr/cnews/une-nouvelle-etape-pour-preparer-une-majorite-parlementaire/"
+    },
+    {
+      "site": "x",
+      "handle": "jmilei",
+      "name": "Javier Milei",
+      "category": "Autres",
+      "id": "4020276615",
+      "source": "https://x.com/jmilei"
     },
     {
       "site": "x",
@@ -2427,6 +3396,14 @@
     },
     {
       "site": "x",
+      "handle": "justicepquentin",
+      "name": "Justice Pour Quentin",
+      "category": "Autres",
+      "id": "2024072393690673152",
+      "source": "https://x.com/JusticePQuentin"
+    },
+    {
+      "site": "x",
       "handle": "jylgallou",
       "name": "Jean-Yves Le Gallou",
       "category": "Autres",
@@ -2463,11 +3440,35 @@
     },
     {
       "site": "x",
+      "handle": "kevin_nader7",
+      "name": "Kevin Nader",
+      "category": "RN",
+      "id": "1906739891255353344",
+      "source": "https://x.com/Kevin_Nader7"
+    },
+    {
+      "site": "x",
       "handle": "kevindm75",
       "name": "KevinDM75",
       "category": "Autres",
       "id": "1539373821764968450",
       "source": "https://x.com/KevinDM75"
+    },
+    {
+      "site": "x",
+      "handle": "khannrachel",
+      "name": "Khan Rachel",
+      "category": "Autres",
+      "id": "566749548",
+      "source": "https://x.com/KhanNRachel"
+    },
+    {
+      "site": "x",
+      "handle": "kiefferalc",
+      "name": "KiefferALC",
+      "category": "Autres",
+      "id": "3234157595",
+      "source": "https://x.com/KiefferALC"
     },
     {
       "site": "x",
@@ -2480,6 +3481,30 @@
     },
     {
       "site": "x",
+      "handle": "koxiecolor",
+      "name": "koxie",
+      "category": "Reconquête",
+      "id": "221505726",
+      "source": "https://x.com/koxieColor"
+    },
+    {
+      "site": "x",
+      "handle": "kriloffs",
+      "name": "Kriloff Sébastien",
+      "category": "Autres",
+      "id": "1521833471752216578",
+      "source": "https://x.com/KriloffS"
+    },
+    {
+      "site": "x",
+      "handle": "lapinblanc0041",
+      "name": "Borderpin Blanc",
+      "category": "Autres",
+      "id": "1531951954737389570",
+      "source": "https://x.com/LapinBlanc0041"
+    },
+    {
+      "site": "x",
       "handle": "laurenceferrari",
       "name": "Laurence Ferrari",
       "category": "Autres",
@@ -2489,12 +3514,28 @@
     },
     {
       "site": "x",
+      "handle": "laurencetrochu",
+      "name": "Laurence Trochu",
+      "category": "Autres",
+      "id": "3707834307",
+      "source": "https://x.com/LaurenceTrochu"
+    },
+    {
+      "site": "x",
       "handle": "laurentobertone",
       "name": "Laurent Obertone",
       "category": "Autres",
       "id": "2229879344",
       "reason": "Auteur",
       "source": "https://x.com/LaurentObertone"
+    },
+    {
+      "site": "x",
+      "handle": "laurentwauquiez",
+      "name": "Laurent Wauquiez",
+      "category": "Autres",
+      "id": "19438626",
+      "source": "https://x.com/laurentwauquiez"
     },
     {
       "site": "x",
@@ -2532,12 +3573,36 @@
     },
     {
       "site": "x",
+      "handle": "leasalame",
+      "name": "Léa Salamé",
+      "category": "Autres",
+      "id": "370854282",
+      "source": "https://x.com/leasalame"
+    },
+    {
+      "site": "x",
+      "handle": "lebelino2",
+      "name": "Thierry Belin",
+      "category": "Autres",
+      "id": "105214073",
+      "source": "https://x.com/lebelino2"
+    },
+    {
+      "site": "x",
       "handle": "lebourgeois7610",
       "name": "Robert Le Bourgeois",
       "category": "RN",
       "id": "1802995739536003072",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "lecontempiateur",
+      "name": "LeContempIateur",
+      "category": "Autres",
+      "id": "69425704",
+      "source": "https://x.com/LeContempIateur"
     },
     {
       "site": "x",
@@ -2559,6 +3624,14 @@
     },
     {
       "site": "x",
+      "handle": "lesparentsvigil",
+      "name": "LesParentsVigil",
+      "category": "Autres",
+      "id": "1960360389071478784",
+      "source": "https://x.com/LesParentsVigil"
+    },
+    {
+      "site": "x",
       "handle": "linfiltremedia",
       "name": "L’Infiltré",
       "category": "Autres",
@@ -2574,6 +3647,14 @@
       "id": "2164568108",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "livio_lbs",
+      "name": "https://x.com/livio_lbs",
+      "category": "Autres",
+      "id": "1795163700132786176",
+      "source": "https://x.com/livio_lbs"
     },
     {
       "site": "x",
@@ -2613,6 +3694,22 @@
     },
     {
       "site": "x",
+      "handle": "louis_ducanjou",
+      "name": "Louis_DucAnjou",
+      "category": "Autres",
+      "id": "1162419296842203136",
+      "source": "https://x.com/Louis_DucAnjou"
+    },
+    {
+      "site": "x",
+      "handle": "louisderaguenel",
+      "name": "Louis de Raguenel",
+      "category": "Autres",
+      "id": "87259899",
+      "source": "https://x.com/LouisDeRaguenel"
+    },
+    {
+      "site": "x",
       "handle": "louise_morice_",
       "name": "Louise Morice",
       "category": "Autres",
@@ -2628,6 +3725,22 @@
       "id": "1221332420978532353",
       "reason": "Étudiante militante rn/uni qui passe sur les plateaux télé pour dire de la merde en étant condescendante (très gros frond)",
       "source": "https://x.com/louiselzeu"
+    },
+    {
+      "site": "x",
+      "handle": "lrdehault",
+      "name": "Laurence Robert-Dehault",
+      "category": "Autres",
+      "id": "1527188940029149184",
+      "source": "https://x.com/LRDehault"
+    },
+    {
+      "site": "x",
+      "handle": "m_dauchy",
+      "name": "Marie Dauchy",
+      "category": "RN",
+      "id": "4181419349",
+      "source": "https://x.com/M_Dauchy"
     },
     {
       "site": "x",
@@ -2675,6 +3788,14 @@
     },
     {
       "site": "x",
+      "handle": "marcguyon",
+      "name": "Marc Guyon",
+      "category": "Autres",
+      "id": "35090601",
+      "source": "https://x.com/MarcGuyon"
+    },
+    {
+      "site": "x",
       "handle": "marchiomatthieu",
       "name": "Matthieu Marchio",
       "category": "RN",
@@ -2701,12 +3822,28 @@
     },
     {
       "site": "x",
+      "handle": "marinpetrus",
+      "name": "Pierre Charron",
+      "category": "Autres",
+      "id": "858841735866306560",
+      "source": "https://x.com/marinpetrus?s=11"
+    },
+    {
+      "site": "x",
       "handle": "marionmarechal",
       "name": "Marion Maréchal",
       "category": "Autres",
       "id": "520449734",
       "reason": "Remigration",
       "source": "https://www.lemonde.fr/politique/article/2024/08/07/l-identitaire-philippe-vardon-de-retour-dans-l-orbite-du-rassemblement-national_6272268_823448.html"
+    },
+    {
+      "site": "x",
+      "handle": "massonbryan",
+      "name": "MassonBryan",
+      "category": "Autres",
+      "id": "293620822",
+      "source": "https://x.com/MassonBryan"
     },
     {
       "site": "x",
@@ -2761,6 +3898,22 @@
       "id": "203311649",
       "reason": "Chroniqueur CNEWS",
       "source": "https://www30.twstalker.com/ThierryCabannes"
+    },
+    {
+      "site": "x",
+      "handle": "mcarolinelepen",
+      "name": "MCarolineLePen",
+      "category": "Autres",
+      "id": "389577459",
+      "source": "https://x.com/MCarolineLePen"
+    },
+    {
+      "site": "x",
+      "handle": "menard_off",
+      "name": "Robert Ménard",
+      "category": "Autres",
+      "id": "2096860318613766149",
+      "source": "https://x.com/Menard_off"
     },
     {
       "site": "x",
@@ -2839,6 +3992,14 @@
       "id": "1364165334",
       "reason": "Groupe RN à l’Assemblée · août 2026",
       "source": "https://www2.assemblee-nationale.fr/deputes/liste/reseaux-sociaux"
+    },
+    {
+      "site": "x",
+      "handle": "montretacroix",
+      "name": "https://x.com/MontreTaCroix",
+      "category": "Autres",
+      "id": "1162513032",
+      "source": "https://x.com/MontreTaCroix"
     },
     {
       "site": "x",
@@ -2956,12 +4117,36 @@
     },
     {
       "site": "x",
+      "handle": "ou_va_ma_france",
+      "name": "Où va ma France ?",
+      "category": "Autres",
+      "id": "1855440148298907649",
+      "source": "https://x.com/ou_va_ma_France"
+    },
+    {
+      "site": "x",
       "handle": "p_condomines",
       "name": "Pauline Condomines",
       "category": "Autres",
       "id": "1777970574943211520",
       "reason": "Journaliste Valeurs actuelles",
       "source": "https://mobile.twstalker.com/p_condomines"
+    },
+    {
+      "site": "x",
+      "handle": "p_vardon",
+      "name": "Philippe Vardon",
+      "category": "Autres",
+      "id": "528890147",
+      "source": "https://x.com/P_Vardon"
+    },
+    {
+      "site": "x",
+      "handle": "pandeamonium121",
+      "name": "🇨🇵🌿Pandeamonium1233🇨🇵",
+      "category": "Autres",
+      "id": "1456160848100069376",
+      "source": "https://x.com/Pandeamonium121"
     },
     {
       "site": "x",
@@ -2980,6 +4165,22 @@
       "id": "416221365",
       "reason": "Présentateur CNEWS",
       "source": "https://x.com/PascalPraud/with_replies"
+    },
+    {
+      "site": "x",
+      "handle": "pasnotreeurope",
+      "name": "Pas Notre Europe",
+      "category": "Autres",
+      "id": "1614987757100699648",
+      "source": "https://x.com/PasNotreEurope"
+    },
+    {
+      "site": "x",
+      "handle": "patrioteseurope",
+      "name": "Patriotes pour l’Europe 🇫🇷",
+      "category": "Autres",
+      "id": "4782667416",
+      "source": "https://x.com/patrioteseurope"
     },
     {
       "site": "x",
@@ -3016,6 +4217,14 @@
       "id": "1691421426",
       "reason": "Chroniqueur CNEWS · candidat RN en 2024",
       "source": "https://www.lemonde.fr/politique/article/2024/07/04/legislatives-2024-pierre-gentillet-un-russophile-dans-le-berry_6246778_823448.html"
+    },
+    {
+      "site": "x",
+      "handle": "pierrickbrtlo",
+      "name": "Pierrick Berteloot Ⓜ️",
+      "category": "Autres",
+      "id": "2261699515",
+      "source": "https://x.com/pierrickbrtlo"
     },
     {
       "site": "x",
@@ -3079,12 +4288,28 @@
     },
     {
       "site": "x",
+      "handle": "radiogenoa",
+      "name": "radioGenoa",
+      "category": "Autres",
+      "id": "1429400366819512323",
+      "source": "https://x.com/radioGenoa"
+    },
+    {
+      "site": "x",
       "handle": "radouan_kourak",
       "name": "Radouan Kourak",
       "category": "Autres",
       "id": "943227398975303680",
       "reason": "Chroniqueur CNEWS",
       "source": "https://www30.twstalker.com/radouan_kourak"
+    },
+    {
+      "site": "x",
+      "handle": "raforafo",
+      "name": "Olivier Rafowicz",
+      "category": "Autres",
+      "id": "75650926",
+      "source": "https://x.com/RAFOrafo"
     },
     {
       "site": "x",
@@ -3122,6 +4347,14 @@
     },
     {
       "site": "x",
+      "handle": "regelegorila",
+      "name": "Regelegorila",
+      "category": "Autres",
+      "id": "1706200000684752896",
+      "source": "https://x.com/Regelegorila"
+    },
+    {
+      "site": "x",
       "handle": "renaudcamus",
       "name": "Renaud Camus",
       "category": "Autres",
@@ -3149,12 +4382,44 @@
     },
     {
       "site": "x",
+      "handle": "rn_bfc",
+      "name": "Groupe RN BFC",
+      "category": "RN",
+      "id": "912352786574188549",
+      "source": "https://x.com/rn_bfc"
+    },
+    {
+      "site": "x",
+      "handle": "rn_hautevienne",
+      "name": "RN_HauteVienne",
+      "category": "Autres",
+      "id": "1633849263867215873",
+      "source": "https://x.com/RN_HauteVienne"
+    },
+    {
+      "site": "x",
+      "handle": "rn_occitanie",
+      "name": "Rassemblement National Occitanie",
+      "category": "Autres",
+      "id": "709297506165891072",
+      "source": "https://x.com/RN_Occitanie?s=20"
+    },
+    {
+      "site": "x",
       "handle": "rn_paca",
       "name": "RN Provence-Alpes-Côte d’Azur",
       "category": "RN",
       "id": "3359390985",
       "reason": "Groupe régional RN",
       "source": "https://sotwe.twstalker.com/rn_paca"
+    },
+    {
+      "site": "x",
+      "handle": "rn_vosges",
+      "name": "Rassemblement National - Vosges",
+      "category": "RN",
+      "id": "811615180060848129",
+      "source": "https://x.com/RN_Vosges"
     },
     {
       "site": "x",
@@ -3182,6 +4447,30 @@
       "id": "493091464",
       "reason": "Fédération RN",
       "source": "https://testing-when.twstalker.com/RNGrandEst"
+    },
+    {
+      "site": "x",
+      "handle": "rnj_77",
+      "name": "RNJ_77",
+      "category": "Autres",
+      "id": "1485992427638956037",
+      "source": "https://x.com/RNJ_77"
+    },
+    {
+      "site": "x",
+      "handle": "rnvar_officiel",
+      "name": "RN Var",
+      "category": "Autres",
+      "id": "2613656785",
+      "source": "https://x.com/RNVar_officiel"
+    },
+    {
+      "site": "x",
+      "handle": "rocheteaudomin2",
+      "name": "Eric Roche 🇫🇷 ⚜️🇨🇵🇨🇵",
+      "category": "RN",
+      "id": "1505617825901260801",
+      "source": "https://x.com/RocheteauDomin2"
     },
     {
       "site": "x",
@@ -3225,6 +4514,14 @@
       "category": "Autres",
       "id": "88462044",
       "source": "https://x.com/Samuel_Lafont"
+    },
+    {
+      "site": "x",
+      "handle": "sandrine_dogor",
+      "name": "Sandrine Dogor Such 🇫🇷",
+      "category": "Autres",
+      "id": "857607035252297729",
+      "source": "https://x.com/Sandrine_Dogor"
     },
     {
       "site": "x",
@@ -3281,6 +4578,14 @@
     },
     {
       "site": "x",
+      "handle": "sergil88349033",
+      "name": "🇫🇷SERGE GIL 🇫🇷🇮🇱🎗️",
+      "category": "Autres",
+      "id": "1503658180349468676",
+      "source": "https://x.com/SERGIL88349033"
+    },
+    {
+      "site": "x",
       "handle": "sevilliayves",
       "name": "Yves-Marie Sévillia",
       "category": "Autres",
@@ -3295,6 +4600,22 @@
       "category": "Autres",
       "id": "1065963435098349568",
       "source": "https://x.com/SGurbuz__"
+    },
+    {
+      "site": "x",
+      "handle": "shannasparkleof",
+      "name": "shannasparkleof",
+      "category": "Autres",
+      "id": "733969720827740160",
+      "source": "https://x.com/shannasparkleof"
+    },
+    {
+      "site": "x",
+      "handle": "shannonseban",
+      "name": "Shannon Seban",
+      "category": "Autres",
+      "id": "1108744220007903232",
+      "source": "https://x.com/ShannonSeban"
     },
     {
       "site": "x",
@@ -3315,11 +4636,27 @@
     },
     {
       "site": "x",
+      "handle": "sjallamion",
+      "name": "Sébastien JALLAMION",
+      "category": "Autres",
+      "id": "3354964647",
+      "source": "https://x.com/SJallamion"
+    },
+    {
+      "site": "x",
       "handle": "sociologuelvl99",
       "name": "@sociologuelvl99",
       "category": "Autres",
       "id": "1882507120576483329",
       "source": "https://x.com/sociologuelvl99"
+    },
+    {
+      "site": "x",
+      "handle": "souverainetefra",
+      "name": "🇫🇷 Souveraineté. Démocratie.",
+      "category": "Autres",
+      "id": "2047291075581059072",
+      "source": "https://x.com/SouveraineteFra"
     },
     {
       "site": "x",
@@ -3367,6 +4704,14 @@
     },
     {
       "site": "x",
+      "handle": "tatianaventose",
+      "name": "TatianaVentose",
+      "category": "Autres",
+      "id": "1432902236",
+      "source": "https://x.com/TatianaVentose"
+    },
+    {
+      "site": "x",
       "handle": "tavernemichael",
       "name": "Michaël Taverne",
       "category": "RN",
@@ -3390,6 +4735,14 @@
       "id": "784347608",
       "reason": "Frontières · CNEWS",
       "source": "https://lightbrd.com/tegnererik"
+    },
+    {
+      "site": "x",
+      "handle": "tesson59",
+      "name": "Thierry TESSON Ⓜ️",
+      "category": "Autres",
+      "id": "1828843984619294721",
+      "source": "https://x.com/Tesson59"
     },
     {
       "site": "x",
@@ -3456,6 +4809,14 @@
     },
     {
       "site": "x",
+      "handle": "thomasr2020",
+      "name": "Thomas Rousseau",
+      "category": "Autres",
+      "id": "825377686457552897",
+      "source": "https://x.com/ThomasR2020"
+    },
+    {
+      "site": "x",
       "handle": "tiffany_joncour",
       "name": "Tiffany Joncour",
       "category": "RN",
@@ -3513,6 +4874,30 @@
       "id": "1268909773115863040",
       "reason": "Spammeur à 11k abonnés islamophobe",
       "source": "https://x.com/UIAthee"
+    },
+    {
+      "site": "x",
+      "handle": "uni_lyon",
+      "name": "UNI Lyon",
+      "category": "Autres",
+      "id": "1348334205541998594",
+      "source": "https://x.com/uni_lyon"
+    },
+    {
+      "site": "x",
+      "handle": "unibordeaux",
+      "name": "UNI Bordeaux",
+      "category": "Autres",
+      "id": "4276455677",
+      "source": "https://x.com/unibordeaux"
+    },
+    {
+      "site": "x",
+      "handle": "unionepatriotti",
+      "name": "Unione di i Patriotti",
+      "category": "Autres",
+      "id": "1984540341975035904",
+      "source": "https://x.com/Unionepatriotti"
     },
     {
       "site": "x",
@@ -3604,6 +4989,23 @@
     },
     {
       "site": "x",
+      "handle": "vivre_francais",
+      "name": "Vivre Français",
+      "category": "Autres",
+      "id": "1637159718408933376",
+      "source": "https://x.com/Vivre_Francais"
+    },
+    {
+      "site": "x",
+      "handle": "vlbelang",
+      "name": "Vlaams Belang",
+      "category": "Autres",
+      "id": "22473403",
+      "reason": "Belges",
+      "source": "https://x.com/vlbelang"
+    },
+    {
+      "site": "x",
       "handle": "vltngr",
       "name": "Valentin Gaure",
       "category": "Autres",
@@ -3658,6 +5060,38 @@
     },
     {
       "site": "x",
+      "handle": "yohanpawerf",
+      "name": "Yohan Pawer",
+      "category": "Autres",
+      "id": "1308779687263469568",
+      "source": "https://x.com/YohanPawerF"
+    },
+    {
+      "site": "x",
+      "handle": "yona_faedda",
+      "name": "Yona Faedda",
+      "category": "Autres",
+      "id": "1541095493043949568",
+      "source": "https://x.com/yona_faedda"
+    },
+    {
+      "site": "x",
+      "handle": "yt_laminuteinfo",
+      "name": "La minute info",
+      "category": "Autres",
+      "id": "1584132200911585280",
+      "source": "https://x.com/yt_LaMinuteInfo"
+    },
+    {
+      "site": "x",
+      "handle": "z4bivaka",
+      "name": "Z4bivaka",
+      "category": "Autres",
+      "id": "2573146514",
+      "source": "https://x.com/Z4bivaka"
+    },
+    {
+      "site": "x",
       "handle": "zemmoureric",
       "name": "Éric Zemmour",
       "category": "Reconquête",
@@ -3672,6 +5106,20 @@
       "category": "Autres",
       "id": "2438136788",
       "source": "https://x.com/Zu_Demir"
+    },
+    {
+      "site": "youtube",
+      "handle": "goldenboyy001",
+      "name": "GoldenBoy",
+      "category": "Autres",
+      "source": "https://youtube.com/@goldenboyy001?si=lqsqRptRGAjKjSFj"
+    },
+    {
+      "site": "youtube",
+      "handle": "im_jungo",
+      "name": "JUNGO",
+      "category": "Autres",
+      "source": "https://www.youtube.com/@im_Jungo"
     }
   ]
 }

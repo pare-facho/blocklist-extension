@@ -1,4 +1,19 @@
 {
+  "_agnesmarion": {
+    "id": "1875944024",
+    "screenName": "_AgnesMarion",
+    "checkedAt": "2026-10-28T05:39:49.699Z"
+  },
+  "_lespatriotes": {
+    "id": "864138756068134912",
+    "screenName": "_LesPatriotes",
+    "checkedAt": "2026-10-28T05:40:37.066Z"
+  },
+  "1ripostelaique": {
+    "id": "1953472298",
+    "screenName": "1RiposteLaique",
+    "checkedAt": "2026-10-28T05:40:30.472Z"
+  },
   "21newsbe": {
     "id": "1803504026698346496",
     "screenName": "21NewsBE",
@@ -9,6 +24,16 @@
     "screenName": "A_Dutremble",
     "checkedAt": "2026-10-27T23:07:55.371Z"
   },
+  "a_masson06": {
+    "id": "3360454371",
+    "screenName": "A_Masson06",
+    "checkedAt": "2026-10-28T05:40:11.864Z"
+  },
+  "abrfl31": {
+    "id": "1445346299965022215",
+    "screenName": "ABRFL31",
+    "checkedAt": "2026-10-28T05:40:13.994Z"
+  },
   "actionfrancaise": {
     "id": "76723418",
     "screenName": "actionfrancaise",
@@ -18,6 +43,11 @@
     "id": "1641306819363471361",
     "screenName": "AlcidedeFrance",
     "checkedAt": "2026-10-27T23:09:43.797Z"
+  },
+  "alexandredfss": {
+    "id": "732726264",
+    "screenName": "AlexandreDfss",
+    "checkedAt": "2026-10-28T05:40:15.564Z"
   },
   "alexandrejardin": {
     "id": "108928379",
@@ -34,10 +64,20 @@
     "screenName": "AlexandreVaraut",
     "checkedAt": "2026-10-27T23:10:44.206Z"
   },
+  "alexdevecchio": {
+    "id": "87156428",
+    "screenName": "AlexDevecchio",
+    "checkedAt": "2026-10-28T05:39:43.735Z"
+  },
   "alexisjollyrn": {
     "id": "120521019",
     "screenName": "alexisjollyrn",
     "checkedAt": "2026-10-27T23:07:51.152Z"
+  },
+  "alexsaradjian": {
+    "id": "702363387",
+    "screenName": "AlexSaradjian",
+    "checkedAt": "2026-10-28T05:39:53.202Z"
   },
   "alienordep": {
     "id": "1812280277248434176",
@@ -49,6 +89,16 @@
     "screenName": "AmauryBucco",
     "checkedAt": "2026-10-27T23:10:13.891Z"
   },
+  "ambre_louisin": {
+    "id": "1293175066218442753",
+    "screenName": "ambre_louisin",
+    "checkedAt": "2026-10-28T05:40:23.472Z"
+  },
+  "amirkhizymeliss": {
+    "id": "1458778569912561668",
+    "screenName": "AmirkhizyMeliss",
+    "checkedAt": "2026-10-28T05:40:01.496Z"
+  },
   "anais_marechal_": {
     "id": "1731767747216875520",
     "screenName": "anais_marechal_",
@@ -58,6 +108,11 @@
     "id": "1156135942660460544",
     "screenName": "AndreRougeOff",
     "checkedAt": "2026-10-27T23:09:25.439Z"
+  },
+  "angel_paradize": {
+    "id": "432280475",
+    "screenName": "Angel_Paradize",
+    "checkedAt": "2026-10-28T05:40:40.640Z"
   },
   "angelique_ranc": {
     "id": "1496184473439899657",
@@ -74,6 +129,11 @@
     "screenName": "AnneSicard1",
     "checkedAt": "2026-10-27T23:07:52.965Z"
   },
+  "annickcousin_rn": {
+    "id": "1395420945955840010",
+    "screenName": "AnnickCousin_RN",
+    "checkedAt": "2026-10-28T05:40:13.502Z"
+  },
   "antboulogne54": {
     "id": "53667012",
     "screenName": "AntBoulogne54",
@@ -88,6 +148,11 @@
     "id": "1472269167218806797",
     "screenName": "ArMarvailher",
     "checkedAt": "2026-10-27T23:09:46.182Z"
+  },
+  "arthurjosso1": {
+    "id": "1424832324877828100",
+    "screenName": "ArthurJosso1",
+    "checkedAt": "2026-10-28T05:40:22.493Z"
   },
   "asabatou": {
     "id": "1222799668150665216",
@@ -114,10 +179,20 @@
     "screenName": "Bart_DeWever",
     "checkedAt": "2026-10-27T23:10:40.600Z"
   },
+  "bartolenoir": {
+    "id": "522646235",
+    "screenName": "bartolenoir",
+    "checkedAt": "2026-10-28T05:39:46.682Z"
+  },
   "bastionmediafr": {
     "id": "1718034808347992064",
     "screenName": "BastionMediaFR",
     "checkedAt": "2026-10-27T23:10:03.979Z"
+  },
+  "baubryr": {
+    "id": "1180615972597764096",
+    "screenName": "BaubryR",
+    "checkedAt": "2026-10-28T05:39:58.070Z"
   },
   "bay_christophe": {
     "id": "1802355173727105024",
@@ -133,6 +208,16 @@
     "id": "1159815717811867649",
     "screenName": "BeaurainJose",
     "checkedAt": "2026-10-27T23:08:14.292Z"
+  },
+  "ben_voyons2022": {
+    "id": "1469438263966547973",
+    "screenName": "Ben_voyons2022",
+    "checkedAt": "2026-10-28T05:40:10.888Z"
+  },
+  "beneauzanot": {
+    "id": "967709351359246337",
+    "screenName": "BeneAuzanot",
+    "checkedAt": "2026-10-28T05:40:04.471Z"
   },
   "bentzchristophe": {
     "id": "93939435",
@@ -164,6 +249,11 @@
     "screenName": "Boccaletti83",
     "checkedAt": "2026-10-27T23:08:06.365Z"
   },
+  "bonnationaliste": {
+    "id": "1642041498156802049",
+    "screenName": "BonNationaliste",
+    "checkedAt": "2026-10-28T05:40:01.005Z"
+  },
   "boskodebamako": {
     "id": "1971324557861462016",
     "screenName": "BoskoDeBamako",
@@ -183,6 +273,11 @@
     "id": "1898101152002326529",
     "screenName": "Boulicitoyen",
     "checkedAt": "2026-10-27T23:10:26.574Z"
+  },
+  "boulinukem": {
+    "id": "1464559800558231555",
+    "screenName": "BouliNukem",
+    "checkedAt": "2026-10-28T05:40:11.376Z"
   },
   "boulizellig": {
     "id": "2084660158722961409",
@@ -214,6 +309,11 @@
     "screenName": "BrunoClavet",
     "checkedAt": "2026-10-27T23:07:57.271Z"
   },
+  "brunolemaire": {
+    "id": "374184532",
+    "screenName": "BrunoLeMaire",
+    "checkedAt": "2026-10-28T05:39:42.750Z"
+  },
   "brunoretailleau": {
     "id": "408398312",
     "screenName": "BrunoRetailleau",
@@ -224,6 +324,11 @@
     "screenName": "BVoltaire",
     "checkedAt": "2026-10-27T23:08:50.939Z"
   },
+  "camille_eros": {
+    "id": "1919224678205337600",
+    "screenName": "camille_eros",
+    "checkedAt": "2026-10-28T05:40:32.507Z"
+  },
   "capetlevrai": {
     "id": "262764995",
     "screenName": "Capetlevrai",
@@ -233,6 +338,11 @@
     "id": "49292117",
     "screenName": "CarolineFourest",
     "checkedAt": "2026-10-27T23:09:44.990Z"
+  },
+  "carolineyadan": {
+    "id": "96099818",
+    "screenName": "CarolineYADAN",
+    "checkedAt": "2026-10-28T05:40:28.181Z"
   },
   "casuslady": {
     "id": "1533500020804165635",
@@ -264,6 +374,16 @@
     "screenName": "CerfiaFR",
     "checkedAt": "2026-10-27T23:10:42.402Z"
   },
+  "cerifrerisme": {
+    "id": "1893728528275013632",
+    "screenName": "CERIFrerisme",
+    "checkedAt": "2026-10-28T05:40:42.456Z"
+  },
+  "charlesconsigny": {
+    "id": "391385801",
+    "screenName": "CharlesConsigny",
+    "checkedAt": "2026-10-28T05:39:43.241Z"
+  },
   "chdornellas": {
     "id": "1350083185774891010",
     "screenName": "ChdOrnellas",
@@ -279,10 +399,20 @@
     "screenName": "christine_kelly",
     "checkedAt": "2026-10-27T23:08:52.731Z"
   },
+  "christineloirrn": {
+    "id": "1541365185847361536",
+    "screenName": "ChristineLoirRN",
+    "checkedAt": "2026-10-28T05:39:57.582Z"
+  },
   "chudeaur": {
     "id": "1522966362267734017",
     "screenName": "ChudeauR",
     "checkedAt": "2026-10-27T23:08:37.516Z"
+  },
+  "chypre_france_": {
+    "id": "1982530091465986048",
+    "screenName": "Chypre_France_",
+    "checkedAt": "2026-10-28T05:40:06.010Z"
   },
   "cnews": {
     "id": "18396319",
@@ -299,10 +429,20 @@
     "screenName": "CocardeEtud",
     "checkedAt": "2026-10-27T23:09:32.256Z"
   },
+  "coline_houssays": {
+    "id": "1166439541",
+    "screenName": "coline_houssays",
+    "checkedAt": "2026-10-28T05:39:57.101Z"
+  },
   "coll_nemesis": {
     "id": "1189178129501298688",
     "screenName": "Coll_Nemesis",
     "checkedAt": "2026-10-27T23:07:49.273Z"
+  },
+  "collectiferos": {
+    "id": "1794027280781512706",
+    "screenName": "CollectifEros",
+    "checkedAt": "2026-10-28T05:40:29.984Z"
   },
   "commandertorenn": {
     "id": "1124166730568359936",
@@ -334,6 +474,21 @@
     "screenName": "DamienRieu",
     "checkedAt": "2026-10-27T23:08:01.478Z"
   },
+  "danielgrenon89": {
+    "id": "1526201039770341378",
+    "screenName": "DanielGrenon89",
+    "checkedAt": "2026-10-28T05:40:14.476Z"
+  },
+  "danielriolo": {
+    "id": "360668525",
+    "screenName": "DanielRiolo",
+    "checkedAt": "2026-10-28T05:39:45.048Z"
+  },
+  "danykab1971": {
+    "id": "2950850686",
+    "screenName": "DANYKAB1971",
+    "checkedAt": "2026-10-28T05:40:21.998Z"
+  },
   "davidalaime": {
     "id": "1046167840536055809",
     "screenName": "DavidAlaime",
@@ -343,6 +498,11 @@
     "id": "103918784",
     "screenName": "davidlisnard",
     "checkedAt": "2026-10-27T23:09:37.797Z"
+  },
+  "de_nva": {
+    "id": "24688336",
+    "screenName": "de_NVA",
+    "checkedAt": "2026-10-28T05:40:10.398Z"
   },
   "destexhe": {
     "id": "36775728",
@@ -374,6 +534,11 @@
     "screenName": "droiteuniv",
     "checkedAt": "2026-10-28T00:08:35.755Z"
   },
+  "ducarmedenis": {
+    "id": "75315061",
+    "screenName": "ducarmedenis",
+    "checkedAt": "2026-10-28T05:39:42.269Z"
+  },
   "dupontaignan": {
     "id": "38170599",
     "screenName": "dupontaignan",
@@ -404,6 +569,11 @@
     "screenName": "EddyCasterman",
     "checkedAt": "2026-10-27T23:08:02.078Z"
   },
+  "eleonorebez": {
+    "id": "3059051375",
+    "screenName": "EleonoreBez",
+    "checkedAt": "2026-10-28T05:40:16.550Z"
+  },
   "elodiehuchard": {
     "id": "98605435",
     "screenName": "ElodieHuchard",
@@ -418,6 +588,21 @@
     "id": "493628470",
     "screenName": "EmericSalmon",
     "checkedAt": "2026-10-27T23:08:02.691Z"
+  },
+  "enerveveve": {
+    "id": "1319620137255948290",
+    "screenName": "EnerveVeve",
+    "checkedAt": "2026-10-28T05:40:00.029Z"
+  },
+  "enough_was_then": {
+    "id": "2049862363214462976",
+    "screenName": "Enough_was_then",
+    "checkedAt": "2026-10-28T05:40:17.514Z"
+  },
+  "ericmorillot": {
+    "id": "40803349",
+    "screenName": "EricMorillot",
+    "checkedAt": "2026-10-28T05:40:06.501Z"
   },
   "ericnaulleau": {
     "id": "700737161708986369",
@@ -454,6 +639,11 @@
     "screenName": "FabriceLeggeri",
     "checkedAt": "2026-10-27T23:09:27.864Z"
   },
+  "falconfrederic": {
+    "id": "1526227912222990336",
+    "screenName": "FalconFrederic",
+    "checkedAt": "2026-10-28T05:40:16.053Z"
+  },
   "faycaljelil": {
     "id": "836890014495698944",
     "screenName": "FaycalJelil",
@@ -469,6 +659,16 @@
     "screenName": "FDW_VB",
     "checkedAt": "2026-10-27T23:10:41.214Z"
   },
+  "femmeazadi": {
+    "id": "1591136052277874704",
+    "screenName": "femmeazadi",
+    "checkedAt": "2026-10-28T05:40:46.737Z"
+  },
+  "flavien_jouve": {
+    "id": "1605463540466388992",
+    "screenName": "flavien_jouve",
+    "checkedAt": "2026-10-28T05:39:51.479Z"
+  },
   "flaviobolsonaro": {
     "id": "40053694",
     "screenName": "FlavioBolsonaro",
@@ -478,6 +678,16 @@
     "id": "1263385251176484864",
     "screenName": "Flo_Joubert",
     "checkedAt": "2026-10-27T23:08:05.154Z"
+  },
+  "florencegoulet4": {
+    "id": "1471984978183528450",
+    "screenName": "FlorenceGoulet4",
+    "checkedAt": "2026-10-28T05:40:04.955Z"
+  },
+  "france_gaulois": {
+    "id": "1584173239638556674",
+    "screenName": "france_gaulois",
+    "checkedAt": "2026-10-28T05:39:58.566Z"
   },
   "francelorho": {
     "id": "902788871460724740",
@@ -499,6 +709,11 @@
     "screenName": "FrDesouche",
     "checkedAt": "2026-10-27T23:08:33.215Z"
   },
+  "fredchatillon": {
+    "id": "410175771",
+    "screenName": "fredchatillon",
+    "checkedAt": "2026-10-28T05:39:52.024Z"
+  },
   "fredericvo79738": {
     "missing": true,
     "checkedAt": "2026-10-27T23:08:06.970Z"
@@ -508,10 +723,20 @@
     "screenName": "FredericVos",
     "checkedAt": "2026-10-27T23:22:20.840Z"
   },
+  "frenchcarcan": {
+    "id": "1884145301251837952",
+    "screenName": "FrenchCarcan",
+    "checkedAt": "2026-10-28T05:40:41.134Z"
+  },
   "frontieresmedia": {
     "id": "1357358878674059265",
     "screenName": "Frontieresmedia",
     "checkedAt": "2026-10-27T23:08:49.147Z"
+  },
+  "furet_angeline": {
+    "id": "1821135380432687104",
+    "screenName": "furet_angeline",
+    "checkedAt": "2026-10-28T05:40:23.949Z"
   },
   "g_dussausaye": {
     "id": "1098578904",
@@ -543,10 +768,25 @@
     "screenName": "GauthierBret",
     "checkedAt": "2026-10-27T23:08:53.943Z"
   },
+  "gbensouss": {
+    "id": "238317867",
+    "screenName": "gbensouss",
+    "checkedAt": "2026-10-28T05:40:09.375Z"
+  },
+  "gensnostra": {
+    "id": "1903887112006717440",
+    "screenName": "GensNostra",
+    "checkedAt": "2026-10-28T05:39:59.538Z"
+  },
   "geoffroylejeune": {
     "id": "128698096",
     "screenName": "GeoffroyLejeune",
     "checkedAt": "2026-10-27T23:09:55.955Z"
+  },
+  "gerard_larcher": {
+    "id": "1134643441",
+    "screenName": "gerard_larcher",
+    "checkedAt": "2026-10-28T05:40:27.126Z"
   },
   "giacomofirenze": {
     "id": "1972600003341295616",
@@ -577,6 +817,11 @@
     "id": "1238476209291476993",
     "screenName": "GrangierGe",
     "checkedAt": "2026-10-27T23:08:09.471Z"
+  },
+  "gregorybruel": {
+    "id": "379611112",
+    "screenName": "GregoryBruel",
+    "checkedAt": "2026-10-28T05:39:44.559Z"
   },
   "grisetcatherine": {
     "id": "1090919392840503296",
@@ -618,15 +863,45 @@
     "screenName": "H2Lepinau",
     "checkedAt": "2026-10-27T23:08:10.082Z"
   },
+  "haimkorsia": {
+    "id": "2473037815",
+    "screenName": "HaimKorsia",
+    "checkedAt": "2026-10-28T05:40:44.402Z"
+  },
   "helenelaportern": {
     "id": "789179329854869507",
     "screenName": "HeleneLaporteRN",
     "checkedAt": "2026-10-27T23:08:10.673Z"
   },
+  "id_libertes": {
+    "id": "1842533759695958016",
+    "screenName": "ID_Libertes",
+    "checkedAt": "2026-10-28T05:39:54.182Z"
+  },
+  "id_libertes37": {
+    "id": "780129788270931968",
+    "screenName": "ID_Libertes37",
+    "checkedAt": "2026-10-28T05:39:55.142Z"
+  },
+  "id_libertes75": {
+    "id": "1482028056046981120",
+    "screenName": "ID_Libertes75",
+    "checkedAt": "2026-10-28T05:39:54.660Z"
+  },
+  "id_libertesocc": {
+    "id": "1852710957367070720",
+    "screenName": "ID_LibertesOcc",
+    "checkedAt": "2026-10-28T05:39:55.633Z"
+  },
   "ilangabet": {
     "id": "1481064763211886592",
     "screenName": "Ilangabet",
     "checkedAt": "2026-10-27T23:10:32.585Z"
+  },
+  "ilsonttuekenny": {
+    "id": "598294062",
+    "screenName": "IlsOntTueKenny",
+    "checkedAt": "2026-10-28T05:40:38.659Z"
   },
   "imambouli": {
     "id": "1946222929282281472",
@@ -653,6 +928,11 @@
     "screenName": "ivanrioufol",
     "checkedAt": "2026-10-27T23:08:56.387Z"
   },
+  "ivoir1savage": {
+    "id": "1639627664976748546",
+    "screenName": "Ivoir1Savage",
+    "checkedAt": "2026-10-28T05:40:20.937Z"
+  },
   "j_bardella": {
     "id": "1499400284",
     "screenName": "J_Bardella",
@@ -662,6 +942,11 @@
     "id": "4067518516",
     "screenName": "J_Rancoule",
     "checkedAt": "2026-10-27T23:08:17.916Z"
+  },
+  "jafarianmona": {
+    "id": "1585185702538629121",
+    "screenName": "JafarianMona",
+    "checkedAt": "2026-10-28T05:40:46.151Z"
   },
   "jdvance": {
     "id": "1542228578",
@@ -706,6 +991,11 @@
     "id": "95599164",
     "screenName": "jllacapelle",
     "checkedAt": "2026-10-27T23:09:30.876Z"
+  },
+  "jmilei": {
+    "id": "4020276615",
+    "screenName": "JMilei",
+    "checkedAt": "2026-10-28T05:40:33.477Z"
   },
   "jmlepain_off": {
     "id": "2070604133325746176",
@@ -807,6 +1097,11 @@
     "screenName": "jussetain",
     "checkedAt": "2026-10-27T23:10:15.102Z"
   },
+  "justicepquentin": {
+    "id": "2024072393690673152",
+    "screenName": "JusticePQuentin",
+    "checkedAt": "2026-10-28T05:40:18.475Z"
+  },
   "jylgallou": {
     "id": "2148731538",
     "screenName": "jylgallou",
@@ -827,25 +1122,65 @@
     "screenName": "KbgStream",
     "checkedAt": "2026-10-27T23:09:51.045Z"
   },
+  "kevin_nader7": {
+    "id": "1906739891255353344",
+    "screenName": "Kevin_Nader7",
+    "checkedAt": "2026-10-28T05:40:36.036Z"
+  },
   "kevindm75": {
     "id": "1539373821764968450",
     "screenName": "KevinDM75",
     "checkedAt": "2026-10-27T23:10:31.981Z"
+  },
+  "khannrachel": {
+    "id": "566749548",
+    "screenName": "KhanNRachel",
+    "checkedAt": "2026-10-28T05:40:43.439Z"
+  },
+  "kiefferalc": {
+    "id": "3234157595",
+    "screenName": "KiefferALC",
+    "checkedAt": "2026-10-28T05:40:17.029Z"
   },
   "knafo_sarah": {
     "id": "1111901164487000064",
     "screenName": "knafo_sarah",
     "checkedAt": "2026-10-27T23:08:38.118Z"
   },
+  "koxiecolor": {
+    "id": "221505726",
+    "screenName": "koxieColor",
+    "checkedAt": "2026-10-28T05:40:07.842Z"
+  },
+  "kriloffs": {
+    "id": "1521833471752216578",
+    "screenName": "KriloffS",
+    "checkedAt": "2026-10-28T05:40:08.345Z"
+  },
+  "lapinblanc0041": {
+    "id": "1531951954737389570",
+    "screenName": "LapinBlanc0041",
+    "checkedAt": "2026-10-28T05:40:39.644Z"
+  },
   "laurenceferrari": {
     "id": "72343264",
     "screenName": "LaurenceFerrari",
     "checkedAt": "2026-10-27T23:08:53.330Z"
   },
+  "laurencetrochu": {
+    "id": "3707834307",
+    "screenName": "LaurenceTrochu",
+    "checkedAt": "2026-10-28T05:39:48.662Z"
+  },
   "laurentobertone": {
     "id": "2229879344",
     "screenName": "LaurentObertone",
     "checkedAt": "2026-10-27T23:10:03.386Z"
+  },
+  "laurentwauquiez": {
+    "id": "19438626",
+    "screenName": "laurentwauquiez",
+    "checkedAt": "2026-10-28T05:40:25.983Z"
   },
   "lauriane_bd": {
     "id": "1477951452744232964",
@@ -867,10 +1202,25 @@
     "screenName": "le_jarl",
     "checkedAt": "2026-10-27T23:10:09.673Z"
   },
+  "leasalame": {
+    "id": "370854282",
+    "screenName": "LeaSalame",
+    "checkedAt": "2026-10-28T05:40:35.553Z"
+  },
+  "lebelino2": {
+    "id": "105214073",
+    "screenName": "lebelino2",
+    "checkedAt": "2026-10-28T05:40:24.431Z"
+  },
   "lebourgeois7610": {
     "id": "1802995739536003072",
     "screenName": "LeBourgeois7610",
     "checkedAt": "2026-10-27T23:08:36.917Z"
+  },
+  "lecontempiateur": {
+    "id": "69425704",
+    "screenName": "LeContempIateur",
+    "checkedAt": "2026-10-28T05:40:34.889Z"
   },
   "legaymaxime1": {
     "id": "1240284223308775424",
@@ -882,6 +1232,11 @@
     "screenName": "leJDD",
     "checkedAt": "2026-10-27T23:09:47.393Z"
   },
+  "lesparentsvigil": {
+    "id": "1960360389071478784",
+    "screenName": "LesParentsVigil",
+    "checkedAt": "2026-10-28T05:40:32.022Z"
+  },
   "linfiltremedia": {
     "id": "2096604207293820936",
     "screenName": "linfiltremedia",
@@ -891,6 +1246,11 @@
     "id": "2164568108",
     "screenName": "Lionel_Tivoli",
     "checkedAt": "2026-10-27T23:08:21.587Z"
+  },
+  "livio_lbs": {
+    "id": "1795163700132786176",
+    "screenName": "Livio_lbs",
+    "checkedAt": "2026-10-28T05:40:32.991Z"
   },
   "ljacobelli": {
     "id": "2784005936",
@@ -912,6 +1272,16 @@
     "screenName": "louis_aliot",
     "checkedAt": "2026-10-27T23:09:31.477Z"
   },
+  "louis_ducanjou": {
+    "id": "1162419296842203136",
+    "screenName": "Louis_DucAnjou",
+    "checkedAt": "2026-10-28T05:40:47.710Z"
+  },
+  "louisderaguenel": {
+    "id": "87259899",
+    "screenName": "LouisDeRaguenel",
+    "checkedAt": "2026-10-28T05:39:47.163Z"
+  },
   "louise_morice_": {
     "id": "1670085105375649793",
     "screenName": "louise_morice_",
@@ -921,6 +1291,16 @@
     "id": "1221332420978532353",
     "screenName": "louiselzeu",
     "checkedAt": "2026-10-27T23:09:45.589Z"
+  },
+  "lrdehault": {
+    "id": "1527188940029149184",
+    "screenName": "LRDehault",
+    "checkedAt": "2026-10-28T05:40:05.452Z"
+  },
+  "m_dauchy": {
+    "id": "4181419349",
+    "screenName": "M_Dauchy",
+    "checkedAt": "2026-10-28T05:39:56.601Z"
   },
   "maaroufi9": {
     "id": "563148050",
@@ -947,6 +1327,11 @@
     "screenName": "MarcDeFleurian",
     "checkedAt": "2026-10-27T23:08:22.218Z"
   },
+  "marcguyon": {
+    "id": "35090601",
+    "screenName": "MarcGuyon",
+    "checkedAt": "2026-10-28T05:39:49.157Z"
+  },
   "marchiomatthieu": {
     "id": "1173524445169934336",
     "screenName": "MarchioMatthieu",
@@ -962,10 +1347,20 @@
     "screenName": "marine_hamelet",
     "checkedAt": "2026-10-27T23:08:23.610Z"
   },
+  "marinpetrus": {
+    "id": "858841735866306560",
+    "screenName": "marinpetrus",
+    "checkedAt": "2026-10-28T05:40:25.446Z"
+  },
   "marionmarechal": {
     "id": "520449734",
     "screenName": "MarionMarechal",
     "checkedAt": "2026-10-27T23:08:24.202Z"
+  },
+  "massonbryan": {
+    "id": "293620822",
+    "screenName": "MassonBryan",
+    "checkedAt": "2026-10-28T05:40:12.351Z"
   },
   "mathildeklotgen": {
     "id": "856207970560077825",
@@ -996,6 +1391,16 @@
     "id": "203311649",
     "screenName": "mbockcote",
     "checkedAt": "2026-10-27T23:08:55.767Z"
+  },
+  "mcarolinelepen": {
+    "id": "389577459",
+    "screenName": "MCarolineLePen",
+    "checkedAt": "2026-10-28T05:40:47.225Z"
+  },
+  "menard_off": {
+    "id": "2096860318613766149",
+    "screenName": "Menard_off",
+    "checkedAt": "2026-10-28T05:40:45.181Z"
   },
   "meurin_p": {
     "id": "1459094447753469964",
@@ -1041,6 +1446,11 @@
     "id": "1364165334",
     "screenName": "MonnierThibaut",
     "checkedAt": "2026-10-27T23:08:42.506Z"
+  },
+  "montretacroix": {
+    "id": "1162513032",
+    "screenName": "MontreTaCroix",
+    "checkedAt": "2026-10-28T05:39:47.658Z"
   },
   "morandiniblog": {
     "id": "35287180",
@@ -1111,10 +1521,25 @@
     "screenName": "omertamedia",
     "checkedAt": "2026-10-27T23:09:49.800Z"
   },
+  "ou_va_ma_france": {
+    "id": "1855440148298907649",
+    "screenName": "ou_va_ma_France",
+    "checkedAt": "2026-10-28T05:40:17.995Z"
+  },
   "p_condomines": {
     "id": "1777970574943211520",
     "screenName": "p_condomines",
     "checkedAt": "2026-10-27T23:09:16.430Z"
+  },
+  "p_vardon": {
+    "id": "528890147",
+    "screenName": "P_Vardon",
+    "checkedAt": "2026-10-28T05:39:50.188Z"
+  },
+  "pandeamonium121": {
+    "id": "1456160848100069376",
+    "screenName": "Pandeamonium121",
+    "checkedAt": "2026-10-28T05:39:48.165Z"
   },
   "parmentier_rn": {
     "id": "1073862562792521729",
@@ -1125,6 +1550,16 @@
     "id": "416221365",
     "screenName": "PascalPraud",
     "checkedAt": "2026-10-27T23:08:52.124Z"
+  },
+  "pasnotreeurope": {
+    "id": "1614987757100699648",
+    "screenName": "PasNotreEurope",
+    "checkedAt": "2026-10-28T05:40:19.970Z"
+  },
+  "patrioteseurope": {
+    "id": "4782667416",
+    "screenName": "PatriotesEurope",
+    "checkedAt": "2026-10-28T05:40:20.453Z"
   },
   "ph_schreck": {
     "id": "1100772609321512961",
@@ -1145,6 +1580,11 @@
     "id": "1691421426",
     "screenName": "Pierre_GTIL",
     "checkedAt": "2026-10-27T23:09:21.852Z"
+  },
+  "pierrickbrtlo": {
+    "id": "2261699515",
+    "screenName": "pierrickbrtlo",
+    "checkedAt": "2026-10-28T05:40:14.963Z"
   },
   "pnbsbb": {
     "id": "1671375070072287232",
@@ -1181,10 +1621,20 @@
     "screenName": "quoicoubologue",
     "checkedAt": "2026-10-27T23:10:30.144Z"
   },
+  "radiogenoa": {
+    "id": "1429400366819512323",
+    "screenName": "RadioGenoa",
+    "checkedAt": "2026-10-28T05:40:43.918Z"
+  },
   "radouan_kourak": {
     "id": "943227398975303680",
     "screenName": "radouan_kourak",
     "checkedAt": "2026-10-27T23:09:11.030Z"
+  },
+  "raforafo": {
+    "id": "75650926",
+    "screenName": "RAFOrafo",
+    "checkedAt": "2026-10-28T05:40:45.665Z"
   },
   "raphpaillot": {
     "id": "1654172428472401920",
@@ -1206,6 +1656,11 @@
     "screenName": "Reconquete_off",
     "checkedAt": "2026-10-27T23:08:33.838Z"
   },
+  "regelegorila": {
+    "id": "1706200000684752896",
+    "screenName": "regelegorila",
+    "checkedAt": "2026-10-28T05:40:08.870Z"
+  },
   "renaudcamus": {
     "id": "1044928850",
     "screenName": "RenaudCamus",
@@ -1221,10 +1676,30 @@
     "screenName": "RiposteLaique",
     "checkedAt": "2026-10-27T23:09:50.416Z"
   },
+  "rn_bfc": {
+    "id": "912352786574188549",
+    "screenName": "RN_BFC",
+    "checkedAt": "2026-10-28T05:40:29.500Z"
+  },
+  "rn_hautevienne": {
+    "id": "1633849263867215873",
+    "screenName": "RN_HauteVienne",
+    "checkedAt": "2026-10-28T05:39:59.058Z"
+  },
+  "rn_occitanie": {
+    "id": "709297506165891072",
+    "screenName": "RN_Occitanie",
+    "checkedAt": "2026-10-28T05:40:22.982Z"
+  },
   "rn_paca": {
     "id": "3359390985",
     "screenName": "rn_paca",
     "checkedAt": "2026-10-27T23:08:35.726Z"
+  },
+  "rn_vosges": {
+    "id": "811615180060848129",
+    "screenName": "RN_Vosges",
+    "checkedAt": "2026-10-28T05:40:00.519Z"
   },
   "rnational_idf": {
     "id": "4821062745",
@@ -1240,6 +1715,21 @@
     "id": "493091464",
     "screenName": "RNGrandEst",
     "checkedAt": "2026-10-27T23:08:35.087Z"
+  },
+  "rnj_77": {
+    "id": "1485992427638956037",
+    "screenName": "RNJ_77",
+    "checkedAt": "2026-10-28T05:40:19.487Z"
+  },
+  "rnvar_officiel": {
+    "id": "2613656785",
+    "screenName": "RNVar_officiel",
+    "checkedAt": "2026-10-28T05:39:56.121Z"
+  },
+  "rocheteaudomin2": {
+    "id": "1505617825901260801",
+    "screenName": "RocheteauDomin2",
+    "checkedAt": "2026-10-28T05:40:02.564Z"
   },
   "roullaudbeatric": {
     "id": "290794764",
@@ -1265,6 +1755,11 @@
     "id": "88462044",
     "screenName": "Samuel_Lafont",
     "checkedAt": "2026-10-27T23:10:20.532Z"
+  },
+  "sandrine_dogor": {
+    "id": "857607035252297729",
+    "screenName": "Sandrine_Dogor",
+    "checkedAt": "2026-10-28T05:40:03.491Z"
   },
   "sarah176israel": {
     "id": "1495417959036116997",
@@ -1296,6 +1791,11 @@
     "screenName": "Serge_Muller24",
     "checkedAt": "2026-10-27T23:08:38.718Z"
   },
+  "sergil88349033": {
+    "id": "1503658180349468676",
+    "screenName": "SERGIL88349033",
+    "checkedAt": "2026-10-28T05:39:53.693Z"
+  },
   "sevilliayves": {
     "id": "1908468990315499520",
     "screenName": "SevilliaYves",
@@ -1305,6 +1805,16 @@
     "id": "1065963435098349568",
     "screenName": "SGurbuz__",
     "checkedAt": "2026-10-27T23:10:43.598Z"
+  },
+  "shannasparkleof": {
+    "id": "733969720827740160",
+    "screenName": "shannasparkleof",
+    "checkedAt": "2026-10-28T05:39:45.604Z"
+  },
+  "shannonseban": {
+    "id": "1108744220007903232",
+    "screenName": "ShannonSeban",
+    "checkedAt": "2026-10-28T05:40:03.987Z"
   },
   "simao_rda": {
     "id": "1167085894584668160",
@@ -1316,10 +1826,20 @@
     "screenName": "SirenesFR",
     "checkedAt": "2026-10-27T23:09:59.770Z"
   },
+  "sjallamion": {
+    "id": "3354964647",
+    "screenName": "SJallamion",
+    "checkedAt": "2026-10-28T05:40:42.955Z"
+  },
   "sociologuelvl99": {
     "id": "1882507120576483329",
     "screenName": "sociologuelvl99",
     "checkedAt": "2026-10-27T23:10:10.866Z"
+  },
+  "souverainetefra": {
+    "id": "2047291075581059072",
+    "screenName": "SouveraineteFra",
+    "checkedAt": "2026-10-28T05:40:33.973Z"
   },
   "srambaudrn": {
     "id": "1456335129731911684",
@@ -1350,6 +1870,11 @@
     "screenName": "T_Houssin",
     "checkedAt": "2026-10-27T23:08:46.111Z"
   },
+  "tatianaventose": {
+    "id": "1432902236",
+    "screenName": "TatianaVentose",
+    "checkedAt": "2026-10-28T05:40:31.545Z"
+  },
   "tavernemichael": {
     "id": "1319560178958815232",
     "screenName": "TaverneMichael",
@@ -1364,6 +1889,11 @@
     "id": "784347608",
     "screenName": "tegnererik",
     "checkedAt": "2026-10-27T23:08:51.537Z"
+  },
+  "tesson59": {
+    "id": "1828843984619294721",
+    "screenName": "Tesson59",
+    "checkedAt": "2026-10-28T05:40:40.144Z"
   },
   "th_bnrdt": {
     "id": "1473415154058551296",
@@ -1400,6 +1930,11 @@
     "screenName": "ThomasBonnet",
     "checkedAt": "2026-10-27T23:08:59.426Z"
   },
+  "thomasr2020": {
+    "id": "825377686457552897",
+    "screenName": "ThomasR2020",
+    "checkedAt": "2026-10-28T05:39:52.507Z"
+  },
   "tiffany_joncour": {
     "id": "703306285580754945",
     "screenName": "Tiffany_Joncour",
@@ -1434,6 +1969,21 @@
     "id": "1268909773115863040",
     "screenName": "UIAthee",
     "checkedAt": "2026-10-27T23:09:38.995Z"
+  },
+  "uni_lyon": {
+    "id": "1348334205541998594",
+    "screenName": "uni_lyon",
+    "checkedAt": "2026-10-28T05:40:18.953Z"
+  },
+  "unibordeaux": {
+    "id": "4276455677",
+    "screenName": "unibordeaux",
+    "checkedAt": "2026-10-28T05:40:38.018Z"
+  },
+  "unionepatriotti": {
+    "id": "1984540341975035904",
+    "screenName": "Unionepatriotti",
+    "checkedAt": "2026-10-28T05:40:41.615Z"
   },
   "v_joron": {
     "id": "2991912647",
@@ -1485,6 +2035,16 @@
     "screenName": "VincLapierre",
     "checkedAt": "2026-10-27T23:10:02.198Z"
   },
+  "vivre_francais": {
+    "id": "1637159718408933376",
+    "screenName": "Vivre_Francais",
+    "checkedAt": "2026-10-28T05:40:39.147Z"
+  },
+  "vlbelang": {
+    "id": "22473403",
+    "screenName": "vlbelang",
+    "checkedAt": "2026-10-28T05:40:09.865Z"
+  },
   "vltngr": {
     "id": "2203069263",
     "screenName": "VltnGR",
@@ -1514,6 +2074,26 @@
     "id": "219269942",
     "screenName": "YOANNUSAI",
     "checkedAt": "2026-10-27T23:08:58.223Z"
+  },
+  "yohanpawerf": {
+    "id": "1308779687263469568",
+    "screenName": "YohanPawerF",
+    "checkedAt": "2026-10-28T05:40:28.657Z"
+  },
+  "yona_faedda": {
+    "id": "1541095493043949568",
+    "screenName": "yona_faedda",
+    "checkedAt": "2026-10-28T05:40:24.917Z"
+  },
+  "yt_laminuteinfo": {
+    "id": "1584132200911585280",
+    "screenName": "yt_LaMinuteInfo",
+    "checkedAt": "2026-10-28T05:39:50.985Z"
+  },
+  "z4bivaka": {
+    "id": "2573146514",
+    "screenName": "Z4bivaka",
+    "checkedAt": "2026-10-28T05:40:36.561Z"
   },
   "zemmoureric": {
     "id": "1183418538285027329",
