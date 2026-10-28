@@ -7,9 +7,9 @@ comptes figurant dans des listes auxquelles vous choisissez de vous abonner. Pre
 cible : X. Threads et Instagram sont prévus.
 
 Le projet est né pour utiliser la liste du site
-[On bloque l'extrême droite](https://onbloquelextremedroite.fun/), mais l'extension ne
-contient **aucune liste** : vous ajoutez celles que vous voulez, et vous pouvez retirer ou
-ajouter des comptes vous-même.
+[On bloque l'extrême droite](https://onbloquelextremedroite.fun/) : elle est **abonnée
+d'office** à l'installation (mise à jour toutes les heures depuis ce dépôt). Vous pouvez la
+retirer, ajouter d'autres listes, et retirer ou ajouter des comptes vous-même.
 
 > **Bêta.** Le code est public et testé automatiquement, mais l'extension n'est pas encore
 > publiée sur les boutiques. Installez-la à la main (voir plus bas) et utilisez de

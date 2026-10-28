@@ -8,7 +8,7 @@ export default defineConfig({
     description: "__MSG_extDescription__",
     default_locale: "fr",
     permissions: ["storage", "alarms"],
-    host_permissions: ["https://x.com/*"],
+    host_permissions: ["https://x.com/*", "https://pare-facho.github.io/*"],
     // Feed hosts are granted one by one when the user subscribes (see options page).
     // MV2 (Firefox) has no optional_host_permissions key; origins go in optional_permissions.
     ...(manifestVersion === 2 ? { optional_permissions: ["https://*/*"] } : { optional_host_permissions: ["https://*/*"] }),

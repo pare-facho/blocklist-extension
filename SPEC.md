@@ -11,7 +11,7 @@ on X, Threads and Instagram, without putting the user's account at risk.
    - Manual list: the user adds accounts by hand (paste a handle or a profile URL).
    - Subscribed lists: the user adds a feed URL. The extension re-downloads it on a schedule
      and applies additions and removals.
-   - The extension ships with **no list**. It never sends the user's lists anywhere.
+   - The extension ships with the Blockfacho list subscribed by default (removable). It never sends the user's lists anywhere.
    - Per-list on/off switch and "allow list" (accounts the user never wants blocked).
 2. **Hide now, block later**
    - Posts, replies and comments from listed accounts are hidden immediately in the page.
