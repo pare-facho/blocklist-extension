@@ -12,20 +12,39 @@ changes what shows on your screen.
 
 ## Install
 
-**Firefox**: install it from the official page
-[addons.mozilla.org/firefox/addon/pare-facho](https://addons.mozilla.org/firefox/addon/pare-facho/)
-by clicking "Add to Firefox".
+### Firefox
 
-**Chrome, Edge, Brave**: the extension is being reviewed by Google. Until then you can
-install it by hand in five steps:
+The extension is waiting for Mozilla's review. Until the official page
+([addons.mozilla.org/firefox/addon/pare-facho](https://addons.mozilla.org/firefox/addon/pare-facho/))
+is live, you can install the Mozilla-signed build in two steps:
+
+1. In Firefox, click this link:
+   [pare-facho-firefox.xpi](https://github.com/pare-facho/blocklist-extension/releases/latest/download/pare-facho-firefox.xpi).
+2. Firefox first asks for permission to install from GitHub: click "Continue to
+   Installation" (or "Allow"), then "Add" in the "Add Pare-Facho?" dialog.
+
+Alternatively, download the `.xpi` file, then drag it onto a Firefox window, or open
+`about:addons`, click the gear icon and choose "Install Add-on From File…".
+
+This build is signed by Mozilla, so it works in regular Firefox and stays installed. A
+`.zip` or an unsigned `.xpi` is refused by Firefox ("the add-on could not be verified"): do
+not use `pare-facho-firefox.zip` to install, it only exists for code review.
+
+### Chrome, Edge, Brave
+
+The extension is being reviewed by Google. Until then you can install it by hand in five
+steps:
 
 1. Download this file:
    [pare-facho-chrome.zip](https://github.com/pare-facho/blocklist-extension/releases/latest/download/pare-facho-chrome.zip).
 2. Unzip it (double-click the file). You get a folder named `pare-facho-chrome`. Keep it:
    the browser uses it.
-3. In the browser, type `chrome://extensions` in the address bar and press Enter.
+3. In the browser, type `chrome://extensions` in the address bar and press Enter
+   (`edge://extensions` in Edge, `brave://extensions` in Brave).
 4. Turn on "Developer mode" (switch at the top right).
-5. Click "Load unpacked" and choose the unzipped folder.
+5. Drag the unzipped folder onto that page, or click "Load unpacked" and choose the folder.
+
+The `.zip` file itself cannot be dropped: unzip it first.
 
 That is all. Open [x.com](https://x.com): listed accounts disappear from your screen. The
 extension's icon (in the extensions menu, top right) opens the settings page.
