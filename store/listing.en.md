@@ -26,7 +26,7 @@ Privacy: no data collected, no server. Everything stays in your browser. The onl
 
 Be aware: automated actions are against X's terms of use. The slow pace lowers the risk for your account; it does not remove it. Prefer a secondary account.
 
-Free software (GPL-3.0). Source code: https://github.com/lnilluv/blocklist-extension
+Free software (GPL-3.0). Source code: https://github.com/pare-facho/blocklist-extension
 
 ## Category
 Chrome: Social & Communication. Firefox: Social & Communication.
@@ -35,11 +35,11 @@ Chrome: Social & Communication. Firefox: Social & Communication.
 French (English available).
 
 ## Privacy policy (URL)
-https://github.com/lnilluv/blocklist-extension/blob/main/PRIVACY.md
+https://github.com/pare-facho/blocklist-extension/blob/main/PRIVACY.md
 
 ## Homepage / support
-https://github.com/lnilluv/blocklist-extension
-https://github.com/lnilluv/blocklist-extension/issues
+https://github.com/pare-facho/blocklist-extension
+https://github.com/pare-facho/blocklist-extension/issues
 
 ## Single purpose (Chrome)
 Hide and block on X the accounts found in lists chosen by the user.

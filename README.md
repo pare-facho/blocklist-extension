@@ -39,7 +39,7 @@ Toutes les données restent dans votre navigateur. Voir [PRIVACY.md](PRIVACY.md)
 ## Installation (bêta)
 
 Téléchargez le fichier zip de la
-[dernière version](https://github.com/lnilluv/blocklist-extension/releases).
+[dernière version](https://github.com/pare-facho/blocklist-extension/releases).
 
 - **Chrome / Edge / Brave** : décompressez le zip. Ouvrez `chrome://extensions`, activez le
   « Mode développeur », cliquez « Charger l'extension non empaquetée » et choisissez le
@@ -51,7 +51,7 @@ Téléchargez le fichier zip de la
 Puis ouvrez les réglages de l'extension et ajoutez une liste, par exemple :
 
 ```
-https://lnilluv.github.io/blocklist-extension/blocklist.json
+https://pare-facho.github.io/blocklist-extension/blocklist.json
 ```
 
 Cette liste est générée automatiquement toutes les heures à partir du site
