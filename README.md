@@ -59,8 +59,7 @@ Toutes les données restent dans votre navigateur. Rien n'est envoyé à personn
 ## À savoir avant d'installer
 
 - Les actions automatiques sont contraires aux conditions d'utilisation de X. Le rythme
-  modéré réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte
-  secondaire si vous le pouvez.
+  modéré réduit le risque pour votre compte, il ne le supprime pas. 
 - L'extension dépend des pages et des adresses internes de X. Quand X change, elle peut
   cesser de fonctionner jusqu'à une mise à jour.
 - Sur X, une personne bloquée peut toujours voir vos publications publiques. Elle ne peut
