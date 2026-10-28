@@ -2,7 +2,7 @@
 
 *[Version française](README.md)*
 
-A browser extension (Chrome and Firefox) that **hides** and **slowly blocks** the accounts
+A browser extension (Chrome and Firefox) that **hides** and **step by step blocks** the accounts
 on lists you choose to subscribe to. First target: X. Threads and Instagram are planned.
 
 The project started to make use of the list published by
@@ -17,9 +17,9 @@ lists, and remove or add accounts yourself.
 
 1. **Hide now.** On x.com, posts from listed accounts disappear from your screen as they
    render: timeline, replies, search. Nothing changes on X, only your display.
-2. **Block slowly, in the background (optional, off by default).** When enabled, the
-   extension blocks listed accounts one at a time, at a slow pace (defaults: at most 10 per
-   hour, 60 per day, with a random 3–15 minute gap). It sends exactly the request the X
+2. **Block step by step, in the background (on by default, can be turned off).** While enabled, the
+   extension blocks listed accounts one at a time, at an adjustable pace (defaults: at most 300 per
+   hour, 1000 per day, with a random 5–15 second gap). It sends exactly the request the X
    website sends when you click "Block" yourself, with your own session. It opens no page,
    clicks nothing, and only runs while a logged-in x.com tab is open. Real blocks then
    apply everywhere, including the mobile app.
@@ -54,8 +54,8 @@ This list is generated every hour from the *On bloque l'extrême droite* website
 
 ## Risks, stated plainly
 
-- Automated actions are against the terms of X and the other networks. The slow pace makes
-  the extension look like a person; it is not a guarantee. **Use a secondary account if
+- Automated actions are against the terms of X and the other networks. The pacing lowers
+  the risk for your account; it is not a guarantee. **Use a secondary account if
   you can.**
 - Hiding depends on the structure of X's pages; blocking depends on its internal
   addresses. When X changes, the extension may stop working until it is updated.

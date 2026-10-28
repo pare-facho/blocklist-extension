@@ -42,18 +42,18 @@ export type Settings = {
   paused: boolean;
   perHour: number;
   perDay: number;
-  minGapMinutes: number;
-  maxGapMinutes: number;
+  minGapSeconds: number;
+  maxGapSeconds: number;
   feedRefreshHours: number;
 };
 
 export const DEFAULT_SETTINGS: Settings = {
-  blockingEnabled: false,
+  blockingEnabled: true,
   paused: false,
-  perHour: 10,
-  perDay: 60,
-  minGapMinutes: 3,
-  maxGapMinutes: 15,
+  perHour: 200,
+  perDay: 1000,
+  minGapSeconds: 5,
+  maxGapSeconds: 15,
   feedRefreshHours: 6,
 };
 

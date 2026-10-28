@@ -20,6 +20,13 @@ export async function appendLog(line: string): Promise<void> {
   await logItem.setValue(log.slice(-LOG_MAX));
 }
 
+// Settings saved before 0.2.0 kept the gap in minutes; nothing else changed.
+type LegacySettings = Partial<Settings> & { minGapMinutes?: number; maxGapMinutes?: number };
+
 export async function getSettings(): Promise<Settings> {
-  return { ...DEFAULT_SETTINGS, ...(await settingsItem.getValue()) };
+  const { minGapMinutes, maxGapMinutes, ...saved } = (await settingsItem.getValue()) as LegacySettings;
+  const migrated: Partial<Settings> = {};
+  if (saved.minGapSeconds === undefined && minGapMinutes !== undefined) migrated.minGapSeconds = minGapMinutes * 60;
+  if (saved.maxGapSeconds === undefined && maxGapMinutes !== undefined) migrated.maxGapSeconds = maxGapMinutes * 60;
+  return { ...DEFAULT_SETTINGS, ...saved, ...migrated };
 }

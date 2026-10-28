@@ -4,6 +4,7 @@ h1 { font-size: 24px; margin: 0 0 4px; }
 h2 { font-size: 17px; margin: 0 0 8px; }
 section { background: #fff; border: 1px solid #e3e3e3; border-radius: 8px; padding: 16px 18px; margin-top: 18px; }
 .muted { color: #666; font-size: 14px; }
+.notice { background: #e8f1ff; border-left: 3px solid #2a6ddf; padding: 8px 12px; font-size: 14px; }
 .warn { background: #fff7e6; border-left: 3px solid #e6a100; padding: 8px 12px; font-size: 14px; }
 .status { font-size: 13px; color: #666; margin-left: 8px; }
 .status.error { color: #b00020; }

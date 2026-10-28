@@ -71,7 +71,7 @@ test("buildBlockSet merges enabled lists and manual entries, minus the allow lis
 });
 
 test("pacing enforces the random gap, hourly and daily limits", () => {
-  const settings = { ...DEFAULT_SETTINGS, perHour: 2, perDay: 3, minGapMinutes: 5, maxGapMinutes: 5 };
+  const settings = { ...DEFAULT_SETTINGS, perHour: 2, perDay: 3, minGapSeconds: 300, maxGapSeconds: 300 };
   const t0 = Date.parse("2026-10-28T10:00:00Z");
   const min = 60 * 1000;
 

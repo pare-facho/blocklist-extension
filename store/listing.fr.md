@@ -4,7 +4,7 @@
 Pare-Facho
 
 ## Résumé (Chrome : 132 caractères max)
-On bloque l'extrême droite : masque et bloque lentement les comptes des listes auxquelles vous vous abonnez. X pour l'instant.
+On bloque l'extrême droite : masque et bloque progressivement les comptes d'extrême droite listés, que vous les suiviez ou non.
 
 ## Description longue
 
@@ -14,7 +14,7 @@ Ce que fait l'extension :
 
 • Masquer tout de suite. Les publications des comptes listés disparaissent de votre fil, des réponses et de la recherche dès qu'elles s'affichent. Rien ne change sur X, seulement votre écran.
 
-• Bloquer lentement, en arrière-plan (optionnel, désactivé par défaut). Si vous l'activez, l'extension bloque les comptes listés un par un, à un rythme lent que vous réglez (par défaut : au plus 10 par heure, 60 par jour, avec un délai aléatoire entre deux). Elle envoie la même demande que le site X quand vous cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et ne fonctionne que si un onglet x.com connecté est ouvert.
+• Bloquer progressivement, en arrière-plan (activé par défaut, désactivable). L'extension bloque les comptes listés un par un, à un rythme que vous réglez (par défaut : au plus 300 par heure, 1000 par jour, avec un délai aléatoire de 5 à 15 secondes entre deux). Elle envoie la même demande que le site X quand vous cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et ne fonctionne que si un onglet x.com connecté est ouvert.
 
 • Un bouton ⛔ sur chaque publication : un clic pour masquer, ajouter le compte à votre liste et le mettre en file de blocage. Cinq secondes pour annuler.
 
@@ -24,7 +24,7 @@ Ce que fait l'extension :
 
 Vie privée : aucune donnée collectée, aucun serveur. Tout reste dans votre navigateur. Les seules connexions sont le téléchargement des listes (celle fournie par défaut et celles que vous ajoutez) et les blocages que vous demandez sur x.com.
 
-À savoir : les actions automatiques sont contraires aux conditions d'utilisation de X. Le rythme lent réduit le risque pour votre compte, il ne le supprime pas. Utilisez de préférence un compte secondaire.
+À savoir : les actions automatiques sont contraires aux conditions d'utilisation de X. Un rythme modéré réduit le risque pour votre compte, il ne le supprime pas. Utilisez de préférence un compte secondaire.
 
 Logiciel libre (GPL-3.0). Code source : https://github.com/pare-facho/blocklist-extension
 
@@ -46,7 +46,7 @@ Masquer et bloquer sur X les comptes figurant dans des listes choisies par l'uti
 
 ## Justification des permissions (Chrome)
 - storage : enregistrer les listes, les réglages, la file de blocage et l'historique, localement.
-- alarms : vérifier les listes périodiquement et exécuter au plus un blocage par minute, au rythme réglé.
+- alarms : vérifier les listes périodiquement et lancer les blocages en arrière-plan, au rythme réglé.
 - Accès au site x.com (host permission) : masquer les publications des comptes listés dans la page, afficher le bouton ⛔, et envoyer les demandes de blocage avec la session de l'utilisateur.
 - Accès au site pare-facho.github.io (host permission) : télécharger la liste fournie par défaut et ses mises à jour.
 - Accès optionnel à d'autres sites (optional host permission https://*/*) : demandé uniquement, et au cas par cas, quand l'utilisateur ajoute l'adresse d'une liste, pour pouvoir la télécharger.

@@ -3,7 +3,7 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "On bloque l’extrême droite : masque et bloque lentement les comptes des listes auxquelles vous êtes abonné·e."
+    "message": "On bloque l’extrême droite : masque et bloque progressivement les comptes d’extrême droite listés, que vous les suiviez ou non."
   },
   "optionsTitle": {
     "message": "Pare-Facho — réglages"
@@ -228,10 +228,10 @@
     "message": "Blocage"
   },
   "blockingHelp": {
-    "message": "Les publications des comptes listés sont toujours masquées. Le blocage réel est optionnel : il se fait lentement en arrière-plan, uniquement quand un onglet x.com est ouvert et que vous êtes connecté·e."
+    "message": "Les publications des comptes listés sont toujours masquées. Le blocage réel est activé par défaut : il se fait petit à petit en arrière-plan, uniquement quand un onglet x.com est ouvert et que vous êtes connecté·e. Décochez la case pour seulement masquer."
   },
   "blockingWarn": {
-    "message": "Les actions automatiques sont contraires aux conditions d'utilisation de la plupart des réseaux. Un rythme lent réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte secondaire si vous le pouvez."
+    "message": "Les actions automatiques sont contraires aux conditions d'utilisation de la plupart des réseaux. Un rythme modéré réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte secondaire si vous le pouvez."
   },
   "blockingEnabled": {
     "message": "Bloquer réellement les comptes listés"
@@ -246,10 +246,10 @@
     "message": "Maximum par jour"
   },
   "gapMin": {
-    "message": "Délai entre deux blocages, minimum (minutes)"
+    "message": "Délai entre deux blocages, minimum (secondes)"
   },
   "gapMax": {
-    "message": "Délai entre deux blocages, maximum (minutes)"
+    "message": "Délai entre deux blocages, maximum (secondes)"
   },
   "historyTitle": {
     "message": "Historique"
@@ -400,5 +400,22 @@
   },
   "errNotFound": {
     "message": "compte introuvable"
+  },
+  "tabNotice": {
+    "message": "Pour que les blocages aient lieu, gardez un onglet x.com ouvert et connecté (le fil, une page de profil, n'importe laquelle). Si vous fermez X, le blocage s'arrête ; il reprend dès que vous rouvrez X."
+  },
+  "noTab": {
+    "message": "Aucun onglet x.com n'est ouvert en ce moment : rien ne sera bloqué tant que vous n'ouvrez pas X."
+  },
+  "logNoTab": {
+    "message": "aucun onglet x.com ouvert : les blocages attendent que vous ouvriez X"
+  },
+  "logTabSilent": {
+    "message": "l'onglet x.com ne répond pas (rechargez la page X) : $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   }
 }

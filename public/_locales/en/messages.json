@@ -3,7 +3,7 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "Block the far right: hides and slowly blocks the accounts on lists you subscribe to."
+    "message": "Block the far right: hides and step by step blocks listed far-right accounts, whether you follow them or not."
   },
   "optionsTitle": {
     "message": "Pare-Facho — settings"
@@ -228,10 +228,10 @@
     "message": "Blocking"
   },
   "blockingHelp": {
-    "message": "Posts from listed accounts are always hidden. Real blocking is optional: it runs slowly in the background, only while an x.com tab is open and you are logged in."
+    "message": "Posts from listed accounts are always hidden. Real blocking is on by default: it runs step by step in the background, only while an x.com tab is open and you are logged in. Untick the box to only hide."
   },
   "blockingWarn": {
-    "message": "Automated actions are against the terms of most networks. A slow pace lowers the risk for your account; it does not remove it. Use a secondary account if you can."
+    "message": "Automated actions are against the terms of most networks. A moderate pace lowers the risk for your account; it does not remove it. Use a secondary account if you can."
   },
   "blockingEnabled": {
     "message": "Really block the listed accounts"
@@ -246,10 +246,10 @@
     "message": "Maximum per day"
   },
   "gapMin": {
-    "message": "Gap between two blocks, minimum (minutes)"
+    "message": "Gap between two blocks, minimum (seconds)"
   },
   "gapMax": {
-    "message": "Gap between two blocks, maximum (minutes)"
+    "message": "Gap between two blocks, maximum (seconds)"
   },
   "historyTitle": {
     "message": "History"
@@ -400,5 +400,22 @@
   },
   "errNotFound": {
     "message": "account not found"
+  },
+  "tabNotice": {
+    "message": "For blocks to happen, keep an x.com tab open and logged in (the feed, a profile page, any page). If you close X, blocking stops; it resumes as soon as you open X again."
+  },
+  "noTab": {
+    "message": "No x.com tab is open right now: nothing will be blocked until you open X."
+  },
+  "logNoTab": {
+    "message": "no x.com tab open: blocks wait until you open X"
+  },
+  "logTabSilent": {
+    "message": "the x.com tab is not answering (reload the X page): $1",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   }
 }

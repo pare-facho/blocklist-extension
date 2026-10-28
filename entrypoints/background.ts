@@ -6,12 +6,14 @@ import { buildBlockSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, BlockResult, ContentMessage, OptionsMessage } from "../lib/messages.ts";
 import { backOff, canBlockNow, prunePace, recordBlock } from "../lib/pacing.ts";
 import { allowItem, appendLog, getSettings, manualItem, paceItem, queueItem, seededItem, subscriptionsItem } from "../lib/storage.ts";
-import { isSite, taskKey, type QueueTask, type Site, type Subscription } from "../lib/types.ts";
+import { taskKey, type QueueTask, type Site, type Subscription } from "../lib/types.ts";
 
 const ALARM_REFRESH = "refresh-feeds";
 const ALARM_TICK = "block-tick";
 const MAX_ATTEMPTS = 3;
 const RETRY_LATER_MS = 15 * 60 * 1000;
+const TICK_MINUTES = 0.5; // the shortest period Chrome allows for an alarm
+const TICK_BUDGET_MS = 25_000; // what one alarm may spend before handing over to the next
 
 export default defineBackground(() => {
   browser.runtime.onInstalled.addListener(() => {
@@ -22,7 +24,7 @@ export default defineBackground(() => {
 
   browser.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === ALARM_REFRESH) void refreshAllFeeds();
-    if (alarm.name === ALARM_TICK) void tick();
+    if (alarm.name === ALARM_TICK) void runTicks();
   });
 
   browser.runtime.onMessage.addListener((message: ContentMessage | OptionsMessage, sender) => {
@@ -46,7 +48,7 @@ export default defineBackground(() => {
 async function scheduleAlarms() {
   const settings = await getSettings();
   await browser.alarms.create(ALARM_REFRESH, { delayInMinutes: 1, periodInMinutes: settings.feedRefreshHours * 60 });
-  await browser.alarms.create(ALARM_TICK, { delayInMinutes: 1, periodInMinutes: 1 });
+  await browser.alarms.create(ALARM_TICK, { delayInMinutes: TICK_MINUTES, periodInMinutes: TICK_MINUTES });
 }
 
 async function blockSetFor(site: Site) {
@@ -121,10 +123,9 @@ async function refreshAllFeeds() {
     }
   }
   await subscriptionsItem.setValue(subs);
-  if (changed) {
-    await syncQueue();
-    await notifyContentScripts();
-  }
+  // Always resync: blocking may have been switched on since the lists last changed.
+  await syncQueue();
+  if (changed) await notifyContentScripts();
 }
 
 // ---- queue -----------------------------------------------------------------
@@ -134,13 +135,14 @@ async function refreshAllFeeds() {
 async function syncQueue() {
   const settings = await getSettings();
   if (!settings.blockingEnabled) return;
-  const queue = await queueItem.getValue();
+  // Only X has a blocker so far; tasks for other sites came from older builds.
+  const queue = (await queueItem.getValue()).filter((t) => t.site === "x");
   const known = new Set(queue.map((t) => t.key));
   const [subs, manual, allow] = await Promise.all([subscriptionsItem.getValue(), manualItem.getValue(), allowItem.getValue()]);
   const allowed = new Set(allow.map((e) => `${e.site}:${e.handle}`));
   const now = new Date().toISOString();
   for (const e of [...subs.filter((s) => s.enabled).flatMap((s) => s.entries), ...manual]) {
-    if (!isSite(e.site)) continue;
+    if (e.site !== "x") continue;
     const key = taskKey(e.site, e.handle);
     if (known.has(key) || allowed.has(key)) continue;
     known.add(key);
@@ -177,6 +179,40 @@ async function undoQuickBlock(site: Site, handle: string) {
   return { ok: true };
 }
 
+// Logs why no block can happen right now, once per cause, so the activity log
+// explains a queue that does not move (no x.com tab, tab not answering).
+let lastBlocker: string | undefined;
+async function noteBlocker(kind: "noTab" | "tabSilent", detail = ""): Promise<string> {
+  const reason = kind === "noTab" ? t("logNoTab") : t("logTabSilent", detail);
+  if (lastBlocker !== kind) {
+    lastBlocker = kind;
+    await appendLog(reason);
+  }
+  return reason;
+}
+
+let ticking = false;
+
+// One alarm: block accounts one after the other, waiting out the random gap in
+// between, until the pacing says no or the alarm period is nearly over.
+async function runTicks(): Promise<void> {
+  if (ticking) return;
+  ticking = true;
+  const started = Date.now();
+  try {
+    for (;;) {
+      const result = await tick();
+      if (!result.ran) return;
+      const pace = await paceItem.getValue();
+      const next = pace.nextAllowedAt ? Date.parse(pace.nextAllowedAt) : Date.now();
+      if (next - started > TICK_BUDGET_MS) return;
+      await new Promise((resolve) => setTimeout(resolve, Math.max(0, next - Date.now())));
+    }
+  } finally {
+    ticking = false;
+  }
+}
+
 // One tick: if pacing allows, block the oldest pending X account through an open x.com tab.
 async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: string }> {
   const settings = await getSettings();
@@ -194,15 +230,16 @@ async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: s
 
   const tabs = await browser.tabs.query({ url: "https://x.com/*" });
   const tab = tabs.find((t) => t.id === preferredTabId) ?? tabs[0];
-  if (!tab?.id) return { ran: false, reason: "no x.com tab open" };
+  if (!tab?.id) return { ran: false, reason: await noteBlocker("noTab") };
 
   const msg: BackgroundMessage = { type: "x:block", handle: task.handle, id: task.id };
   let result: BlockResult;
   try {
     result = (await browser.tabs.sendMessage(tab.id, msg)) as BlockResult;
   } catch (err) {
-    return { ran: false, reason: `x.com tab did not answer: ${(err as Error).message}` };
+    return { ran: false, reason: await noteBlocker("tabSilent", (err as Error).message) };
   }
+  lastBlocker = undefined;
 
   task.attempts++;
   if (result.ok) {

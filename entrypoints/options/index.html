@@ -20,6 +20,8 @@
           <div class="stat"><strong id="stat-next">–</strong><span data-i18n="statNext"></span></div>
         </div>
         <p id="state-line" class="muted"></p>
+        <p id="tab-notice" class="notice" data-i18n="tabNotice"></p>
+        <p id="no-tab" class="warn" data-i18n="noTab" hidden></p>
       </section>
 
       <section>
@@ -72,10 +74,10 @@
         <label><input type="checkbox" id="blocking-enabled" /> <span data-i18n="blockingEnabled"></span></label><br />
         <label><input type="checkbox" id="paused" /> <span data-i18n="paused"></span></label>
         <div class="grid">
-          <label><span data-i18n="perHour"></span> <input type="number" id="per-hour" min="1" max="100" /></label>
-          <label><span data-i18n="perDay"></span> <input type="number" id="per-day" min="1" max="1000" /></label>
-          <label><span data-i18n="gapMin"></span> <input type="number" id="gap-min" min="0" max="720" /></label>
-          <label><span data-i18n="gapMax"></span> <input type="number" id="gap-max" min="0" max="720" /></label>
+          <label><span data-i18n="perHour"></span> <input type="number" id="per-hour" min="1" max="1000" /></label>
+          <label><span data-i18n="perDay"></span> <input type="number" id="per-day" min="1" max="5000" /></label>
+          <label><span data-i18n="gapMin"></span> <input type="number" id="gap-min" min="0" max="3600" /></label>
+          <label><span data-i18n="gapMax"></span> <input type="number" id="gap-max" min="0" max="3600" /></label>
         </div>
         <div><button type="button" id="settings-save" data-i18n="save"></button> <span id="settings-status" class="status"></span></div>
       </section>
