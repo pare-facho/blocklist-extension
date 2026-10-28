@@ -4,7 +4,7 @@
 Pare-Facho
 
 ## Résumé (Chrome : 132 caractères max)
-On bloque l'extrême droite : replie les publications des comptes d'extrême droite listés et dit à X qu'elles ne vous intéressent pas.
+On bloque l'extrême droite : replie sur X les publications des comptes listés et dit à X qu'elles ne vous intéressent pas.
 
 ## Description longue
 
