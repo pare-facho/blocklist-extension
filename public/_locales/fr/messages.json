@@ -3,46 +3,28 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "On bloque l’extrême droite : masque et bloque progressivement les comptes d’extrême droite listés, que vous les suiviez ou non."
+    "message": "On bloque l’extrême droite : masque les publications des comptes d’extrême droite listés, que vous les suiviez ou non."
   },
   "optionsTitle": {
     "message": "Pare-Facho — réglages"
   },
   "intro": {
-    "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez et les blocages que vous demandez sur les réseaux eux-mêmes."
+    "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez."
   },
   "statusTitle": {
     "message": "Statut"
   },
   "statListed": {
-    "message": "comptes listés"
+    "message": "comptes masqués"
   },
-  "statBlocked": {
-    "message": "bloqués"
+  "statOwn": {
+    "message": "dans ma liste"
   },
-  "statRemaining": {
-    "message": "restants"
+  "statKept": {
+    "message": "gardés"
   },
-  "statToday": {
-    "message": "bloqués ces 24 h"
-  },
-  "statNext": {
-    "message": "prochain blocage"
-  },
-  "stateOff": {
-    "message": "Le blocage réel est désactivé : les publications sont seulement masquées."
-  },
-  "statePaused": {
-    "message": "Blocage en pause."
-  },
-  "stateOn": {
-    "message": "Blocage actif : un compte à la fois, tant qu'un onglet x.com connecté est ouvert."
-  },
-  "nextNow": {
-    "message": "dès que possible"
-  },
-  "nextNone": {
-    "message": "—"
+  "stateLine": {
+    "message": "Les publications des comptes listés sont masquées sur x.com dès qu'elles s'affichent. Rien n'est envoyé à X : aucun blocage, aucun signalement."
   },
   "listsTitle": {
     "message": "Listes abonnées"
@@ -148,16 +130,16 @@
     "message": "Enregistré"
   },
   "allowTitle": {
-    "message": "Ne jamais bloquer"
+    "message": "Ne jamais masquer"
   },
   "allowHelp": {
     "message": "Comptes que vous voulez garder, même s'ils figurent dans une liste. Un compte par ligne."
   },
   "allTitle": {
-    "message": "Tous les comptes à bloquer"
+    "message": "Tous les comptes masqués"
   },
   "allHelp": {
-    "message": "Les listes abonnées et ma liste, moins les exceptions. « Garder » ajoute le compte aux exceptions ; il n'est plus masqué ni bloqué (un blocage déjà fait n'est pas annulé)."
+    "message": "Les listes abonnées et ma liste, moins les exceptions. « Garder » ajoute le compte aux exceptions : il n'est plus masqué."
   },
   "searchPlaceholder": {
     "message": "Rechercher un pseudo ou un nom…"
@@ -185,38 +167,11 @@
   "colStatus": {
     "message": "Statut"
   },
-  "colActions": {
-    "message": ""
-  },
-  "colWhen": {
-    "message": "Quand"
-  },
-  "colNote": {
-    "message": "Note"
-  },
-  "stHiddenOnly": {
+  "stHidden": {
     "message": "masqué"
-  },
-  "stWaiting": {
-    "message": "en attente"
-  },
-  "stBlocked": {
-    "message": "bloqué"
-  },
-  "stFailed": {
-    "message": "échec"
-  },
-  "stSkipped": {
-    "message": "ignoré"
   },
   "stKept": {
     "message": "gardé"
-  },
-  "stUnblocking": {
-    "message": "déblocage en attente"
-  },
-  "stUnblocked": {
-    "message": "débloqué"
   },
   "actKeep": {
     "message": "Garder"
@@ -230,73 +185,11 @@
   "ownListName": {
     "message": "Ma liste"
   },
-  "blockingTitle": {
-    "message": "Blocage"
-  },
-  "blockingHelp": {
-    "message": "Les publications des comptes listés sont toujours masquées. Le blocage réel est activé par défaut : il se fait petit à petit en arrière-plan, uniquement quand un onglet x.com est ouvert et que vous êtes connecté·e. Décochez la case pour seulement masquer."
-  },
-  "blockingWarn": {
-    "message": "Les actions automatiques sont contraires aux conditions d'utilisation de la plupart des réseaux. Un rythme modéré réduit le risque pour votre compte, il ne le supprime pas. Utilisez un compte secondaire si vous le pouvez."
-  },
-  "blockingEnabled": {
-    "message": "Bloquer réellement les comptes listés"
-  },
-  "paused": {
-    "message": "Pause"
-  },
-  "perHour": {
-    "message": "Maximum par heure"
-  },
-  "perDay": {
-    "message": "Maximum par jour"
-  },
-  "gapMin": {
-    "message": "Délai entre deux blocages, minimum (secondes)"
-  },
-  "gapMax": {
-    "message": "Délai entre deux blocages, maximum (secondes)"
-  },
-  "historyTitle": {
-    "message": "Historique"
-  },
-  "historyHelp": {
-    "message": "Derniers blocages effectués, échecs, comptes ignorés et déblocages. Les comptes qui sortent des listes sont débloqués automatiquement, s'ils avaient été bloqués par l'extension."
-  },
-  "historySummary": {
-    "message": "$WAITING$ en attente · $DONE$ bloqués · $FAILED$ échecs · $SKIPPED$ ignorés · $UNBLOCKED$ débloqués",
-    "placeholders": {
-      "waiting": {
-        "content": "$1"
-      },
-      "done": {
-        "content": "$2"
-      },
-      "failed": {
-        "content": "$3"
-      },
-      "skipped": {
-        "content": "$4"
-      },
-      "unblocked": {
-        "content": "$5"
-      }
-    }
-  },
-  "retryFailed": {
-    "message": "Réessayer les échecs"
-  },
-  "clearHistory": {
-    "message": "Effacer l'historique"
-  },
-  "historyEmpty": {
-    "message": "Aucun blocage pour l'instant."
-  },
   "activityTitle": {
     "message": "Journal"
   },
   "quickTitle": {
-    "message": "Bloquer @$HANDLE$ (un clic, annulable pendant 5 s)",
+    "message": "Masquer @$HANDLE$ (un clic, annulable pendant 5 s)",
     "placeholders": {
       "handle": {
         "content": "$1"
@@ -304,7 +197,7 @@
     }
   },
   "quickAdded": {
-    "message": "@$HANDLE$ ajouté·e à ma liste de blocage.",
+    "message": "@$HANDLE$ ajouté·e à ma liste : ses publications sont masquées.",
     "placeholders": {
       "handle": {
         "content": "$1"
@@ -347,7 +240,7 @@
       }
     }
   },
-  "logQuickBlock": {
+  "logQuickHide": {
     "message": "bouton ⛔ : @$HANDLE$ ajouté·e",
     "placeholders": {
       "handle": {
@@ -359,103 +252,6 @@
     "message": "bouton ⛔ annulé : @$HANDLE$",
     "placeholders": {
       "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logBlocked": {
-    "message": "bloqué @$HANDLE$ sur X",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logRateLimit": {
-    "message": "X demande de ralentir, reprise à $TIME$",
-    "placeholders": {
-      "time": {
-        "content": "$1"
-      }
-    }
-  },
-  "logNotLoggedIn": {
-    "message": "X : pas connecté·e, nouvel essai dans 15 min"
-  },
-  "logSkipped": {
-    "message": "@$HANDLE$ ignoré·e : compte introuvable",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logFailed": {
-    "message": "blocage de @$HANDLE$ échoué ($ATTEMPT$/$MAX$) : $ERROR$",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      },
-      "attempt": {
-        "content": "$2"
-      },
-      "max": {
-        "content": "$3"
-      },
-      "error": {
-        "content": "$4"
-      }
-    }
-  },
-  "logDelisted": {
-    "message": "$COUNT$ compte(s) sorti(s) des listes : déblocage prévu",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "logUnblocked": {
-    "message": "débloqué @$HANDLE$ sur X (plus dans les listes)",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logUnblockFailed": {
-    "message": "déblocage de @$HANDLE$ échoué ($ATTEMPT$/$MAX$) : $ERROR$",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      },
-      "attempt": {
-        "content": "$2"
-      },
-      "max": {
-        "content": "$3"
-      },
-      "error": {
-        "content": "$4"
-      }
-    }
-  },
-  "errNotFound": {
-    "message": "compte introuvable"
-  },
-  "tabNotice": {
-    "message": "Pour que les blocages aient lieu, gardez un onglet x.com ouvert et connecté (le fil, une page de profil, n'importe laquelle). Si vous fermez X, le blocage s'arrête ; il reprend dès que vous rouvrez X."
-  },
-  "noTab": {
-    "message": "Aucun onglet x.com n'est ouvert en ce moment : rien ne sera bloqué tant que vous n'ouvrez pas X."
-  },
-  "logNoTab": {
-    "message": "aucun onglet x.com ouvert : les blocages attendent que vous ouvriez X"
-  },
-  "logTabSilent": {
-    "message": "l'onglet x.com ne répond pas (rechargez la page X) : $1",
-    "placeholders": {
-      "1": {
         "content": "$1"
       }
     }

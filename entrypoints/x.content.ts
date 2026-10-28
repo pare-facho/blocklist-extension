@@ -1,11 +1,10 @@
 import { browser, defineContentScript } from "#imports";
 import { t } from "../lib/i18n.ts";
-import { isListed, type BlockSet } from "../lib/matcher.ts";
-import type { BackgroundMessage, BlockResult, ContentMessage } from "../lib/messages.ts";
-import { blockOnX, unblockOnX } from "../lib/x-api.ts";
+import { isListed, type HideSet } from "../lib/matcher.ts";
+import type { BackgroundMessage, ContentMessage } from "../lib/messages.ts";
 
-// Hides posts from listed accounts as they appear, adds a one-click block button,
-// and performs the real block or unblock when the background asks for it.
+// Hides posts from listed accounts as they appear (their own posts and their reposts)
+// and adds a one-click button that hides an author and adds them to the user's list.
 
 const HIDDEN_ATTR = "data-blocklist-hidden";
 const BUTTON_CLASS = "blocklist-quick";
@@ -15,18 +14,16 @@ export default defineContentScript({
   matches: ["https://x.com/*"],
   runAt: "document_idle",
   main() {
-    let set: BlockSet = { handles: [], ids: [] };
+    let set: HideSet = { handles: [], ids: [] };
 
     const send = (msg: ContentMessage) => browser.runtime.sendMessage(msg);
     const reload = async () => {
-      set = (await send({ type: "blockset", site: "x" })) as BlockSet;
+      set = (await send({ type: "hideset", site: "x" })) as HideSet;
       scan();
     };
 
     browser.runtime.onMessage.addListener((msg: BackgroundMessage) => {
-      if (msg.type === "blocksetChanged") return reload();
-      if (msg.type === "x:block") return blockOnX({ handle: msg.handle, id: msg.id }) as Promise<BlockResult>;
-      if (msg.type === "x:unblock") return unblockOnX({ handle: msg.handle, id: msg.id }) as Promise<BlockResult>;
+      if (msg.type === "hidesetChanged") return reload();
     });
 
     injectStyle();
@@ -44,7 +41,8 @@ export default defineContentScript({
       for (const article of document.querySelectorAll<HTMLElement>('article[data-testid="tweet"]')) {
         const author = authorOf(article);
         if (!author) continue;
-        if (isListed(set, author)) hide(article, author.handle);
+        const reposter = reposterOf(article);
+        if (isListed(set, author) || (reposter && isListed(set, { handle: reposter }))) hide(article, author.handle);
         else addButton(article, author.handle);
       }
     }
@@ -67,14 +65,14 @@ export default defineContentScript({
       btn.addEventListener("click", (ev) => {
         ev.preventDefault();
         ev.stopPropagation();
-        void quickBlock(article, handle);
+        void quickHide(article, handle);
       });
       nameBox.appendChild(btn);
     }
 
-    async function quickBlock(article: HTMLElement, handle: string) {
+    async function quickHide(article: HTMLElement, handle: string) {
       const cell = article.closest<HTMLElement>('[data-testid="cellInnerDiv"]') ?? article;
-      await send({ type: "quickBlock", site: "x", handle });
+      await send({ type: "quickHide", site: "x", handle });
       cell.style.display = "none";
       cell.setAttribute(HIDDEN_ATTR, handle);
 
@@ -90,7 +88,7 @@ export default defineContentScript({
       undo.addEventListener("click", async () => {
         window.clearTimeout(timer);
         bar.remove();
-        await send({ type: "undoQuickBlock", site: "x", handle });
+        await send({ type: "undoQuickHide", site: "x", handle });
         cell.removeAttribute(HIDDEN_ATTR);
         cell.style.display = "";
       });
@@ -98,15 +96,25 @@ export default defineContentScript({
   },
 });
 
+const HANDLE_PATH = /^\/([A-Za-z0-9_]{1,15})$/;
+
 // The author handle is the "@name" link inside the post header.
 function authorOf(article: HTMLElement): { handle: string } | undefined {
   const nameBox = article.querySelector('[data-testid="User-Name"]');
   if (!nameBox) return undefined;
   for (const a of nameBox.querySelectorAll<HTMLAnchorElement>('a[href^="/"]')) {
-    const handle = a.getAttribute("href")?.match(/^\/([A-Za-z0-9_]{1,15})$/)?.[1];
+    const handle = a.getAttribute("href")?.match(HANDLE_PATH)?.[1];
     if (handle && a.textContent?.trim().startsWith("@")) return { handle: handle.toLowerCase() };
   }
   return undefined;
+}
+
+// A repost shows "<name> reposted" above the post, linking to the reposter's profile.
+function reposterOf(article: HTMLElement): string | undefined {
+  const context = article.querySelector<HTMLElement>('[data-testid="socialContext"]');
+  if (!context) return undefined;
+  const link = context.closest<HTMLAnchorElement>('a[href^="/"]') ?? context.querySelector<HTMLAnchorElement>('a[href^="/"]');
+  return link?.getAttribute("href")?.match(HANDLE_PATH)?.[1]?.toLowerCase();
 }
 
 function injectStyle() {

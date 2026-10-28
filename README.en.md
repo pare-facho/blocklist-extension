@@ -2,10 +2,13 @@
 
 *[Version française](README.md)*
 
-A Chrome and Firefox extension that hides and blocks on X the far-right accounts listed by
-the French website [On bloque l'extrême droite](https://onbloquelextremedroite.fun/).
-The site's list is subscribed at install and refreshed every hour. You can remove it, add
+A Chrome and Firefox extension that hides on X the posts of the far-right accounts listed
+by the French website [On bloque l'extrême droite](https://onbloquelextremedroite.fun/).
+The site's list is subscribed at install and refreshed regularly. You can remove it, add
 other lists, and add or remove accounts yourself.
+
+The extension does not touch your account: it blocks, mutes or reports nobody. It only
+changes what shows on your screen.
 
 ## Install
 
@@ -24,41 +27,33 @@ install it by hand in five steps:
 4. Turn on "Developer mode" (switch at the top right).
 5. Click "Load unpacked" and choose the unzipped folder.
 
-That is all. Open [x.com](https://x.com) and leave the tab open: listed accounts disappear
-from your screen right away, and the blocks run in the background. The extension's icon
-(in the extensions menu, top right) opens the settings page, with status and history.
-
-Prefer a secondary account (see [Before you install](#before-you-install)).
+That is all. Open [x.com](https://x.com): listed accounts disappear from your screen. The
+extension's icon (in the extensions menu, top right) opens the settings page.
 
 ## What it does
 
-1. **Hide now.** On x.com, posts from listed accounts disappear from your screen as they
-   render: timeline, replies, search. Nothing changes on X, only your display.
-2. **Block in the background.** The extension blocks listed accounts one at a time, at an
-   adjustable pace (defaults: at most 30 per hour, 1000 per day, with a random 5 to 15
-   second gap between two). It sends the same request the X website sends when you click
-   "Block" yourself, with your own session. It opens no page and only runs while a
-   logged-in x.com tab is open. Blocks then apply everywhere, including the mobile app.
-   Blocking can be turned off in the settings if you only want hiding.
-3. **Unblock what leaves the lists.** If an account disappears from all your lists (added
-   by mistake, or a tampered list), the extension unblocks it the same way, provided it was
-   the one that blocked it. Blocks you made yourself are never undone.
-4. **A ⛔ button on every post.** One click: the post is hidden, the account is added to
-   your list and queued for blocking. Five seconds to undo.
-5. **Status and history.** The settings page shows listed, blocked and remaining accounts,
-   when the next block is due, the history, and the full list with search. Any account can
-   be **kept** (never hidden nor blocked) or, if it comes from your own list, **removed**.
+1. **Hide.** On x.com, posts from listed accounts disappear from your screen as they
+   render: timeline, replies, search, profiles. Reposts made by a listed account are hidden
+   too. Nothing changes on X, only your display.
+2. **A ⛔ button on every post.** One click: the post is hidden and the account is added to
+   your list. Five seconds to undo.
+3. **Your lists, your control.** The settings page shows the subscribed lists, your own
+   list, the full list with search, and the activity log. Any account can be **kept**
+   (never hidden) or, if it comes from your own list, **removed**.
 
 All data stays in your browser. Nothing is sent to anyone. See [PRIVACY.md](PRIVACY.md).
 
+Up to version 0.3 the extension could also block the listed accounts, step by step, with
+your session. That feature was removed in version 0.4: automated actions are against X's
+terms of use and exposed your account. Blocks made by an older version stay in place; you
+can undo them in X's settings ("Blocked accounts").
+
 ## Before you install
 
-- Automated actions are against X's terms of use. The moderate pace lowers the risk for
-  your account; it does not remove it. Use a secondary account if you can.
-- The extension depends on X's pages and internal addresses. When X changes, it may stop
-  working until it is updated.
-- On X, a blocked person can still see your public posts. They can no longer reply, like
-  or message you, and you no longer see them.
+- The extension depends on X's pages. When X changes its layout, it may stop hiding until
+  it is updated.
+- Hiding only works in the browser where the extension is installed. The mobile app shows
+  everything.
 
 ## For list authors
 
@@ -82,10 +77,9 @@ A list is a JSON file served over HTTPS at a fixed address, with the header
 - `id` is the account's permanent numeric identifier. Give it when you have it: handles
   change, the id never does.
 - `site`: `x`, `threads` or `instagram`. Other values are accepted and ignored. Only X is
-  blocked for now.
+  supported for now.
 - `updated` must change on every modification.
-- Removing an entry removes the hiding, and the extension unblocks the account if it was
-  the one that blocked it.
+- Removing an entry removes the hiding at the next refresh.
 - Maximum size: 5 MB.
 
 Naming people in a public list, especially for their political opinions, is sensitive
@@ -115,7 +109,7 @@ Node 22 or newer.
 
 ```
 npm install            # installs WXT and TypeScript
-npm test               # unit tests (feed, format, block queue, pacing, translations)
+npm test               # unit tests (feed, format, matching, translations)
 npm run check          # type check
 npm run build          # Chrome build in .output/chrome-mv3
 npm run build:firefox  # Firefox build in .output/firefox-mv2

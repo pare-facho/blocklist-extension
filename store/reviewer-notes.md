@@ -17,22 +17,31 @@ npm run zip:firefox    # Firefox: .output/pare-facho-<version>-firefox.zip
 The build tool is WXT 0.21 (TypeScript bundling, no minification beyond what
 esbuild does; no obfuscation). No remote code is loaded at runtime.
 
+## What changed in 0.4.0
+
+Versions up to 0.3.x could also block the listed accounts through X's own web
+endpoints, at a paced rate. That feature is gone: the extension now only hides
+posts inside the page. It sends no request to x.com. The "blocking" settings,
+the queue and the history were removed, and the stored data of older versions
+is cleaned up at update.
+
 ## How to test
 
 1. Open the extension settings page.
 2. The default list (`https://pare-facho.github.io/blocklist-extension/blocklist.json`)
    is subscribed automatically at install; the status board shows the number of
-   accounts listed. Other lists can be added by address (host permission prompt).
-3. Open https://x.com while logged in: posts from listed accounts are hidden
-   and every post gets a ⛔ button that adds its author to "My list".
-4. Real blocking is on by default (can be turned off in "Blocking"). The extension
-   sends the same block request as the X website, one account at a time, at the
-   configured pace, only while an x.com tab is open.
+   accounts hidden. Other lists can be added by address (host permission prompt).
+3. Open https://x.com (logged in or not): posts and reposts from listed accounts are
+   hidden, and every other post gets a ⛔ button that hides its author and adds them
+   to "My list" (undo for 5 seconds).
+4. In the settings page, "Keep" on an account brings its posts back.
 
 ## Permissions
 
-- `storage`, `alarms`: local state and the periodic tick.
-- `https://x.com/*`: hide posts, add the button, send block requests with the user's session.
+- `storage`: lists, settings and activity log, locally.
+- `alarms`: the periodic list refresh (every 6 hours).
+- `https://x.com/*`: hide posts in the page and add the button. No request is sent.
+- `https://pare-facho.github.io/*`: download the default list.
 - optional `https://*/*`: requested per list address when the user subscribes, to download it.
 
 No analytics, no telemetry, no remote server of our own.
