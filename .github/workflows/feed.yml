@@ -30,9 +30,14 @@ jobs:
           node-version: 22
       - name: Unit tests
         run: node --test tests/feed.test.ts
+      # A source outage must not take the published list down: the deploy below
+      # then republishes the last committed feed.
       - name: Fetch lists and resolve ids
+        id: fetch
+        continue-on-error: true
         run: node tools/feed/run.ts
       - name: Commit updated feed and id cache
+        if: steps.fetch.outcome == 'success'
         run: |
           git add feed/blocklist.json tools/feed/cache/x-ids.json
           if git diff --cached --quiet; then
