@@ -3,28 +3,25 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "Block the far right: hides the posts of listed far-right accounts, whether you follow them or not."
+    "message": "Block the far right: hides the posts of listed far-right accounts and tells X you are not interested, from your feed, at a human pace."
   },
   "optionsTitle": {
     "message": "Pare-Facho — settings"
   },
   "intro": {
-    "message": "Everything on this page stays in your browser. Nothing is sent anywhere, except downloading the lists you add."
+    "message": "Everything on this page stays in your browser. Nothing is sent anywhere, except downloading the lists you add. What the extension sends to X goes through your X session, like a click of your own."
   },
   "statusTitle": {
     "message": "Status"
   },
   "statListed": {
-    "message": "accounts hidden"
+    "message": "accounts listed"
   },
   "statOwn": {
     "message": "in my list"
   },
-  "statKept": {
-    "message": "kept"
-  },
   "stateLine": {
-    "message": "Posts from listed accounts are hidden on x.com as they render. Nothing is sent to X: no block, no report."
+    "message": "Posts from listed accounts are collapsed on x.com as they render. When a collapsed post is on screen, the extension picks the chosen item in X's own post menu, as if you had done it by hand."
   },
   "listsTitle": {
     "message": "Subscribed lists"
@@ -42,7 +39,7 @@
     "message": "Remove"
   },
   "listsMeta": {
-    "message": "$COUNTS$ · list updated $UPDATED$ · checked $CHECKED$",
+    "message": "$COUNTS$ X accounts · list dated $UPDATED$ · checked $CHECKED$",
     "placeholders": {
       "counts": {
         "content": "$1"
@@ -136,7 +133,7 @@
     "message": "Accounts you want to keep, even if a list contains them. One account per line."
   },
   "allTitle": {
-    "message": "All hidden accounts"
+    "message": "All listed accounts"
   },
   "allHelp": {
     "message": "Subscribed lists and my list, minus the exceptions. \"Keep\" adds the account to the exceptions: it is no longer hidden."
@@ -197,7 +194,7 @@
     }
   },
   "quickAdded": {
-    "message": "@$HANDLE$ added to my list: their posts are hidden.",
+    "message": "@$HANDLE$ added to my list.",
     "placeholders": {
       "handle": {
         "content": "$1"
@@ -253,6 +250,166 @@
     "placeholders": {
       "handle": {
         "content": "$1"
+      }
+    }
+  },
+  "actionTitle": {
+    "message": "What to do with listed accounts"
+  },
+  "actionPace": {
+    "message": "Pace: at most $HOUR$ actions per hour and $DAY$ per day, with a pause of $MIN$ to $MAX$ seconds between two. One at a time, only on posts on screen.",
+    "placeholders": {
+      "hour": {
+        "content": "$1"
+      },
+      "day": {
+        "content": "$2"
+      },
+      "min": {
+        "content": "$3"
+      },
+      "max": {
+        "content": "$4"
+      }
+    }
+  },
+  "actionRisk": {
+    "message": "X forbids bulk automated actions. This pace mimics a person acting while reading their feed, but it is your account that acts: the choice is yours."
+  },
+  "whatsNew": {
+    "message": "New in version 0.5: the extension acts from your feed through X's own menu. By default it marks each post \"Not interested\"; you can choose to mute the accounts instead. The explanation is below."
+  },
+  "failedLine": {
+    "message": "@$HANDLE$ · $WHEN$ · failed ($DETAIL$)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      },
+      "detail": {
+        "content": "$3"
+      }
+    }
+  },
+  "stripHidden": {
+    "message": "⛔ @$HANDLE$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "stripShow": {
+    "message": "Show"
+  },
+  "strip_hidden": {
+    "message": "post hidden"
+  },
+  "strip_soon": {
+    "message": "hidden · acting in a moment"
+  },
+  "strip_waiting": {
+    "message": "hidden · will act when the pace allows"
+  },
+  "strip_failed": {
+    "message": "hidden · not possible here"
+  },
+  "strip_shown": {
+    "message": "shown"
+  },
+  "statNotInterested": {
+    "message": "\"not interested\" sent"
+  },
+  "statMuted": {
+    "message": "accounts muted"
+  },
+  "actionIntro": {
+    "message": "X's ranking only learns from what you do on posts it has served you, in your feed. Both options act from the post, through X's own menu, with your session."
+  },
+  "actionNotInterested": {
+    "message": "\"Not interested\" on every post (recommended)"
+  },
+  "actionNotInterestedHelp": {
+    "message": "The post is collapsed, then marked \"Not interested in this post\". Nothing is blocked or muted, so X keeps serving you the account and each new post sends a new negative signal. In X's published ranking code this signal weighs almost twice a block. X offers an Undo on the post."
+  },
+  "actionMute": {
+    "message": "Mute the account"
+  },
+  "actionMuteHelp": {
+    "message": "The post is collapsed, then the account is muted from the post menu. The strongest single signal short of a report, but only one per account: X then stops showing you the account, so nothing more is sent. The account is not told. Undo in X's settings (\"Muted accounts\")."
+  },
+  "actionProfileNote": {
+    "message": "A block or a mute made on a profile page teaches X's ranking nothing. The extension never acts from a profile page or in the background."
+  },
+  "actedTitle": {
+    "message": "What the extension did on X"
+  },
+  "actedHelp": {
+    "message": "From posts on screen, with your session. Newest first."
+  },
+  "actedNone": {
+    "message": "Nothing yet."
+  },
+  "actedNotInterested": {
+    "message": "@$HANDLE$ · $WHEN$ · not interested",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      }
+    }
+  },
+  "actedMuted": {
+    "message": "@$HANDLE$ · $WHEN$ · muted",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      }
+    }
+  },
+  "stMuted": {
+    "message": "muted"
+  },
+  "strip_acting": {
+    "message": "sending…"
+  },
+  "strip_done_notInterested": {
+    "message": "not interested ✓"
+  },
+  "strip_done_mute": {
+    "message": "muted ✓"
+  },
+  "logNotInterested": {
+    "message": "@$HANDLE$: \"not interested\" sent from a post on screen",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logMuted": {
+    "message": "@$HANDLE$ muted from a post on screen",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logFailed": {
+    "message": "@$HANDLE$: action failed ($DETAIL$)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "detail": {
+        "content": "$2"
       }
     }
   }

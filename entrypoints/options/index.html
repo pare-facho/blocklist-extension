@@ -9,15 +9,27 @@
     <main>
       <h1 data-i18n="extName">Pare-Facho</h1>
       <p class="muted" data-i18n="intro"></p>
+      <p class="notice" data-i18n="whatsNew"></p>
 
       <section id="status">
         <h2 data-i18n="statusTitle"></h2>
         <div class="stats">
           <div class="stat"><strong id="stat-listed">–</strong><span data-i18n="statListed"></span></div>
+          <div class="stat"><strong id="stat-ni">–</strong><span data-i18n="statNotInterested"></span></div>
+          <div class="stat"><strong id="stat-muted">–</strong><span data-i18n="statMuted"></span></div>
           <div class="stat"><strong id="stat-own">–</strong><span data-i18n="statOwn"></span></div>
-          <div class="stat"><strong id="stat-kept">–</strong><span data-i18n="statKept"></span></div>
         </div>
         <p class="muted" data-i18n="stateLine"></p>
+      </section>
+
+      <section>
+        <h2 data-i18n="actionTitle"></h2>
+        <p data-i18n="actionIntro"></p>
+        <label class="choice"><input type="radio" name="action" value="notInterested" /> <span data-i18n="actionNotInterested"></span><small class="muted" data-i18n="actionNotInterestedHelp"></small></label>
+        <label class="choice"><input type="radio" name="action" value="mute" /> <span data-i18n="actionMute"></span><small class="muted" data-i18n="actionMuteHelp"></small></label>
+        <p class="muted" data-i18n="actionProfileNote"></p>
+        <p class="muted" id="action-pace"></p>
+        <p class="warn" data-i18n="actionRisk"></p>
       </section>
 
       <section>
@@ -61,6 +73,12 @@
           <thead><tr><th data-i18n="colAccount"></th><th data-i18n="colName"></th><th data-i18n="colList"></th><th data-i18n="colStatus"></th><th></th></tr></thead>
           <tbody></tbody>
         </table>
+      </section>
+
+      <section>
+        <h2 data-i18n="actedTitle"></h2>
+        <p class="muted" data-i18n="actedHelp"></p>
+        <pre id="acted"></pre>
       </section>
 
       <section>

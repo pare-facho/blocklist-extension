@@ -2,14 +2,16 @@ import { browser } from "#imports";
 import { parseManualLines } from "../../lib/feed.ts";
 import { applyI18n, t } from "../../lib/i18n.ts";
 import type { OptionsMessage } from "../../lib/messages.ts";
-import { allowItem, getSettings, logItem, manualItem, subscriptionsItem } from "../../lib/storage.ts";
-import type { FeedEntry, Subscription } from "../../lib/types.ts";
+import { PACE } from "../../lib/pacing.ts";
+import { allowItem, getActed, getSettings, logItem, manualItem, settingsItem, subscriptionsItem } from "../../lib/storage.ts";
+import { ACTIONS, type ActedEntry, type FeedEntry, type Subscription } from "../../lib/types.ts";
 
 const $ = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
 const send = (msg: OptionsMessage) => browser.runtime.sendMessage(msg);
 const el = <K extends keyof HTMLElementTagNameMap>(tag: K, props: Record<string, string | boolean> = {}): HTMLElementTagNameMap[K] =>
   Object.assign(document.createElement(tag), props);
 const when = (iso?: string) => (iso ? new Date(iso).toLocaleString(undefined, { dateStyle: "short", timeStyle: "short" }) : t("never"));
+const day = (iso?: string) => (iso ? new Date(iso).toLocaleDateString(undefined, { dateStyle: "short" }) : "?");
 
 function flash(sel: string, text: string, error = false) {
   const node = $(sel);
@@ -23,20 +25,53 @@ type State = {
   subs: Subscription[];
   manual: FeedEntry[];
   allow: FeedEntry[];
+  acted: ActedEntry[];
 };
 
 async function loadState(): Promise<State> {
-  const [subs, manual, allow] = await Promise.all([subscriptionsItem.getValue(), manualItem.getValue(), allowItem.getValue()]);
-  return { subs, manual, allow };
+  const [subs, manual, allow, acted] = await Promise.all([subscriptionsItem.getValue(), manualItem.getValue(), allowItem.getValue(), getActed()]);
+  return { subs, manual, allow, acted };
 }
 
 // ---- status board ----------------------------------------------------------
 
 function renderStatus(state: State) {
   const accounts = allAccounts(state);
+  const done = state.acted.filter((e) => e.site === "x" && e.result === "done");
   $("#stat-listed").textContent = String(accounts.filter((a) => !a.kept).length);
   $("#stat-own").textContent = String(accounts.filter((a) => a.own).length);
-  $("#stat-kept").textContent = String(accounts.filter((a) => a.kept).length);
+  $("#stat-ni").textContent = String(done.filter((e) => e.action === "notInterested").length);
+  $("#stat-muted").textContent = String(done.filter((e) => e.action === "mute").length);
+}
+
+// ---- action on listed accounts ---------------------------------------------
+
+async function renderAction() {
+  const settings = await getSettings();
+  for (const radio of document.querySelectorAll<HTMLInputElement>('input[name="action"]')) radio.checked = radio.value === settings.action;
+  $("#action-pace").textContent = t("actionPace", PACE.perHour, PACE.perDay, PACE.minGapSeconds, PACE.maxGapSeconds);
+}
+
+for (const radio of document.querySelectorAll<HTMLInputElement>('input[name="action"]')) {
+  radio.addEventListener("change", async () => {
+    if (!radio.checked) return;
+    const action = ACTIONS.find((a) => a === radio.value);
+    if (!action) return;
+    await settingsItem.setValue({ ...(await getSettings()), action });
+    await send({ type: "settingsChanged" });
+  });
+}
+
+function renderActed(acted: ActedEntry[]) {
+  const lines = acted
+    .filter((e) => e.site === "x")
+    .slice()
+    .reverse()
+    .map((e) => {
+      if (e.result === "failed") return t("failedLine", e.handle, when(e.at), e.detail ?? "");
+      return t(e.action === "mute" ? "actedMuted" : "actedNotInterested", e.handle, when(e.at));
+    });
+  $("#acted").textContent = lines.length ? lines.join("\n") : t("actedNone");
 }
 
 // ---- subscriptions ---------------------------------------------------------
@@ -53,10 +88,8 @@ function renderSubscriptions(subs: Subscription[]) {
       await subscriptionsItem.setValue(subs);
       await send({ type: "refreshFeeds" });
     });
-    const bySite = new Map<string, number>();
-    for (const e of sub.entries) bySite.set(e.site, (bySite.get(e.site) ?? 0) + 1);
-    const counts = [...bySite].map(([s, n]) => `${s}: ${n}`).join(", ");
-    const meta = el("span", { className: "meta", textContent: t("listsMeta", counts, sub.updated?.slice(0, 10) ?? "?", when(sub.lastFetched)) });
+    const count = sub.entries.filter((e) => e.site === "x").length;
+    const meta = el("span", { className: "meta", textContent: t("listsMeta", String(count), day(sub.updated), when(sub.lastFetched)) });
     const link = el("a", { href: sub.url, textContent: t("listsSource"), target: "_blank", rel: "noopener" });
     const remove = el("button", { type: "button", textContent: t("listsRemove"), className: "small" });
     remove.addEventListener("click", async () => {
@@ -125,21 +158,22 @@ $("#allow-save").addEventListener("click", async () => {
 
 // ---- full list -------------------------------------------------------------
 
-type Account = { handle: string; name?: string; list: string; own: boolean; kept: boolean };
+type Account = { handle: string; name?: string; list: string; own: boolean; kept: boolean; muted: boolean };
 
 function allAccounts(state: State): Account[] {
   const kept = new Set(state.allow.filter((e) => e.site === "x").map((e) => e.handle));
+  const muted = new Set(state.acted.filter((e) => e.site === "x" && e.action === "mute" && e.result === "done").map((e) => e.handle));
   const out = new Map<string, Account>();
   for (const sub of state.subs) {
     if (!sub.enabled) continue;
     for (const e of sub.entries) {
       if (e.site !== "x" || out.has(e.handle)) continue;
-      out.set(e.handle, { handle: e.handle, name: e.name, list: sub.name, own: false, kept: kept.has(e.handle) });
+      out.set(e.handle, { handle: e.handle, name: e.name, list: sub.name, own: false, kept: kept.has(e.handle), muted: muted.has(e.handle) });
     }
   }
   for (const e of state.manual) {
     if (e.site !== "x" || out.has(e.handle)) continue;
-    out.set(e.handle, { handle: e.handle, name: e.name, list: t("ownListName"), own: true, kept: kept.has(e.handle) });
+    out.set(e.handle, { handle: e.handle, name: e.name, list: t("ownListName"), own: true, kept: kept.has(e.handle), muted: muted.has(e.handle) });
   }
   return [...out.values()].sort((a, b) => a.handle.localeCompare(b.handle));
 }
@@ -156,7 +190,7 @@ function renderAll(state: State) {
   for (const a of shown.slice(0, 500)) {
     const tr = el("tr", { className: a.kept ? "kept" : "" });
     const link = el("a", { href: `https://x.com/${a.handle}`, textContent: `@${a.handle}`, target: "_blank", rel: "noopener" });
-    tr.append(el("td"), el("td", { textContent: a.name ?? "" }), el("td", { textContent: a.list }), el("td", { textContent: a.kept ? t("stKept") : t("stHidden") }));
+    tr.append(el("td"), el("td", { textContent: a.name ?? "" }), el("td", { textContent: a.list }), el("td", { textContent: a.kept ? t("stKept") : a.muted ? t("stMuted") : t("stHidden") }));
     tr.firstElementChild!.append(link);
     const actions = el("td", { className: "actions" });
     const keep = el("button", { type: "button", className: "small", textContent: a.kept ? t("actUnkeep") : t("actKeep") });
@@ -191,6 +225,8 @@ async function render() {
   $<HTMLTextAreaElement>("#allow").value = toLines(state.allow);
   renderAll(state);
   renderStatus(state);
+  renderActed(state.acted);
+  await renderAction();
 }
 
 applyI18n();
@@ -199,6 +235,6 @@ void render();
 browser.storage.onChanged.addListener((changes, area) => {
   if (area !== "local") return;
   if (changes.log) $("#log").textContent = ((changes.log.newValue as string[] | undefined) ?? []).slice().reverse().join("\n");
-  if (changes.subscriptions || changes.manual || changes.allow) void render();
+  if (changes.subscriptions || changes.manual || changes.allow || changes.acted || changes.settings) void render();
 });
 void logItem.getValue().then((log) => ($("#log").textContent = log.slice().reverse().join("\n")));

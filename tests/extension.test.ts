@@ -10,8 +10,8 @@ const goodFeed = {
   updated: "2026-10-28T00:00:00Z",
   entries: [
     { site: "x", id: "123", handle: "@SomeOne", name: "Some One" },
-    { site: "instagram", handle: "other" },
-    { site: "facebook", handle: "ignored-site" },
+    { site: "other", handle: "other" },
+    { site: "unknown", handle: "ignored-site" },
   ],
 };
 
@@ -60,7 +60,7 @@ test("buildHideSet merges enabled lists and manual entries, minus the allow list
     { id: "1", url: "https://a", name: "A", enabled: true, entries: [{ site: "x", handle: "one", id: "1" }, { site: "x", handle: "two" }] },
     { id: "2", url: "https://b", name: "B", enabled: false, entries: [{ site: "x", handle: "three" }] },
   ];
-  const set = buildHideSet("x", subs, [{ site: "x", handle: "four" }, { site: "instagram", handle: "five" }], [{ site: "x", handle: "two" }]);
+  const set = buildHideSet("x", subs, [{ site: "x", handle: "four" }, { site: "other", handle: "five" }], [{ site: "x", handle: "two" }]);
   assert.deepEqual(set.handles.sort(), ["four", "one"]);
   assert.deepEqual(set.ids, ["1"]);
   assert.equal(isListed(set, { handle: "ONE" }), true);

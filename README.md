@@ -7,8 +7,11 @@ droite recensés par le site [On bloque l'extrême droite](https://onbloquelextr
 La liste du site est abonnée dès l'installation et mise à jour régulièrement. Vous pouvez
 la retirer, ajouter d'autres listes, et ajouter ou retirer des comptes vous-même.
 
-L'extension ne touche pas à votre compte : elle ne bloque, ne masque côté X et ne signale
-personne. Elle change seulement ce qui s'affiche sur votre écran.
+L'extension replie ces publications et, au moment où la publication arrive à l'écran, agit
+par le menu de X lui-même, avec votre session, au rythme d'une personne. Deux réglages :
+« Pas intéressé » sur chaque publication (par défaut), ou masquer le compte (mute). Rien
+n'est bloqué. La section [Ce qui pèse sur leur portée](#ce-qui-pèse-sur-leur-portée)
+explique pourquoi.
 
 ## Installer
 
@@ -56,24 +59,69 @@ de réglages.
 
 ## Ce que fait l'extension
 
-1. **Masquer.** Sur x.com, les publications des comptes listés disparaissent de votre écran
-   dès qu'elles s'affichent : fil, réponses, recherche, profils. Les republications
-   (reposts) faites par un compte listé sont masquées aussi. Rien ne change sur X,
-   seulement votre affichage.
-2. **Un bouton ⛔ sur chaque publication.** Un clic : la publication est masquée et le
-   compte est ajouté à votre liste. Cinq secondes pour annuler.
-3. **Vos listes, votre contrôle.** La page de réglages montre les listes abonnées, votre
+1. **Replier.** Sur x.com, les publications des comptes listés sont remplacées par une
+   ligne « ⛔ @compte · publication masquée » dès qu'elles s'affichent : fil, réponses,
+   recherche, profils. Les republications (reposts) faites par un compte listé sont repliées
+   aussi. Un bouton « Afficher » montre la publication quand même.
+2. **Agir depuis le fil.** Quand la ligne repliée est à l'écran, l'extension ouvre le menu
+   « ⋯ » de la publication et choisit, selon le réglage :
+   - **« Ce post ne m'intéresse pas »** (par défaut), sur chaque publication servie. Rien
+     n'est bloqué ni masqué : X continue de vous servir le compte, et chaque nouvelle
+     publication envoie un nouveau signal. X affiche son propre « Annuler » à la place de
+     la publication.
+   - **« Masquer »** (mute), une fois par compte. X cesse ensuite de vous montrer le
+     compte ; le compte n'est pas prévenu. Annulable dans les réglages de X
+     (« Comptes masqués »).
+
+   Ce sont les clics et les requêtes de X elle-même, avec votre session. Rythme : au plus
+   30 actions par heure et 150 par jour, 15 à 45 secondes de pause entre deux, une seule à
+   la fois, jamais en arrière-plan, jamais depuis une page de profil. Ce que l'extension a
+   fait est listé dans les réglages.
+3. **Un bouton ⛔ sur chaque publication.** Un clic : le compte est ajouté à votre liste,
+   la publication est repliée et traitée comme celle d'un compte listé. Cinq secondes pour
+   annuler.
+4. **Vos listes, votre contrôle.** La page de réglages montre les listes abonnées, votre
    propre liste, la liste complète avec recherche, et le journal. Chaque compte peut être
    **gardé** (jamais masqué) ou, s'il vient de votre liste, **retiré**.
 
-Toutes les données restent dans votre navigateur. Rien n'est envoyé à personne. Voir
-[PRIVACY.md](PRIVACY.md).
+Toutes les données restent dans votre navigateur. Rien n'est envoyé à personne d'autre que
+X, et seulement sous la forme de vos propres clics dans son menu. Voir [PRIVACY.md](PRIVACY.md).
 
-Jusqu'à la version 0.3, l'extension pouvait aussi bloquer les comptes listés, petit à
-petit, avec votre session. Cette fonction a été retirée dans la version 0.4 : les actions
-automatiques sont contraires aux conditions d'utilisation de X et exposaient votre compte.
-Les blocages déjà faits par une ancienne version restent en place ; vous pouvez les annuler
-dans les réglages de X (« Comptes bloqués »).
+**À savoir.** X interdit les actions automatisées en masse. L'extension agit uniquement
+sur les publications que X vous a affichées, une par une, à un rythme humain, et jamais sur
+l'ensemble de la liste en arrière-plan (c'est ce que faisaient les versions 0.3, retiré en
+0.4). C'est tout de même votre compte qui agit : à vous de décider. Les libellés du menu
+sont reconnus dans dix langues d'interface de X (français, anglais, espagnol, allemand,
+italien, portugais, néerlandais, polonais, arabe, turc) ; dans une autre langue, les
+publications sont seulement repliées.
+
+## Ce qui pèse sur leur portée
+
+X a publié le code de classement de son fil « Pour vous » (dépôt
+[xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)). Ce que l'extension fait
+en découle.
+
+- **Le classement n'apprend que des actions faites sur une publication qu'il vous a servie
+  dans votre fil.** Les signaux négatifs qui entraînent le modèle sont tous « depuis la
+  publication » : pas intéressé, masquer, bloquer, signaler. Un blocage ou un masquage fait
+  depuis une page de profil n'existe pas dans ces données d'entraînement. C'est pourquoi
+  l'extension n'agit jamais depuis un profil ni en arrière-plan.
+- **Le poids de chaque action** dans la note finale d'une publication (valeurs par défaut
+  publiées ; elles multiplient la probabilité prédite de l'action, pas un compte brut) :
+  signaler −234, masquer −58,8, pas intéressé −52,3, bloquer −31,2 ; un « j'aime » vaut
+  +0,66. Le signalement est une déclaration d'abus avec un motif : l'extension ne
+  l'automatise pas.
+- **« Pas intéressé » se répète, masquer et bloquer non.** Après un masquage ou un
+  blocage, X retire le compte de votre fil : vous n'envoyez plus qu'un seul signal par
+  compte. Après « pas intéressé », X continue de servir le compte, et chaque publication
+  servie reçoit un nouveau signal ; le compteur « pas intéressé » de chaque publication
+  est aussi une caractéristique stockée avec elle. Deux publications marquées pèsent déjà
+  plus qu'un masquage. L'extension ne choisit pas « Voir moins de publications de… », qui
+  ferait disparaître le compte de votre fil.
+- **Limites.** Le modèle est personnalisé : l'effet se concentre sur les personnes dont
+  le fil ressemble au vôtre. Les poids sont ceux du code publié ; les valeurs en
+  production peuvent différer. X surveille les suites d'actions pour détecter
+  l'automatisation : le rythme ci-dessus reste celui d'une personne.
 
 ## À savoir avant d'installer
 
@@ -96,15 +144,14 @@ Une liste est un fichier JSON servi en HTTPS, à une adresse fixe, avec l'en-tê
   "updated": "2026-10-27T10:00:00Z",
   "entries": [
     { "site": "x", "id": "12345678", "handle": "exemple", "name": "Nom affiché", "reason": "texte court" },
-    { "site": "instagram", "handle": "exemple" }
+    { "site": "x", "handle": "autre_exemple" }
   ]
 }
 ```
 
 - `id` est l'identifiant numérique permanent du compte. Donnez-le quand vous l'avez : les
   pseudos changent, l'identifiant jamais.
-- `site` : `x`, `threads` ou `instagram`. D'autres valeurs sont acceptées et ignorées.
-  Seul X est pris en charge pour l'instant.
+- `site` : `x`. D'autres valeurs sont acceptées et ignorées : l'extension ne traite que X.
 - `updated` doit changer à chaque modification.
 - Retirer une entrée retire le masquage à la prochaine mise à jour.
 - Taille maximale : 5 Mo.
@@ -138,7 +185,7 @@ Node 22 ou plus récent.
 
 ```
 npm install            # installe WXT et TypeScript
-npm test               # tests unitaires (flux, format, filtrage, traductions)
+npm test               # tests unitaires (flux, format, filtrage, libellés du menu, traductions)
 npm run check          # vérification des types
 npm run build          # build Chrome dans .output/chrome-mv3
 npm run build:firefox  # build Firefox dans .output/firefox-mv2
