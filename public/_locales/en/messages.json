@@ -3,46 +3,28 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "Block the far right: hides and step by step blocks listed far-right accounts, whether you follow them or not."
+    "message": "Block the far right: hides the posts of listed far-right accounts, whether you follow them or not."
   },
   "optionsTitle": {
     "message": "Pare-Facho — settings"
   },
   "intro": {
-    "message": "Everything on this page stays in your browser. Nothing is sent anywhere, except downloading the lists you add and the blocks you ask for on the networks themselves."
+    "message": "Everything on this page stays in your browser. Nothing is sent anywhere, except downloading the lists you add."
   },
   "statusTitle": {
     "message": "Status"
   },
   "statListed": {
-    "message": "accounts listed"
+    "message": "accounts hidden"
   },
-  "statBlocked": {
-    "message": "blocked"
+  "statOwn": {
+    "message": "in my list"
   },
-  "statRemaining": {
-    "message": "remaining"
+  "statKept": {
+    "message": "kept"
   },
-  "statToday": {
-    "message": "blocked in 24 h"
-  },
-  "statNext": {
-    "message": "next block"
-  },
-  "stateOff": {
-    "message": "Real blocking is off: posts are only hidden."
-  },
-  "statePaused": {
-    "message": "Blocking is paused."
-  },
-  "stateOn": {
-    "message": "Blocking is on: one account at a time, while a logged-in x.com tab is open."
-  },
-  "nextNow": {
-    "message": "as soon as possible"
-  },
-  "nextNone": {
-    "message": "—"
+  "stateLine": {
+    "message": "Posts from listed accounts are hidden on x.com as they render. Nothing is sent to X: no block, no report."
   },
   "listsTitle": {
     "message": "Subscribed lists"
@@ -148,16 +130,16 @@
     "message": "Saved"
   },
   "allowTitle": {
-    "message": "Never block"
+    "message": "Never hide"
   },
   "allowHelp": {
     "message": "Accounts you want to keep, even if a list contains them. One account per line."
   },
   "allTitle": {
-    "message": "All accounts to block"
+    "message": "All hidden accounts"
   },
   "allHelp": {
-    "message": "Subscribed lists and my list, minus the exceptions. \"Keep\" adds the account to the exceptions: it is no longer hidden or blocked (a block already done is not undone)."
+    "message": "Subscribed lists and my list, minus the exceptions. \"Keep\" adds the account to the exceptions: it is no longer hidden."
   },
   "searchPlaceholder": {
     "message": "Search a handle or a name…"
@@ -185,38 +167,11 @@
   "colStatus": {
     "message": "Status"
   },
-  "colActions": {
-    "message": ""
-  },
-  "colWhen": {
-    "message": "When"
-  },
-  "colNote": {
-    "message": "Note"
-  },
-  "stHiddenOnly": {
+  "stHidden": {
     "message": "hidden"
-  },
-  "stWaiting": {
-    "message": "waiting"
-  },
-  "stBlocked": {
-    "message": "blocked"
-  },
-  "stFailed": {
-    "message": "failed"
-  },
-  "stSkipped": {
-    "message": "skipped"
   },
   "stKept": {
     "message": "kept"
-  },
-  "stUnblocking": {
-    "message": "unblock pending"
-  },
-  "stUnblocked": {
-    "message": "unblocked"
   },
   "actKeep": {
     "message": "Keep"
@@ -230,73 +185,11 @@
   "ownListName": {
     "message": "My list"
   },
-  "blockingTitle": {
-    "message": "Blocking"
-  },
-  "blockingHelp": {
-    "message": "Posts from listed accounts are always hidden. Real blocking is on by default: it runs step by step in the background, only while an x.com tab is open and you are logged in. Untick the box to only hide."
-  },
-  "blockingWarn": {
-    "message": "Automated actions are against the terms of most networks. A moderate pace lowers the risk for your account; it does not remove it. Use a secondary account if you can."
-  },
-  "blockingEnabled": {
-    "message": "Really block the listed accounts"
-  },
-  "paused": {
-    "message": "Pause"
-  },
-  "perHour": {
-    "message": "Maximum per hour"
-  },
-  "perDay": {
-    "message": "Maximum per day"
-  },
-  "gapMin": {
-    "message": "Gap between two blocks, minimum (seconds)"
-  },
-  "gapMax": {
-    "message": "Gap between two blocks, maximum (seconds)"
-  },
-  "historyTitle": {
-    "message": "History"
-  },
-  "historyHelp": {
-    "message": "Latest blocks done, failures, skipped accounts and unblocks. Accounts that leave the lists are unblocked automatically, if the extension had blocked them."
-  },
-  "historySummary": {
-    "message": "$WAITING$ waiting · $DONE$ blocked · $FAILED$ failed · $SKIPPED$ skipped · $UNBLOCKED$ unblocked",
-    "placeholders": {
-      "waiting": {
-        "content": "$1"
-      },
-      "done": {
-        "content": "$2"
-      },
-      "failed": {
-        "content": "$3"
-      },
-      "skipped": {
-        "content": "$4"
-      },
-      "unblocked": {
-        "content": "$5"
-      }
-    }
-  },
-  "retryFailed": {
-    "message": "Retry failed"
-  },
-  "clearHistory": {
-    "message": "Clear history"
-  },
-  "historyEmpty": {
-    "message": "No block yet."
-  },
   "activityTitle": {
     "message": "Activity"
   },
   "quickTitle": {
-    "message": "Block @$HANDLE$ (one click, undo for 5 s)",
+    "message": "Hide @$HANDLE$ (one click, undo for 5 s)",
     "placeholders": {
       "handle": {
         "content": "$1"
@@ -304,7 +197,7 @@
     }
   },
   "quickAdded": {
-    "message": "@$HANDLE$ added to my block list.",
+    "message": "@$HANDLE$ added to my list: their posts are hidden.",
     "placeholders": {
       "handle": {
         "content": "$1"
@@ -347,7 +240,7 @@
       }
     }
   },
-  "logQuickBlock": {
+  "logQuickHide": {
     "message": "⛔ button: @$HANDLE$ added",
     "placeholders": {
       "handle": {
@@ -359,103 +252,6 @@
     "message": "⛔ button undone: @$HANDLE$",
     "placeholders": {
       "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logBlocked": {
-    "message": "blocked @$HANDLE$ on X",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logRateLimit": {
-    "message": "X asks to slow down, resuming at $TIME$",
-    "placeholders": {
-      "time": {
-        "content": "$1"
-      }
-    }
-  },
-  "logNotLoggedIn": {
-    "message": "X: not logged in, retrying in 15 min"
-  },
-  "logSkipped": {
-    "message": "@$HANDLE$ skipped: account not found",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logFailed": {
-    "message": "block of @$HANDLE$ failed ($ATTEMPT$/$MAX$): $ERROR$",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      },
-      "attempt": {
-        "content": "$2"
-      },
-      "max": {
-        "content": "$3"
-      },
-      "error": {
-        "content": "$4"
-      }
-    }
-  },
-  "logDelisted": {
-    "message": "$COUNT$ account(s) left the lists: unblock scheduled",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "logUnblocked": {
-    "message": "unblocked @$HANDLE$ on X (no longer listed)",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      }
-    }
-  },
-  "logUnblockFailed": {
-    "message": "unblock of @$HANDLE$ failed ($ATTEMPT$/$MAX$): $ERROR$",
-    "placeholders": {
-      "handle": {
-        "content": "$1"
-      },
-      "attempt": {
-        "content": "$2"
-      },
-      "max": {
-        "content": "$3"
-      },
-      "error": {
-        "content": "$4"
-      }
-    }
-  },
-  "errNotFound": {
-    "message": "account not found"
-  },
-  "tabNotice": {
-    "message": "For blocks to happen, keep an x.com tab open and logged in (the feed, a profile page, any page). If you close X, blocking stops; it resumes as soon as you open X again."
-  },
-  "noTab": {
-    "message": "No x.com tab is open right now: nothing will be blocked until you open X."
-  },
-  "logNoTab": {
-    "message": "no x.com tab open: blocks wait until you open X"
-  },
-  "logTabSilent": {
-    "message": "the x.com tab is not answering (reload the X page): $1",
-    "placeholders": {
-      "1": {
         "content": "$1"
       }
     }

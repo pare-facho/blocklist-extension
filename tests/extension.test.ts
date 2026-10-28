@@ -1,9 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { parseFeed, parseManualLines, FeedFormatError, fetchFeed } from "../lib/feed.ts";
-import { buildBlockSet, isListed } from "../lib/matcher.ts";
-import { canBlockNow, recordBlock, backOff, prunePace } from "../lib/pacing.ts";
-import { DEFAULT_SETTINGS, type Subscription } from "../lib/types.ts";
+import { buildHideSet, isListed } from "../lib/matcher.ts";
+import type { Subscription } from "../lib/types.ts";
 
 const goodFeed = {
   format: "blocklist/1",
@@ -56,51 +55,16 @@ test("parseManualLines accepts handles, @handles and profile links, dedupes", ()
   assert.deepEqual(entries.map((e) => e.handle), ["alpha", "beta", "gamma"]);
 });
 
-test("buildBlockSet merges enabled lists and manual entries, minus the allow list", () => {
+test("buildHideSet merges enabled lists and manual entries, minus the allow list", () => {
   const subs: Subscription[] = [
     { id: "1", url: "https://a", name: "A", enabled: true, entries: [{ site: "x", handle: "one", id: "1" }, { site: "x", handle: "two" }] },
     { id: "2", url: "https://b", name: "B", enabled: false, entries: [{ site: "x", handle: "three" }] },
   ];
-  const set = buildBlockSet("x", subs, [{ site: "x", handle: "four" }, { site: "instagram", handle: "five" }], [{ site: "x", handle: "two" }]);
+  const set = buildHideSet("x", subs, [{ site: "x", handle: "four" }, { site: "instagram", handle: "five" }], [{ site: "x", handle: "two" }]);
   assert.deepEqual(set.handles.sort(), ["four", "one"]);
   assert.deepEqual(set.ids, ["1"]);
   assert.equal(isListed(set, { handle: "ONE" }), true);
   assert.equal(isListed(set, { handle: "two" }), false, "allow list wins");
   assert.equal(isListed(set, { handle: "three" }), false, "disabled list ignored");
   assert.equal(isListed(set, { handle: "renamed", id: "1" }), true, "id matches after a rename");
-});
-
-test("pacing enforces the random gap, hourly and daily limits", () => {
-  const settings = { ...DEFAULT_SETTINGS, perHour: 2, perDay: 3, minGapSeconds: 300, maxGapSeconds: 300 };
-  const t0 = Date.parse("2026-10-28T10:00:00Z");
-  const min = 60 * 1000;
-
-  let pace = { blockedAt: [] as string[] };
-  assert.equal(canBlockNow(settings, pace, t0).ok, true);
-
-  pace = recordBlock(settings, pace, t0, () => 0.5);
-  assert.equal(pace.nextAllowedAt, new Date(t0 + 5 * min).toISOString());
-  const gap = canBlockNow(settings, pace, t0 + 1 * min);
-  assert.equal(gap.ok, false);
-  assert.equal(!gap.ok && gap.reason, "waiting for the random gap");
-
-  pace = recordBlock(settings, pace, t0 + 5 * min, () => 0.5);
-  const hourly = canBlockNow(settings, pace, t0 + 10 * min);
-  assert.equal(!hourly.ok && hourly.reason, "hourly limit (2) reached");
-  assert.equal(!hourly.ok && hourly.retryAt, t0 + 60 * min);
-
-  pace = recordBlock(settings, pace, t0 + 61 * min, () => 0.5);
-  const daily = canBlockNow(settings, pace, t0 + 130 * min);
-  assert.equal(!daily.ok && daily.reason, "daily limit (3) reached");
-
-  const later = t0 + 26 * 60 * min; // last block was at t0 + 61 min
-  assert.equal(prunePace(pace, later).blockedAt.length, 0);
-  assert.equal(canBlockNow(settings, prunePace(pace, later), later).ok, true);
-});
-
-test("backOff never moves nextAllowedAt earlier", () => {
-  const t0 = Date.parse("2026-10-28T10:00:00Z");
-  const pace = { blockedAt: [], nextAllowedAt: new Date(t0 + 60_000).toISOString() };
-  assert.equal(backOff(pace, t0).nextAllowedAt, pace.nextAllowedAt);
-  assert.equal(backOff(pace, t0 + 120_000).nextAllowedAt, new Date(t0 + 120_000).toISOString());
 });

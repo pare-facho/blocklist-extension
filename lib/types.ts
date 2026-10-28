@@ -38,48 +38,9 @@ export type Subscription = {
 };
 
 export type Settings = {
-  blockingEnabled: boolean;
-  paused: boolean;
-  perHour: number;
-  perDay: number;
-  minGapSeconds: number;
-  maxGapSeconds: number;
   feedRefreshHours: number;
 };
 
 export const DEFAULT_SETTINGS: Settings = {
-  blockingEnabled: true,
-  paused: false,
-  perHour: 30,
-  perDay: 1000,
-  minGapSeconds: 5,
-  maxGapSeconds: 15,
   feedRefreshHours: 6,
 };
-
-// pending: block to do · done: blocked by the extension · unblocking: the account left
-// every list, unblock to do · unblocked: unblock done · failed/skipped: block given up.
-export type TaskStatus = "pending" | "done" | "failed" | "skipped" | "unblocking" | "unblocked";
-
-export type QueueTask = {
-  key: string; // `${site}:${handle}`
-  site: Site;
-  handle: string;
-  id?: string;
-  origin: "list" | "quick";
-  status: TaskStatus;
-  attempts: number;
-  createdAt: string;
-  doneAt?: string;
-  lastError?: string;
-};
-
-// Timestamps of successful blocks in the last 24 h, plus the earliest moment the next one may run.
-export type PaceState = {
-  blockedAt: string[];
-  nextAllowedAt?: string;
-};
-
-export function taskKey(site: Site, handle: string): string {
-  return `${site}:${handle.toLowerCase()}`;
-}

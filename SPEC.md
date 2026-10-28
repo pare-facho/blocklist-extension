@@ -1,34 +1,41 @@
-# Blocklist browser extension — specification (draft 1, 2026-10-27)
+# Pare-Facho browser extension — specification (revision 2, 2026-10-28)
 
 ## Goal
 
-A Chrome + Firefox extension that hides and blocks accounts from lists the user chooses,
-on X, Threads and Instagram, without putting the user's account at risk.
+A Chrome + Firefox extension that hides, on X, the posts of accounts from lists the user
+chooses. It changes only what the user sees. It never acts on the user's account.
+
+Revision 1 (2026-10-27) also blocked the listed accounts through X's own web endpoints,
+one at a time, at a paced rate. That was removed in 0.4.0: automated actions are against
+X's terms of use and put the user's account at risk, and hiding alone gives the user a
+clean timeline. The feed format keeps its name (`blocklist/1`) so published lists stay valid.
 
 ## Requirements
 
 1. **Lists**
-   - Manual list: the user adds accounts by hand (paste a handle or a profile URL).
+   - Manual list: the user adds accounts by hand (a handle, an @handle or a profile URL),
+     or with the ⛔ button on a post.
    - Subscribed lists: the user adds a feed URL. The extension re-downloads it on a schedule
-     and applies additions and removals.
-   - The extension ships with the Blockfacho list subscribed by default (removable). It never sends the user's lists anywhere.
-   - Per-list on/off switch and "allow list" (accounts the user never wants blocked).
-2. **Hide now, block later**
-   - Posts, replies and comments from listed accounts are hidden immediately in the page.
-   - The real block is queued and executed step by step in the background (see pacing).
-   - Accounts that leave every list are unblocked the same way, if the extension blocked them.
-3. **Pacing (account protection)**
-   - Defaults: blocking on, at most 30 blocks per hour and 1000 per day, with a random gap of 5–15 seconds
-     between two blocks. A 30-second alarm runs several blocks in a row, waiting out the gap between them. Configurable. Blocks run only while the browser is open and the user
-     is logged in on that site.
-   - On any rate-limit or error response the queue pauses with back-off; nothing is dropped.
-   - Per-site daily counter visible in the options page.
-4. **One-click block button**
-   - A small icon on every post/comment. One click = hide now + add to the manual list +
-     queue the block. Short undo (5 s).
-5. **Platforms**: X (x.com) first, then Threads (threads.com), then Instagram.
-   Each site is a separate adapter: detect posts, read author id/handle, hide, block.
-6. **Browsers**: Chrome and Firefox from one codebase (WebExtensions, Manifest V3).
+     (every 6 hours, manual refresh button) and applies additions and removals.
+   - The extension ships with the "On bloque l'extrême droite" list subscribed by default
+     (removable, never re-added once removed). It never sends the user's lists anywhere.
+   - Per-list on/off switch and "keep" list (accounts the user never wants hidden).
+2. **Hide**
+   - Posts and replies from listed accounts are hidden as soon as they render, everywhere
+     on x.com (timeline, replies, search, profiles).
+   - Reposts made by a listed account are hidden too, whoever wrote the original post.
+   - Hiding is local to the page: nothing is sent to X. No block, no mute, no report.
+3. **One-click button**
+   - A small ⛔ icon on every post. One click = hide now + add the author to the manual
+     list. Short undo (5 s).
+4. **Settings page**
+   - Counts: accounts hidden, accounts in the user's own list, accounts kept.
+   - Subscribed lists with their size and dates; own list and keep list as text;
+     full searchable list with Keep / Remove per account; activity log.
+5. **Platforms**: X (x.com). Threads and Instagram are possible later slices (each site is
+   a separate content script: detect posts, read the author handle, hide).
+6. **Browsers**: Chrome and Firefox from one codebase (WebExtensions; Manifest V3 on
+   Chrome, V2 on Firefox).
 
 ## Feed format (subscribed lists)
 
@@ -49,69 +56,37 @@ room for metadata. JSON is easy to host anywhere (GitHub, a static site, Nextclo
 }
 ```
 
-- `id` is preferred (handles change; ids do not). `handle` alone is accepted; the
-  extension resolves it to an id the first time it meets the account.
-- Removing an entry from the feed removes the hide rule and, if the extension itself had
-  blocked the account, queues an unblock at the same pace (lists get tampered with: an
-  account added by mistake must not stay blocked). Blocks the user made by hand are never
-  undone. An account that comes back on a list is blocked again.
-- Fetch rules: `ETag`/`If-None-Match`, size cap (e.g. 5 MB), refresh every 6 h by default,
-  manual refresh button. Reject feeds over plain HTTP.
-- Also accepted on import (manual list only): plain text with one handle per line, and
-  X's own `block.js` archive export.
-
-## Account identity
-
-- X: numeric user id, obtained from the page's data or by resolving the handle through the
-  site's own web endpoints with the user's session.
-- Threads / Instagram: numeric user id from page data where available; otherwise handle.
-
-## Blocking mechanism (per site)
-
-- **X**: the site's own web endpoints, using the logged-in session (same approach as
-  existing tools). Known to work; can change without notice.
-- **Threads / Instagram**: Meta's web endpoints are undocumented and change often. First
-  approach: drive the site's own block menu (open the post menu, click "Block", confirm),
-  which is what existing Threads quick-block tools do. Try the web endpoint later if the
-  menu route proves too fragile. These two sites carry more risk and are later slices.
+- `id` is preferred (handles change; ids do not). `handle` alone is accepted.
+- Removing an entry from the feed removes the hide rule at the next refresh.
+- Fetch rules: `ETag`/`If-None-Match`, size cap 5 MB, refresh every 6 h by default,
+  manual refresh button. Feeds over plain HTTP are rejected.
+- Also accepted in the manual list: plain text with one handle per line.
 
 ## Risks and limits (stated, not hidden)
 
-- All three sites forbid automation in their terms. Pacing lowers the risk; it is not a
-  guarantee. The options page says this plainly.
-- Hiding breaks when a site changes its page layout; blocking breaks when it changes its
-  web endpoints. Expect maintenance.
+- Hiding breaks when X changes its page layout. Expect maintenance.
+- Hiding only works in the browser where the extension is installed. The mobile apps
+  show everything.
 - Lists naming people by political opinion are sensitive personal data under GDPR (art. 9).
   The extension does not publish lists. List authors carry that responsibility.
-- Blocks happen only while the browser is open. Mobile apps get the benefit of real blocks,
-  not of hiding.
 
-## Out of scope (for now)
+## Out of scope
 
-- Reporting accounts to the platform.
+- Blocking, muting or reporting accounts on the platform (removed in 0.4.0, see Goal).
 - Shared or crowd-sourced list editing inside the extension.
 - Facebook, YouTube, Bluesky, Mastodon (Bluesky and Mastodon have native list import).
 - Safari.
 
-## Slices
-
-1. **Skeleton + X hide**: WXT + TypeScript project, options page, manual list, feed
-   subscription, hide posts on X. Chrome + Firefox builds.
-2. **X block queue**: paced background blocking, counters, pause/resume, one-click button.
-3. **Threads** adapter (hide + block).
-4. **Instagram** adapter (hide + block).
-5. Store listings (Chrome Web Store, Firefox Add-ons).
-
 ## Success condition
 
-With a test list of 3 accounts: their posts disappear from the X timeline within one page
-load; the three blocks appear in X's "Blocked accounts" page over the following hour at
-the configured pace; the one-click icon blocks a fourth account; the same build installs
-and passes the same check in Chrome and Firefox.
+With a test list of 3 accounts: their posts and their reposts disappear from the X
+timeline within one page load; the ⛔ icon hides a fourth account and adds it to "My list";
+"Keep" brings an account back; the same build installs and passes the same check in
+Chrome and Firefox.
 
 ## Stack
 
-- WXT (Vite-based, Chrome + Firefox from one codebase), TypeScript, no UI framework
-  beyond what WXT scaffolds. Storage: `browser.storage.local` + IndexedDB for the queue.
-- Permissions: `storage`, `alarms`, host permissions only for the three sites and the
-  user's feed URLs (requested at subscribe time).
+- WXT (Vite-based, Chrome + Firefox from one codebase), TypeScript, no UI framework.
+  Storage: `browser.storage.local`.
+- Permissions: `storage`, `alarms` (list refresh), host permissions for x.com and the
+  default list's host; other feed hosts are requested one by one at subscribe time.

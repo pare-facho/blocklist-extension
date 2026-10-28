@@ -2,14 +2,14 @@ import type { FeedEntry, Subscription } from "./types.ts";
 
 // What a content script needs to decide "is this author on a list": handles and ids
 // for one site, after the allow list is removed. Serializable for messaging.
-export type BlockSet = { handles: string[]; ids: string[] };
+export type HideSet = { handles: string[]; ids: string[] };
 
-export function buildBlockSet(
+export function buildHideSet(
   site: string,
   subscriptions: Subscription[],
   manual: FeedEntry[],
   allow: FeedEntry[],
-): BlockSet {
+): HideSet {
   const allowHandles = new Set(allow.filter((e) => e.site === site).map((e) => e.handle));
   const allowIds = new Set(allow.filter((e) => e.site === site && e.id).map((e) => e.id as string));
   const handles = new Set<string>();
@@ -24,7 +24,7 @@ export function buildBlockSet(
   return { handles: [...handles], ids: [...ids] };
 }
 
-export function isListed(set: BlockSet, author: { handle?: string; id?: string }): boolean {
+export function isListed(set: HideSet, author: { handle?: string; id?: string }): boolean {
   if (author.id && set.ids.includes(author.id)) return true;
   if (author.handle && set.handles.includes(author.handle.toLowerCase())) return true;
   return false;

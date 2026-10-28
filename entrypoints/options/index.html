@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title data-i18n="optionsTitle">Blocklist</title>
+    <title data-i18n="optionsTitle">Pare-Facho</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -14,14 +14,10 @@
         <h2 data-i18n="statusTitle"></h2>
         <div class="stats">
           <div class="stat"><strong id="stat-listed">–</strong><span data-i18n="statListed"></span></div>
-          <div class="stat"><strong id="stat-blocked">–</strong><span data-i18n="statBlocked"></span></div>
-          <div class="stat"><strong id="stat-remaining">–</strong><span data-i18n="statRemaining"></span></div>
-          <div class="stat"><strong id="stat-today">–</strong><span data-i18n="statToday"></span></div>
-          <div class="stat"><strong id="stat-next">–</strong><span data-i18n="statNext"></span></div>
+          <div class="stat"><strong id="stat-own">–</strong><span data-i18n="statOwn"></span></div>
+          <div class="stat"><strong id="stat-kept">–</strong><span data-i18n="statKept"></span></div>
         </div>
-        <p id="state-line" class="muted"></p>
-        <p id="tab-notice" class="notice" data-i18n="tabNotice"></p>
-        <p id="no-tab" class="warn" data-i18n="noTab" hidden></p>
+        <p class="muted" data-i18n="stateLine"></p>
       </section>
 
       <section>
@@ -65,33 +61,6 @@
           <thead><tr><th data-i18n="colAccount"></th><th data-i18n="colName"></th><th data-i18n="colList"></th><th data-i18n="colStatus"></th><th></th></tr></thead>
           <tbody></tbody>
         </table>
-      </section>
-
-      <section>
-        <h2 data-i18n="blockingTitle"></h2>
-        <p data-i18n="blockingHelp"></p>
-        <p class="warn" data-i18n="blockingWarn"></p>
-        <label><input type="checkbox" id="blocking-enabled" /> <span data-i18n="blockingEnabled"></span></label><br />
-        <label><input type="checkbox" id="paused" /> <span data-i18n="paused"></span></label>
-        <div class="grid">
-          <label><span data-i18n="perHour"></span> <input type="number" id="per-hour" min="1" max="1000" /></label>
-          <label><span data-i18n="perDay"></span> <input type="number" id="per-day" min="1" max="5000" /></label>
-          <label><span data-i18n="gapMin"></span> <input type="number" id="gap-min" min="0" max="3600" /></label>
-          <label><span data-i18n="gapMax"></span> <input type="number" id="gap-max" min="0" max="3600" /></label>
-        </div>
-        <div><button type="button" id="settings-save" data-i18n="save"></button> <span id="settings-status" class="status"></span></div>
-      </section>
-
-      <section>
-        <h2 data-i18n="historyTitle"></h2>
-        <p class="muted" data-i18n="historyHelp"></p>
-        <p id="history-summary"></p>
-        <p><button type="button" id="retry-failed" data-i18n="retryFailed"></button> <button type="button" id="clear-history" data-i18n="clearHistory"></button></p>
-        <table id="history-table">
-          <thead><tr><th data-i18n="colAccount"></th><th data-i18n="colStatus"></th><th data-i18n="colWhen"></th><th data-i18n="colNote"></th></tr></thead>
-          <tbody></tbody>
-        </table>
-        <p id="history-empty" class="muted" data-i18n="historyEmpty" hidden></p>
       </section>
 
       <section>

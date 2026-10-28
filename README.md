@@ -2,10 +2,13 @@
 
 *[English version](README.en.md)*
 
-Extension pour Chrome et Firefox qui masque et bloque sur X les comptes d'extrême droite
-recensés par le site [On bloque l'extrême droite](https://onbloquelextremedroite.fun/).
-La liste du site est abonnée dès l'installation et mise à jour toutes les heures. Vous
-pouvez la retirer, ajouter d'autres listes, et ajouter ou retirer des comptes vous-même.
+Extension pour Chrome et Firefox qui masque sur X les publications des comptes d'extrême
+droite recensés par le site [On bloque l'extrême droite](https://onbloquelextremedroite.fun/).
+La liste du site est abonnée dès l'installation et mise à jour régulièrement. Vous pouvez
+la retirer, ajouter d'autres listes, et ajouter ou retirer des comptes vous-même.
+
+L'extension ne touche pas à votre compte : elle ne bloque, ne masque côté X et ne signale
+personne. Elle change seulement ce qui s'affiche sur votre écran.
 
 ## Installer
 
@@ -24,46 +27,37 @@ vous pouvez l'installer à la main en cinq étapes :
 4. Activez le « Mode développeur » (interrupteur en haut à droite).
 5. Cliquez sur « Charger l'extension non empaquetée » et choisissez le dossier décompressé.
 
-C'est tout. Ouvrez [x.com](https://x.com) et laissez l'onglet ouvert : les comptes listés
-disparaissent de votre écran tout de suite, et les blocages se font en arrière-plan. L'icône
-de l'extension (dans le menu des extensions, en haut à droite) ouvre la page de réglages,
-avec le statut et l'historique.
-
-Utilisez de préférence un compte secondaire (voir [À savoir avant d'installer](#à-savoir-avant-dinstaller)).
+C'est tout. Ouvrez [x.com](https://x.com) : les comptes listés disparaissent de votre
+écran. L'icône de l'extension (dans le menu des extensions, en haut à droite) ouvre la page
+de réglages.
 
 ## Ce que fait l'extension
 
-1. **Masquer tout de suite.** Sur x.com, les publications des comptes listés disparaissent
-   de votre écran dès qu'elles s'affichent : fil, réponses, recherche. Rien ne change sur
-   X, seulement votre affichage.
-2. **Bloquer en arrière-plan.** L'extension bloque les comptes listés un par un, à un rythme
-   réglable (par défaut : au plus 30 par heure, 1000 par jour, avec un délai aléatoire de
-   5 à 15 secondes entre deux). Elle envoie la même requête que le site X quand vous
-   cliquez vous-même sur « Bloquer », avec votre propre session. Elle n'ouvre aucune page et
-   ne fonctionne que si un onglet x.com connecté est ouvert. Les blocages s'appliquent
-   ensuite partout, y compris dans l'application mobile. Le blocage se désactive dans les
-   réglages si vous voulez seulement masquer.
-3. **Débloquer ce qui sort des listes.** Si un compte disparaît de toutes vos listes (ajouté
-   par erreur, ou liste trafiquée), l'extension le débloque de la même façon, à condition que
-   ce soit elle qui l'ait bloqué. Vos propres blocages ne sont jamais annulés.
-4. **Un bouton ⛔ sur chaque publication.** Un clic : la publication est masquée, le compte
-   est ajouté à votre liste et mis dans la file de blocage. Cinq secondes pour annuler.
-5. **Statut et historique.** La page de réglages montre les comptes listés, bloqués,
-   restants, le prochain blocage prévu, l'historique et la liste complète avec recherche.
-   Chaque compte peut être **gardé** (jamais masqué ni bloqué) ou, s'il vient de votre
-   liste, **retiré**.
+1. **Masquer.** Sur x.com, les publications des comptes listés disparaissent de votre écran
+   dès qu'elles s'affichent : fil, réponses, recherche, profils. Les republications
+   (reposts) faites par un compte listé sont masquées aussi. Rien ne change sur X,
+   seulement votre affichage.
+2. **Un bouton ⛔ sur chaque publication.** Un clic : la publication est masquée et le
+   compte est ajouté à votre liste. Cinq secondes pour annuler.
+3. **Vos listes, votre contrôle.** La page de réglages montre les listes abonnées, votre
+   propre liste, la liste complète avec recherche, et le journal. Chaque compte peut être
+   **gardé** (jamais masqué) ou, s'il vient de votre liste, **retiré**.
 
 Toutes les données restent dans votre navigateur. Rien n'est envoyé à personne. Voir
 [PRIVACY.md](PRIVACY.md).
 
+Jusqu'à la version 0.3, l'extension pouvait aussi bloquer les comptes listés, petit à
+petit, avec votre session. Cette fonction a été retirée dans la version 0.4 : les actions
+automatiques sont contraires aux conditions d'utilisation de X et exposaient votre compte.
+Les blocages déjà faits par une ancienne version restent en place ; vous pouvez les annuler
+dans les réglages de X (« Comptes bloqués »).
+
 ## À savoir avant d'installer
 
-- Les actions automatiques sont contraires aux conditions d'utilisation de X. Le rythme
-  modéré réduit le risque pour votre compte, il ne le supprime pas. 
-- L'extension dépend des pages et des adresses internes de X. Quand X change, elle peut
-  cesser de fonctionner jusqu'à une mise à jour.
-- Sur X, une personne bloquée peut toujours voir vos publications publiques. Elle ne peut
-  plus y répondre, les aimer, ni vous écrire, et vous ne la voyez plus.
+- L'extension dépend des pages de X. Quand X change son affichage, elle peut cesser de
+  masquer jusqu'à une mise à jour.
+- Le masquage ne vaut que dans le navigateur où l'extension est installée. L'application
+  mobile affiche tout.
 
 ## Pour les auteurs de listes
 
@@ -87,10 +81,9 @@ Une liste est un fichier JSON servi en HTTPS, à une adresse fixe, avec l'en-tê
 - `id` est l'identifiant numérique permanent du compte. Donnez-le quand vous l'avez : les
   pseudos changent, l'identifiant jamais.
 - `site` : `x`, `threads` ou `instagram`. D'autres valeurs sont acceptées et ignorées.
-  Seul X est bloqué pour l'instant.
+  Seul X est pris en charge pour l'instant.
 - `updated` doit changer à chaque modification.
-- Retirer une entrée retire le masquage, et l'extension débloque le compte si c'est elle
-  qui l'avait bloqué.
+- Retirer une entrée retire le masquage à la prochaine mise à jour.
 - Taille maximale : 5 Mo.
 
 Nommer des personnes dans une liste publique, en particulier pour leurs opinions
@@ -122,7 +115,7 @@ Node 22 ou plus récent.
 
 ```
 npm install            # installe WXT et TypeScript
-npm test               # tests unitaires (flux, format, file de blocage, rythme, traductions)
+npm test               # tests unitaires (flux, format, filtrage, traductions)
 npm run check          # vérification des types
 npm run build          # build Chrome dans .output/chrome-mv3
 npm run build:firefox  # build Firefox dans .output/firefox-mv2
