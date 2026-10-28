@@ -8,7 +8,7 @@ section { background: #fff; border: 1px solid #e3e3e3; border-radius: 8px; paddi
 .warn { background: #fff7e6; border-left: 3px solid #e6a100; padding: 8px 12px; font-size: 14px; }
 .status { font-size: 13px; color: #666; margin-left: 8px; }
 .status.error { color: #b00020; }
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 8px 0; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 8px 0; }
 .stat { background: #f4f6f8; border-radius: 6px; padding: 10px; text-align: center; }
 .stat strong { display: block; font-size: 22px; }
 .stat span { font-size: 12px; color: #555; }
@@ -27,3 +27,5 @@ td.actions { white-space: nowrap; text-align: right; }
 tr.kept td { color: #999; }
 pre { font-size: 12px; max-height: 260px; overflow: auto; background: #f4f4f4; padding: 8px; }
 @media (max-width: 640px) { .stats { grid-template-columns: 1fr; } }
+.choice { display: block; padding: 6px 0; }
+.choice small { display: block; margin-left: 22px; }

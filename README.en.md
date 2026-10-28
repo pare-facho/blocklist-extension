@@ -7,8 +7,9 @@ by the French website [On bloque l'extrême droite](https://onbloquelextremedroi
 The site's list is subscribed at install and refreshed regularly. You can remove it, add
 other lists, and add or remove accounts yourself.
 
-The extension does not touch your account: it blocks, mutes or reports nobody. It only
-changes what shows on your screen.
+By default the extension collapses those posts and **blocks the account** through X's own
+menu, with your session, when the post reaches your screen: one account at a time, at a
+human pace. A "Hide only" setting collapses without sending anything to X.
 
 ## Install
 
@@ -51,21 +52,30 @@ extension's icon (in the extensions menu, top right) opens the settings page.
 
 ## What it does
 
-1. **Hide.** On x.com, posts from listed accounts disappear from your screen as they
-   render: timeline, replies, search, profiles. Reposts made by a listed account are hidden
-   too. Nothing changes on X, only your display.
-2. **A ⛔ button on every post.** One click: the post is hidden and the account is added to
-   your list. Five seconds to undo.
-3. **Your lists, your control.** The settings page shows the subscribed lists, your own
+1. **Collapse.** On x.com, posts from listed accounts are replaced by a line
+   "⛔ @account · post hidden" as they render: timeline, replies, search, profiles. Reposts
+   made by a listed account are collapsed too. A "Show" button reveals the post anyway.
+2. **Block from the feed** (default). When the collapsed line is on screen, the extension
+   opens the post's "⋯" menu, picks "Block" and confirms, exactly as you would by hand:
+   these are X's own clicks and requests, with your session. A block made from a post on
+   screen is a negative signal for that account in what X recommends. Pace: at most 30
+   blocks per hour and 150 per day, a 15 to 45 second pause between two, one at a time,
+   never in the background. The collapsed line says "blocking in a moment" and offers
+   "Don't block". Blocked accounts are listed in the settings.
+3. **A ⛔ button on every post.** One click: the account is added to your list, the post is
+   collapsed and, in block mode, the account is blocked. Five seconds to undo.
+4. **Your lists, your control.** The settings page shows the subscribed lists, your own
    list, the full list with search, and the activity log. Any account can be **kept**
    (never hidden) or, if it comes from your own list, **removed**.
 
-All data stays in your browser. Nothing is sent to anyone. See [PRIVACY.md](PRIVACY.md).
+All data stays in your browser. Nothing is sent to anyone but X, and only as your own
+blocks. See [PRIVACY.md](PRIVACY.md).
 
-Up to version 0.3 the extension could also block the listed accounts, step by step, with
-your session. That feature was removed in version 0.4: automated actions are against X's
-terms of use and exposed your account. Blocks made by an older version stay in place; you
-can undo them in X's settings ("Blocked accounts").
+**Be aware.** X forbids bulk automated actions. "Block" mode only acts on posts X has shown
+you, one by one, at a human pace, and never on the whole list in the background (which is
+what the 0.3 versions did, removed in 0.4). It is still your account that blocks: choose
+"Hide only" if you want nothing sent to X. A block can be undone in X's settings ("Blocked
+accounts").
 
 ## Before you install
 

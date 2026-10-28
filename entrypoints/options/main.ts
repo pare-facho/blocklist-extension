@@ -2,8 +2,9 @@ import { browser } from "#imports";
 import { parseManualLines } from "../../lib/feed.ts";
 import { applyI18n, t } from "../../lib/i18n.ts";
 import type { OptionsMessage } from "../../lib/messages.ts";
-import { allowItem, getSettings, logItem, manualItem, subscriptionsItem } from "../../lib/storage.ts";
-import type { FeedEntry, Subscription } from "../../lib/types.ts";
+import { PACE } from "../../lib/pacing.ts";
+import { actedItem, allowItem, getSettings, logItem, manualItem, settingsItem, subscriptionsItem } from "../../lib/storage.ts";
+import type { ActedEntry, FeedEntry, Subscription } from "../../lib/types.ts";
 
 const $ = <T extends HTMLElement>(sel: string) => document.querySelector<T>(sel)!;
 const send = (msg: OptionsMessage) => browser.runtime.sendMessage(msg);
@@ -23,11 +24,12 @@ type State = {
   subs: Subscription[];
   manual: FeedEntry[];
   allow: FeedEntry[];
+  acted: ActedEntry[];
 };
 
 async function loadState(): Promise<State> {
-  const [subs, manual, allow] = await Promise.all([subscriptionsItem.getValue(), manualItem.getValue(), allowItem.getValue()]);
-  return { subs, manual, allow };
+  const [subs, manual, allow, acted] = await Promise.all([subscriptionsItem.getValue(), manualItem.getValue(), allowItem.getValue(), actedItem.getValue()]);
+  return { subs, manual, allow, acted };
 }
 
 // ---- status board ----------------------------------------------------------
@@ -37,6 +39,32 @@ function renderStatus(state: State) {
   $("#stat-listed").textContent = String(accounts.filter((a) => !a.kept).length);
   $("#stat-own").textContent = String(accounts.filter((a) => a.own).length);
   $("#stat-kept").textContent = String(accounts.filter((a) => a.kept).length);
+  $("#stat-blocked").textContent = String(state.acted.filter((e) => e.site === "x" && e.result === "blocked").length);
+}
+
+// ---- action on listed accounts ---------------------------------------------
+
+async function renderAction() {
+  const settings = await getSettings();
+  for (const radio of document.querySelectorAll<HTMLInputElement>('input[name="action"]')) radio.checked = radio.value === settings.action;
+  $("#action-pace").textContent = t("actionPace", PACE.perHour, PACE.perDay, PACE.minGapSeconds, PACE.maxGapSeconds);
+}
+
+for (const radio of document.querySelectorAll<HTMLInputElement>('input[name="action"]')) {
+  radio.addEventListener("change", async () => {
+    if (!radio.checked) return;
+    await settingsItem.setValue({ ...(await getSettings()), action: radio.value === "hide" ? "hide" : "block" });
+    await send({ type: "settingsChanged" });
+  });
+}
+
+function renderBlocked(acted: ActedEntry[]) {
+  const lines = acted
+    .filter((e) => e.site === "x")
+    .slice()
+    .reverse()
+    .map((e) => (e.result === "blocked" ? t("blockedLine", e.handle, when(e.at)) : t("failedLine", e.handle, when(e.at), e.detail ?? "")));
+  $("#blocked").textContent = lines.length ? lines.join("\n") : t("blockedNone");
 }
 
 // ---- subscriptions ---------------------------------------------------------
@@ -125,21 +153,22 @@ $("#allow-save").addEventListener("click", async () => {
 
 // ---- full list -------------------------------------------------------------
 
-type Account = { handle: string; name?: string; list: string; own: boolean; kept: boolean };
+type Account = { handle: string; name?: string; list: string; own: boolean; kept: boolean; blocked: boolean };
 
 function allAccounts(state: State): Account[] {
   const kept = new Set(state.allow.filter((e) => e.site === "x").map((e) => e.handle));
+  const blocked = new Set(state.acted.filter((e) => e.site === "x" && e.result === "blocked").map((e) => e.handle));
   const out = new Map<string, Account>();
   for (const sub of state.subs) {
     if (!sub.enabled) continue;
     for (const e of sub.entries) {
       if (e.site !== "x" || out.has(e.handle)) continue;
-      out.set(e.handle, { handle: e.handle, name: e.name, list: sub.name, own: false, kept: kept.has(e.handle) });
+      out.set(e.handle, { handle: e.handle, name: e.name, list: sub.name, own: false, kept: kept.has(e.handle), blocked: blocked.has(e.handle) });
     }
   }
   for (const e of state.manual) {
     if (e.site !== "x" || out.has(e.handle)) continue;
-    out.set(e.handle, { handle: e.handle, name: e.name, list: t("ownListName"), own: true, kept: kept.has(e.handle) });
+    out.set(e.handle, { handle: e.handle, name: e.name, list: t("ownListName"), own: true, kept: kept.has(e.handle), blocked: blocked.has(e.handle) });
   }
   return [...out.values()].sort((a, b) => a.handle.localeCompare(b.handle));
 }
@@ -156,7 +185,7 @@ function renderAll(state: State) {
   for (const a of shown.slice(0, 500)) {
     const tr = el("tr", { className: a.kept ? "kept" : "" });
     const link = el("a", { href: `https://x.com/${a.handle}`, textContent: `@${a.handle}`, target: "_blank", rel: "noopener" });
-    tr.append(el("td"), el("td", { textContent: a.name ?? "" }), el("td", { textContent: a.list }), el("td", { textContent: a.kept ? t("stKept") : t("stHidden") }));
+    tr.append(el("td"), el("td", { textContent: a.name ?? "" }), el("td", { textContent: a.list }), el("td", { textContent: a.kept ? t("stKept") : a.blocked ? t("stBlocked") : t("stHidden") }));
     tr.firstElementChild!.append(link);
     const actions = el("td", { className: "actions" });
     const keep = el("button", { type: "button", className: "small", textContent: a.kept ? t("actUnkeep") : t("actKeep") });
@@ -191,6 +220,8 @@ async function render() {
   $<HTMLTextAreaElement>("#allow").value = toLines(state.allow);
   renderAll(state);
   renderStatus(state);
+  renderBlocked(state.acted);
+  await renderAction();
 }
 
 applyI18n();
@@ -199,6 +230,6 @@ void render();
 browser.storage.onChanged.addListener((changes, area) => {
   if (area !== "local") return;
   if (changes.log) $("#log").textContent = ((changes.log.newValue as string[] | undefined) ?? []).slice().reverse().join("\n");
-  if (changes.subscriptions || changes.manual || changes.allow) void render();
+  if (changes.subscriptions || changes.manual || changes.allow || changes.acted || changes.settings) void render();
 });
 void logItem.getValue().then((log) => ($("#log").textContent = log.slice().reverse().join("\n")));

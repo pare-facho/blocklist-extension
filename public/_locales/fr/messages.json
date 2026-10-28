@@ -3,13 +3,13 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "On bloque l’extrême droite : masque les publications des comptes d’extrême droite listés, que vous les suiviez ou non."
+    "message": "On bloque l’extrême droite : masque les publications des comptes d’extrême droite listés et les bloque, depuis votre fil, au rythme d’une personne."
   },
   "optionsTitle": {
     "message": "Pare-Facho — réglages"
   },
   "intro": {
-    "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez."
+    "message": "Tout ce qui est sur cette page reste dans votre navigateur. Rien n'est envoyé ailleurs, à part le téléchargement des listes que vous ajoutez. Les blocages passent par votre session X, comme un clic de votre part."
   },
   "statusTitle": {
     "message": "Statut"
@@ -24,7 +24,7 @@
     "message": "gardés"
   },
   "stateLine": {
-    "message": "Les publications des comptes listés sont masquées sur x.com dès qu'elles s'affichent. Rien n'est envoyé à X : aucun blocage, aucun signalement."
+    "message": "Les publications des comptes listés sont repliées sur x.com dès qu'elles s'affichent. En mode « bloquer », le compte est ensuite bloqué par le menu de X, comme si vous l'aviez fait à la main."
   },
   "listsTitle": {
     "message": "Listes abonnées"
@@ -197,7 +197,7 @@
     }
   },
   "quickAdded": {
-    "message": "@$HANDLE$ ajouté·e à ma liste : ses publications sont masquées.",
+    "message": "@$HANDLE$ ajouté·e à ma liste.",
     "placeholders": {
       "handle": {
         "content": "$1"
@@ -253,6 +253,146 @@
     "placeholders": {
       "handle": {
         "content": "$1"
+      }
+    }
+  },
+  "statBlocked": {
+    "message": "bloqués"
+  },
+  "actionTitle": {
+    "message": "Que faire des comptes listés"
+  },
+  "actionBlock": {
+    "message": "Bloquer depuis mon fil (recommandé)"
+  },
+  "actionBlockHelp": {
+    "message": "Quand une publication d'un compte listé arrive à l'écran, elle est repliée, puis le compte est bloqué par le menu « Bloquer » de X, avec votre session. Un blocage fait depuis une publication affichée pèse sur ce que X recommande : il compte comme un signal négatif pour ce compte."
+  },
+  "actionHide": {
+    "message": "Masquer seulement"
+  },
+  "actionHideHelp": {
+    "message": "Les publications sont repliées, rien n'est envoyé à X."
+  },
+  "actionPace": {
+    "message": "Rythme : au plus $HOUR$ blocages par heure et $DAY$ par jour, avec une pause de $MIN$ à $MAX$ secondes entre deux. Les blocages se font un par un, uniquement sur les publications affichées, jamais en arrière-plan.",
+    "placeholders": {
+      "hour": {
+        "content": "$1"
+      },
+      "day": {
+        "content": "$2"
+      },
+      "min": {
+        "content": "$3"
+      },
+      "max": {
+        "content": "$4"
+      }
+    }
+  },
+  "actionRisk": {
+    "message": "X interdit les actions automatisées en masse. Ce rythme imite une personne qui bloque en lisant son fil, mais c'est votre compte qui bloque : à vous de décider. Vous pouvez annuler un blocage dans les réglages de X (« Comptes bloqués »)."
+  },
+  "whatsNew": {
+    "message": "Nouveau dans la version 0.5 : l'extension peut bloquer les comptes listés depuis votre fil. C'est le réglage par défaut ; choisissez « Masquer seulement » si vous ne voulez rien envoyer à X."
+  },
+  "blockedTitle": {
+    "message": "Comptes bloqués par l'extension"
+  },
+  "blockedHelp": {
+    "message": "Depuis une publication affichée, avec votre session. Pour débloquer : réglages de X, « Comptes bloqués »."
+  },
+  "blockedNone": {
+    "message": "Aucun pour l'instant."
+  },
+  "blockedLine": {
+    "message": "@$HANDLE$ · $WHEN$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      }
+    }
+  },
+  "failedLine": {
+    "message": "@$HANDLE$ · $WHEN$ · échec ($DETAIL$)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      },
+      "detail": {
+        "content": "$3"
+      }
+    }
+  },
+  "stBlocked": {
+    "message": "bloqué"
+  },
+  "quickTitleBlock": {
+    "message": "Masquer et bloquer @$HANDLE$ (un clic, annulable pendant 5 s)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "stripHidden": {
+    "message": "⛔ @$HANDLE$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "stripShow": {
+    "message": "Afficher"
+  },
+  "stripNoBlock": {
+    "message": "Ne pas bloquer"
+  },
+  "strip_hidden": {
+    "message": "publication masquée"
+  },
+  "strip_soon": {
+    "message": "masquée · blocage dans un instant"
+  },
+  "strip_waiting": {
+    "message": "masquée · blocage dès que le rythme le permet"
+  },
+  "strip_blocking": {
+    "message": "blocage en cours…"
+  },
+  "strip_blocked": {
+    "message": "bloqué ✓"
+  },
+  "strip_failed": {
+    "message": "masquée · blocage impossible ici"
+  },
+  "strip_shown": {
+    "message": "affichée"
+  },
+  "logBlocked": {
+    "message": "@$HANDLE$ bloqué·e depuis une publication affichée",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logBlockFailed": {
+    "message": "@$HANDLE$ : blocage impossible ($DETAIL$)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "detail": {
+        "content": "$2"
       }
     }
   }

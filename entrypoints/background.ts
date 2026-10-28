@@ -3,17 +3,31 @@ import { DEFAULT_FEED_URL } from "../lib/defaults.ts";
 import { fetchFeed } from "../lib/feed.ts";
 import { t } from "../lib/i18n.ts";
 import { buildHideSet } from "../lib/matcher.ts";
-import type { BackgroundMessage, ContentMessage, OptionsMessage } from "../lib/messages.ts";
-import { allowItem, appendLog, getSettings, manualItem, OBSOLETE_KEYS, seededItem, subscriptionsItem } from "../lib/storage.ts";
+import type { BackgroundMessage, ContentMessage, MayActReply, OptionsMessage, SiteState } from "../lib/messages.ts";
+import { canActNow, recordAction, releaseSlot } from "../lib/pacing.ts";
+import {
+  actedItem,
+  allowItem,
+  appendActed,
+  appendLog,
+  getSettings,
+  manualItem,
+  OBSOLETE_KEYS,
+  pacingItem,
+  seededItem,
+  subscriptionsItem,
+} from "../lib/storage.ts";
 import type { Site, Subscription } from "../lib/types.ts";
 
 const ALARM_REFRESH = "refresh-feeds";
 
 export default defineBackground(() => {
-  browser.runtime.onInstalled.addListener(() => {
+  browser.runtime.onInstalled.addListener((details) => {
     void browser.storage.local.remove(OBSOLETE_KEYS);
     void scheduleRefresh();
     void ensureDefaultFeed();
+    // 0.5 blocks from the page by default where 0.4 only hid: show the settings once so the change is seen.
+    if (details.reason === "update" && details.previousVersion && details.previousVersion < "0.5") void browser.runtime.openOptionsPage();
   });
   browser.runtime.onStartup.addListener(() => void scheduleRefresh());
   // The toolbar icon opens the settings page (browserAction on Firefox MV2, action on Chrome MV3).
@@ -25,16 +39,22 @@ export default defineBackground(() => {
 
   browser.runtime.onMessage.addListener((message: ContentMessage | OptionsMessage) => {
     switch (message.type) {
-      case "hideset":
-        return hideSetFor(message.site);
+      case "state":
+        return stateFor(message.site);
       case "quickHide":
         return quickHide(message);
       case "undoQuickHide":
         return undoQuickHide(message.site, message.handle);
+      case "mayAct":
+        return mayAct();
+      case "acted":
+        return acted(message);
       case "subscribe":
         return subscribe(message.url);
       case "refreshFeeds":
         return refreshAllFeeds();
+      case "settingsChanged":
+        return notifyContentScripts();
     }
   });
 });
@@ -44,15 +64,65 @@ async function scheduleRefresh() {
   await browser.alarms.create(ALARM_REFRESH, { delayInMinutes: 1, periodInMinutes: settings.feedRefreshHours * 60 });
 }
 
-async function hideSetFor(site: Site) {
-  const [subs, manual, allow] = await Promise.all([subscriptionsItem.getValue(), manualItem.getValue(), allowItem.getValue()]);
-  return buildHideSet(site, subs, manual, allow);
+async function stateFor(site: Site): Promise<SiteState> {
+  const [subs, manual, allow, settings, acted] = await Promise.all([
+    subscriptionsItem.getValue(),
+    manualItem.getValue(),
+    allowItem.getValue(),
+    getSettings(),
+    actedItem.getValue(),
+  ]);
+  return {
+    set: buildHideSet(site, subs, manual, allow),
+    action: settings.action,
+    blocked: acted.filter((e) => e.site === site && e.result === "blocked").map((e) => e.handle),
+  };
 }
 
 async function notifyContentScripts() {
   const tabs = await browser.tabs.query({ url: "https://x.com/*" });
-  const msg: BackgroundMessage = { type: "hidesetChanged" };
+  const msg: BackgroundMessage = { type: "stateChanged" };
   await Promise.all(tabs.map((t) => t.id && browser.tabs.sendMessage(t.id, msg).catch(() => {})));
+}
+
+// ---- acting on X -----------------------------------------------------------
+// The background is the single arbiter of the pacing rules across all x.com tabs:
+// a tab asks for a slot, gets it reserved, and reports how it went.
+
+let paceLock: Promise<unknown> = Promise.resolve();
+function withPace<T>(fn: () => Promise<T>): Promise<T> {
+  const run = paceLock.then(fn, fn);
+  paceLock = run.catch(() => {});
+  return run;
+}
+
+function mayAct(): Promise<MayActReply> {
+  return withPace(async () => {
+    const now = Date.now();
+    const pace = await pacingItem.getValue();
+    const decision = canActNow(pace, now);
+    if (!decision.ok) return decision;
+    const next = recordAction(pace, now);
+    await pacingItem.setValue(next);
+    return { ok: true, slot: next.actedAt[next.actedAt.length - 1] as string };
+  });
+}
+
+async function acted(msg: { site: Site; handle: string; slot: string; result: "blocked" | "failed" | "gone"; detail?: string }) {
+  const handle = msg.handle.toLowerCase();
+  if (msg.result === "blocked") {
+    await appendActed({ site: msg.site, handle, at: new Date().toISOString(), result: "blocked" });
+    await appendLog(t("logBlocked", handle));
+    await notifyContentScripts();
+    return { ok: true };
+  }
+  // Nothing was sent: give the slot back so the pace is not spent on a miss.
+  await withPace(async () => pacingItem.setValue(releaseSlot(await pacingItem.getValue(), msg.slot)));
+  if (msg.result === "failed") {
+    await appendActed({ site: msg.site, handle, at: new Date().toISOString(), result: "failed", detail: msg.detail });
+    await appendLog(t("logBlockFailed", handle, msg.detail ?? ""));
+  }
+  return { ok: true };
 }
 
 // ---- feeds -----------------------------------------------------------------

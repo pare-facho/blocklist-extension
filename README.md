@@ -7,8 +7,9 @@ droite recensés par le site [On bloque l'extrême droite](https://onbloquelextr
 La liste du site est abonnée dès l'installation et mise à jour régulièrement. Vous pouvez
 la retirer, ajouter d'autres listes, et ajouter ou retirer des comptes vous-même.
 
-L'extension ne touche pas à votre compte : elle ne bloque, ne masque côté X et ne signale
-personne. Elle change seulement ce qui s'affiche sur votre écran.
+Par défaut, l'extension replie ces publications et **bloque le compte** par le menu de X,
+avec votre session, au moment où la publication arrive à l'écran : un compte à la fois, au
+rythme d'une personne. Un réglage « Masquer seulement » replie sans rien envoyer à X.
 
 ## Installer
 
@@ -56,24 +57,34 @@ de réglages.
 
 ## Ce que fait l'extension
 
-1. **Masquer.** Sur x.com, les publications des comptes listés disparaissent de votre écran
-   dès qu'elles s'affichent : fil, réponses, recherche, profils. Les republications
-   (reposts) faites par un compte listé sont masquées aussi. Rien ne change sur X,
-   seulement votre affichage.
-2. **Un bouton ⛔ sur chaque publication.** Un clic : la publication est masquée et le
-   compte est ajouté à votre liste. Cinq secondes pour annuler.
-3. **Vos listes, votre contrôle.** La page de réglages montre les listes abonnées, votre
+1. **Replier.** Sur x.com, les publications des comptes listés sont remplacées par une
+   ligne « ⛔ @compte · publication masquée » dès qu'elles s'affichent : fil, réponses,
+   recherche, profils. Les republications (reposts) faites par un compte listé sont repliées
+   aussi. Un bouton « Afficher » montre la publication quand même.
+2. **Bloquer depuis le fil** (réglage par défaut). Quand la ligne repliée est à l'écran,
+   l'extension ouvre le menu « ⋯ » de la publication, choisit « Bloquer » et confirme,
+   exactement comme vous le feriez à la main : ce sont les clics et les requêtes de X
+   elle-même, avec votre session. Un blocage fait depuis une publication affichée est un
+   signal négatif pour ce compte dans ce que X recommande. Rythme : au plus 30 blocages
+   par heure et 150 par jour, 15 à 45 secondes de pause entre deux, un seul à la fois,
+   jamais en arrière-plan. La ligne repliée indique « blocage dans un instant » et offre
+   « Ne pas bloquer ». Les comptes bloqués sont listés dans les réglages.
+3. **Un bouton ⛔ sur chaque publication.** Un clic : le compte est ajouté à votre liste,
+   la publication est repliée et, en mode bloquer, le compte est bloqué. Cinq secondes
+   pour annuler.
+4. **Vos listes, votre contrôle.** La page de réglages montre les listes abonnées, votre
    propre liste, la liste complète avec recherche, et le journal. Chaque compte peut être
    **gardé** (jamais masqué) ou, s'il vient de votre liste, **retiré**.
 
-Toutes les données restent dans votre navigateur. Rien n'est envoyé à personne. Voir
-[PRIVACY.md](PRIVACY.md).
+Toutes les données restent dans votre navigateur. Rien n'est envoyé à personne d'autre que
+X, et seulement sous la forme de vos propres blocages. Voir [PRIVACY.md](PRIVACY.md).
 
-Jusqu'à la version 0.3, l'extension pouvait aussi bloquer les comptes listés, petit à
-petit, avec votre session. Cette fonction a été retirée dans la version 0.4 : les actions
-automatiques sont contraires aux conditions d'utilisation de X et exposaient votre compte.
-Les blocages déjà faits par une ancienne version restent en place ; vous pouvez les annuler
-dans les réglages de X (« Comptes bloqués »).
+**À savoir.** X interdit les actions automatisées en masse. Le mode « bloquer » agit
+uniquement sur les publications que X vous a affichées, une par une, à un rythme humain,
+et jamais sur l'ensemble de la liste en arrière-plan (c'est ce que faisaient les versions
+0.3, retiré en 0.4). C'est tout de même votre compte qui bloque : choisissez « Masquer
+seulement » si vous ne voulez rien envoyer à X. Un blocage s'annule dans les réglages de X
+(« Comptes bloqués »).
 
 ## À savoir avant d'installer
 

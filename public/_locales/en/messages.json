@@ -3,13 +3,13 @@
     "message": "Pare-Facho"
   },
   "extDescription": {
-    "message": "Block the far right: hides the posts of listed far-right accounts, whether you follow them or not."
+    "message": "Block the far right: hides the posts of listed far-right accounts and blocks them from your feed, at a human pace."
   },
   "optionsTitle": {
     "message": "Pare-Facho — settings"
   },
   "intro": {
-    "message": "Everything on this page stays in your browser. Nothing is sent anywhere, except downloading the lists you add."
+    "message": "Everything on this page stays in your browser. Nothing is sent anywhere, except downloading the lists you add. Blocks go through your X session, like a click of your own."
   },
   "statusTitle": {
     "message": "Status"
@@ -24,7 +24,7 @@
     "message": "kept"
   },
   "stateLine": {
-    "message": "Posts from listed accounts are hidden on x.com as they render. Nothing is sent to X: no block, no report."
+    "message": "Posts from listed accounts are collapsed on x.com as they render. In \"block\" mode the account is then blocked through X's own menu, as if you had done it by hand."
   },
   "listsTitle": {
     "message": "Subscribed lists"
@@ -197,7 +197,7 @@
     }
   },
   "quickAdded": {
-    "message": "@$HANDLE$ added to my list: their posts are hidden.",
+    "message": "@$HANDLE$ added to my list.",
     "placeholders": {
       "handle": {
         "content": "$1"
@@ -253,6 +253,146 @@
     "placeholders": {
       "handle": {
         "content": "$1"
+      }
+    }
+  },
+  "statBlocked": {
+    "message": "blocked"
+  },
+  "actionTitle": {
+    "message": "What to do with listed accounts"
+  },
+  "actionBlock": {
+    "message": "Block from my feed (recommended)"
+  },
+  "actionBlockHelp": {
+    "message": "When a post from a listed account reaches the screen, it is collapsed, then the account is blocked through X's own \"Block\" menu, with your session. A block made from a post on screen weighs on what X recommends: it counts as a negative signal for that account."
+  },
+  "actionHide": {
+    "message": "Hide only"
+  },
+  "actionHideHelp": {
+    "message": "Posts are collapsed, nothing is sent to X."
+  },
+  "actionPace": {
+    "message": "Pace: at most $HOUR$ blocks per hour and $DAY$ per day, with a pause of $MIN$ to $MAX$ seconds between two. Blocks happen one at a time, only on posts on screen, never in the background.",
+    "placeholders": {
+      "hour": {
+        "content": "$1"
+      },
+      "day": {
+        "content": "$2"
+      },
+      "min": {
+        "content": "$3"
+      },
+      "max": {
+        "content": "$4"
+      }
+    }
+  },
+  "actionRisk": {
+    "message": "X forbids bulk automated actions. This pace mimics a person blocking while reading their feed, but it is your account that blocks: the choice is yours. A block can be undone in X's settings (\"Blocked accounts\")."
+  },
+  "whatsNew": {
+    "message": "New in version 0.5: the extension can block listed accounts from your feed. It is the default; choose \"Hide only\" if you want nothing sent to X."
+  },
+  "blockedTitle": {
+    "message": "Accounts blocked by the extension"
+  },
+  "blockedHelp": {
+    "message": "From a post on screen, with your session. To unblock: X settings, \"Blocked accounts\"."
+  },
+  "blockedNone": {
+    "message": "None yet."
+  },
+  "blockedLine": {
+    "message": "@$HANDLE$ · $WHEN$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      }
+    }
+  },
+  "failedLine": {
+    "message": "@$HANDLE$ · $WHEN$ · failed ($DETAIL$)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "when": {
+        "content": "$2"
+      },
+      "detail": {
+        "content": "$3"
+      }
+    }
+  },
+  "stBlocked": {
+    "message": "blocked"
+  },
+  "quickTitleBlock": {
+    "message": "Hide and block @$HANDLE$ (one click, undo for 5 s)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "stripHidden": {
+    "message": "⛔ @$HANDLE$",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "stripShow": {
+    "message": "Show"
+  },
+  "stripNoBlock": {
+    "message": "Don't block"
+  },
+  "strip_hidden": {
+    "message": "post hidden"
+  },
+  "strip_soon": {
+    "message": "hidden · blocking in a moment"
+  },
+  "strip_waiting": {
+    "message": "hidden · will block when the pace allows"
+  },
+  "strip_blocking": {
+    "message": "blocking…"
+  },
+  "strip_blocked": {
+    "message": "blocked ✓"
+  },
+  "strip_failed": {
+    "message": "hidden · could not block here"
+  },
+  "strip_shown": {
+    "message": "shown"
+  },
+  "logBlocked": {
+    "message": "@$HANDLE$ blocked from a post on screen",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      }
+    }
+  },
+  "logBlockFailed": {
+    "message": "@$HANDLE$: block failed ($DETAIL$)",
+    "placeholders": {
+      "handle": {
+        "content": "$1"
+      },
+      "detail": {
+        "content": "$2"
       }
     }
   }
