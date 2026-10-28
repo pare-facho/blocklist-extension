@@ -34,7 +34,7 @@ All data stays in your browser. See [PRIVACY.md](PRIVACY.md).
 ## Install (beta)
 
 Download the zip from the
-[latest release](https://github.com/lnilluv/blocklist-extension/releases).
+[latest release](https://github.com/pare-facho/blocklist-extension/releases).
 
 - **Chrome / Edge / Brave**: unzip. Open `chrome://extensions`, enable "Developer mode",
   click "Load unpacked" and pick the unzipped folder.
@@ -45,7 +45,7 @@ Download the zip from the
 Then open the extension's settings and add a list, for example:
 
 ```
-https://lnilluv.github.io/blocklist-extension/blocklist.json
+https://pare-facho.github.io/blocklist-extension/blocklist.json
 ```
 
 This list is generated every hour from the *On bloque l'extrême droite* website (see

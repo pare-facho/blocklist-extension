@@ -26,7 +26,7 @@ Vie privée : aucune donnée collectée, aucun serveur. Tout reste dans votre na
 
 À savoir : les actions automatiques sont contraires aux conditions d'utilisation de X. Le rythme lent réduit le risque pour votre compte, il ne le supprime pas. Utilisez de préférence un compte secondaire.
 
-Logiciel libre (GPL-3.0). Code source : https://github.com/lnilluv/blocklist-extension
+Logiciel libre (GPL-3.0). Code source : https://github.com/pare-facho/blocklist-extension
 
 ## Catégorie
 Chrome : Réseaux sociaux et communication. Firefox : Réseaux sociaux (Social & Communication).
@@ -35,11 +35,11 @@ Chrome : Réseaux sociaux et communication. Firefox : Réseaux sociaux (Social &
 Français (anglais disponible).
 
 ## Politique de confidentialité (URL)
-https://github.com/lnilluv/blocklist-extension/blob/main/PRIVACY.md
+https://github.com/pare-facho/blocklist-extension/blob/main/PRIVACY.md
 
 ## Page d'accueil / support
-https://github.com/lnilluv/blocklist-extension
-https://github.com/lnilluv/blocklist-extension/issues
+https://github.com/pare-facho/blocklist-extension
+https://github.com/pare-facho/blocklist-extension/issues
 
 ## Objectif unique (Chrome « single purpose »)
 Masquer et bloquer sur X les comptes figurant dans des listes choisies par l'utilisateur.

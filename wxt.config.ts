@@ -15,7 +15,7 @@ export default defineConfig({
     ...(browser === "firefox"
       ? {
           browser_specific_settings: {
-            gecko: { id: "pare-facho@lnilluv.github.io", strict_min_version: "128.0" },
+            gecko: { id: "pare-facho@pare-facho.github.io", strict_min_version: "128.0" },
           },
         }
       : {}),
