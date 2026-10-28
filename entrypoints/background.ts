@@ -224,17 +224,24 @@ async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: s
   if (!task) return { ran: false, reason: "queue is empty" };
   const unblock = task.status === "unblocking";
 
-  const tabs = await browser.tabs.query({ url: "https://x.com/*" });
-  const tab = tabs.find((t) => t.id === preferredTabId) ?? tabs[0];
-  if (!tab?.id) return { ran: false, reason: await noteBlocker("noTab") };
+  const tabs = (await browser.tabs.query({ url: "https://x.com/*" })).sort((a, b) => Number(b.id === preferredTabId) - Number(a.id === preferredTabId));
+  if (tabs.length === 0) return { ran: false, reason: await noteBlocker("noTab") };
 
+  // A tab opened before the extension was installed or updated has no content script
+  // and never answers; try the others before giving up.
   const msg: BackgroundMessage = { type: unblock ? "x:unblock" : "x:block", handle: task.handle, id: task.id };
-  let result: BlockResult;
-  try {
-    result = (await browser.tabs.sendMessage(tab.id, msg)) as BlockResult;
-  } catch (err) {
-    return { ran: false, reason: await noteBlocker("tabSilent", (err as Error).message) };
+  let result: BlockResult | undefined;
+  let silent = "";
+  for (const tab of tabs) {
+    if (!tab.id) continue;
+    try {
+      result = (await browser.tabs.sendMessage(tab.id, msg)) as BlockResult;
+      break;
+    } catch (err) {
+      silent = (err as Error).message;
+    }
   }
+  if (!result) return { ran: false, reason: await noteBlocker("tabSilent", silent) };
   lastBlocker = undefined;
 
   task.attempts++;
