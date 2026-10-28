@@ -7,6 +7,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "feed/**" # list pushed from the server job
       - "tools/feed/**"
       - "tests/feed.test.ts"
       - ".github/workflows/feed.yml"

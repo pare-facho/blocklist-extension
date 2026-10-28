@@ -98,7 +98,9 @@ each X account's permanent numeric id (no account, no API key: through the publi
 `x.com/intent/user` redirect) and writes `feed/blocklist.json`. A
 [GitHub Actions workflow](.github/workflows/feed.yml) runs it hourly and publishes the
 result at `https://pare-facho.github.io/blocklist-extension/blocklist.json`. The git
-history shows every addition and removal.
+history shows every addition and removal. If the source loses more than a tenth of its
+accounts at once (site under maintenance, partial download, tampered list), the list is not
+published and the previous one stays online.
 
 ```
 node tools/feed/run.ts   # one pass

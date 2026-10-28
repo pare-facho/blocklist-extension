@@ -11,7 +11,7 @@ import {
   applyCorrections,
 } from "../tools/feed/source.ts";
 import { userIdFromLocation } from "../tools/feed/xids.ts";
-import { toFeedEntries, buildFeed } from "../tools/feed/build.ts";
+import { toFeedEntries, buildFeed, shrinksTooMuch } from "../tools/feed/build.ts";
 
 const accountsJs = `const accounts = [
   { "name": "Example One", "handle": "ExampleOne", "category": "RN", "reason": "r1", "source": "https://s/1" },
@@ -114,4 +114,22 @@ test("feed entries carry ids from the cache and 'updated' only moves on change",
   assert.equal(same.updated, t1.toISOString());
   const changed = buildFeed(entries.slice(1), first, t2);
   assert.equal(changed.updated, t2.toISOString());
+});
+
+test("a list that loses more than a tenth of its entries is not published", () => {
+  assert.equal(shrinksTooMuch(618, 452), true);
+  assert.equal(shrinksTooMuch(618, 600), false);
+  assert.equal(shrinksTooMuch(618, 700), false);
+  assert.equal(shrinksTooMuch(0, 0), false);
+});
+
+test("API removals may point at another entry's id", () => {
+  const api = entriesFromApi({
+    entries: [
+      { id: "a1", type: "new", platform: "x", profile_url: "https://x.com/SomeOne", name: "S" },
+      { id: "r1", type: "removal", target_id: "a1" },
+      { id: "r2", type: "removal", target_id: "Other" },
+    ],
+  } as never);
+  assert.deepEqual([...api.removed].sort(), ["other", "someone"]);
 });

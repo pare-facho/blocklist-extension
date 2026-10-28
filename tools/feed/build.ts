@@ -66,3 +66,13 @@ export async function writeFeed(path: string, feed: Feed): Promise<void> {
   await mkdir(dirname(path), { recursive: true });
   await writeFile(path, JSON.stringify(feed, null, 2) + "\n");
 }
+
+// A source that suddenly loses a large share of its entries is more likely a partial
+// download, a site under maintenance or a tampered list than a real change. Publishing
+// it would make every installed extension unblock those accounts, then re-block them.
+export const MAX_SHRINK_RATIO = 0.1;
+
+export function shrinksTooMuch(previousCount: number, nextCount: number, maxRatio = MAX_SHRINK_RATIO): boolean {
+  if (previousCount === 0) return false;
+  return (previousCount - nextCount) / previousCount > maxRatio;
+}

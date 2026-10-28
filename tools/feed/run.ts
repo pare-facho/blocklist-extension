@@ -10,7 +10,7 @@ import { parseArgs } from "node:util";
 import { readFile } from "node:fs/promises";
 import { loadSourceEntries, applyCorrections, type Corrections } from "./source.ts";
 import { readCache, writeCache, resolveMissingIds } from "./xids.ts";
-import { toFeedEntries, readPreviousFeed, buildFeed, writeFeed } from "./build.ts";
+import { toFeedEntries, readPreviousFeed, buildFeed, writeFeed, shrinksTooMuch } from "./build.ts";
 
 const { values } = parseArgs({
   options: {
@@ -46,7 +46,16 @@ await writeCache(values.cache, cache);
 log(`ids: looked up ${stats.looked}, found ${stats.found}, missing ${stats.missing}, failed ${stats.failed}`);
 
 const feedEntries = toFeedEntries(entries, cache);
-const feed = buildFeed(feedEntries, await readPreviousFeed(values.out), new Date());
+const previous = await readPreviousFeed(values.out);
+const previousCount = previous?.entries.length ?? 0;
+if (shrinksTooMuch(previousCount, feedEntries.length) && process.env.FEED_ALLOW_SHRINK !== "1") {
+  console.error(
+    `feed: refusing to publish ${feedEntries.length} entries, down from ${previousCount}: ` +
+      "the source lost too many accounts at once. Set FEED_ALLOW_SHRINK=1 to accept it.",
+  );
+  process.exit(2);
+}
+const feed = buildFeed(feedEntries, previous, new Date());
 await writeFeed(values.out, feed);
 
 const withId = feedEntries.filter((e) => e.site === "x" && e.id).length;
