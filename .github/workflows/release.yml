@@ -33,7 +33,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release upload "${GITHUB_REF_NAME}" .output/*-chrome.zip .output/*-firefox.zip .output/*-sources.zip --clobber
+          # Copies with a fixed name, so the README can link to the latest build directly.
+          cp .output/pare-facho-*-chrome.zip .output/pare-facho-chrome.zip
+          cp .output/pare-facho-*-firefox.zip .output/pare-facho-firefox.zip
+          gh release upload "${GITHUB_REF_NAME}" .output/pare-facho-*-chrome.zip .output/pare-facho-*-firefox.zip .output/*-sources.zip \
+            .output/pare-facho-chrome.zip .output/pare-facho-firefox.zip --clobber
       - name: Submit to the stores
         if: env.HAS_STORE_SECRETS == 'true'
         env:

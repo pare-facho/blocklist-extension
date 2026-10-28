@@ -7,6 +7,8 @@ export default defineConfig({
     name: "__MSG_extName__",
     description: "__MSG_extDescription__",
     default_locale: "fr",
+    // Toolbar icon: a click opens the settings page (see background). WXT maps it to browser_action on MV2.
+    action: { default_title: "__MSG_extName__" },
     permissions: ["storage", "alarms"],
     host_permissions: ["https://x.com/*", "https://pare-facho.github.io/*"],
     // Feed hosts are granted one by one when the user subscribes (see options page).

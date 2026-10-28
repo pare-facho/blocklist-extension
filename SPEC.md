@@ -16,6 +16,7 @@ on X, Threads and Instagram, without putting the user's account at risk.
 2. **Hide now, block later**
    - Posts, replies and comments from listed accounts are hidden immediately in the page.
    - The real block is queued and executed step by step in the background (see pacing).
+   - Accounts that leave every list are unblocked the same way, if the extension blocked them.
 3. **Pacing (account protection)**
    - Defaults: blocking on, at most 300 blocks per hour and 1000 per day, with a random gap of 5–15 seconds
      between two blocks. A 30-second alarm runs several blocks in a row, waiting out the gap between them. Configurable. Blocks run only while the browser is open and the user
@@ -50,8 +51,10 @@ room for metadata. JSON is easy to host anywhere (GitHub, a static site, Nextclo
 
 - `id` is preferred (handles change; ids do not). `handle` alone is accepted; the
   extension resolves it to an id the first time it meets the account.
-- Removing an entry from the feed removes the hide rule. It does **not** unblock
-  automatically (the user may have blocked for other reasons); unblocking is a manual action.
+- Removing an entry from the feed removes the hide rule and, if the extension itself had
+  blocked the account, queues an unblock at the same pace (lists get tampered with: an
+  account added by mistake must not stay blocked). Blocks the user made by hand are never
+  undone. An account that comes back on a list is blocked again.
 - Fetch rules: `ETag`/`If-None-Match`, size cap (e.g. 5 MB), refresh every 6 h by default,
   manual refresh button. Reject feeds over plain HTTP.
 - Also accepted on import (manual list only): plain text with one handle per line, and

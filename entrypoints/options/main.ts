@@ -43,7 +43,7 @@ async function renderStatus(state: State) {
   const pace = await paceItem.getValue();
   const listed = allAccounts(state).filter((a) => !a.kept).length;
   const xQueue = state.queue.filter((q) => q.site === "x");
-  const done = xQueue.filter((q) => q.status === "done").length;
+  const done = xQueue.filter((q) => q.status === "done" || q.status === "unblocking").length;
   const pending = xQueue.filter((q) => q.status === "pending").length;
   const dayAgo = Date.now() - 24 * 3600 * 1000;
   const today = pace.blockedAt.filter((iso) => Date.parse(iso) > dayAgo).length;
@@ -175,6 +175,8 @@ function statusLabel(a: Account): string {
     case "pending": return t("stWaiting");
     case "failed": return t("stFailed");
     case "skipped": return t("stSkipped");
+    case "unblocking": return t("stUnblocking");
+    case "unblocked": return t("stUnblocked");
     default: return t("stHiddenOnly");
   }
 }
@@ -256,13 +258,20 @@ $("#settings-save").addEventListener("click", async () => {
 // ---- history ---------------------------------------------------------------
 
 function renderHistory(queue: QueueTask[]) {
-  const count = (st: QueueTask["status"]) => queue.filter((q) => q.status === st).length;
-  $("#history-summary").textContent = t("historySummary", count("pending"), count("done"), count("failed"), count("skipped"));
+  const count = (...st: QueueTask["status"][]) => queue.filter((q) => st.includes(q.status)).length;
+  $("#history-summary").textContent = t("historySummary", count("pending"), count("done", "unblocking"), count("failed"), count("skipped"), count("unblocked"));
   const finished = queue.filter((q) => q.status !== "pending").sort((a, b) => (b.doneAt ?? b.createdAt).localeCompare(a.doneAt ?? a.createdAt));
   $("#history-empty").hidden = finished.length > 0;
   const body = $("#history-table tbody");
   body.replaceChildren();
-  const label = { done: t("stBlocked"), failed: t("stFailed"), skipped: t("stSkipped"), pending: t("stWaiting") };
+  const label: Record<QueueTask["status"], string> = {
+    done: t("stBlocked"),
+    failed: t("stFailed"),
+    skipped: t("stSkipped"),
+    pending: t("stWaiting"),
+    unblocking: t("stUnblocking"),
+    unblocked: t("stUnblocked"),
+  };
   for (const q of finished.slice(0, 100)) {
     const tr = el("tr");
     tr.append(el("td", { textContent: `@${q.handle}` }), el("td", { textContent: label[q.status] }), el("td", { textContent: when(q.doneAt ?? q.createdAt) }), el("td", { textContent: q.lastError ?? "" }));
@@ -276,8 +285,9 @@ $("#retry-failed").addEventListener("click", async () => {
   await queueItem.setValue(queue);
 });
 
+// Blocks the extension made stay on record: that is how it knows what to unblock later.
 $("#clear-history").addEventListener("click", async () => {
-  await queueItem.setValue((await queueItem.getValue()).filter((q) => q.status === "pending"));
+  await queueItem.setValue((await queueItem.getValue()).filter((q) => q.status === "pending" || q.status === "done" || q.status === "unblocking"));
 });
 
 // ---- initial render and live updates ---------------------------------------

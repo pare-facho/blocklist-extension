@@ -5,6 +5,7 @@ import { t } from "../lib/i18n.ts";
 import { buildBlockSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, BlockResult, ContentMessage, OptionsMessage } from "../lib/messages.ts";
 import { backOff, canBlockNow, prunePace, recordBlock } from "../lib/pacing.ts";
+import { listedOnX, reconcileQueue } from "../lib/queue.ts";
 import { allowItem, appendLog, getSettings, manualItem, paceItem, queueItem, seededItem, subscriptionsItem } from "../lib/storage.ts";
 import { taskKey, type QueueTask, type Site, type Subscription } from "../lib/types.ts";
 
@@ -21,6 +22,8 @@ export default defineBackground(() => {
     void ensureDefaultFeed();
   });
   browser.runtime.onStartup.addListener(() => void scheduleAlarms());
+  // The toolbar icon opens the settings page (browserAction on Firefox MV2, action on Chrome MV3).
+  (browser.action ?? browser.browserAction).onClicked.addListener(() => void browser.runtime.openOptionsPage());
 
   browser.alarms.onAlarm.addListener((alarm) => {
     if (alarm.name === ALARM_REFRESH) void refreshAllFeeds();
@@ -130,25 +133,16 @@ async function refreshAllFeeds() {
 
 // ---- queue -----------------------------------------------------------------
 
-// Adds every listed account that is not yet in the queue. Only when blocking is on:
+// Lines the queue up with the lists: blocks to do for new accounts, unblocks for
+// accounts the extension blocked that left every list. Only when blocking is on:
 // users who just want to hide posts never get a queue.
 async function syncQueue() {
   const settings = await getSettings();
   if (!settings.blockingEnabled) return;
-  // Only X has a blocker so far; tasks for other sites came from older builds.
-  const queue = (await queueItem.getValue()).filter((t) => t.site === "x");
-  const known = new Set(queue.map((t) => t.key));
   const [subs, manual, allow] = await Promise.all([subscriptionsItem.getValue(), manualItem.getValue(), allowItem.getValue()]);
-  const allowed = new Set(allow.map((e) => `${e.site}:${e.handle}`));
-  const now = new Date().toISOString();
-  for (const e of [...subs.filter((s) => s.enabled).flatMap((s) => s.entries), ...manual]) {
-    if (e.site !== "x") continue;
-    const key = taskKey(e.site, e.handle);
-    if (known.has(key) || allowed.has(key)) continue;
-    known.add(key);
-    queue.push({ key, site: e.site, handle: e.handle, id: e.id, origin: "list", status: "pending", attempts: 0, createdAt: now });
-  }
+  const { queue, toUnblock } = reconcileQueue(await queueItem.getValue(), listedOnX(subs, manual, allow), new Date().toISOString());
   await queueItem.setValue(queue);
+  if (toUnblock > 0) await appendLog(t("logDelisted", toUnblock));
 }
 
 async function quickBlock(msg: { site: Site; handle: string; id?: string; name?: string }) {
@@ -213,7 +207,8 @@ async function runTicks(): Promise<void> {
   }
 }
 
-// One tick: if pacing allows, block the oldest pending X account through an open x.com tab.
+// One tick: if pacing allows, act on the oldest waiting X task through an open x.com
+// tab. Unblocks go first: an account that left the lists should not stay blocked.
 async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: string }> {
   const settings = await getSettings();
   if (!settings.blockingEnabled) return { ran: false, reason: "blocking is off" };
@@ -225,30 +220,38 @@ async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: s
   if (!decision.ok) return { ran: false, reason: decision.reason };
 
   const queue = await queueItem.getValue();
-  const task = queue.find((t) => t.status === "pending" && t.site === "x");
+  const task = queue.find((t) => t.status === "unblocking" && t.site === "x") ?? queue.find((t) => t.status === "pending" && t.site === "x");
   if (!task) return { ran: false, reason: "queue is empty" };
+  const unblock = task.status === "unblocking";
 
-  const tabs = await browser.tabs.query({ url: "https://x.com/*" });
-  const tab = tabs.find((t) => t.id === preferredTabId) ?? tabs[0];
-  if (!tab?.id) return { ran: false, reason: await noteBlocker("noTab") };
+  const tabs = (await browser.tabs.query({ url: "https://x.com/*" })).sort((a, b) => Number(b.id === preferredTabId) - Number(a.id === preferredTabId));
+  if (tabs.length === 0) return { ran: false, reason: await noteBlocker("noTab") };
 
-  const msg: BackgroundMessage = { type: "x:block", handle: task.handle, id: task.id };
-  let result: BlockResult;
-  try {
-    result = (await browser.tabs.sendMessage(tab.id, msg)) as BlockResult;
-  } catch (err) {
-    return { ran: false, reason: await noteBlocker("tabSilent", (err as Error).message) };
+  // A tab opened before the extension was installed or updated has no content script
+  // and never answers; try the others before giving up.
+  const msg: BackgroundMessage = { type: unblock ? "x:unblock" : "x:block", handle: task.handle, id: task.id };
+  let result: BlockResult | undefined;
+  let silent = "";
+  for (const tab of tabs) {
+    if (!tab.id) continue;
+    try {
+      result = (await browser.tabs.sendMessage(tab.id, msg)) as BlockResult;
+      break;
+    } catch (err) {
+      silent = (err as Error).message;
+    }
   }
+  if (!result) return { ran: false, reason: await noteBlocker("tabSilent", silent) };
   lastBlocker = undefined;
 
   task.attempts++;
   if (result.ok) {
-    task.status = "done";
+    task.status = unblock ? "unblocked" : "done";
     task.doneAt = new Date().toISOString();
     task.id = result.id ?? task.id;
     task.lastError = undefined;
     pace = recordBlock(settings, pace, now);
-    await appendLog(t("logBlocked", task.handle));
+    await appendLog(t(unblock ? "logUnblocked" : "logBlocked", task.handle));
   } else if (result.kind === "rateLimited") {
     task.attempts--; // not the task's fault
     pace = backOff(pace, result.retryAt ?? now + RETRY_LATER_MS);
@@ -257,15 +260,22 @@ async function tick(preferredTabId?: number): Promise<{ ran: boolean; reason?: s
     task.attempts--;
     pace = backOff(pace, now + RETRY_LATER_MS);
     await appendLog(t("logNotLoggedIn"));
+  } else if (result.kind === "notFound" && unblock) {
+    // The account is gone (or already unblocked): nothing left to undo.
+    task.status = "unblocked";
+    task.doneAt = new Date().toISOString();
+    task.lastError = undefined;
+    await appendLog(t("logUnblocked", task.handle));
   } else if (result.kind === "notFound") {
     task.status = "skipped";
     task.lastError = t("errNotFound");
     await appendLog(t("logSkipped", task.handle));
   } else {
     task.lastError = result.error;
-    if (task.attempts >= MAX_ATTEMPTS) task.status = "failed";
+    // A failed unblock stays "done": the block is still in place and will be retried at the next list refresh.
+    if (task.attempts >= MAX_ATTEMPTS) task.status = unblock ? "done" : "failed";
     pace = backOff(pace, now + RETRY_LATER_MS);
-    await appendLog(t("logFailed", task.handle, task.attempts, MAX_ATTEMPTS, result.error));
+    await appendLog(t(unblock ? "logUnblockFailed" : "logFailed", task.handle, task.attempts, MAX_ATTEMPTS, result.error));
   }
   await paceItem.setValue(pace);
   await queueItem.setValue(queue);
