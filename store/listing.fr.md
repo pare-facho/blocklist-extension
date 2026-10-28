@@ -18,11 +18,11 @@ Ce que fait l'extension :
 
 • Un bouton ⛔ sur chaque publication : un clic pour masquer, ajouter le compte à votre liste et le mettre en file de blocage. Cinq secondes pour annuler.
 
-• Vos listes, votre contrôle. L'extension ne contient aucune liste. Vous vous abonnez à une adresse (par exemple la liste du site « On bloque l'extrême droite »), vous ajoutez vos propres comptes, et vous pouvez « garder » n'importe quel compte pour qu'il ne soit jamais masqué ni bloqué.
+• Vos listes, votre contrôle. La liste du site « On bloque l'extrême droite » est abonnée d'office et mise à jour automatiquement ; vous pouvez la retirer, vous abonner à d'autres adresses, ajouter vos propres comptes, et « garder » n'importe quel compte pour qu'il ne soit jamais masqué ni bloqué.
 
 • Statut et historique : comptes listés, bloqués, restants, prochain blocage, liste complète avec recherche.
 
-Vie privée : aucune donnée collectée, aucun serveur. Tout reste dans votre navigateur. Les seules connexions sont le téléchargement des listes que vous avez ajoutées et les blocages que vous demandez sur x.com.
+Vie privée : aucune donnée collectée, aucun serveur. Tout reste dans votre navigateur. Les seules connexions sont le téléchargement des listes (celle fournie par défaut et celles que vous ajoutez) et les blocages que vous demandez sur x.com.
 
 À savoir : les actions automatiques sont contraires aux conditions d'utilisation de X. Le rythme lent réduit le risque pour votre compte, il ne le supprime pas. Utilisez de préférence un compte secondaire.
 
@@ -48,6 +48,7 @@ Masquer et bloquer sur X les comptes figurant dans des listes choisies par l'uti
 - storage : enregistrer les listes, les réglages, la file de blocage et l'historique, localement.
 - alarms : vérifier les listes périodiquement et exécuter au plus un blocage par minute, au rythme réglé.
 - Accès au site x.com (host permission) : masquer les publications des comptes listés dans la page, afficher le bouton ⛔, et envoyer les demandes de blocage avec la session de l'utilisateur.
+- Accès au site pare-facho.github.io (host permission) : télécharger la liste fournie par défaut et ses mises à jour.
 - Accès optionnel à d'autres sites (optional host permission https://*/*) : demandé uniquement, et au cas par cas, quand l'utilisateur ajoute l'adresse d'une liste, pour pouvoir la télécharger.
 - Aucun code distant : tout le code est dans le paquet.
 

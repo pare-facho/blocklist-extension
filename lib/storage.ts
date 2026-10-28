@@ -9,6 +9,8 @@ export const settingsItem = storage.defineItem<Settings>("local:settings", { fal
 export const queueItem = storage.defineItem<QueueTask[]>("local:queue", { fallback: [] });
 export const paceItem = storage.defineItem<PaceState>("local:pace", { fallback: { blockedAt: [] } });
 export const logItem = storage.defineItem<string[]>("local:log", { fallback: [] });
+// true once the default list has been subscribed (or removed by the user)
+export const seededItem = storage.defineItem<boolean>("local:seeded", { fallback: false });
 
 const LOG_MAX = 200;
 

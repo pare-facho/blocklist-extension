@@ -6,8 +6,9 @@ A browser extension (Chrome and Firefox) that **hides** and **slowly blocks** th
 on lists you choose to subscribe to. First target: X. Threads and Instagram are planned.
 
 The project started to make use of the list published by
-[On bloque l'extrême droite](https://onbloquelextremedroite.fun/), but the extension ships
-**no list**: you add the ones you want, and you can remove or add accounts yourself.
+[On bloque l'extrême droite](https://onbloquelextremedroite.fun/): it is **subscribed by
+default** at install (refreshed hourly from this repository). You can remove it, add other
+lists, and remove or add accounts yourself.
 
 > **Beta.** The code is public and tested automatically, but the extension is not yet on
 > the stores. Install it by hand (see below) and prefer a secondary account.

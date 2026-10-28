@@ -1,10 +1,11 @@
 import { browser, defineBackground } from "#imports";
+import { DEFAULT_FEED_URL } from "../lib/defaults.ts";
 import { fetchFeed } from "../lib/feed.ts";
 import { t } from "../lib/i18n.ts";
 import { buildBlockSet } from "../lib/matcher.ts";
 import type { BackgroundMessage, BlockResult, ContentMessage, OptionsMessage } from "../lib/messages.ts";
 import { backOff, canBlockNow, prunePace, recordBlock } from "../lib/pacing.ts";
-import { allowItem, appendLog, getSettings, manualItem, paceItem, queueItem, subscriptionsItem } from "../lib/storage.ts";
+import { allowItem, appendLog, getSettings, manualItem, paceItem, queueItem, seededItem, subscriptionsItem } from "../lib/storage.ts";
 import { isSite, taskKey, type QueueTask, type Site, type Subscription } from "../lib/types.ts";
 
 const ALARM_REFRESH = "refresh-feeds";
@@ -13,7 +14,10 @@ const MAX_ATTEMPTS = 3;
 const RETRY_LATER_MS = 15 * 60 * 1000;
 
 export default defineBackground(() => {
-  browser.runtime.onInstalled.addListener(() => void scheduleAlarms());
+  browser.runtime.onInstalled.addListener(() => {
+    void scheduleAlarms();
+    void ensureDefaultFeed();
+  });
   browser.runtime.onStartup.addListener(() => void scheduleAlarms());
 
   browser.alarms.onAlarm.addListener((alarm) => {
@@ -84,7 +88,17 @@ async function subscribe(url: string): Promise<{ ok: true; name: string; count: 
   }
 }
 
+// Subscribes to the default list once. Retried at each refresh until the first
+// download succeeds (the install may happen offline); never re-added once the
+// user has removed it.
+async function ensureDefaultFeed() {
+  if (await seededItem.getValue()) return;
+  const result = await subscribe(DEFAULT_FEED_URL);
+  if (result.ok) await seededItem.setValue(true);
+}
+
 async function refreshAllFeeds() {
+  await ensureDefaultFeed();
   const subs = await subscriptionsItem.getValue();
   let changed = false;
   for (const sub of subs) {

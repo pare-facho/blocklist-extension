@@ -20,9 +20,9 @@ esbuild does; no obfuscation). No remote code is loaded at runtime.
 ## How to test
 
 1. Open the extension settings page.
-2. In "Subscribed lists", add `https://pare-facho.github.io/blocklist-extension/blocklist.json`
-   and accept the host permission prompt. The status board shows the number of
-   accounts listed.
+2. The default list (`https://pare-facho.github.io/blocklist-extension/blocklist.json`)
+   is subscribed automatically at install; the status board shows the number of
+   accounts listed. Other lists can be added by address (host permission prompt).
 3. Open https://x.com while logged in: posts from listed accounts are hidden
    and every post gets a ⛔ button that adds its author to "My list".
 4. Real blocking is off by default. When enabled in "Blocking", the extension

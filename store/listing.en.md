@@ -18,11 +18,11 @@ What it does:
 
 • A ⛔ button on every post: one click to hide, add the account to your list and queue it for blocking. Five seconds to undo.
 
-• Your lists, your control. The extension ships no list. You subscribe to an address (for example the list of the "On bloque l'extrême droite" website), add your own accounts, and can "keep" any account so it is never hidden nor blocked.
+• Your lists, your control. The list of the "On bloque l'extrême droite" website is subscribed by default and refreshed automatically; you can remove it, subscribe to other addresses, add your own accounts, and "keep" any account so it is never hidden nor blocked.
 
 • Status and history: accounts listed, blocked, remaining, next block, full list with search.
 
-Privacy: no data collected, no server. Everything stays in your browser. The only connections are downloading the lists you added and the blocks you ask for on x.com.
+Privacy: no data collected, no server. Everything stays in your browser. The only connections are downloading the lists (the default one and those you add) and the blocks you ask for on x.com.
 
 Be aware: automated actions are against X's terms of use. The slow pace lowers the risk for your account; it does not remove it. Prefer a secondary account.
 
@@ -48,6 +48,7 @@ Hide and block on X the accounts found in lists chosen by the user.
 - storage: save lists, settings, block queue and history, locally.
 - alarms: check lists periodically and run at most one block per minute, at the configured pace.
 - Host access to x.com: hide posts from listed accounts in the page, show the ⛔ button, and send block requests with the user's session.
+- Host access to pare-facho.github.io: download the default list and its updates.
 - Optional host access to other sites (optional host permission https://*/*): requested only, and case by case, when the user adds a list address, to download it.
 - No remote code: all code is in the package.
 
