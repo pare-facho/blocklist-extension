@@ -105,7 +105,9 @@ publique `x.com/intent/user`) et écrit `feed/blocklist.json`. Un
 [workflow GitHub Actions](.github/workflows/feed.yml) le lance toutes les heures et publie
 le résultat à l'adresse
 `https://pare-facho.github.io/blocklist-extension/blocklist.json`. L'historique git montre
-chaque ajout et chaque retrait.
+chaque ajout et chaque retrait. Si la source perd plus d'un dixième de ses comptes d'un coup
+(site en maintenance, téléchargement incomplet, liste trafiquée), la liste n'est pas publiée
+et la précédente reste en ligne.
 
 ```
 node tools/feed/run.ts   # exécute une passe

@@ -113,10 +113,17 @@ export function entriesFromApi(data: { entries?: ApiEntry[] }): {
 } {
   const added: SourceEntry[] = [];
   const removed = new Set<string>();
+  // A removal's target_id is either a handle or the id of another API entry.
+  const handleById = new Map<string, string>();
+  for (const e of data.entries ?? []) {
+    const id = (e as { id?: string }).id;
+    const handle = e.profile_url ? handleFromProfileUrl(e.profile_url) : undefined;
+    if (id && handle) handleById.set(String(id), handle);
+  }
   for (const e of data.entries ?? []) {
     if (e.type === "removal") {
       const target = (e as { target_id?: string }).target_id;
-      if (target) removed.add(String(target).toLowerCase());
+      if (target) removed.add((handleById.get(String(target)) ?? String(target)).toLowerCase());
       continue;
     }
     if (e.type !== "new" || !e.platform || !e.profile_url) continue;
