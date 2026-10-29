@@ -56,7 +56,7 @@ Replier sur X les publications des comptes figurant dans des listes choisies par
 Aucune donnée collectée ni transmise. Pas de vente, pas d'usage hors objectif, pas de crédit.
 
 ## Captures d'écran (1280×800, dossier store/screenshots)
-1. `1-strips.png` : sur X, les publications d'un compte listé repliées en une ligne (⛔ @compte · publication masquée) avec le bouton Afficher.
-2. `2-status.png` : page de réglages, statut et choix du mode avec l'explication.
-3. `3-lists.png` : page de réglages, listes abonnées et ma liste.
-4. `4-full-list.png` : page de réglages, liste complète avec recherche et boutons Garder / Retirer.
+1. `2-status.png` : page de réglages, statut et choix du mode avec l'explication.
+2. `3-lists.png` : page de réglages, listes abonnées et ma liste.
+
+Les captures ne montrent que la page de réglages de l’extension.
