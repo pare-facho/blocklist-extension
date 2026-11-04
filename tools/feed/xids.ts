@@ -9,6 +9,8 @@ import { dirname } from "node:path";
 
 export type IdCacheEntry =
   | { id: string; screenName: string; checkedAt: string }
+  // The account exists but X's redirect no longer carries its id (since Nov 2026).
+  | { screenName: string; checkedAt: string }
   | { missing: true; checkedAt: string };
 
 export type IdCache = Record<string, IdCacheEntry>;
@@ -17,7 +19,7 @@ const USER_AGENT = "blocklist-feed/0.1";
 const RETRY_MISSING_AFTER_MS = 7 * 24 * 60 * 60 * 1000;
 const DELAY_BETWEEN_LOOKUPS_MS = 400;
 
-export function userIdFromLocation(location: string): { id: string; screenName: string } | undefined {
+export function userIdFromLocation(location: string): { id?: string; screenName: string } | undefined {
   let u: URL;
   try {
     u = new URL(location, "https://x.com");
@@ -26,6 +28,10 @@ export function userIdFromLocation(location: string): { id: string; screenName: 
   }
   const intent = u.searchParams.get("_intent");
   if (!intent) return undefined;
+  if (intent === "follow") {
+    const screenName = u.pathname.split("/").filter(Boolean)[0];
+    return screenName ? { screenName } : undefined;
+  }
   try {
     const parsed = JSON.parse(intent);
     if (typeof parsed.userId === "string" && /^\d+$/.test(parsed.userId)) {
@@ -37,7 +43,7 @@ export function userIdFromLocation(location: string): { id: string; screenName: 
   return undefined;
 }
 
-export async function lookupXId(handle: string): Promise<{ id: string; screenName: string } | "missing"> {
+export async function lookupXId(handle: string): Promise<{ id?: string; screenName: string } | "missing"> {
   const url = `https://x.com/intent/user?screen_name=${encodeURIComponent(handle)}`;
   const res = await fetch(url, { headers: { "user-agent": USER_AGENT }, redirect: "manual" });
   if (res.status === 404) return "missing";
@@ -71,16 +77,16 @@ function needsLookup(entry: IdCacheEntry | undefined, now: number): boolean {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-// Fills the cache for every handle that is unknown or whose "missing" mark is stale.
+// Fills the cache for every handle that is unknown, or has no id and was checked over a week ago.
 // Lookups are sequential with a short pause: this is a courtesy, not a documented limit.
 export async function resolveMissingIds(
   handles: string[],
   cache: IdCache,
   log: (msg: string) => void = () => {},
-): Promise<{ looked: number; found: number; missing: number; failed: number }> {
+): Promise<{ looked: number; found: number; noId: number; missing: number; failed: number }> {
   const now = Date.now();
   const todo = [...new Set(handles.map((h) => h.toLowerCase()))].filter((h) => needsLookup(cache[h], now));
-  const stats = { looked: 0, found: 0, missing: 0, failed: 0 };
+  const stats = { looked: 0, found: 0, noId: 0, missing: 0, failed: 0 };
   for (const handle of todo) {
     stats.looked++;
     try {
@@ -92,8 +98,13 @@ export async function resolveMissingIds(
         log(`missing  ${handle}`);
       } else {
         cache[handle] = { ...result, checkedAt };
-        stats.found++;
-        log(`found    ${handle} -> ${result.id}`);
+        if (result.id) {
+          stats.found++;
+          log(`found    ${handle} -> ${result.id}`);
+        } else {
+          stats.noId++;
+          log(`no id    ${handle} (exists as ${result.screenName})`);
+        }
       }
     } catch (err) {
       stats.failed++;
