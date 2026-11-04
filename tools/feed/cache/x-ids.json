@@ -469,6 +469,10 @@
     "screenName": "csapin",
     "checkedAt": "2026-10-27T23:09:15.833Z"
   },
+  "cyrilhanouna": {
+    "screenName": "Cyrilhanouna",
+    "checkedAt": "2026-11-04T09:19:07.708Z"
+  },
   "damienrieu": {
     "id": "978184280",
     "screenName": "DamienRieu",
@@ -524,6 +528,10 @@
     "screenName": "Diazinho_fox75",
     "checkedAt": "2026-10-27T23:10:16.935Z"
   },
+  "dlf_officiel": {
+    "screenName": "DLF_Officiel",
+    "checkedAt": "2026-11-04T09:19:16.090Z"
+  },
   "doramoutot": {
     "id": "1120082742849495040",
     "screenName": "doramoutot",
@@ -548,6 +556,10 @@
     "id": "848784339483721728",
     "screenName": "DVanLangenhove",
     "checkedAt": "2026-10-27T23:10:25.982Z"
+  },
+  "e_dupondm": {
+    "screenName": "E_DupondM",
+    "checkedAt": "2026-11-04T09:19:17.872Z"
   },
   "e_fouquart": {
     "id": "4507234275",
@@ -589,6 +601,10 @@
     "screenName": "EmericSalmon",
     "checkedAt": "2026-10-27T23:08:02.691Z"
   },
+  "emmanuelmacron": {
+    "screenName": "EmmanuelMacron",
+    "checkedAt": "2026-11-04T09:19:07.113Z"
+  },
   "enerveveve": {
     "id": "1319620137255948290",
     "screenName": "EnerveVeve",
@@ -598,6 +614,10 @@
     "id": "2049862363214462976",
     "screenName": "Enough_was_then",
     "checkedAt": "2026-10-28T05:40:17.514Z"
+  },
+  "enthoven_r": {
+    "screenName": "Enthoven_R",
+    "checkedAt": "2026-11-04T09:19:11.305Z"
   },
   "ericmorillot": {
     "id": "40803349",
@@ -773,6 +793,10 @@
     "screenName": "gbensouss",
     "checkedAt": "2026-10-28T05:40:09.375Z"
   },
+  "gdarmanin": {
+    "screenName": "GDarmanin",
+    "checkedAt": "2026-11-04T09:19:08.904Z"
+  },
   "gensnostra": {
     "id": "1903887112006717440",
     "screenName": "GensNostra",
@@ -873,6 +897,10 @@
     "screenName": "HeleneLaporteRN",
     "checkedAt": "2026-10-27T23:08:10.673Z"
   },
+  "i_montaigne": {
+    "screenName": "i_montaigne",
+    "checkedAt": "2026-11-04T09:19:13.134Z"
+  },
   "id_libertes": {
     "id": "1842533759695958016",
     "screenName": "ID_Libertes",
@@ -955,7 +983,7 @@
   },
   "jdvancejdvance": {
     "missing": true,
-    "checkedAt": "2026-10-27T23:10:34.416Z"
+    "checkedAt": "2026-11-04T09:18:20.219Z"
   },
   "jean_bexon": {
     "id": "984148251401248770",
@@ -1217,6 +1245,14 @@
     "screenName": "LeBourgeois7610",
     "checkedAt": "2026-10-27T23:08:36.917Z"
   },
+  "lebrac21": {
+    "screenName": "lebrac21",
+    "checkedAt": "2026-11-04T09:19:15.487Z"
+  },
+  "lechochretien": {
+    "screenName": "lechochretien",
+    "checkedAt": "2026-11-04T09:19:13.723Z"
+  },
   "lecontempiateur": {
     "id": "69425704",
     "screenName": "LeContempIateur",
@@ -1357,6 +1393,10 @@
     "screenName": "MarionMarechal",
     "checkedAt": "2026-10-27T23:08:24.202Z"
   },
+  "marsaultbreum": {
+    "screenName": "MarsaultBreum",
+    "checkedAt": "2026-11-04T09:19:10.112Z"
+  },
   "massonbryan": {
     "id": "293620822",
     "screenName": "MassonBryan",
@@ -1412,6 +1452,10 @@
     "screenName": "MeyerHabib",
     "checkedAt": "2026-10-27T23:10:16.307Z"
   },
+  "michelbarnier": {
+    "screenName": "MichelBarnier",
+    "checkedAt": "2026-11-04T09:19:16.683Z"
+  },
   "michelguiniot": {
     "id": "106782026",
     "screenName": "MichelGuiniot",
@@ -1457,6 +1501,10 @@
     "screenName": "morandiniblog",
     "checkedAt": "2026-10-27T23:09:21.263Z"
   },
+  "mrlepresiden": {
+    "screenName": "MrLePresiden",
+    "checkedAt": "2026-11-04T09:19:14.905Z"
+  },
   "mvalet_officiel": {
     "id": "1432839907559542785",
     "screenName": "mvalet_officiel",
@@ -1491,10 +1539,18 @@
     "screenName": "Nation_x_",
     "checkedAt": "2026-10-27T23:10:18.127Z"
   },
+  "netanyahu": {
+    "screenName": "netanyahu",
+    "checkedAt": "2026-11-04T09:19:08.302Z"
+  },
   "nicolasboutin11": {
     "id": "1326646479197515784",
     "screenName": "NicolasBoutin11",
     "checkedAt": "2026-10-27T23:09:18.817Z"
+  },
+  "nicolassarkozy": {
+    "screenName": "NicolasSarkozy",
+    "checkedAt": "2026-11-04T09:19:10.712Z"
   },
   "nmeizonnet": {
     "id": "773854656",
@@ -1515,6 +1571,10 @@
     "id": "1861453307442593792",
     "screenName": "officielsoral",
     "checkedAt": "2026-10-27T23:10:00.986Z"
+  },
+  "olivierveran": {
+    "screenName": "olivierveran",
+    "checkedAt": "2026-11-04T09:19:17.275Z"
   },
   "omertamedia": {
     "id": "1222950520773599233",
@@ -1545,6 +1605,10 @@
     "id": "1073862562792521729",
     "screenName": "Parmentier_RN",
     "checkedAt": "2026-10-27T23:07:59.088Z"
+  },
+  "parousie33": {
+    "screenName": "Parousie33",
+    "checkedAt": "2026-11-04T09:19:14.310Z"
   },
   "pascalpraud": {
     "id": "416221365",
@@ -1666,6 +1730,10 @@
     "screenName": "RenaudCamus",
     "checkedAt": "2026-10-27T23:08:34.462Z"
   },
+  "rglucks1": {
+    "screenName": "rglucks1",
+    "checkedAt": "2026-11-04T09:19:12.495Z"
+  },
   "rigault_charles": {
     "id": "1964646745792495616",
     "screenName": "rigault_charles",
@@ -1785,6 +1853,10 @@
     "id": "493833484",
     "screenName": "sebchenu",
     "checkedAt": "2026-10-27T23:08:40.690Z"
+  },
+  "seblecornu": {
+    "screenName": "SebLecornu",
+    "checkedAt": "2026-11-04T09:19:09.505Z"
   },
   "serge_muller24": {
     "id": "1448914405861871649",
@@ -2049,6 +2121,10 @@
     "id": "2203069263",
     "screenName": "VltnGR",
     "checkedAt": "2026-10-27T23:09:19.419Z"
+  },
+  "vpecresse": {
+    "screenName": "vpecresse",
+    "checkedAt": "2026-11-04T09:19:11.896Z"
   },
   "wdeguerpel": {
     "id": "898556894553542661",

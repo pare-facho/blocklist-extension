@@ -7,7 +7,12 @@ import {
   entriesFromApi,
   dedupe,
   applyCorrections,
+  entriesFromEntityCatalog,
+  loadWithSnapshot,
 } from "../tools/feed/source.ts";
+import { mkdtemp, readFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { userIdFromLocation } from "../tools/feed/xids.ts";
 import { toFeedEntries, buildFeed, shrinksTooMuch } from "../tools/feed/build.ts";
 
@@ -71,6 +76,8 @@ test("reads the user id from the intent redirect", () => {
   assert.deepEqual(userIdFromLocation(loc), { id: "13334762", screenName: "github" });
   assert.equal(userIdFromLocation("https://x.com/github"), undefined);
   assert.equal(userIdFromLocation("https://x.com/github?_intent=%7B%22userId%22%3A%22abc%22%7D"), undefined);
+  // Since Nov 2026 the redirect only names the account.
+  assert.deepEqual(userIdFromLocation("/GDarmanin?_intent=follow"), { screenName: "GDarmanin" });
 });
 
 test("feed entries carry ids from the cache and 'updated' only moves on change", () => {
@@ -113,4 +120,45 @@ test("API removals may point at another entry's id", () => {
     ],
   } as never);
   assert.deepEqual([...api.removed].sort(), ["other", "someone"]);
+});
+
+test("the .fr catalog gives the X accounts of its block list only", () => {
+  const entries = entriesFromEntityCatalog({
+    entities: [
+      {
+        list: "block",
+        name: "Person One",
+        category: "political",
+        accounts: [
+          { platform: "instagram", handle: "one_ig", url: "https://www.instagram.com/one_ig/" },
+          { platform: "x", handle: "@One_X", name: "One", url: "https://x.com/One_X" },
+        ],
+      },
+      { list: "support", name: "Person Two", category: "media", accounts: [{ platform: "x", handle: "two" }] },
+      { list: "block", name: "Group", category: "unknown", accounts: [{ platform: "x", handle: "group" }] },
+    ],
+  });
+  assert.deepEqual(entries, [
+    { site: "x", handle: "one_x", name: "One", category: "Politique", source: "https://x.com/One_X" },
+    { site: "x", handle: "group", name: "Group", category: "Autres", source: undefined },
+  ]);
+});
+
+test("a source that cannot be read falls back to its last snapshot", async () => {
+  const path = join(await mkdtemp(join(tmpdir(), "feed-")), "s.json");
+  const one = [{ site: "x", handle: "a", name: "A", category: "Autres" }];
+  assert.deepEqual(await loadWithSnapshot(path, async () => one), { entries: one });
+  assert.deepEqual(JSON.parse(await readFile(path, "utf8")), one);
+
+  const down = await loadWithSnapshot(path, async () => {
+    throw new Error("HTTP 403");
+  });
+  assert.deepEqual(down, { entries: one, error: "HTTP 403" });
+
+  await assert.rejects(
+    loadWithSnapshot(path + ".none", async () => {
+      throw new Error("HTTP 403");
+    }),
+    /no snapshot/,
+  );
 });

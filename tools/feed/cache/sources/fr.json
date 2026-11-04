@@ -1,0 +1,366 @@
+[
+  {
+    "site": "x",
+    "handle": "emmanuelmacron",
+    "name": "Emmanuel Macron",
+    "category": "Politique",
+    "source": "https://x.com/emmanuelmacron"
+  },
+  {
+    "site": "x",
+    "handle": "realdonaldtrump",
+    "name": "realdonaldtrump",
+    "category": "Politique",
+    "source": "https://x.com/realdonaldtrump"
+  },
+  {
+    "site": "x",
+    "handle": "mlp_officiel",
+    "name": "Marine Le Pen",
+    "category": "Politique",
+    "source": "https://x.com/mlp_officiel"
+  },
+  {
+    "site": "x",
+    "handle": "j_bardella",
+    "name": "Jordan Bardella",
+    "category": "Politique",
+    "source": "https://x.com/j_bardella"
+  },
+  {
+    "site": "x",
+    "handle": "cyrilhanouna",
+    "name": "cyrilhanouna",
+    "category": "Personnalité",
+    "source": "https://x.com/cyrilhanouna"
+  },
+  {
+    "site": "x",
+    "handle": "netanyahu",
+    "name": "Benyamin Netanyahou",
+    "category": "Politique",
+    "source": "https://x.com/netanyahu"
+  },
+  {
+    "site": "x",
+    "handle": "zemmoureric",
+    "name": "Éric Zemmour",
+    "category": "Politique",
+    "source": "https://x.com/zemmoureric"
+  },
+  {
+    "site": "x",
+    "handle": "gdarmanin",
+    "name": "Gérald Darmanin",
+    "category": "Politique",
+    "source": "https://x.com/gdarmanin"
+  },
+  {
+    "site": "x",
+    "handle": "marionmarechal",
+    "name": "Marion Maréchal",
+    "category": "Politique",
+    "source": "https://x.com/marionmarechal"
+  },
+  {
+    "site": "x",
+    "handle": "brunoretailleau",
+    "name": "Bruno Retailleau",
+    "category": "Politique",
+    "source": "https://x.com/brunoretailleau"
+  },
+  {
+    "site": "x",
+    "handle": "eciotti",
+    "name": "Éric Ciotti",
+    "category": "Politique",
+    "source": "https://x.com/eciotti"
+  },
+  {
+    "site": "x",
+    "handle": "pascalpraud",
+    "name": "Pascal Praud",
+    "category": "Personnalité",
+    "source": "https://x.com/pascalpraud"
+  },
+  {
+    "site": "x",
+    "handle": "knafo_sarah",
+    "name": "Sarah Knafo",
+    "category": "Politique",
+    "source": "https://x.com/knafo_sarah"
+  },
+  {
+    "site": "x",
+    "handle": "julienodoul",
+    "name": "julienodoul",
+    "category": "Politique",
+    "source": "https://x.com/julienodoul"
+  },
+  {
+    "site": "x",
+    "handle": "jeanmessiha",
+    "name": "Jean MESSIHA",
+    "category": "Politique",
+    "source": "https://x.com/jeanmessiha"
+  },
+  {
+    "site": "x",
+    "handle": "damienrieu",
+    "name": "Damien Rieu",
+    "category": "Personnalité",
+    "source": "https://x.com/damienrieu"
+  },
+  {
+    "site": "x",
+    "handle": "cordieralice2",
+    "name": "cordieralice2",
+    "category": "Personnalité",
+    "source": "https://x.com/cordieralice2"
+  },
+  {
+    "site": "x",
+    "handle": "rnational_off",
+    "name": "Rassemblement national",
+    "category": "Politique",
+    "source": "https://x.com/rnational_off"
+  },
+  {
+    "site": "x",
+    "handle": "frontieresmedia",
+    "name": "Frontières",
+    "category": "Média",
+    "source": "https://x.com/frontieresmedia"
+  },
+  {
+    "site": "x",
+    "handle": "cnews",
+    "name": "CNEWS",
+    "category": "Média",
+    "source": "https://x.com/cnews"
+  },
+  {
+    "site": "x",
+    "handle": "reconquete_off",
+    "name": "Reconquête",
+    "category": "Politique",
+    "source": "https://x.com/reconquete_off"
+  },
+  {
+    "site": "x",
+    "handle": "valeurs",
+    "name": "Valeurs actuelles",
+    "category": "Média",
+    "source": "https://x.com/valeurs"
+  },
+  {
+    "site": "x",
+    "handle": "coll_nemesis",
+    "name": "Collectif Némésis",
+    "category": "Organisation",
+    "source": "https://x.com/coll_nemesis"
+  },
+  {
+    "site": "x",
+    "handle": "seblecornu",
+    "name": "Sébastien Lecornu",
+    "category": "Politique",
+    "source": "https://x.com/seblecornu"
+  },
+  {
+    "site": "x",
+    "handle": "marsaultbreum",
+    "name": "Marsault",
+    "category": "Personnalité",
+    "source": "https://x.com/marsaultbreum"
+  },
+  {
+    "site": "x",
+    "handle": "christine_kelly",
+    "name": "Christine Kelly",
+    "category": "Personnalité",
+    "source": "https://x.com/christine_kelly"
+  },
+  {
+    "site": "x",
+    "handle": "sardoche",
+    "name": "Sardoche — Andréas Honnet",
+    "category": "Personnalité",
+    "source": "https://x.com/sardoche"
+  },
+  {
+    "site": "x",
+    "handle": "nicolassarkozy",
+    "name": "Nicolas Sarkozy",
+    "category": "Politique",
+    "source": "https://x.com/nicolassarkozy"
+  },
+  {
+    "site": "x",
+    "handle": "enthoven_r",
+    "name": "Raphaël Enthoven",
+    "category": "Personnalité",
+    "source": "https://x.com/enthoven_r"
+  },
+  {
+    "site": "x",
+    "handle": "f_desouche",
+    "name": "Fdesouche.com",
+    "category": "Média",
+    "source": "https://x.com/f_desouche"
+  },
+  {
+    "site": "x",
+    "handle": "psyhodelikus",
+    "name": "Dalibor Stanisavljevic",
+    "category": "Personnalité",
+    "source": "https://x.com/psyhodelikus"
+  },
+  {
+    "site": "x",
+    "handle": "jdvance",
+    "name": "JD Vance",
+    "category": "Politique",
+    "source": "https://x.com/jdvance"
+  },
+  {
+    "site": "x",
+    "handle": "vpecresse",
+    "name": "Valérie Pécresse",
+    "category": "Politique",
+    "source": "https://x.com/vpecresse"
+  },
+  {
+    "site": "x",
+    "handle": "rglucks1",
+    "name": "Raphaël Glucksmann",
+    "category": "Politique",
+    "source": "https://x.com/rglucks1"
+  },
+  {
+    "site": "x",
+    "handle": "thierrymariani",
+    "name": "Thierry Mariani",
+    "category": "Politique",
+    "source": "https://x.com/thierrymariani"
+  },
+  {
+    "site": "x",
+    "handle": "thaisescufon",
+    "name": "Thaïs d’Escufon",
+    "category": "Personnalité",
+    "source": "https://x.com/thaisescufon"
+  },
+  {
+    "site": "x",
+    "handle": "brivael",
+    "name": "Brivael Le Pogam",
+    "category": "Personnalité",
+    "source": "https://x.com/brivael"
+  },
+  {
+    "site": "x",
+    "handle": "bruno_attal_",
+    "name": "Bruno Attal",
+    "category": "Politique",
+    "source": "https://x.com/bruno_attal_"
+  },
+  {
+    "site": "x",
+    "handle": "cerfiafr",
+    "name": "Cerfia",
+    "category": "Média",
+    "source": "https://x.com/cerfiafr"
+  },
+  {
+    "site": "x",
+    "handle": "elonmusk",
+    "name": "Elon Musk",
+    "category": "Personnalité",
+    "source": "https://x.com/elonmusk"
+  },
+  {
+    "site": "x",
+    "handle": "i_montaigne",
+    "name": "Institut Montaigne",
+    "category": "Organisation",
+    "source": "https://x.com/i_montaigne"
+  },
+  {
+    "site": "x",
+    "handle": "le_crapaud47",
+    "name": "Le Crapaud",
+    "category": "Personnalité",
+    "source": "https://x.com/le_crapaud47"
+  },
+  {
+    "site": "x",
+    "handle": "lechochretien",
+    "name": "L'Écho Chrétien",
+    "category": "Personnalité",
+    "source": "https://x.com/lechochretien"
+  },
+  {
+    "site": "x",
+    "handle": "parousie33",
+    "name": "P@rousie ⚜",
+    "category": "Personnalité",
+    "source": "https://x.com/parousie33"
+  },
+  {
+    "site": "x",
+    "handle": "mrlepresiden",
+    "name": "Georges Jordito",
+    "category": "Personnalité",
+    "source": "https://x.com/mrlepresiden"
+  },
+  {
+    "site": "x",
+    "handle": "lebrac21",
+    "name": "Lebrac",
+    "category": "Personnalité",
+    "source": "https://x.com/lebrac21"
+  },
+  {
+    "site": "x",
+    "handle": "_lespatriotes",
+    "name": "Les Patriotes",
+    "category": "Politique",
+    "source": "https://x.com/_lespatriotes"
+  },
+  {
+    "site": "x",
+    "handle": "dlf_officiel",
+    "name": "Debout la France",
+    "category": "Politique",
+    "source": "https://x.com/dlf_officiel"
+  },
+  {
+    "site": "x",
+    "handle": "gerard_larcher",
+    "name": "Gérard Larcher",
+    "category": "Politique",
+    "source": "https://x.com/gerard_larcher"
+  },
+  {
+    "site": "x",
+    "handle": "michelbarnier",
+    "name": "Michel Barnier",
+    "category": "Politique",
+    "source": "https://x.com/michelbarnier"
+  },
+  {
+    "site": "x",
+    "handle": "olivierveran",
+    "name": "Olivier Véran",
+    "category": "Politique",
+    "source": "https://x.com/olivierveran"
+  },
+  {
+    "site": "x",
+    "handle": "e_dupondm",
+    "name": "Éric Dupond-Moretti",
+    "category": "Politique",
+    "source": "https://x.com/e_dupondm"
+  }
+]

@@ -1,7 +1,13 @@
-// Reads the two public files of the Blockfacho site (accounts.js and /api/accounts)
-// and turns them into one flat list of X accounts.
+// Reads the public lists of two sites and turns them into flat lists of X accounts:
+// - the Blockfacho site (accounts.js and /api/accounts);
+// - onbloquelextremedroite.fr, whose entity catalog groups each person's accounts on
+//   several networks; only the X accounts of its "block" list are taken.
+
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { dirname } from "node:path";
 
 export const SITE_ORIGIN = "https://onbloquelextremedroite.fun";
+export const FR_ORIGIN = "https://www.onbloquelextremedroite.fr";
 
 export type SourceEntry = {
   site: string;
@@ -122,10 +128,64 @@ export function applyCorrections(entries: SourceEntry[], corrections: Correction
   });
 }
 
+type CatalogAccount = { platform?: string; handle?: string; name?: string; url?: string };
+type CatalogEntity = { list?: string; name?: string; category?: string; accounts?: CatalogAccount[] };
+
+const FR_CATEGORIES: Record<string, string> = {
+  political: "Politique",
+  person: "Personnalité",
+  media: "Média",
+  org: "Organisation",
+};
+
+export function entriesFromEntityCatalog(catalog: { entities?: CatalogEntity[] }): SourceEntry[] {
+  const out: SourceEntry[] = [];
+  for (const entity of catalog.entities ?? []) {
+    if (entity.list !== "block") continue;
+    for (const a of entity.accounts ?? []) {
+      if (a.platform !== "x" || !a.handle) continue;
+      const handle = a.handle.replace(/^@/, "").toLowerCase();
+      out.push({
+        site: "x",
+        handle,
+        name: a.name || entity.name || handle,
+        category: FR_CATEGORIES[entity.category ?? ""] ?? "Autres",
+        source: a.url || undefined,
+      });
+    }
+  }
+  return dedupe(out);
+}
+
+export async function loadFrEntries(origin = FR_ORIGIN): Promise<SourceEntry[]> {
+  return entriesFromEntityCatalog(JSON.parse(await fetchText(`${origin}/entity-catalog.json`)));
+}
+
 export async function loadSourceEntries(origin = SITE_ORIGIN): Promise<SourceEntry[]> {
   const [accountsJs, apiJson] = await Promise.all([fetchText(`${origin}/accounts.js`), fetchText(`${origin}/api/accounts`)]);
   const xEntries = entriesFromAccountsJs(parseAccountsJs(accountsJs));
   const api = entriesFromApi(JSON.parse(apiJson));
   const all = dedupe([...xEntries, ...api.added]);
   return all.filter((e) => !api.removed.has(e.handle));
+}
+
+// Each source is kept as a snapshot next to the id cache. When a site cannot be read
+// (outage, or it blocks the job), its last snapshot is used so the other source can still
+// be published and the accounts of the failing one stay in the list.
+export type SourceResult = { entries: SourceEntry[]; error?: string };
+
+export async function loadWithSnapshot(path: string, load: () => Promise<SourceEntry[]>): Promise<SourceResult> {
+  try {
+    const entries = await load();
+    await mkdir(dirname(path), { recursive: true });
+    await writeFile(path, JSON.stringify(entries, null, 2) + "\n");
+    return { entries };
+  } catch (err) {
+    const error = err instanceof Error ? err.message : String(err);
+    try {
+      return { entries: JSON.parse(await readFile(path, "utf8")), error };
+    } catch {
+      throw new Error(`${error}; no snapshot at ${path}`);
+    }
+  }
 }

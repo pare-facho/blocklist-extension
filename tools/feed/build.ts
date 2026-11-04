@@ -55,7 +55,8 @@ export function buildFeed(entries: FeedEntry[], previous: Feed | undefined, now:
   return {
     format: "blocklist/1",
     name: "Blockfacho — on bloque l’extrême droite",
-    description: "Comptes d’extrême droite recensés par onbloquelextremedroite.fun",
+    description:
+      "Comptes d’extrême droite recensés par onbloquelextremedroite.fun, et comptes X de la liste à bloquer de onbloquelextremedroite.fr",
     homepage: "https://onbloquelextremedroite.fun/",
     updated: unchanged ? previous.updated : now.toISOString(),
     entries,
